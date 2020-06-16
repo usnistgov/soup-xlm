@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CausalChain xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="causalchain.xsd">
+	<Attack>
+		<Element>
+			<ElementName>Elements(2)</ElementName>
+			<MethodName>Methods(2)</MethodName>
+			<Realm>T</Realm>
+			<Si>S2i</Si>
+			<Sn>S2n</Sn>
+			<Effects>
+				<Action>
+					<Category>1</Category>
+					<Name/>
+				</Action>
+				<Cause>
+					<Category>1</Category>
+					<Name/>
+				</Cause>
+				<StateTransion>
+					<Category>1</Category>
+					<Name>S1</Name>
+				</StateTransion>
+			</Effects>
+		</Element>
+	</Attack>
+</CausalChain>
