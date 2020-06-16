@@ -7,7 +7,9 @@
 		<File FilePath="CPSFrameworkXMLToDOC.xsl" HomeFolder="Yes"/>
 	</Folder>
 	<Folder FolderName="XQuery Files" ExtStr="xq;xql;xquery;xqu"/>
-	<Folder FolderName="HTML Files" ExtStr="html;htm;xhtml;asp"/>
+	<Folder FolderName="HTML Files" ExtStr="html;htm;xhtml;asp">
+		<File FilePath="CPSFrameworkXMLToDOC.html" HomeFolder="Yes"/>
+	</Folder>
 	<Folder FolderName="DTD/Schemas" ExtStr="dtd;dcd;xdr;biz;xsd">
 		<File FilePath="cpsframework.xsd" HomeFolder="Yes"/>
 		<File FilePath="ODDAspects.xsd" HomeFolder="Yes"/>
