@@ -15,4 +15,5 @@
 		<File FilePath="ODDAspects.xsd" HomeFolder="Yes"/>
 	</Folder>
 	<Folder FolderName="Entities" ExtStr="ent"/>
+	<File FilePath="ODDAspects.json" HomeFolder="Yes"/>
 </Project>
