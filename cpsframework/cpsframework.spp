@@ -18,18 +18,26 @@
 	<Folder FolderName="Entities" ExtStr="ent"/>
 	<Folder FolderName="Tests">
 		<Folder FolderName="Test">
-			<File FilePath="Test\AspectBusinessCaseTest.xml" HomeFolder="Yes"/>
 			<File FilePath="Test\BusinessCaseOnlyTest.xml" HomeFolder="Yes"/>
+			<File FilePath="Test\CpsFrameworkAspectBusinessCaseTest.xml" HomeFolder="Yes"/>
 			<File FilePath="Test\CpsFrameworkInformationModelLibraryTest.xml" HomeFolder="Yes"/>
+			<File FilePath="Test\CpsFrameworkInteractionLibraryTest.xml" HomeFolder="Yes"/>
+			<File FilePath="Test\CpsFrameworkMaturityTest.xml" HomeFolder="Yes"/>
 			<File FilePath="Test\CpsFrameworkMultipleBusinessCaseTest.xml" HomeFolder="Yes"/>
+			<File FilePath="Test\CpsFrameworkUseCaseTest.xml" HomeFolder="Yes"/>
+			<File FilePath="Test\CpsFrameworkUseCaseTestCpsGrouping.xml" HomeFolder="Yes"/>
 			<File FilePath="Test\InformationModelLibraryOnlyTest.xml" HomeFolder="Yes"/>
 			<File FilePath="Test\SimpleCpsFrameworkTest.xml" HomeFolder="Yes"/>
 		</Folder>
 		<Folder FolderName="Test Ouput">
-			<File FilePath="Test Output\AspectBusinessCaseTestOutput.html" HomeFolder="Yes"/>
 			<File FilePath="Test Output\BusinessCaseOnlyTestOutput.html" HomeFolder="Yes"/>
+			<File FilePath="Test Output\CpsFrameworkAspectBusinessCaseTestOutput.html" HomeFolder="Yes"/>
 			<File FilePath="Test Output\CpsFrameworkInformationModelLibraryTestOutput.html" HomeFolder="Yes"/>
+			<File FilePath="Test Output\CpsFrameworkInteractionLibraryTestOutput.html" HomeFolder="Yes"/>
+			<File FilePath="Test Output\CpsFrameworkMaturityTestOutput.html" HomeFolder="Yes"/>
 			<File FilePath="Test Output\CpsFrameworkMultipleBusinessCaseTestOutput.html" HomeFolder="Yes"/>
+			<File FilePath="Test Output\CpsFrameworkUseCaseCpsGroupingTestOutput.html" HomeFolder="Yes"/>
+			<File FilePath="Test Output\CpsFrameworkUseCaseTestOutput.html" HomeFolder="Yes"/>
 			<File FilePath="Test Output\InformationModelOnlyTestOutput.html" HomeFolder="Yes"/>
 			<File FilePath="Test Output\SimpleCpsFrameworkTestOutput.html" HomeFolder="Yes"/>
 		</Folder>

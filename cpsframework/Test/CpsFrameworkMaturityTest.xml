@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cps:CPSFramework xmlns:cps="cpsframework" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="cpsframework ../ODDAspects.xsd">
+	<Maturity>
+		<effective>Maturity Effective Element</effective>
+		<maturity>submitted</maturity>
+		<responsibleParty>Maturity ResponsibleParty Element</responsibleParty>
+		<revision>Maturity Revision Element</revision>
+		<status>asDeveloped</status>
+	</Maturity>
+</cps:CPSFramework>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cps:CPSFramework xmlns:cps="cpsframework" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="cpsframework ../cpsframework.xsd">
+	<UseCase>
+		<identifier>UseCase Identifier Element</identifier>
+		<name>UseCase Name Element</name>
+		<technicalId>UseCase TechnicalId Element</technicalId>
+		<classification>UseCase Classification Element</classification>
+		<CPSGrouping>
+			<CPS>
+				<furtherInformation>CPSGrouping CPS FurtherInformatoin Element</furtherInformation>
+				<name>CPSGropuing CPS Name Element</name>
+				<technicalId>CPSGrouping CPS TechnicalId Element</technicalId>
+			</CPS>
+		</CPSGrouping>
+	</UseCase>
+</cps:CPSFramework>
