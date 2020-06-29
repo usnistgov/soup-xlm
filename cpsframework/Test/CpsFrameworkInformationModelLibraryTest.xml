@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--The xslt file will use the name and description of informatoin models, but not technicalId's or any aspects.-->
 <cps:CPSFramework xmlns:cps="cpsframework" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="cpsframework ../ODDAspects.xsd">
 	<InformationModelLibrary>
 		<InformationModel>

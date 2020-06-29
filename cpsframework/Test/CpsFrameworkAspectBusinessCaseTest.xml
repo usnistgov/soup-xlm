@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="CPSFrameworkXMLToDOC.xsl"?>
+<!--The xslt file is currently not set up to handle Aspects so those will be ignored. Additionally the technicalId and identifier
+	of the BusinessCase is also ignored.-->
 <cps:CPSFramework xmlns:cps="cpsframework" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="cpsframework ../ODDAspects.xsd">
 	<BusinessCase>
 		<description>BusinessCase Description Element</description>

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--The xslt file uses nothing from the CPSGrouping and CPS elements.-->
 <cps:CPSFramework xmlns:cps="cpsframework" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="cpsframework ../cpsframework.xsd">
 	<UseCase>
 		<identifier>UseCase Identifier Element</identifier>

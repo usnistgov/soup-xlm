@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--The xslt file will join the names of multiple BusinessCases with a ',' but 
+	everything else is ignored from the second BusinessCase.-->
 <cps:CPSFramework xmlns:cps="cpsframework" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="cpsframework ../cpsframework.xsd">
 	<BusinessCase>
 		<description>BusinessCase 1 Description Element</description>

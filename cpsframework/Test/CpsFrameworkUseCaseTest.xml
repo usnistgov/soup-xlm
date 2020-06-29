@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--The xslt file uses the identifier, name, and classification from a basic UseCase element, but
+	not the technicalId.-->
 <cps:CPSFramework xmlns:cps="cpsframework" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="cpsframework ../cpsframework.xsd">
 	<UseCase>
 		<identifier>UseCase Identifier Element</identifier>

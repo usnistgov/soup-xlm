@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--The xslt file does not use anything from the InteractionLibrary Element.-->
 <cps:CPSFramework xmlns:cps="cpsframework" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="cpsframework ../cpsframework.xsd">
 	<InteractionLibrary>
 		<Maturity>

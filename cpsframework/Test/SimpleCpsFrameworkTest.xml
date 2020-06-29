@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--The xstl file uses the domain name, businessCase name and description, but not the identifier, or technicalId's-->
 <cps:CPSFramework xmlns:cps="cpsframework" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="cpsframework ../cpsframework.xsd">
 	<BusinessCase>
 		<description>BusinessCase Description Element</description>

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Test file with only a simple BusinessCase Element-->
+<!--Test file with only a simple BusinessCase Element
+	The xslt file is not set up to handle anything outside of a CPSFramework element
+	so using this file as input will produce no output.-->
 <cps:BusinessCase xmlns:cps="cpsframework" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="cpsframework ../cpsframework.xsd">
 	<description>BusinessCase Description Element</description>
 	<identifier>BusinessCase Identifier Element</identifier>

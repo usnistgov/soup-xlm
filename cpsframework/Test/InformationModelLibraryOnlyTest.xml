@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--The xslt file is not set up to accept anything outside of a CPSFramework element, so this file
+	produces no output.-->
 <cps:InformationModelLibrary xmlns:cps="cpsframework" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="cpsframework ../ODDAspects.xsd">
 	<InformationModel>
 		<description>InformationModel 1 Description Element</description>
