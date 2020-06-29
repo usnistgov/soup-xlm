@@ -12,7 +12,7 @@
 	xmlns:fn="functions"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema">
 	
-	<xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>	
+	<xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 
 	<!--Select the table under h2 1.1. This should only be one table.-->
 	<xsl:variable name="table1_1" select="fn:getTablesBetweenHeaders('1.1', 'h2', '1.2', 'h2')"/>
@@ -52,12 +52,12 @@
 		<CPSFramework>
 			<xsl:call-template name="ExtractBusinessCase"/>
 			<xsl:call-template name="ExtractInformationModelLibrary"/>
+			<xsl:call-template name="ExtractUseCase"/>
 		</CPSFramework>
 	</xsl:template>
 	
 	<!--Pulls data from multiple tables to recreate the BusinessCase element.-->
 	<xsl:template name="ExtractBusinessCase">
-		<!--TODO: May not need for-each if there can only be one BusinessCase-->
 		<xsl:for-each select="tokenize($table1_3/x:tr[2]/x:td[2]/x:p/x:span, ',')">
 			<BusinessCase>
 				<name>
@@ -96,6 +96,20 @@
 				</InformationModel>
 			</xsl:for-each>
 		</InformationModelLibrary>
+	</xsl:template>
+
+	<xsl:template name="ExtractUseCase">
+		<UseCase>
+			<identifier>
+				<xsl:value-of select="$table1_1/x:tr[3]/x:td[1]/x:p/x:span"/>
+			</identifier>
+			<name>
+				<xsl:value-of select="$table1_1/x:tr[3]/x:td[3]/x:p/x:span"/>
+			</name>
+			<Version>
+				<date></date>
+			</Version>
+		</UseCase>
 	</xsl:template>
 
 </xsl:stylesheet>

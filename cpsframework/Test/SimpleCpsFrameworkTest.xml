@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cps:CPSFramework xmlns:cps="cpsframework" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="cpsframework ../cpsframework.xsd">
+	<BusinessCase>
+		<description>BusinessCase Description Element</description>
+		<identifier>BusinessCase Identifier Element</identifier>
+		<name>BusinessCase Name Element</name>
+		<technicalId>BusinessCase TechnicalId Element</technicalId>
+		<Domain>
+			<name>Domain Name Element</name>
+			<technicalId>Domain TechnicalId Element</technicalId>
+		</Domain>
+	</BusinessCase>
+</cps:CPSFramework>
