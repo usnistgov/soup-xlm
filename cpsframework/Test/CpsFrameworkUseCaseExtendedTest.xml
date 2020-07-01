@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--UseCasea Narrative shortDescription, RelatedUseCaseName, LevelOfDepth, Prioiritisation, Classification, Nature, Scope, and Keywords are used,
+	everything else is not.-->
+<cps:CPSFramework xmlns:cps="cpsframework" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="cpsframework ../cpsframework.xsd">
+	<UseCase>
+		<identifier>UseCase Identifier Element</identifier>
+		<name>UseCase Name Element</name>
+		<technicalId>UseCase TechnicalId Element</technicalId>
+		<classification>UseCase Classification Element</classification>
+		<CustomInformation>
+			<key>CustomInformation Key Element</key>
+			<reference>CustonInformation Reference Element</reference>
+			<value>CustomInformation Value Element</value>
+		</CustomInformation>
+		<Drawing>
+			<drawingType>MacroActivities Flowchart</drawingType>
+			<name>Drawing Name Element</name>
+			<URI type="UMLDiagram">Drawing URI Element</URI>
+		</Drawing>
+		<KeyPerformanceIndicator>
+			<description>KeyPerformanceIndicator Description Element</description>
+			<name>KeyPerformanceIndicator Name Element</name>
+			<Objective>
+				<technicalId>KeyPerformanceIndicator Objective TechnicalId Element</technicalId>
+			</Objective>
+			<technicalId>KeyPerformanceIndicator TechnicalId Element</technicalId>
+		</KeyPerformanceIndicator>
+		<keywords>Keywork1, Keyword2, Keywork3, Keyword with space, Keywork 5</keywords>
+		<levelOfDepth>LevelOfDepth Element</levelOfDepth>
+		<Narrative>
+			<shortDescription>Narrative ShortDescription Element</shortDescription>
+		</Narrative>
+		<nature>Nature Element</nature>
+		<prioritisation>Prioritisation Element</prioritisation>
+		<RelatedUseCase>
+			<name>RelatedUseCase Name</name>
+			<technicalId>RelatedUseCase TechnicalId</technicalId>
+		</RelatedUseCase>
+		<scope>UseCase Scope Element</scope>
+		<Version>
+			<date> 2020-05-31T00:00:00Z </date>
+		</Version>
+	</UseCase>
+</cps:CPSFramework>

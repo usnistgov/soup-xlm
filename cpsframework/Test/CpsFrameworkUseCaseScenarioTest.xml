@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cps:CPSFramework xmlns:cps="cpsframework" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="cpsframework ../cpsframework.xsd">
+	<UseCase>
+		<identifier>UseCase Identifier Element</identifier>
+		<name>UseCase Name Element</name>
+		<technicalId>UseCase TechnicalId Element</technicalId>
+		<Scenario>
+			<identifier>0.1</identifier>
+			<name>Functional Aspects of ADS</name>
+			<technicalId>String</technicalId>
+			<Aspects>
+				<functional>
+					<TransportationInfrastructure>
+						<Property>
+							<statement> TBD </statement>
+						</Property>
+					</TransportationInfrastructure>
+				</functional>
+			</Aspects>
+			<MacroActivity>
+				<Step>
+					<BusinessObject>
+						<name>TripPlan</name>
+						<technicalId>String</technicalId>
+					</BusinessObject>
+					<description>Trip Planner creates segment plan.</description>
+					<event>Initital Data</event>
+					<identifier>1</identifier>
+					<InformationProducer>
+						<name>Trip Planner</name>
+						<technicalId>String</technicalId>
+					</InformationProducer>
+					<InformationReceiver>
+						<name>Response</name>
+						<technicalId>String</technicalId>
+					</InformationReceiver>
+					<interaction>
+						<refMessage>msg1234</refMessage>
+					</interaction>
+					<name>Segment Plan</name>
+					<service>REPORT</service>
+				</Step>
+				<Step>
+					<BusinessObject>
+						<name>Torque Request</name>
+						<technicalId>String</technicalId>
+					</BusinessObject>
+					<description>Response generates Torque Request.</description>
+					<event>Segment Change</event>
+					<identifier>2</identifier>
+					<InformationProducer>
+						<name>Response</name>
+						<technicalId>String</technicalId>
+					</InformationProducer>
+					<InformationReceiver>
+						<name>Vehicle Physics Engine</name>
+						<technicalId>String</technicalId>
+					</InformationReceiver>
+					<interaction>
+						<refMessage>msg1234</refMessage>
+					</interaction>
+					<name>Torque Request</name>
+					<service>REPORT</service>
+				</Step>
+				<Step>
+					<BusinessObject>
+						<name>Vehicle Physics State</name>
+						<technicalId>String</technicalId>
+					</BusinessObject>
+					<description>Vehicle Physics Engine measure vehicle physics state.</description>
+					<event>Torque Request Change</event>
+					<identifier>3</identifier>
+					<InformationProducer>
+						<name>Vehicle Physics Engine</name>
+						<technicalId>String</technicalId>
+					</InformationProducer>
+					<InformationReceiver>
+						<name>Monitor</name>
+						<technicalId>String</technicalId>
+					</InformationReceiver>
+					<interaction>
+						<refMessage>msg1234</refMessage>
+					</interaction>
+					<name>TVehicle Physics State</name>
+					<service>REPORT</service>
+				</Step>
+				<technicalId>String</technicalId>
+			</MacroActivity>
+		</Scenario>
+	</UseCase>
+</cps:CPSFramework>
