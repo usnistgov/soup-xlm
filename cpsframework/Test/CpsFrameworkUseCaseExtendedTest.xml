@@ -89,6 +89,18 @@
 			<technicalId>UseCase 1 BusinessCase 2 technicalId</technicalId>
 		</BusinessCase>
 		<classification>UseCase Classification Element</classification>
+		<CPSGrouping>
+			<CPS>
+				<furtherInformation>UseCase 1 CPSGrouping 1 CPS 1 furtherInformation</furtherInformation>				
+				<name>UseCase 1 CPSGrouping 1 CPS 1 name</name>
+				<technicalId>UseCase 1 CPSGrouping 1 CPS 1 technicalId</technicalId>
+			</CPS>
+			<CPS>
+				<furtherInformation>UseCase 1 CPSGrouping 1 CPS 2 furtherInformation</furtherInformation>
+				<name>UseCase 1 CPSGrouping 1 CPS 2 name</name>
+				<technicalId>UseCase 1 CPSGrouping 1 CPS 2 technicalId</technicalId>
+			</CPS>
+		</CPSGrouping>
 		<CustomInformation>
 			<key>CustomInformation Key Element</key>
 			<reference>CustonInformation Reference Element</reference>
