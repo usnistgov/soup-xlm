@@ -258,7 +258,7 @@
 								<span lang="EN-GB" xml:lang="EN-GB">draft, for comments, for voting, final</span>
 							</p>
 						</td>
-						<td width="10%" valign="top" style="width:10%;border:solid windowtext 1.0pt; border-top:none;background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="10%" valign="top" style="width:10%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Version Number</span>
 							</p>
@@ -266,6 +266,46 @@
 					</tr>
 					
 					<xsl:apply-templates select="cps:CPSFramework/UseCase/Version"/>
+					
+				</table>
+				
+				<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none;margin-top:16px">
+					<tr>
+						<td width="100%" colspan="5" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+							<p class="TableHeading">
+								<span lang="EN-GB" xml:lang="EN-GB">Maturity</span>
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<td  width="20%" valign="top" style="width:20%;border:solid windowtext 1.0pt; border-top:none;background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+							<p class="TableHeading">
+								<span lang="EN-GB" xml:lang="EN-GB">Effective</span>
+							</p>						
+						</td>
+						<td width="20%" valign="top" style="width:20%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+							<p class="TableHeading">
+								<span lang="EN-GB" xml:lang="EN-GB">Maturity</span>
+							</p>	
+						</td>
+						<td width="20%" valign="top" style="width:20%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+							<p class="TableHeading">
+								<span lang="EN-GB" xml:lang="EN-GB">Responsible Party</span>
+							</p>	
+						</td>
+						<td width="20%" valign="top" style="width:20%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+							<p class="TableHeading">
+								<span lang="EN-GB" xml:lang="EN-GB">Revision</span>
+							</p>	
+						</td>
+						<td width="20%" valign="top" style="width:20%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+							<p class="TableHeading">
+								<span lang="EN-GB" xml:lang="EN-GB">Status</span>
+							</p>	
+						</td>
+					</tr>
+					
+					<xsl:apply-templates select="cps:CPSFramework/Maturity"/>
 					
 				</table>
 				
@@ -537,7 +577,7 @@
 					
 				</table>
 				
-				<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">
+				<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none;margin-top:16px">
 					<tr>
 						<td width="100%" colspan="3" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
 							<p class="TableHeading">
@@ -574,6 +614,8 @@
 		</html>
 	</xsl:template>
 	
+	<!--This template outputs information related to a BusinessCases.
+		This includes the technicalId, identifier, name, description, type, and Domains.-->
 	<xsl:template match="BusinessCase">
 		<tr style="height:11.8pt">
 			<td width="20%" valign="top" style="width:20%;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt;height:11.8pt">
@@ -618,6 +660,8 @@
 		</tr>
 	</xsl:template>
 	
+	<!--This template outputs basic information related to the UseCase. 
+		This includes the technicalId, identifier, and name.-->
 	<xsl:template match="UseCase">
 		<tr style="height:11.8pt">
 			<td width="7%" valign="top" style="width:7.58%;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt;height:11.8pt">
@@ -650,6 +694,8 @@
 		</tr>
 	</xsl:template>
 	
+	<!--This is a named template that outputs the scope and objectives for a UseCase.
+		It is in a push configuration because the basic information template already consumes the UseCase once.-->
 	<xsl:template name="ScopeAndObjectives">
 		<xsl:for-each select="cps:CPSFramework/UseCase">
 			<tr>
@@ -696,6 +742,7 @@
 		</xsl:for-each>
 	</xsl:template>
 	
+	<!--This template outputs Remarks with it's technicalId and content.-->
 	<xsl:template match="Remark">
 		<tr>
 			<td width="100%" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt">
@@ -710,6 +757,7 @@
 		</tr>
 	</xsl:template>
 	
+	<!--This template outputs Version informatoin. Multiple authors are joined by ', '.-->
 	<xsl:template match="Version">
 		<tr>
 			<td width="10%" valign="top" style="width:10%;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt">
@@ -726,7 +774,8 @@
 			</td>
 			<td width="10%" valign="top" style="width:10%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt">
 				<p class="MsoNormal">
-					<!--LOOKUP: UseCase/Version/Author/name multiple names are join with a ,-->
+					<!--LOOKUP: "UseCase/Version/Author/name"
+						multiple names are join with a ', '.-->
 					<xsl:value-of select="fn:string-join(Author/name, ', ')"/>
 				</p>
 			</td>
@@ -745,7 +794,7 @@
 		</tr>
 	</xsl:template>
 	
-	<!--This template adds a rows to the 1.4 table for any Narrative elements-->
+	<!--This template adds a rows to the 1.4 table for any Narrative elements.-->
 	<xsl:template match="Narrative">
 		<tr style="height:1.0pt">
 			<td width="100%" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; border-top:none;background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt;height:1.0pt">
@@ -870,7 +919,22 @@
 	</xsl:template>
 	
 	<xsl:template name="PrecoditionsAndAssumptions">
-		
+		<tr>
+			<td width="32%" style="width:32.8%;border:solid windowtext 1.0pt;border-top: none;padding:0in 5.4pt 0in 5.4pt">
+				<p class="MsoNormal">
+					<!--LOOKUP: Prerequisite/name-->
+					<xsl:value-of select="cps:CPSFramework/UseCase/Prerequisite/name"/>
+				</p>
+			</td>
+			<td width="33%" valign="top" style="width:33.46%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt">
+				<xsl:for-each select="cps:CPSFramework/UseCase/Assumption">
+					<p class="MsoNormal">
+						<!--LOOKUP: Assumption/name & Assumpiton/content-->
+						<xsl:value-of select="fn:concat(name, ': ', content)"/>
+					</p>
+				</xsl:for-each>
+			</td>
+		</tr>
 	</xsl:template>
 	
 	<xsl:template match="Reference">
@@ -981,7 +1045,7 @@
 	</xsl:template>
 
 	<xsl:template match="Scenario">
-		<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">
+		<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none;margin-top: 16px">
 			<tr style="height:14.35pt">
 				<td width="100%" colspan="6" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; background:#D9D9D9;padding:0in 5.4pt 0in 5.4pt;height:14.35pt">
 					<p class="TableHeading">
@@ -1091,16 +1155,24 @@
 				<p>
 					<xsl:value-of select="number"/>   Steps - <xsl:value-of select="name"/>
 				</p>
-				
-				<xsl:if test="Drawing">
-				<!--LOOKUP: MacroActivity/Drawing-->
-					<xsl:apply-templates select="Drawing"/>
-				</xsl:if>
 			</span>
 		</h2>
 		
 		<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse">
+			<!--If there are any drawing a new row is inserted to contain the drawings for this step-->
+			<xsl:if test="Drawing">
+				<tr>
+					<td width="6%" colspan="9" valign="top" style="width:6.04%;border:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+						
+							<!--LOOKUP: MacroActivity/Drawing-->
+							<xsl:apply-templates select="Drawing"/>
+						
+					</td>
+				</tr>
+			</xsl:if>
+			
 			<xsl:apply-templates select="Step"/>
+			
 		</table>
 	</xsl:template>
 	
@@ -1242,13 +1314,15 @@
 	</xsl:template>
 
 	<xsl:template match="Drawing">
-		<xsl:element name="img">
-			<xsl:attribute name="id" select="drawingType"/>
-			<xsl:attribute name="width"><xsl:value-of select="substring-before(substring-after(URI,'W'),'_')"/></xsl:attribute>
-			<xsl:attribute name="height"><xsl:value-of select="substring-before(substring-after(URI,'H'),'_')"/></xsl:attribute>
-			<xsl:attribute name="src" select="URI"/>
-			<xsl:attribute name="alt" select="name"/>
-		</xsl:element>
+		<p>
+			<xsl:element name="img">
+				<xsl:attribute name="id" select="drawingType"/>
+				<xsl:attribute name="width"><xsl:value-of select="substring-before(substring-after(URI,'W'),'_')"/></xsl:attribute>
+				<xsl:attribute name="height"><xsl:value-of select="substring-before(substring-after(URI,'H'),'_')"/></xsl:attribute>
+				<xsl:attribute name="src" select="URI"/>
+				<xsl:attribute name="alt" select="name"/>
+			</xsl:element>
+		</p>
 	</xsl:template>
 
 </xsl:stylesheet>
