@@ -112,12 +112,12 @@
 		<Drawing>
 			<drawingType>other</drawingType>
 			<name>UseCase 1 Drawing 1</name>
-			<URI type='Image'>https://www.ahirlabs.com/wp-content/uploads/2018/07/Scala_logo.png</URI>
+			<URI type='Image'>https://upload.wikimedia.org/wikipedia/commons/8/85/Logo-Test.png</URI>
 		</Drawing>
 				<Drawing>
 			<drawingType>other</drawingType>
 			<name>UseCase 1 Drawing 2</name>
-			<URI type='Image'>https://www.ahirlabs.com/wp-content/uploads/2018/07/Scala_logo.png</URI>
+			<URI type='Image'>https://upload.wikimedia.org/wikipedia/commons/8/85/Logo-Test.png</URI>
 		</Drawing>
 		<KeyPerformanceIndicator>
 			<description>KeyPerformanceIndicator Description Element</description>
@@ -187,7 +187,7 @@
 				<Drawing>
 					<drawingType>other</drawingType>
 					<name>Scenario 1 Drawing</name>
-					<URI type='Image'>https://www.ahirlabs.com/wp-content/uploads/2018/07/Scala_logo.png</URI>
+					<URI type='Image'>https://upload.wikimedia.org/wikipedia/commons/8/85/Logo-Test.png</URI>
 				</Drawing>
 				<name>Scenario 1 MacroActivity 1 name element</name>
 				<Step>
@@ -199,7 +199,7 @@
 					<Drawing>
 						<drawingType>other</drawingType>
 						<name>Scenario 1 MacroActivity 1 Step 1 Drawing</name>
-						<URI type='Image'>https://www.ahirlabs.com/wp-content/uploads/2018/07/Scala_logo.png</URI>
+						<URI type='Image'>https://upload.wikimedia.org/wikipedia/commons/8/85/Logo-Test.png</URI>
 					</Drawing>
 					<event>Scenario 1 MacroActivity 1 Step 1 event element</event>
 					<identifier>Scenario 1 MacroActivity 1 Step 1 identifier element</identifier>
@@ -362,7 +362,7 @@
 				<Drawing>
 					<drawingType>other</drawingType>
 					<name>Scenario 2 Drawing</name>
-					<URI type='Image'>https://www.ahirlabs.com/wp-content/uploads/2018/07/Scala_logo.png</URI>
+					<URI type='Image'>https://upload.wikimedia.org/wikipedia/commons/8/85/Logo-Test.png</URI>
 				</Drawing>
 				<name>Scenario 2 MacroActivity 1 name element</name>
 				<Step>
