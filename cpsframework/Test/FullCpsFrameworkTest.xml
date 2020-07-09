@@ -100,6 +100,9 @@
 				<name>UseCase 1 CPSGrouping 1 CPS 2 name</name>
 				<technicalId>UseCase 1 CPSGrouping 1 CPS 2 technicalId</technicalId>
 			</CPS>
+			<description>UseCase 1 CPSGrouping description</description>
+			<identifier>UseCase 1 CPSGrouping identifier</identifier>
+			<name>UseCase 1 CPSGrouping name</name>
 		</CPSGrouping>
 		<CustomInformation>
 			<key>CustomInformation Key Element</key>
