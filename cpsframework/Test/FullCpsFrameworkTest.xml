@@ -108,12 +108,12 @@
 		</CustomInformation>
 		<Drawing>
 			<drawingType>other</drawingType>
-			<name>Scala Logo 1</name>
+			<name>UseCase 1 Drawing 1</name>
 			<URI type='Image'>https://www.ahirlabs.com/wp-content/uploads/2018/07/Scala_logo.png</URI>
 		</Drawing>
 				<Drawing>
 			<drawingType>other</drawingType>
-			<name>Scala Logo 2</name>
+			<name>UseCase 1 Drawing 2</name>
 			<URI type='Image'>https://www.ahirlabs.com/wp-content/uploads/2018/07/Scala_logo.png</URI>
 		</Drawing>
 		<KeyPerformanceIndicator>
@@ -183,7 +183,7 @@
 			<MacroActivity>
 				<Drawing>
 					<drawingType>other</drawingType>
-					<name>Scala Logo</name>
+					<name>Scenario 1 Drawing</name>
 					<URI type='Image'>https://www.ahirlabs.com/wp-content/uploads/2018/07/Scala_logo.png</URI>
 				</Drawing>
 				<name>Scenario 1 MacroActivity 1 name element</name>
@@ -193,6 +193,11 @@
 						<technicalId>Scenario 1 MacroActivity 1 Step 1 BusinessObject 1 technicalId</technicalId>
 					</BusinessObject>
 					<description>Scenario 1 MacroActivity 1 Step 1 description element</description>
+					<Drawing>
+						<drawingType>other</drawingType>
+						<name>Scenario 1 MacroActivity 1 Step 1 Drawing</name>
+						<URI type='Image'>https://www.ahirlabs.com/wp-content/uploads/2018/07/Scala_logo.png</URI>
+					</Drawing>
 					<event>Scenario 1 MacroActivity 1 Step 1 event element</event>
 					<identifier>Scenario 1 MacroActivity 1 Step 1 identifier element</identifier>
 					<InformationProducer>
@@ -221,6 +226,7 @@
 				</Step>
 				<Step>
 					<BusinessObject>
+						<name>Scenario 1 MacroActivity 1 Step 2 BusinessObjecvt 1 name</name>
 						<technicalId>Scenario 1 MacroActivity 1 Step 2 BusinessObject 1 technicalId</technicalId>
 					</BusinessObject>
 					<description>Scenario 1 MacroActivity 1 Step 2 description element</description>
@@ -238,6 +244,12 @@
 						<refMessage>Scenario 1 MacroActivity 1 Step 2 refMessage element</refMessage>
 					</interaction>
 					<name>Scenario 1 MacroActivity 1 Step 2 name element</name>
+					<Requirement>
+						<technicalId>Scenario 1 MacroActivity 1 Step 2 Requirement 1 techncialId</technicalId>
+					</Requirement>
+					<Requirement>
+						<technicalId>Scenario 1 MacroActivity 1 Step 2 Requirement 2 techncialId</technicalId>
+					</Requirement>
 					<service>Scenario 1 MacroActivity 1 Step 2 service element</service>
 				</Step>
 				<technicalId>Scenario 1 MacroActivity 1 tehcnicalId element</technicalId>
@@ -269,15 +281,16 @@
 					</interaction>
 					<name>Scenario 1 MacroActivity 2 Step 1 name element</name>
 					<Requirement>
-						<technicalId>Scenario 1 MacroActivity 2 Step 2 Requirement 1 techncialId</technicalId>
+						<technicalId>Scenario 1 MacroActivity 2 Step 1 Requirement 1 techncialId</technicalId>
 					</Requirement>
 					<Requirement>
-						<technicalId>Scenario 1 MacroActivity 2 Step 2 Requirement 2 techncialId</technicalId>
+						<technicalId>Scenario 1 MacroActivity 2 Step 1 Requirement 2 techncialId</technicalId>
 					</Requirement>
 					<service>Scenario 1 MacroActivity 2 Step 1 service element</service>
 				</Step>
 				<Step>
 					<BusinessObject>
+						<name>Scenario 1 MacroActivity 2 Step 2 BusinessObject 1 name</name>
 						<technicalId>Scenario 1 MacroActivity 2 Step 2 BusinessObject 1 technicalId</technicalId>
 					</BusinessObject>
 					<description>Scenario 1 MacroActivity 2 Step 2 description element</description>
@@ -295,6 +308,12 @@
 						<refMessage>Scenario 1 MacroActivity 2 Step 2 refMessage element</refMessage>
 					</interaction>
 					<name>Scenario 1 MacroActivity 2 Step 2 name element</name>
+					<Requirement>
+						<technicalId>Scenario 1 MacroActivity 2 Step 2 Requirement 1 techncialId</technicalId>
+					</Requirement>
+					<Requirement>
+						<technicalId>Scenario 1 MacroActivity 2 Step 2 Requirement 2 techncialId</technicalId>
+					</Requirement>
 					<service>Scenario 1 MacroActivity 2 Step 2 service element</service>
 				</Step>
 				<technicalId>Scenario 1 MacroActivity 2 tehcnicalId</technicalId>
@@ -336,6 +355,139 @@
 			<identifier>Scenario 2 identifier element</identifier>
 			<name>Scenario 2 name element</name>
 			<technicalId>Scenario 2 technicalId element</technicalId>
+			<MacroActivity>
+				<Drawing>
+					<drawingType>other</drawingType>
+					<name>Scenario 2 Drawing</name>
+					<URI type='Image'>https://www.ahirlabs.com/wp-content/uploads/2018/07/Scala_logo.png</URI>
+				</Drawing>
+				<name>Scenario 2 MacroActivity 1 name element</name>
+				<Step>
+					<BusinessObject>
+						<name>Scenario 2 MacroActivity 1 Step 1 BusinessObject 1 name</name>
+						<technicalId>Scenario 2 MacroActivity 1 Step 1 BusinessObject 1 technicalId</technicalId>
+					</BusinessObject>
+					<description>Scenario 2 MacroActivity 1 Step 1 description element</description>
+					<event>Scenario 2 MacroActivity 1 Step 1 event element</event>
+					<identifier>Scenario 2 MacroActivity 1 Step 1 identifier element</identifier>
+					<InformationProducer>
+						<name>Scenario 2 MacroActivity 1 Step 1 InformationProducer 1 name</name>
+						<technicalId>Scenario 2 MacroActivity 1 Step 1 InformationProducer 1 technicalId</technicalId>
+					</InformationProducer>
+					<InformationProducer>
+						<name>Scenario 2 MacroActivity 1 Step 1 InformationProducer 2 name</name>
+						<technicalId>Scenario 2 MacroActivity 1 Step 1 InformationProducer 2 technicalId</technicalId>
+					</InformationProducer>
+					<InformationReceiver>
+						<name>Scenario 2 MacroActivity 1 Step 1 InformationReceiver 1 name</name>
+						<technicalId>Scenario 2 MacroActivity 1 Step 1 InformationReceiver 1 technicalId</technicalId>
+					</InformationReceiver>
+					<interaction>
+						<refMessage>Scenario 2 MacroActivity 1 Step 1 refMessage element</refMessage>
+					</interaction>
+					<name>Scenario 2 MacroActivity 1 Step 1 name element</name>
+					<Requirement>
+						<technicalId>Scenario 2 MacroActivity 1 Step 1 Requirement 1 techncialId</technicalId>
+					</Requirement>
+					<Requirement>
+						<technicalId>Scenario 2 MacroActivity 1 Step 1 Requirement 2 techncialId</technicalId>
+					</Requirement>
+					<service>Scenario 2 MacroActivity 1 Step 1 service element</service>
+				</Step>
+				<Step>
+					<BusinessObject>
+						<name>Scenario 2 MacroActivity 2 Step 2 BusinessObject 1 name</name>
+						<technicalId>Scenario 2 MacroActivity 1 Step 2 BusinessObject 1 technicalId</technicalId>
+					</BusinessObject>
+					<description>Scenario 2 MacroActivity 1 Step 2 description element</description>
+					<event>Scenario 2 MacroActivity 1 Step 2 event element</event>
+					<identifier>Scenario 2 MacroActivity 1 Step 2 identifier element</identifier>
+					<InformationProducer>
+						<name>Scenario 2 MacroActivity 1 Step 2 InformationProducer 1 name</name>
+						<technicalId>Scenario 2 MacroActivity 1 Step 2 InformationProducer 1 technicalId</technicalId>
+					</InformationProducer>
+					<InformationReceiver>
+						<name>Scenario 2 MacroActivity 1 Step 2 InformationReceiver 1 name</name>
+						<technicalId>Scenario 2 MacroActivity 1 Step 2 InformationReceiver 1 technicalId</technicalId>
+					</InformationReceiver>
+					<interaction>
+						<refMessage>Scenario 2 MacroActivity 1 Step 2 refMessage element</refMessage>
+					</interaction>
+					<name>Scenario 2 MacroActivity 1 Step 2 name element</name>
+					<Requirement>
+						<technicalId>Scenario 2 MacroActivity 1 Step 2 Requirement 1 techncialId</technicalId>
+					</Requirement>
+					<Requirement>
+						<technicalId>Scenario 2 MacroActivity 1 Step 2 Requirement 2 techncialId</technicalId>
+					</Requirement>
+					<service>Scenario 2 MacroActivity 1 Step 2 service element</service>
+				</Step>
+				<technicalId>Scenario 2 MacroActivity 1 tehcnicalId element</technicalId>
+			</MacroActivity>
+			<MacroActivity>
+				<name>Scenario 2 MacroActivity 2 name</name>
+				<Step>
+					<BusinessObject>
+						<name>Scenario 2 MacroActivity 2 Step 1 BusinessObject 1 name</name>
+						<technicalId>Scenario 2 MacroActivity 2 Step 1 BusinessObject 1 technicalId</technicalId>
+					</BusinessObject>
+					<description>Scenario 2 MacroActivity 2 Step 1 description element</description>
+					<event>Scenario 2 MacroActivity 2 Step 1 event element</event>
+					<identifier>Scenario 2 MacroActivity 2 Step 1 identifier element</identifier>
+					<InformationProducer>
+						<name>Scenario 2 MacroActivity 2 Step 1 InformationProducer 1 name</name>
+						<technicalId>Scenario 2 MacroActivity 2 Step 1 InformationProducer 1 technicalId</technicalId>
+					</InformationProducer>
+					<InformationProducer>
+						<name>Scenario 2 MacroActivity 2 Step 1 InformationProducer 2 name</name>
+						<technicalId>Scenario 2 MacroActivity 2 Step 1 InformationProducer 2 technicalId</technicalId>
+					</InformationProducer>
+					<InformationReceiver>
+						<name>Scenario 2 MacroActivity 2 Step 1 InformationReceiver 1 name</name>
+						<technicalId>Scenario 2 MacroActivity 2 Step 1 InformationReceiver 1 technicalId</technicalId>
+					</InformationReceiver>
+					<interaction>
+						<refMessage>Scenario 2 MacroActivity 2 Step 1 refMessage element</refMessage>
+					</interaction>
+					<name>Scenario 2 MacroActivity 2 Step 1 name element</name>
+					<Requirement>
+						<technicalId>Scenario 2 MacroActivity 2 Step 1 Requirement 1 techncialId</technicalId>
+					</Requirement>
+					<Requirement>
+						<technicalId>Scenario 2 MacroActivity 2 Step 1 Requirement 2 techncialId</technicalId>
+					</Requirement>
+					<service>Scenario 2 MacroActivity 2 Step 1 service element</service>
+				</Step>
+				<Step>
+					<BusinessObject>
+						<name>Scenario 2 MacroActivity 2 Step 2 BusinessObject 1 name</name>
+						<technicalId>Scenario 2 MacroActivity 2 Step 2 BusinessObject 1 technicalId</technicalId>
+					</BusinessObject>
+					<description>Scenario 2 MacroActivity 2 Step 2 description element</description>
+					<event>Scenario 2 MacroActivity 2 Step 2 event element</event>
+					<identifier>Scenario 2 MacroActivity 2 Step 2 identifier element</identifier>
+					<InformationProducer>
+						<name>Scenario 2 MacroActivity 2 Step 2 InformationProducer 1 name</name>
+						<technicalId>Scenario 2 MacroActivity 2 Step 1 InformationProducer 1 technicalId</technicalId>
+					</InformationProducer>
+					<InformationReceiver>
+						<name>Scenario 2 MacroActivity 2 Step 1 InformationReceiver 1 name</name>
+						<technicalId>Scenario 2 MacroActivity 2 Step 1 InformationReceiver 1 technicalId</technicalId>
+					</InformationReceiver>
+					<interaction>
+						<refMessage>Scenario 2 MacroActivity 2 Step 2 refMessage element</refMessage>
+					</interaction>
+					<name>Scenario 2 MacroActivity 2 Step 2 name element</name>
+					<Requirement>
+						<technicalId>Scenario 2 MacroActivity 2 Step 2 Requirement 1 techncialId</technicalId>
+					</Requirement>
+					<Requirement>
+						<technicalId>Scenario 2 MacroActivity 2 Step 2 Requirement 2 techncialId</technicalId>
+					</Requirement>
+					<service>Scenario 2 MacroActivity 2 Step 2 service element</service>
+				</Step>
+				<technicalId>Scenario 2 MacroActivity 2 tehcnicalId</technicalId>
+			</MacroActivity>
 			<Postcondition>
 				<content>Scenario 2 Postcondition 1 content element</content>
 				<name>Scenario 2 Postcondition 1 name element</name>
