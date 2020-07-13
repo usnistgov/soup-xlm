@@ -10,11 +10,11 @@
 	xmlns:xhtml="http://www.w3.org/1999/xhtml" 
 	xmlns:err="http://www.w3.org/2005/xqt-errors" 
 	exclude-result-prefixes="array fn map math xhtml xs err" 
-	version="3.0">
+	version="2.0">
 	
 	<xsl:output method="html" version="4.0" encoding="UTF-8" omit-xml-declaration="yes"/>
 	
-	<xsl:template match="/" name="xsl:initial-template">
+	<xsl:template match="/" name="initial-template">
 		<html xmlns="http://www.w3.org/1999/xhtml">
 			<head>
 				<meta name="generator" content="HTML Tidy for Windows (vers 14 October 2008), see www.w3.org"/>

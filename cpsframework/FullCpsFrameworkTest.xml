@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--UseCasea Narrative shortDescription, RelatedUseCaseName, LevelOfDepth, Prioiritisation, Classification, Nature, Scope, and Keywords are used,
-	everything else is not.-->
-<cps:CPSFramework xmlns:cps="cpsframework" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="cpsframework ../ODDAspects.xsd">
+<?xml-stylesheet type="text/xsl" href="CPSFrameworkXMLToDOC_v2.xsl"?>
+<cps:CPSFramework xmlns:cps="cpsframework" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="cpsframework ODDAspects.xsd">
 	<BusinessCase>
 		<description>BusinessCase 1 description</description>
 		<identifier>BusinessCase 1 identifier</identifier>

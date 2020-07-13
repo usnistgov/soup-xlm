@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Project>
 	<Folder FolderName="XML Files" ExtStr="xml;cml;math;rdf;smil;svg;wml">
+		<File FilePath="FullCpsFrameworkTest.xml" HomeFolder="Yes"/>
 		<File FilePath="ODDAspects.xml" HomeFolder="Yes"/>
 	</Folder>
 	<Folder FolderName="XSL Files" ExtStr="xsl;xslt">
 		<File FilePath="CPSFrameworkDOCToXML.xsl" HomeFolder="Yes"/>
 		<File FilePath="CPSFrameworkXMLToDOC.xsl" HomeFolder="Yes"/>
+		<File FilePath="CPSFrameworkXMLToDOC_v2.xsl" HomeFolder="Yes"/>
 	</Folder>
 	<Folder FolderName="XQuery Files" ExtStr="xq;xql;xquery;xqu"/>
 	<Folder FolderName="HTML Files" ExtStr="html;htm;xhtml;asp">
@@ -40,6 +42,7 @@
 			<File FilePath="Test Output\CpsFrameworkUseCaseCpsGroupingTestOutput.html" HomeFolder="Yes"/>
 			<File FilePath="Test Output\CpsFrameworkUseCaseExtendedTestOutput.html" HomeFolder="Yes"/>
 			<File FilePath="Test Output\CpsFrameworkUseCaseTestOutput.html" HomeFolder="Yes"/>
+			<File FilePath="Test Output\FullCpsFrameworkTest.html" HomeFolder="Yes"/>
 			<File FilePath="Test Output\InformationModelOnlyTestOutput.html" HomeFolder="Yes"/>
 			<File FilePath="Test Output\SimpleCpsFrameworkTestOutput.html" HomeFolder="Yes"/>
 		</Folder>
