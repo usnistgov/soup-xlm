@@ -10,7 +10,7 @@
 	xmlns:xhtml="http://www.w3.org/1999/xhtml" 
 	xmlns:err="http://www.w3.org/2005/xqt-errors" 
 	exclude-result-prefixes="array fn map math xhtml xs err" 
-	version="2.0">
+	version="1.0">
 	
 	<xsl:output method="html" version="4.0" encoding="UTF-8" omit-xml-declaration="yes"/>
 	
@@ -621,7 +621,9 @@
 			<td width="20%" valign="top" style="width:20%;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt;height:11.8pt">
 				<p class="MsoNormal">
 					<!--LOOKUP: BusinessCase/technicalId-->
-					<xsl:attribute name="id" select="technicalId"/>
+					<xsl:attribute name="id">
+						<xsl:value-of select="technicalId"/>
+					</xsl:attribute>
 					
 					<!--LOOKUP: BusinessCase/identifier-->
 					<xsl:value-of select="identifier"/>
@@ -638,7 +640,9 @@
 				<xsl:for-each select="Domain">
 					<p class="MsoNormal">
 						<!--LOOKUP: BusinessCase/Domain/technicalId-->
-						<xsl:attribute name="id" select="technicalId"/>
+						<xsl:attribute name="id">
+							<xsl:value-of select="technicalId"/>
+						</xsl:attribute>
 						
 						<!--LOOKUP: BusinessCase/Domain/name-->
 						<xsl:value-of select="name"/>
@@ -667,7 +671,9 @@
 			<td width="7%" valign="top" style="width:7.58%;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt;height:11.8pt">
 				<p class="MsoNormal">
 					<!--LOOKUP: UseCase/technicalId-->
-					<xsl:attribute name="id" select="technicalId"/>
+					<xsl:attribute name="id">
+						<xsl:value-of select="technicalId"/>
+					</xsl:attribute>
 					
 					<!--LOOKUP: UseCase/Identifier-->
 					<xsl:value-of select="identifier"/>
@@ -707,7 +713,10 @@
 				<td width="75%" valign="top" style="width:75.86%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt">
 					<p class="MsoNormal">
 						<!--LOOKUP: UseCase/BusinessCase/technicalId-->
-						<xsl:value-of select="fn:string-join(BusinessCase/technicalId, ', ')"/>
+						<xsl:call-template name="StringJoin">
+							<xsl:with-param name="values" select="BusinessCase/technicalId"/>
+							<xsl:with-param name="joinString" select="', '"/>
+						</xsl:call-template>
 					</p>
 				</td>
 			</tr>
@@ -733,7 +742,9 @@
 				<td width="75%" valign="top" style="width:75.86%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt">
 					<xsl:for-each select="RelatedObjective">
 						<p class="MsoNormal">
-							<xsl:attribute name="id" select="technicalId"/>
+							<xsl:attribute name="id">
+								<xsl:value-of select="technicalId"/>
+							</xsl:attribute>
 							<xsl:value-of select="concat(name,': ', description)"/>
 						</p>
 					</xsl:for-each>
@@ -748,8 +759,10 @@
 			<td width="100%" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt">
 				<p class="MsoNormal">
 					<!--LOOKUP: UseCase/technicalId-->
-					<xsl:attribute name="id" select="../technicalId"/>
-				
+					<xsl:attribute name="id">
+						<xsl:value-of select="technicalId"/>
+					</xsl:attribute>
+					
 					<!--LOOKUP: UseCase/Remark/content-->
 					<xsl:value-of select="content"/>
 				</p>
@@ -776,7 +789,10 @@
 				<p class="MsoNormal">
 					<!--LOOKUP: "UseCase/Version/Author/name"
 						multiple names are join with a ', '.-->
-					<xsl:value-of select="fn:string-join(Author/name, ', ')"/>
+					<xsl:call-template name="StringJoin">
+						<xsl:with-param name="values" select="Author/name"/>
+						<xsl:with-param name="joinString" select="', '"/>
+					</xsl:call-template>
 				</p>
 			</td>
 			<td width="10%" valign="top" style="width:10%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt">
@@ -854,7 +870,9 @@
 				<td width="42%" colspan="2" valign="top" style="width:42.98%;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt">
 					<p class="MsoNormal">
 						<!--LOOKUP: UseCase/CPSGrouping/identifier-->
-						<xsl:attribute name="id" select="identifier"/>
+						<xsl:attribute name="id">
+							<xsl:value-of select="technicalId"/>
+						</xsl:attribute>
 					
 						<!--LOOKUP: UseCase/CPSGrouping/name-->
 						<xsl:value-of select="name"/>
@@ -933,7 +951,9 @@
 				<xsl:for-each select="cps:CPSFramework/UseCase/Assumption">
 					<p class="MsoNormal">
 						<!--LOOKUP: Assumption/name & Assumpiton/content-->
-						<xsl:value-of select="fn:concat(name, ': ', content)"/>
+						<xsl:value-of select="name"/>
+						<xsl:text>: </xsl:text>
+						<xsl:value-of select="content"/>
 					</p>
 				</xsl:for-each>
 			</td>
@@ -946,8 +966,10 @@
 			<td width="5%" valign="top" style="width:5%;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt">
 				<p class="MsoNormal">
 					<!--LOOKUP: UseCase/technicalId-->
-					<xsl:attribute name="id" select="../technicalId"/>
-				
+					<xsl:attribute name="id">
+						<xsl:value-of select="technicalId"/>
+					</xsl:attribute>
+					
 					<!--LOOKUP: UseCase/Reference/identifier-->
 					<xsl:value-of select="identifier"/>
 				</p>
@@ -1003,15 +1025,23 @@
 			<tr>
 				<td width="10%" valign="top" style="width:10%;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt">
 					<!--LOOKUP: UseCase/technicalId-->
-					<xsl:attribute name="id" select="technicalId"/>
+					<xsl:attribute name="id">
+						<xsl:value-of select="technicalId"/>
+					</xsl:attribute>
 					
 					<xsl:for-each select="RelatedUseCase">
 						<p class="MsoNormal">
 							<!--LOOKUP: UseCase/RelatedUseCase/technicalId-->
-							<xsl:attribute name="id" select="technicalId"/>
-							
+							<xsl:attribute name="id">
+								<xsl:value-of select="technicalId"/>
+							</xsl:attribute>
+					
 							<!--LOOKUP: UseCase/RelatedUseCase/name-->
-							<xsl:value-of select="if (position() = last()) then name else concat(name, ',')"/>
+							<!--<xsl:value-of select="if (position() = last()) then name else concat(name, ',')"/>-->
+							<xsl:value-of select="name"/>
+							<xsl:if test="position() = last()">
+								<xsl:text>, </xsl:text>
+							</xsl:if>
 						</p>
 					</xsl:for-each>
 				</td>
@@ -1096,8 +1126,10 @@
 				<td width="6%" valign="top" style="width:6.04%;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt">
 					<p class="MsoNormal">
 						<!--LOOKUP: UseCase/Scenario/technicalId-->
-						<xsl:attribute name="id" select="technicalId"/>
-					
+						<xsl:attribute name="id">
+							<xsl:value-of select="technicalId"/>
+						</xsl:attribute>
+						
 						<!--LOOKUP: UseCase/Scenario/identifier-->
 						<xsl:value-of select="identifier"/>
 					</p>
@@ -1114,7 +1146,9 @@
 						<xsl:for-each select="PrimaryCPS">
 							<p class="MsoNormal">
 								<!--LOOKUP: PrimaryCPS/technicalId-->
-								<xsl:attribute name="id" select="technicalId"/>
+								<xsl:attribute name="id">
+									<xsl:value-of select="technicalId"/>
+								</xsl:attribute>
 								
 								<!--LOOKUP: PrimaryCPS/name-->
 								<xsl:value-of select="name"/>
@@ -1161,7 +1195,8 @@
 		<h2>
 			<span lang="EN-GB" xml:lang="EN-GB">
 				<p>
-					<xsl:value-of select="fn:concat('MacroActivity - ', name)"/>
+					<xsl:text>MacroActivity - </xsl:text>
+					<xsl:value-of select="name"/>
 				</p>
 			</span>
 		</h2>
@@ -1180,7 +1215,8 @@
 		<h2>
 			<span lang="EN-GB" xml:lang="EN-GB">
 				<p>
-					<xsl:value-of select="fn:concat('Steps - ', name)"/>
+					<xsl:text>Steps - </xsl:text>
+					<xsl:value-of select="name"/>
 				</p>
 			</span>
 		</h2>
@@ -1230,8 +1266,10 @@
 					<xsl:for-each select="InformationProducer">
 						<p class="MsoNormal">
 							<!--LOOKUP: MacroActivity/Step/InformationProducer/technicalId-->
-							<xsl:attribute name="id" select="technicalId"/>
-						
+							<xsl:attribute name="id">
+								<xsl:value-of select="technicalId"/>
+							</xsl:attribute>
+											
 							<!--LOOKUP: MacroActivity/Step/InformationProducer/name-->
 							<xsl:value-of select="name"/>
 						</p>
@@ -1241,8 +1279,10 @@
 					<xsl:for-each select="InformationReceiver">
 						<p class="MsoNormal">
 							<!--LOOKUP: MacroActivity/Step/InformationReceiver/technicalId-->
-							<xsl:attribute name="id" select="technicalId"/>
-							
+							<xsl:attribute name="id">
+								<xsl:value-of select="technicalId"/>
+							</xsl:attribute>
+					
 							<!--LOOKUP: MacroActivity/Step/InformatoinReceiver/name-->
 							<xsl:value-of select="name"/>
 						</p>
@@ -1252,8 +1292,10 @@
 					<xsl:for-each select="BusinessObject">
 						<p class="MsoNormal">
 							<!--LOOKUP: MacroActivity/Step/BusinessObject/technicalId-->
-							<xsl:attribute name="id" select="technicalId"/>
-							
+							<xsl:attribute name="id">
+								<xsl:value-of select="technicalId"/>
+							</xsl:attribute>
+					
 							<!--LOOKUP: MacroActivity/Step/BusinessObject/name-->
 							<xsl:value-of select="name"/>
 						</p>
@@ -1277,7 +1319,9 @@
 			<td width="19%" valign="top" style="width:19.74%;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt">
 				<p class="MsoNormal">
 					<!--LOOKUP: InformationModel/technicalId-->
-					<xsl:attribute name="id" select="technicalId"/>
+					<xsl:attribute name="id">
+						<xsl:value-of select="technicalId"/>
+					</xsl:attribute>
 				
 					<!--LOOKUP: InformationModel/name-->
 					<xsl:value-of select="name"/>
@@ -1292,7 +1336,10 @@
 			<td width="35%" valign="top" style="width:35.6%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt">
 				<p class="MsoNormal">
 					<!--LOOKUP: InformationModel/Requirement-->
-					<xsl:value-of select="fn:string-join(Requirement/technicalId, ', ')"/>
+					<xsl:call-template name="StringJoin">
+						<xsl:with-param name="values" select="Requirement/technicalId"/>
+						<xsl:with-param name="joinString" select="', '"/>
+					</xsl:call-template>
 				</p>
 			</td>
 		</tr>
@@ -1339,13 +1386,34 @@
 	<xsl:template match="Drawing">
 		<p>
 			<xsl:element name="img">
-				<xsl:attribute name="id" select="drawingType"/>
-				<xsl:attribute name="width"><xsl:value-of select="substring-before(substring-after(URI,'W'),'_')"/></xsl:attribute>
-				<xsl:attribute name="height"><xsl:value-of select="substring-before(substring-after(URI,'H'),'_')"/></xsl:attribute>
-				<xsl:attribute name="src" select="URI"/>
-				<xsl:attribute name="alt" select="name"/>
+				<xsl:attribute name="id">
+					<xsl:value-of select="drawingType"/>
+				</xsl:attribute>
+				<xsl:attribute name="width">
+					<xsl:value-of select="substring-before(substring-after(URI,'W'),'_')"/>
+				</xsl:attribute>
+				<xsl:attribute name="height">
+					<xsl:value-of select="substring-before(substring-after(URI,'H'),'_')"/>
+					</xsl:attribute>
+				<xsl:attribute name="src">
+					<xsl:value-of select="URI"/>
+				</xsl:attribute>
+				<xsl:attribute name="alt">
+					<xsl:value-of select="name"/>
+				</xsl:attribute>
 			</xsl:element>
 		</p>
+	</xsl:template>
+
+	<xsl:template name="StringJoin">
+		<xsl:param name="values"/>
+		<xsl:param name="joinString"/>
+		<xsl:for-each select="$values">
+			<xsl:value-of select="."/>
+			<xsl:if test="position() &lt; last()">
+				<xsl:value-of select="$joinString"/>
+			</xsl:if>
+		</xsl:for-each>
 	</xsl:template>
 
 </xsl:stylesheet>
