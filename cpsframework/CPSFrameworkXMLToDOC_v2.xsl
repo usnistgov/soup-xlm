@@ -610,6 +610,109 @@
 					
 				</table>
 				
+				<h1>
+					<span lang="EN-GB" xml:lang="EN-GB">6       Interactions</span>
+				</h1>
+				
+				<h2>
+					<span lang="EN-GB" xml:lang="EN-GB">6.1 Interaction Libary Maturity</span>
+				</h2>	
+				<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">
+					<tr>
+						<td width="100%" colspan="5" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+							<p class="TableHeading">
+								<span lang="EN-GB" xml:lang="EN-GB">Interaction Maturity</span>
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<td  width="20%" valign="top" style="width:20%;border:solid windowtext 1.0pt; border-top:none;background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+							<p class="TableHeading">
+								<span lang="EN-GB" xml:lang="EN-GB">Effective</span>
+							</p>						
+						</td>
+						<td width="20%" valign="top" style="width:20%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+							<p class="TableHeading">
+								<span lang="EN-GB" xml:lang="EN-GB">Maturity</span>
+							</p>	
+						</td>
+						<td width="20%" valign="top" style="width:20%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+							<p class="TableHeading">
+								<span lang="EN-GB" xml:lang="EN-GB">Responsible Party</span>
+							</p>	
+						</td>
+						<td width="20%" valign="top" style="width:20%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+							<p class="TableHeading">
+								<span lang="EN-GB" xml:lang="EN-GB">Revision</span>
+							</p>	
+						</td>
+						<td width="20%" valign="top" style="width:20%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+							<p class="TableHeading">
+								<span lang="EN-GB" xml:lang="EN-GB">Status</span>
+							</p>	
+						</td>
+					</tr>
+					
+					<xsl:apply-templates select="cps:CPSFramework/InteractionLibrary/Maturity"/>
+					
+				</table>
+				
+				<h2>
+					<span lang="EN-GB" xml:lang="EN-GB">6.2 Influences</span>
+				</h2>
+				<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none;margin-top:16px">
+					<tr>
+						<td width="100%" colspan="2" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+							<p class="TableHeading">
+								<span lang="EN-GB" xml:lang="EN-GB">Influences</span>
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<td width="20%" valign="top" style="width:20%;border:solid windowtext 1.0pt; border-top:none;background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+							<p class="TableHeading">
+								<span lang="EN-GB" xml:lang="EN-GB">Name</span>
+							</p>
+						</td>
+						<td width="80%" valign="top" style="width:80%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+							<p class="TableHeading">
+								<span lang="EN-GB" xml:lang="EN-GB">Description</span>
+							</p>
+						</td>
+					</tr>
+					
+					<xsl:apply-templates select="cps:CPSFramework/InteractionLibrary/Influences/influence"/>
+					
+				</table>
+				
+				<h2>
+					<span lang="EN-GB" xml:lang="EN-GB">6.3 Messages</span>
+				</h2>
+				<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none;margin-top:16px">
+					<tr>
+						<td width="100%" colspan="2" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+							<p class="TableHeading">
+								<span lang="EN-GB" xml:lang="EN-GB">Messages</span>
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<td width="20%" valign="top" style="width:20%;border:solid windowtext 1.0pt; border-top:none;background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+							<p class="TableHeading">
+								<span lang="EN-GB" xml:lang="EN-GB">Name</span>
+							</p>
+						</td>
+						<td width="80%" valign="top" style="width:80%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+							<p class="TableHeading">
+								<span lang="EN-GB" xml:lang="EN-GB">Description</span>
+							</p>
+						</td>
+					</tr>
+					
+					<xsl:apply-templates select="cps:CPSFramework/InteractionLibrary/Messages/message"/>
+					
+				</table>
+				
 			</body>
 		</html>
 	</xsl:template>
@@ -1376,6 +1479,50 @@
 				<p class="MsoNormal">
 					<!--LOOKUP: Maturity/status-->
 					<xsl:value-of select="status"/>
+				</p>
+			</td>
+		</tr>
+	</xsl:template>
+
+	<xsl:template match="influence">
+		<tr>
+			<td width="20%" valign="top" style="width:20%;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt">
+				<p class="MsoNormal">
+					<!--LOOKUP: influence/technicalId-->
+					<xsl:attribute name="id">
+						<xsl:value-of select="technicalId"/>
+					</xsl:attribute>
+					
+					<!--LOOKUP: influence/name-->
+					<xsl:value-of select="name"/>
+				</p>
+			</td>
+			<td width="80%" valign="top" style="width:80%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+				<p class="MsoNormal">
+					<!--LOOKUP: influence/description-->
+					<xsl:value-of select="description"/>
+				</p>
+			</td>
+		</tr>
+	</xsl:template>
+	
+	<xsl:template match="message">
+		<tr>
+			<td width="20%" valign="top" style="width:20%;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt">
+				<p class="MsoNormal">
+					<!--LOOKUP: message/technicalId-->
+					<xsl:attribute name="id">
+						<xsl:value-of select="technicalId"/>
+					</xsl:attribute>
+					
+					<!--LOOKUP: message/name-->
+					<xsl:value-of select="name"/>
+				</p>
+			</td>
+			<td width="80%" valign="top" style="width:80%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+				<p class="MsoNormal">
+					<!--LOOKUP: message/description-->
+					<xsl:value-of select="description"/>
 				</p>
 			</td>
 		</tr>
