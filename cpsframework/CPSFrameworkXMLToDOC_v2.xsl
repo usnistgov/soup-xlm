@@ -7,15 +7,15 @@
 	xmlns:math="http://www.w3.org/2005/xpath-functions/math" 
 	xmlns:array="http://www.w3.org/2005/xpath-functions/array" 
 	xmlns:map="http://www.w3.org/2005/xpath-functions/map" 
-	xmlns:xhtml="http://www.w3.org/1999/xhtml" 
+	xmlns="http://www.w3.org/1999/xhtml" 
 	xmlns:err="http://www.w3.org/2005/xqt-errors" 
-	exclude-result-prefixes="array fn map math xhtml xs err" 
+	exclude-result-prefixes="array fn map math xs err" 
 	version="1.0">
 	
-	<xsl:output method="html" version="4.0" encoding="UTF-8" omit-xml-declaration="yes"/>
+	<xsl:output method="xml" version="4.0" encoding="UTF-8" omit-xml-declaration="yes" indent="yes"/>
 	
 	<xsl:template match="/" name="initial-template">
-		<html xmlns="http://www.w3.org/1999/xhtml">
+		<html>
 			<head>
 				<meta name="generator" content="HTML Tidy for Windows (vers 14 October 2008), see www.w3.org"/>
 				<meta http-equiv="Content-Type" content="text/html; charset=us-ascii"/>
