@@ -186,6 +186,14 @@
 			<shortDescription>Narrative ShortDescription Element</shortDescription>
 		</Narrative>
 		<nature>Nature Element</nature>
+		<Prerequisite>
+			<content>UseCase 1 Prerequisite 1 content</content>
+			<name>UseCase 1 Prerequisite 1 name</name>
+		</Prerequisite>
+		<Prerequisite>
+			<content>UseCase 1 Prerequisite 2 content</content>
+			<name>UseCase 1 Prerequisite 2 name</name>
+		</Prerequisite>
 		<prioritisation>Prioritisation Element</prioritisation>
 		<Reference>
 			<description>UseCase 1 Reference 1 description</description>

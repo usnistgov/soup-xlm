@@ -154,7 +154,7 @@
 				<h1>
 					<span lang="EN-GB" xml:lang="EN-GB">0       Description of the Business Case</span>
 				</h1>			
-				<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">
+				<table id="0" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">
 					<tr style="height:10.75pt">
 						<td width="20%" valign="top" style="width:20%;border:solid windowtext 1.0pt;background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt;height:10.75pt">
 							<p class="TableHeading">
@@ -193,7 +193,7 @@
 				<h2>
 					<span lang="EN-GB" xml:lang="EN-GB">1.1    Name of Use Case</span>
 				</h2>
-				<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">
+				<table id="1.1" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">
 					<tr style="height:10.75pt">
 						<td width="100%" colspan="3" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt;height:10.75pt">
 							<p class="TableHeading">
@@ -226,7 +226,7 @@
 				<h2>
 					<span lang="EN-GB" xml:lang="EN-GB">1.2    Version Management</span>
 				</h2>
-				<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">
+				<table id="1.2" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">
 					<tr style="height:1.0pt">
 						<td width="100%" colspan="7" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt;height:1.0pt">
 							<p class="TableHeading">
@@ -269,7 +269,7 @@
 					
 				</table>
 				
-				<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none;margin-top:16px">
+				<table id="1.2.1" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none;margin-top:16px">
 					<tr>
 						<td width="100%" colspan="5" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
 							<p class="TableHeading">
@@ -312,7 +312,7 @@
 				<h2>
 					<span lang="EN-GB" xml:lang="EN-GB">1.3    Scope and Objectives of Use Case</span>
 				</h2>
-				<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">
+				<table id="1.3" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">
 					<tr style="height:17.2pt">
 						<td width="100%" colspan="2" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt;height:17.2pt">
 							<p class="TableHeading">
@@ -328,7 +328,7 @@
 				<h2>
 					<span lang="EN-GB" xml:lang="EN-GB">1.4    Narrative of Use Case</span>
 				</h2>
-				<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">
+				<table id="1.4" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">
 					<tr style="height:1.0pt">
 						<td width="100%" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt;height:1.0pt">
 							<p class="TableHeading">
@@ -344,7 +344,7 @@
 				<h2>
 					<span lang="EN-GB" xml:lang="EN-GB">1.5    General Remarks</span>
 				</h2>
-				<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">
+				<table id="1.5" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">
 					<tr>
 						<td width="100%" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
 							<p class="TableHeading">
@@ -360,7 +360,7 @@
 				<h1>
 					<span lang="EN-GB" xml:lang="EN-GB">2       Diagrams of Use Case</span>
 				</h1>
-				<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">
+				<table id="2" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">
 					<tr>
 						<td width="100%" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; background:#BFBFBF;padding:0in 5.4pt 0in 5.4pt">
 							<p class="TableHeading">
@@ -387,7 +387,7 @@
 				<h2>
 					<span lang="EN-GB" xml:lang="EN-GB">3.2    Preconditions, Assumptions, Post condition, Events</span>
 				</h2>
-				<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">
+				<table id="3.2" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">
 					<tr>
 						<td width="100%" colspan="4" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
 							<p class="TableHeading">
@@ -398,34 +398,39 @@
 					<tr>
 						<td width="32%" valign="top" style="width:32.8%;border:solid windowtext 1.0pt; border-top:none;background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
 							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Actor/System/Information/Contract</span>
-							</p>
-						</td>
-						<td width="17%" valign="top" style="width:17.8%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Triggering Event</span>
-							</p>
-						</td>
-						<td width="15%" valign="top" style="width:15.94%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Pre-conditions</span>
+								<span lang="EN-GB" xml:lang="EN-GB">Assumption name</span>
 							</p>
 						</td>
 						<td width="33%" valign="top" style="width:33.46%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
 							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Assumption</span>
+								<span lang="EN-GB" xml:lang="EN-GB">Assumption content</span>
 							</p>
 						</td>
 					</tr>
 					
-					<xsl:call-template name="PrecoditionsAndAssumptions"/>
+					<xsl:apply-templates select="cps:CPSFramework/UseCase/Assumption"/>
+					
+					<tr>
+						<td width="32%" valign="top" style="width:32.8%;border:solid windowtext 1.0pt; border-top:none;background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+							<p class="TableHeading">
+								<span lang="EN-GB" xml:lang="EN-GB">Prerequisite name</span>
+							</p>
+						</td>
+						<td width="33%" valign="top" style="width:33.46%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+							<p class="TableHeading">
+								<span lang="EN-GB" xml:lang="EN-GB">Prerequisite content</span>
+							</p>
+						</td>
+					</tr>
+					
+					<xsl:apply-templates select="cps:CPSFramework/UseCase/Prerequisite"/>
 					
 				</table>
 				
 				<h2>
 					<span lang="EN-GB" xml:lang="EN-GB">3.3    References / Issues</span>
 				</h2>
-				<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">
+				<table id="3.3" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">
 					<tr>
 						<td width="100%" colspan="8" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
 							<p class="TableHeading">
@@ -483,7 +488,7 @@
 				<h2>
 					<span lang="EN-GB" xml:lang="EN-GB">3.4    Further Information to the Use Case for Classification / Mapping</span>
 				</h2>				
-				<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">				
+				<table id="3.4" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">				
 					<tr>
 						<td width="100%" colspan="6" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
 							<p class="TableHeading">
@@ -537,7 +542,7 @@
 				<h1>
 					<span lang="EN-GB" xml:lang="EN-GB">5       Information Exchanged</span>
 				</h1>
-				<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">
+				<table id="5" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">
 					<tr>
 						<td width="100%" colspan="5" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
 							<p class="TableHeading">
@@ -577,7 +582,7 @@
 					
 				</table>
 				
-				<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none;margin-top:16px">
+				<table id="5.0.1" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none;margin-top:16px">
 					<tr>
 						<td width="100%" colspan="3" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
 							<p class="TableHeading">
@@ -617,7 +622,7 @@
 				<h2>
 					<span lang="EN-GB" xml:lang="EN-GB">6.1 Interaction Libary Maturity</span>
 				</h2>	
-				<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">
+				<table id="6.1" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">
 					<tr>
 						<td width="100%" colspan="5" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
 							<p class="TableHeading">
@@ -660,7 +665,7 @@
 				<h2>
 					<span lang="EN-GB" xml:lang="EN-GB">6.2 Influences</span>
 				</h2>
-				<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none;margin-top:16px">
+				<table id="6.2" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none;margin-top:16px">
 					<tr>
 						<td width="100%" colspan="2" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
 							<p class="TableHeading">
@@ -688,7 +693,7 @@
 				<h2>
 					<span lang="EN-GB" xml:lang="EN-GB">6.3 Messages</span>
 				</h2>
-				<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none;margin-top:16px">
+				<table id="6.3" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none;margin-top:16px">
 					<tr>
 						<td width="100%" colspan="2" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
 							<p class="TableHeading">
@@ -949,7 +954,7 @@
 
 	<!--Create table for basic CPSGrouping and call template for any CPS elements.-->
 	<xsl:template match="CPSGrouping">
-		<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">
+		<table id="3.1" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">
 			<tr>
 				<td width="100%" colspan="4" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
 					<p class="TableHeading">
@@ -1041,24 +1046,39 @@
 		</tr>
 	</xsl:template>
 	
-	<!--Output UseCase Preconditino and Assumption elements.-->
-	<xsl:template name="PrecoditionsAndAssumptions">
+	<!--Output UseCase Precondition and Assumption elements.-->
+	<xsl:template match="Prerequisite">
 		<tr>
-			<td width="32%" style="width:32.8%;border:solid windowtext 1.0pt;border-top: none;padding:0in 5.4pt 0in 5.4pt">
+			<td width="25%" style="width:25%;border:solid windowtext 1.0pt;border-top: none;padding:0in 5.4pt 0in 5.4pt">
 				<p class="MsoNormal">
 					<!--LOOKUP: Prerequisite/name-->
-					<xsl:value-of select="cps:CPSFramework/UseCase/Prerequisite/name"/>
+					<xsl:value-of select="name"/>
 				</p>
 			</td>
-			<td width="33%" valign="top" style="width:33.46%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt">
-				<xsl:for-each select="cps:CPSFramework/UseCase/Assumption">
-					<p class="MsoNormal">
-						<!--LOOKUP: Assumption/name & Assumpiton/content-->
-						<xsl:value-of select="name"/>
-						<xsl:text>: </xsl:text>
-						<xsl:value-of select="content"/>
-					</p>
-				</xsl:for-each>
+			
+			<td width="75%" style="width:75%;border:solid windowtext 1.0pt;border-top: none;padding:0in 5.4pt 0in 5.4pt">
+				<p class="MsoNormal">
+					<!--LOOKUP: Prerequisite/content-->
+					<xsl:value-of select="content"/>	
+				</p>
+			</td>
+		</tr>
+	</xsl:template>
+	
+	<xsl:template match="Assumption">
+		<tr>
+			<td width="25%" style="width:25%;border:solid windowtext 1.0pt;border-top: none;padding:0in 5.4pt 0in 5.4pt">
+				<p class="MsoNormal">
+					<!--LOOKUP: Assumption/name-->
+					<xsl:value-of select="name"/>
+				</p>
+			</td>
+			
+			<td width="75%" style="width:75%;border:solid windowtext 1.0pt;border-top: none;padding:0in 5.4pt 0in 5.4pt">
+				<p class="MsoNormal">
+					<!--LOOKUP: Assumption/content-->
+					<xsl:value-of select="content"/>	
+				</p>
 			</td>
 		</tr>
 	</xsl:template>
@@ -1185,7 +1205,7 @@
 	<!--Output header table for a Scenario. This includes basic information about the Scenario and
 		then creates sub tables for the MacroActivities and steps in this Scenario.-->
 	<xsl:template match="Scenario">
-		<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none;margin-top: 16px">
+		<table id="4" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none;margin-top: 16px">
 			<tr style="height:14.35pt">
 				<td width="100%" colspan="6" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; background:#D9D9D9;padding:0in 5.4pt 0in 5.4pt;height:14.35pt">
 					<p class="TableHeading">
