@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--Author: Luke Donmoyer 
 	Date: June, 2020-->
-<xsl:stylesheet version="2.0" 
-	exclude-result-prefixes="xsi x n1" 
-	xmlns="cpsframework" 
-	xmlns:n1="cpsframework"
+<xsl:stylesheet version="1.0" 
+	exclude-result-prefixes="xsi x cps" 
+	xmlns:cps="cpsframework"
 	xmlns:x="http://www.w3.org/1999/xhtml"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
@@ -14,104 +13,452 @@
 	
 	<xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 
-	<!--Select the table under h2 1.1. This should only be one table.-->
-	<xsl:variable name="table1_1" select="fn:getTablesBetweenHeaders('1.1', 'h2', '1.2', 'h2')"/>
-	
-	<!--Select the table under h2 1.2. This should only be one table.-->
-	<xsl:variable name="table1_2" select="fn:getTablesBetweenHeaders('1.2', 'h2', '1.3', 'h2')"/>
-
-	<!--Select the table under h2 1.3. This should only be one table.-->
-	<xsl:variable name="table1_3" select="fn:getTablesBetweenHeaders('1.3', 'h2', '1.4', 'h2')"/>
-
-	<!--Select the table under h2 1.4. This should only be one table.-->
-	<xsl:variable name="table1_4" select="fn:getTablesBetweenHeaders('1.4', 'h2', '1.5', 'h2')"/>
-
-	<!--Select the table under h2 1.5. This should only be one table.-->
-	<xsl:variable name="table1_5" select="fn:getTablesBetweenHeaders('1.5', 'h2', '2', 'h1')"/>
-	
-	<!--Select the table under h1 5.-->
-	<xsl:variable name="table5" select="fn:getTablesBetweenHeaders('5', 'h1', '6', 'h1')"/>
-
-	<!--Root html/body node used for fn:getTablesBetweenHeaders-->
-	<xsl:variable name="htmlBody" select="/x:html/x:body"/>
-	
-	<!--Returns a sequence of nodes between the given header elements.
-		The element name of the header must also be specified, for example 'h2' for an h2 header
-		or 'h1' for an h1 header.-->
-	<xsl:function name="fn:getTablesBetweenHeaders">
-		<xsl:param name="firstHeader" as="xs:string"/>
-		<xsl:param name="firstHeaderName" as="xs:string"/>
-		<xsl:param name="lastHeader" as="xs:string"/>
-		<xsl:param name="lastHeaderName" as="xs:string"/>
-		<xsl:sequence select="
-			$htmlBody/*[name() = $firstHeaderName and x:span[contains(text(), $firstHeader)]]/following-sibling::x:table[following-sibling::*[name() = $lastHeaderName and x:span[contains(text(), $lastHeader)]]]"
-		/>
-	</xsl:function>
-
 	<xsl:template match="/">
-		<CPSFramework>
-			<xsl:call-template name="ExtractBusinessCase"/>
-			<xsl:call-template name="ExtractInformationModelLibrary"/>
-			<xsl:call-template name="ExtractUseCase"/>
-		</CPSFramework>
+		<cps:CPSFramework>
+			<xsl:call-template name="ExtractBusinessCase">
+				<xsl:with-param name="table" select="/x:html/x:body/x:table[@id='0']"/>
+			</xsl:call-template>
+			
+			<xsl:call-template name="ExtractInformationModelLibrary">
+				<xsl:with-param name="table" select="/x:html/x:body/x:table[@id='5.0.1']"/>
+			</xsl:call-template>
+			
+			<xsl:call-template name="ExtractInteractionLibrary">
+				<xsl:with-param name="htmlBody" select="/x:html/x:body"/>
+			</xsl:call-template>
+			
+			<xsl:call-template name="ExtractMaturity">
+				<xsl:with-param name="table" select="/x:html/x:body/x:table[@id='1.2.1']"/>
+			</xsl:call-template>
+			
+			<xsl:call-template name="ExtractUseCase">
+				<xsl:with-param name="htmlBody" select="/x:html/x:body"/>
+			</xsl:call-template>
+		</cps:CPSFramework>
 	</xsl:template>
 	
-	<!--Pulls data from multiple tables to recreate the BusinessCase element.-->
 	<xsl:template name="ExtractBusinessCase">
-		<xsl:for-each select="tokenize($table1_3/x:tr[2]/x:td[2]/x:p/x:span, ',')">
-			<BusinessCase>
+		<xsl:param name="table"/>
+		
+		<BusinessCase>
+			<description>
+				<xsl:value-of select="$table/x:tr[2]/x:td[4]/x:p"/>
+			</description>
+			<identifier>
+				<xsl:value-of select="$table/x:tr[2]/x:td[1]/x:p"/>
+			</identifier>
+			<name>
+				<xsl:value-of select="$table/x:tr[2]/x:td[2]/x:p"/>
+			</name>
+			<technicalId>
+				<xsl:value-of select="$table/x:tr[2]/x:td[1]/x:p/@id"/>
+			</technicalId>
+			<type>
+				<xsl:value-of select="$table/x:tr[2]/x:td[5]/x:p"/>
+			</type>
+			
+			<xsl:call-template name="ExtractBusinessCaseDomains">
+				<xsl:with-param name="nodes" select="$table/x:tr[2]/x:td[3]/x:p"/>
+			</xsl:call-template>
+			
+		</BusinessCase>
+	</xsl:template>
+	
+	<xsl:template name="ExtractBusinessCaseDomains">
+		<xsl:param name="nodes"/>
+		
+		<xsl:for-each select="$nodes">
+			<Domain>
 				<name>
 					<xsl:value-of select="."/>
 				</name>
-				<!--TODO: This could be an image?-->
-				<xsl:if test="position() = 1">
+				<technicalId>
+					<xsl:value-of select="@id"/>
+				</technicalId>
+			</Domain> 
+		</xsl:for-each>
+	</xsl:template>
+	
+	<xsl:template name="ExtractInformationModelLibrary">
+		<xsl:param name="table"/>
+		
+		<InformationModelLibrary>
+			<xsl:call-template name="ExtractInformationModel">
+				<xsl:with-param name="nodes" select="$table/x:tr[position() > 2]"/>
+			</xsl:call-template>
+			
+			<xsl:call-template name="ExtractMaturity">
+				<xsl:with-param name="table" select="$table/../x:table[@id='5']"/>
+			</xsl:call-template>
+		</InformationModelLibrary>
+	</xsl:template>
+	
+	<xsl:template name="ExtractInformationModel">
+		<xsl:param name="nodes"/>
+		
+		<xsl:for-each select="$nodes">
+			<InformationModelLibrary>
+				<description>
+					<xsl:value-of select="x:td[2]/x:p"/>
+				</description>
+				<name>
+					<xsl:value-of select="x:td[1]/x:p"/>
+				</name>
+				
+				<xsl:call-template name="ExtractRequirement">
+					<xsl:with-param name="nodes" select="x:td[3]/x:p"/>
+				</xsl:call-template>
+				
+				<technicalId>
+					<xsl:value-of select="x:td[1]/x:p/@id"/>
+				</technicalId>
+			</InformationModelLibrary>
+		</xsl:for-each>
+	</xsl:template>
+	
+	<xsl:template name="ExtractRequirement">
+		<xsl:param name="nodes"/>
+		
+		<xsl:for-each select="$nodes">
+			<Requirement>
+				<technicalId>
+					<xsl:value-of select="."/>
+				</technicalId>
+			</Requirement>
+		</xsl:for-each>
+	</xsl:template>
+	
+	<xsl:template name="ExtractMaturity">
+		<xsl:param name="table"/>
+		
+		<Maturity>
+			<effective>
+				<xsl:value-of select="$table/x:tr[3]/x:td[1]/x:p"/>
+			</effective>
+			<maturity>
+				<xsl:value-of select="$table/x:tr[3]/x:td[2]/x:p"/>
+			</maturity>
+			<responsibleParty>
+				<xsl:value-of select="$table/x:tr[3]/x:td[3]/x:p"/>
+			</responsibleParty>
+			<revision>
+				<xsl:value-of select="$table/x:tr[3]/x:td[4]/x:p"/>
+			</revision>
+			<status>
+				<xsl:value-of select="$table/x:tr[3]/x:td[5]/x:p"/>
+			</status>
+		</Maturity>
+	</xsl:template>
+	
+	<xsl:template name="ExtractInteractionLibrary">
+		<xsl:param name="htmlBody"/>
+		
+		<InteractionLibrary>
+			<xsl:call-template name="ExtractInfluences">
+				<xsl:with-param name="table" select="$htmlBody/x:table[@id='6.2']"/>
+			</xsl:call-template>
+			
+			<xsl:call-template name="ExtractMaturity">
+				<xsl:with-param name="table" select="$htmlBody/x:table[@id='6.1']"/>
+			</xsl:call-template>
+			
+			<xsl:call-template name="ExtractMessages">
+				<xsl:with-param name="table" select="$htmlBody/x:table[@id='6.3']"/>
+			</xsl:call-template>
+		</InteractionLibrary>
+	</xsl:template>
+	
+	<xsl:template name="ExtractInfluences">
+		<xsl:param name="table"/>
+		
+		<Influences>
+			<xsl:for-each select="$table/x:tr[position() > 2]">
+				<influence>
 					<description>
-						<xsl:value-of select="$table1_3/x:tr[3]/x:td[2]/x:p/x:span/n1:p"/>
+						<xsl:value-of select="x:td[2]/x:p"/>
 					</description>
-				</xsl:if>
-				<Domain>
 					<name>
-						<!--The BusinessCase/Domain/name and any UseCase/AdditionalDomain are combined with commas
-							with the BusinessCase name always coming first, so split the value on commas and select the first element-->
-						<xsl:if test="position() = 1">
-							<xsl:value-of select="tokenize($table1_1/x:tr[3]/x:td[2]/x:p/x:span, ',')[1]"/>
-						</xsl:if>
+						<xsl:value-of select="x:td[1]/x:p"/>
 					</name>
-				</Domain>
+					<technicalId>
+						<xsl:value-of select="x:td[1]/x:p/@id"/>
+					</technicalId>
+				</influence>
+			</xsl:for-each>
+		</Influences>
+	</xsl:template>
+	
+	<xsl:template name="ExtractMessages">
+		<xsl:param name="table"/>
+		
+		<Messages>
+			<xsl:for-each select="$table/x:tr[position() > 2]">
+				<message>
+					<description>
+						<xsl:value-of select="x:td[2]/x:p"/>
+					</description>
+					<name>
+						<xsl:value-of select="x:td[1]/x:p"/>
+					</name>
+					<technicalId>
+						<xsl:value-of select="x:td[1]/x:p/@id"/>
+					</technicalId>
+				</message>
+			</xsl:for-each>
+		</Messages>
+	</xsl:template>
+	
+	<xsl:template name="ExtractUseCase">
+		<xsl:param name="htmlBody"/>
+		
+		<xsl:variable name="basicInformationTable" select="$htmlBody/x:table[@id='1.1']"/>
+		<xsl:variable name="additionalInformationTable" select="$htmlBody/x:table[@id='3.5']"/>
+		
+		<UseCase>
+			<identifier>
+				<xsl:value-of select="$basicInformationTable/x:tr[3]/x:td[1]/x:p"/>
+			</identifier>
+			<name>
+				<xsl:value-of select="$basicInformationTable/x:tr[3]/x:td[3]/x:p"/>
+			</name>
+			<technicalId>
+				<xsl:value-of select="$basicInformationTable/x:tr[3]/x:td[1]/x:p/@id"/>
+			</technicalId>
+			
+			<xsl:call-template name="ExtractAssumption">
+				<xsl:with-param name="table" select="$htmlBody/x:table[@id='3.2']"/>
+			</xsl:call-template>
+			
+			<xsl:call-template name="ExtractRelatedBusinessCase">
+				<xsl:with-param name="table" select="$htmlBody/x:table[@id='1.3']"/>
+			</xsl:call-template>
+			
+			<classification>
+				<xsl:value-of select="$additionalInformationTable/x:tr[3]/x:td[4]/x:p"/>
+			</classification>
+			
+			<xsl:call-template name="ExtractCPSGrouping">
+				<xsl:with-param name="table" select="$htmlBody/x:table[@id='3.1']"/>
+			</xsl:call-template>
+			
+			<xsl:for-each select="$htmlBody/x:table[@id='2']/x:tr[2]/x:td/x:p/x:img">
+				<xsl:call-template name="ExtractDrawing">
+					<xsl:with-param name="imgElement" select="."/>
+				</xsl:call-template>
+			</xsl:for-each>
+			
+			<Keywords>
+				<xsl:value-of select="$additionalInformationTable/x:tr[3]/x:td[6]/x:p"/>
+			</Keywords>
+			<levelOfDepth>
+				<xsl:value-of select="$additionalInformationTable/x:tr[3]/x:td[2]/x:p"/>
+			</levelOfDepth>
+			
+			<xsl:call-template name="ExtractNarrative">
+				<xsl:with-param name="table" select="$htmlBody/x:table[@id='1.4']"/>
+			</xsl:call-template>
+			
+			<nature>
+				<xsl:value-of select="$additionalInformationTable/x:tr[3]/x:td[5]/x:p"/>
+			</nature>
+			
+			<xsl:call-template name="ExtractPrerequisite">
+				<xsl:with-param name="table" select="$htmlBody/x:table[@id='3.3']"/>
+			</xsl:call-template>
+			
+			<prioritisation>
+				<xsl:value-of select="$additionalInformationTable/x:tr[3]/x:td[3]/x:p"/>
+			</prioritisation>
+			
+			<xsl:call-template name="ExtractReference">
+				<xsl:with-param name="table" select="$htmlBody/x:table[@id='3.4']"/>
+			</xsl:call-template>
+			
+			<xsl:call-template name="ExtractRelatedObjective">
+				<xsl:with-param name="table" select="$htmlBody/x:table[@id='1.3']"/>
+			</xsl:call-template>
+			
+			<xsl:call-template name="ExtractRelatedUseCase">
+				<xsl:with-param name="table" select="$htmlBody/x:table[@id='3.5']"/>
+			</xsl:call-template>
+			
+		</UseCase>
+	</xsl:template>
+
+	<xsl:template name="ExtractAssumption">
+		<xsl:param name="table"/>
+		
+		<xsl:for-each select="$table/x:tr[position() > 2]">
+			<Assumption>
+				<content>
+					<xsl:value-of select="x:td[2]/x:p"/>
+				</content>
+				<name>
+					<xsl:value-of select="x:td[1]/x:p"/>
+				</name>
+			</Assumption>
+		</xsl:for-each>
+	</xsl:template>
+	
+	<xsl:template name="ExtractRelatedBusinessCase">
+		<xsl:param name="table"/>
+		
+		<xsl:for-each select="$table/x:tr[2]/x:td[2]/x:p">
+			<BusinessCase>
+				<technicalId>
+					<xsl:value-of select="."/>
+				</technicalId>
 			</BusinessCase>
 		</xsl:for-each>
 	</xsl:template>
 	
-	<!--Pulls data from the table under h1 5 to recreate the InformationModelLibrary element-->
-	<xsl:template name="ExtractInformationModelLibrary">
-		<InformationModelLibrary>
-			<xsl:for-each select="subsequence($table5/x:tr, 3)">
-				<InformationModel>
-					<description>
-						<xsl:value-of select="x:td[2]/x:p/x:span/n1:p"/>
-					</description>
+	<xsl:template name="ExtractCPSGrouping">
+		<xsl:param name="table"/>
+		
+		<CPSGrouping>
+			<xsl:for-each select="$table/x:tr[position() > 4]">
+				<CPS>
+					<furtherInformation>
+						<xsl:value-of select="x:td[3]/x:p"/>
+					</furtherInformation>				
 					<name>
-						<xsl:value-of select="x:td[1]/x:p/x:span/n1:p"/>
+						<xsl:value-of select="x:td[1]/x:p"/>
 					</name>
-				</InformationModel>
+					<technicalId>
+						<xsl:value-of select="x:td[2]/x:p"/>
+					</technicalId>
+				</CPS>
 			</xsl:for-each>
-		</InformationModelLibrary>
-	</xsl:template>
-
-	<xsl:template name="ExtractUseCase">
-		<UseCase>
+		
+			<description>
+				<xsl:value-of select="$table/x:tr[3]/x:td[2]/x:p"/>
+			</description>
 			<identifier>
-				<xsl:value-of select="$table1_1/x:tr[3]/x:td[1]/x:p/x:span"/>
+				<xsl:value-of select="$table/x:tr[3]/x:td[1]/x:p/@id"/>
 			</identifier>
 			<name>
-				<xsl:value-of select="$table1_1/x:tr[3]/x:td[3]/x:p/x:span"/>
+				<xsl:value-of select="$table/x:tr[3]/x:td[1]/x:p/img"/>
 			</name>
-			<Version>
-				<date></date>
-			</Version>
-		</UseCase>
+		</CPSGrouping>
 	</xsl:template>
-
+	
+	<xsl:template name="ExtractDrawing">
+		<xsl:param name="imgElement"/>
+	
+		<Drawing>
+			<drawingType>
+				<xsl:value-of select="$imgElement/@id"/>
+			</drawingType>
+			<name>
+				<xsl:value-of select="$imgElement/@alt"/>
+			</name>
+			<URI type='Image'>
+				<xsl:value-of select="$imgElement/@src"/>
+			</URI>
+		</Drawing>
+	</xsl:template>
+	
+	<xsl:template name="ExtractNarrative">
+		<xsl:param name="table"/>
+		
+		<Narrative>
+			<completeDescription>
+				<xsl:value-of select="$table/x:tr[3]/x:td/x:p"/>
+			</completeDescription>
+			<shortDescription>
+				<xsl:value-of select="$table/x:tr[5]/x:td/x:p"/>
+			</shortDescription>
+		</Narrative>
+	</xsl:template>
+	
+	<xsl:template name="ExtractPrerequisite">
+		<xsl:param name="table"/>
+		
+		<xsl:for-each select="$table/x:tr[position() > 1]">
+			<Prerequisite>
+				<content>
+					<xsl:value-of select="x:td[2]/x:p"/>
+				</content>
+				<name>
+					<xsl:value-of select="x:td[1]/x:p"/>
+				</name>
+			</Prerequisite>
+		</xsl:for-each>
+	</xsl:template>
+	
+	<xsl:template name="ExtractReference">
+		<xsl:param name="table"/>
+		
+		<xsl:for-each select="$table/x:tr[position() > 2]">
+			<Reference>
+				<description>
+					<xsl:value-of select="x:td[4]/x:p"/>
+				</description>
+				<identifier>
+					<xsl:value-of select="x:td[1]/x:p"/>
+				</identifier>
+				<impact>
+					<xsl:value-of select="x:td[6]/x:p"/>
+				</impact>
+				<link>
+					<xsl:value-of select="x:td[8]/x:p"/>
+				</link>
+				<name>
+					<xsl:value-of select="x:td[3]/x:p"/>
+				</name>
+				<originatorOrganisation>
+					<xsl:value-of select="x:td[7]/x:p"/>
+				</originatorOrganisation>
+				<status>
+					<xsl:value-of select="x:td[5]/x:p"/>
+				</status>
+				<type>
+					<xsl:value-of select="x:td[2]/x:p"/>
+				</type>
+			</Reference>
+		</xsl:for-each>
+	</xsl:template>
+	
+	<xsl:template name="ExtractRelatedObjective">
+		<xsl:param name="table"/>
+		
+		<xsl:for-each select="$table/x:tr[4]/x:td[2]/x:p">
+			<RelatedObjective>
+				<description>
+					<xsl:value-of select="substring-after(., ': ')"/>
+				</description>
+				<name>
+					<xsl:value-of select="substring-before(., ': ')"/>
+				</name>
+				<technicalId>
+					<xsl:value-of select="@id"/>
+				</technicalId>
+			</RelatedObjective>
+		</xsl:for-each>
+	</xsl:template>
+	
+	<xsl:template name="ExtractRelatedUseCase">
+		<xsl:param name="table"/>
+		
+		<xsl:for-each select="$table/x:tr[3]/x:td[1]/x:p">
+			<RelatedUseCase>
+				<name>
+					<xsl:choose>
+						<xsl:when test="position() = last()">
+							<xsl:value-of select="."/>
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:value-of select="substring-before(., ',')"/>
+						</xsl:otherwise>
+					</xsl:choose>
+				</name>
+				<technicalId>
+					<xsl:value-of select="@id"/>
+				</technicalId>
+			</RelatedUseCase>
+		</xsl:for-each>
+	</xsl:template>
+	
 </xsl:stylesheet>
 
 

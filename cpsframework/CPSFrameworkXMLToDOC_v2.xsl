@@ -410,6 +410,9 @@
 					
 					<xsl:apply-templates select="cps:CPSFramework/UseCase/Assumption"/>
 					
+				</table>
+					
+				<table id="3.3" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">
 					<tr>
 						<td width="32%" valign="top" style="width:32.8%;border:solid windowtext 1.0pt; border-top:none;background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
 							<p class="TableHeading">
@@ -430,7 +433,7 @@
 				<h2>
 					<span lang="EN-GB" xml:lang="EN-GB">3.3    References / Issues</span>
 				</h2>
-				<table id="3.3" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">
+				<table id="3.4" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">
 					<tr>
 						<td width="100%" colspan="8" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
 							<p class="TableHeading">
@@ -488,7 +491,7 @@
 				<h2>
 					<span lang="EN-GB" xml:lang="EN-GB">3.4    Further Information to the Use Case for Classification / Mapping</span>
 				</h2>				
-				<table id="3.4" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">				
+				<table id="3.5" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">				
 					<tr>
 						<td width="100%" colspan="6" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
 							<p class="TableHeading">
@@ -819,13 +822,20 @@
 					</p>
 				</td>
 				<td width="75%" valign="top" style="width:75.86%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt">
-					<p class="MsoNormal">
-						<!--LOOKUP: UseCase/BusinessCase/technicalId-->
-						<xsl:call-template name="StringJoin">
-							<xsl:with-param name="values" select="BusinessCase/technicalId"/>
-							<xsl:with-param name="joinString" select="', '"/>
-						</xsl:call-template>
-					</p>
+					<!--LOOKUP: UseCase/BusinessCase/technicalId-->
+					<xsl:for-each select="BusinessCase">
+						<p class="MsoNormal">
+							<xsl:value-of select="technicalId"/>
+							<xsl:if test="position() &lt; last()">
+								<xsl:text>, </xsl:text>
+							</xsl:if>
+							
+							<!--<xsl:call-template name="StringJoin">
+								<xsl:with-param name="values" select="BusinessCase/technicalId"/>
+								<xsl:with-param name="joinString" select="', '"/>
+							</xsl:call-template>-->
+						</p>
+					</xsl:for-each>
 				</td>
 			</tr>
 			<tr>
@@ -979,7 +989,7 @@
 					<p class="MsoNormal">
 						<!--LOOKUP: UseCase/CPSGrouping/identifier-->
 						<xsl:attribute name="id">
-							<xsl:value-of select="technicalId"/>
+							<xsl:value-of select="identifier"/>
 						</xsl:attribute>
 					
 						<!--LOOKUP: UseCase/CPSGrouping/name-->
@@ -1162,8 +1172,8 @@
 							<!--LOOKUP: UseCase/RelatedUseCase/name-->
 							<!--<xsl:value-of select="if (position() = last()) then name else concat(name, ',')"/>-->
 							<xsl:value-of select="name"/>
-							<xsl:if test="position() = last()">
-								<xsl:text>, </xsl:text>
+							<xsl:if test="position() &lt; last()">
+								<xsl:text>,</xsl:text>
 							</xsl:if>
 						</p>
 					</xsl:for-each>
@@ -1457,13 +1467,21 @@
 				</p>
 			</td>
 			<td width="35%" valign="top" style="width:35.6%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt">
-				<p class="MsoNormal">
-					<!--LOOKUP: InformationModel/Requirement-->
-					<xsl:call-template name="StringJoin">
-						<xsl:with-param name="values" select="Requirement/technicalId"/>
-						<xsl:with-param name="joinString" select="', '"/>
-					</xsl:call-template>
-				</p>
+				<xsl:for-each select="Requirement">
+					<p class="MsoNormal">
+						<!--LOOKUP: InformationModel/Requirement-->
+						<xsl:value-of select="technicalId"/>
+						
+						<xsl:if test="position() &lt; last()">
+							<xsl:text>,</xsl:text>
+						</xsl:if>
+						
+						<!--<xsl:call-template name="StringJoin">
+							<xsl:with-param name="values" select="Requirement/technicalId"/>
+							<xsl:with-param name="joinString" select="', '"/>
+						</xsl:call-template>-->
+					</p>
+				</xsl:for-each>
 			</td>
 		</tr>
 	</xsl:template>

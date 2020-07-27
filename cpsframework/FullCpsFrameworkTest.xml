@@ -166,7 +166,7 @@
 			<name>UseCase 1 Drawing 1</name>
 			<URI type='Image'>https://upload.wikimedia.org/wikipedia/commons/8/85/Logo-Test.png</URI>
 		</Drawing>
-				<Drawing>
+		<Drawing>
 			<drawingType>other</drawingType>
 			<name>UseCase 1 Drawing 2</name>
 			<URI type='Image'>https://upload.wikimedia.org/wikipedia/commons/8/85/Logo-Test.png</URI>
