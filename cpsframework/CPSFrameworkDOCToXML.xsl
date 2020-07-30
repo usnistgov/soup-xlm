@@ -282,6 +282,16 @@
 				<xsl:with-param name="table" select="$htmlBody/x:table[@id='3.5']"/>
 			</xsl:call-template>
 			
+			<xsl:call-template name="ExtractRemark">
+				<xsl:with-param name="table" select="$htmlBody/x:table[@id='1.5']"/>
+			</xsl:call-template>
+			
+			<xsl:for-each select="$htmlBody/x:div[@id='4']">
+				<xsl:call-template name="ExtractScenario">
+					<xsl:with-param name="div" select="."/>
+				</xsl:call-template>
+			</xsl:for-each>
+			
 		</UseCase>
 	</xsl:template>
 
@@ -345,17 +355,19 @@
 	<xsl:template name="ExtractDrawing">
 		<xsl:param name="imgElement"/>
 	
-		<Drawing>
-			<drawingType>
-				<xsl:value-of select="$imgElement/@id"/>
-			</drawingType>
-			<name>
-				<xsl:value-of select="$imgElement/@alt"/>
-			</name>
-			<URI type='Image'>
-				<xsl:value-of select="$imgElement/@src"/>
-			</URI>
-		</Drawing>
+		<xsl:if test="$imgElement">
+			<Drawing>
+				<drawingType>
+					<xsl:value-of select="$imgElement/@id"/>
+				</drawingType>
+				<name>
+					<xsl:value-of select="$imgElement/@alt"/>
+				</name>
+				<URI type='Image'>
+					<xsl:value-of select="$imgElement/@src"/>
+				</URI>
+			</Drawing>
+		</xsl:if>
 	</xsl:template>
 	
 	<xsl:template name="ExtractNarrative">
@@ -456,6 +468,155 @@
 					<xsl:value-of select="@id"/>
 				</technicalId>
 			</RelatedUseCase>
+		</xsl:for-each>
+	</xsl:template>
+	
+	<xsl:template name="ExtractRemark">
+		<xsl:param name="table"/>
+		
+		<xsl:for-each select="$table/x:tr[position() > 1]">
+			<Remark>
+				<content>
+					<xsl:value-of select="x:td/x:p"/>
+				</content>
+			</Remark>
+		</xsl:for-each>
+	</xsl:template>
+	
+	<xsl:template name="ExtractScenario">
+		<xsl:param name="div"/>
+		
+		<xsl:variable name="table" select="$div/x:table[1]"/>
+		
+		<Scenario>
+			<identifier>
+				<xsl:value-of select="$table/x:tr[3]/x:td[1]/x:p"/>
+			</identifier>
+			<name>
+				<xsl:value-of select="$table/x:tr[3]/x:td[2]/x:p"/>
+			</name>
+			<technicalId>
+				<xsl:value-of select="$table/x:tr[3]/x:td[1]/x:p/@id"/>
+			</technicalId>
+			
+			<xsl:call-template name="ExtractMacroActivity">
+				<xsl:with-param name="divNodes" select="$div/x:div"/>
+			</xsl:call-template>
+			
+			<xsl:call-template name="ExtractPostcondition">
+				<xsl:with-param name="table" select="$table"/>
+			</xsl:call-template>
+			
+			<xsl:call-template name="ExtractPrecondition">
+				<xsl:with-param name="table" select="$table"/>
+			</xsl:call-template>
+			
+			<xsl:call-template name="ExtractPrimaryCPS">
+				<xsl:with-param name="table" select="$table"/>
+			</xsl:call-template>
+			
+			<xsl:call-template name="ExtractTriggeringEvent">
+				<xsl:with-param name="table" select="$table"/>
+			</xsl:call-template>
+		</Scenario>
+	</xsl:template>
+	
+	<xsl:template name="ExtractMacroActivity">
+		<xsl:param name="divNodes"/>
+		
+		<xsl:for-each select="$divNodes">
+			<MacroActivity>
+				<xsl:call-template name="ExtractDrawing">
+					<xsl:with-param name="imgElement" select="x:h2/x:p/x:img"/>
+				</xsl:call-template>
+			
+				<name>
+					<xsl:value-of select="substring-after(x:h2/x:span/x:p, 'MacroActivity - ')"/>
+				</name>
+				
+				<xsl:call-template name="ExtractStep">
+					<xsl:with-param name="divNodes" select="x:div"/>
+				</xsl:call-template>
+				
+				<technicalId>
+					<xsl:value-of select="x:h2/x:span/x:p/@id"/>
+				</technicalId>
+			</MacroActivity>
+		</xsl:for-each>
+	</xsl:template>
+	
+	<xsl:template name="ExtractStep">
+		<xsl:param name="divNodes"/>
+		
+		<xsl:for-each select="$divNodes">
+			<Step>
+				<name>
+					<xsl:value-of select="substring-after(x:h2/x:span/x:p, 'Steps - ')"/>
+				</name>
+			</Step>
+		</xsl:for-each>
+	</xsl:template>
+	
+	<xsl:template name="ExtractPostcondition">
+		<xsl:param name="table"/>
+		
+		
+		<xsl:for-each select="$table/x:tr[3]/x:td[6]/x:p">
+			<Postcondition>
+				<content>
+					<xsl:value-of select="substring-after(., ': ')"/>
+				</content>
+				<name>
+					<xsl:value-of select="substring-before(., ': ')"/>
+				</name>
+			</Postcondition>
+		</xsl:for-each>
+	</xsl:template>
+	
+	<xsl:template name="ExtractPrecondition">
+		<xsl:param name="table"/>
+		
+		
+		<xsl:for-each select="$table/x:tr[3]/x:td[5]/x:p">
+			<Precondition>
+				<content>
+					<xsl:value-of select="substring-after(., ': ')"/>
+				</content>
+				<name>
+					<xsl:value-of select="substring-before(., ': ')"/>
+				</name>
+			</Precondition>
+		</xsl:for-each>
+	</xsl:template>
+	
+	
+	<xsl:template name="ExtractPrimaryCPS">	
+		<xsl:param name="table"/>
+		
+		<xsl:for-each select="$table/x:tr[3]/x:td[3]/x:p">
+			<PrimaryCPS>
+				<name>
+					<xsl:value-of select="."/>
+				</name>
+				<technicalId>
+					<xsl:value-of select="@id"/>
+				</technicalId>
+			</PrimaryCPS>
+		</xsl:for-each>
+	</xsl:template>
+	
+	<xsl:template name="ExtractTriggeringEvent">
+		<xsl:param name="table"/>
+		
+		<xsl:for-each select="$table/x:tr[3]/x:td[4]/x:p">
+			<TriggeringEvent>
+				<content>
+					<xsl:value-of select="substring-after(., ': ')"/>
+				</content>
+				<name>
+					<xsl:value-of select="substring-before(., ': ')"/>
+				</name>
+			</TriggeringEvent>
 		</xsl:for-each>
 	</xsl:template>
 	
