@@ -39,6 +39,15 @@
 				<technicalId>InformationModel 1 Requirement 3 technicalId</technicalId>
 			</Requirement>
 			<technicalId>InformationModel 1 technicalId</technicalId>
+			<Aspects>
+			<functional>
+				<TransportationInfrastructure>
+					<Property>
+						<statement> TBD </statement>
+					</Property>
+				</TransportationInfrastructure>
+			</functional>
+		</Aspects>
 		</InformationModel>
 		<InformationModel>
 			<description>InformationModel 2 description</description>
@@ -53,6 +62,15 @@
 				<technicalId>InformationModel 2 Requirement 3 technicalId</technicalId>
 			</Requirement>
 			<technicalId>InformationModel 2 technicalId</technicalId>
+			<Aspects>
+			<functional>
+				<TransportationInfrastructure>
+					<Property>
+						<statement> TBD </statement>
+					</Property>
+				</TransportationInfrastructure>
+			</functional>
+		</Aspects>
 		</InformationModel>
 		<Maturity>
 			<effective>InformationModelLibrary Maturity effective</effective>
