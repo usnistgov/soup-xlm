@@ -8,16 +8,19 @@
 	xmlns:math="http://www.w3.org/2005/xpath-functions/math" 
 	xmlns:array="http://www.w3.org/2005/xpath-functions/array" 
 	xmlns:map="http://www.w3.org/2005/xpath-functions/map" 
+	xmlns:msxsl="urn:schemas-microsoft-com:xslt"
 	xmlns="http://www.w3.org/1999/xhtml" 
 	xmlns:err="http://www.w3.org/2005/xqt-errors" 
-	exclude-result-prefixes="array fn map math xs err lookup" 
+	exclude-result-prefixes="array fn map math xs err msxsl" 
 	version="1.0">
 	
 	<xsl:output method="xml" version="4.0" encoding="UTF-8" omit-xml-declaration="yes" indent="yes"/>
 	
-	<xsl:variable name="AspectLookupTable">
+	<xsl:variable name="AspectLookupTableString">
 		<xsl:call-template name="CreateAspectLookup"/>
 	</xsl:variable>
+	
+	<xsl:variable name="AspectLookupTable" select="msxsl:node-set($AspectLookupTableString)"/>
 	
 	<xsl:template match="/" name="initial-template">
 		<html>
@@ -550,7 +553,7 @@
 				<h1>
 					<span lang="EN-GB" xml:lang="EN-GB">4       Step by Step Analysis of Use Case</span>
 				</h1>
-				<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">
+				<table id="4" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">
 					<tr style="height:14.35pt">
 						<td width="100%" colspan="6" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; background:#D9D9D9;padding:0in 5.4pt 0in 5.4pt;height:14.35pt">
 							<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">Scenario Conditions</span></p>
@@ -577,9 +580,11 @@
 						</td>
 					</tr>
 					
-					<xsl:apply-templates select="cps:CPSFramework/UseCase/Scenario"/>
+					<xsl:apply-templates select="cps:CPSFramework/UseCase/Scenario" mode="ScenarioTable"/>
 					
 				</table>
+				
+				<xsl:apply-templates select="cps:CPSFramework/UseCase/Scenario" mode="ScenarioStepsTable"/>
 				
 				<h1>
 					<span lang="EN-GB" xml:lang="EN-GB">5       Information Exchanged</span>
@@ -785,7 +790,7 @@
 						</td>
 					</tr>
 					
-					<xsl:apply-templates select="$AspectLookupTable/lookup:lookup/lookup:entry"/>
+					<xsl:apply-templates select="$AspectLookupTable/lookup:entry"/>
 					
 				</table>
 				
@@ -1290,7 +1295,7 @@
 
 	<!--Output header table for a Scenario. This includes basic information about the Scenario and
 		then creates sub tables for the MacroActivities and steps in this Scenario.-->
-	<xsl:template match="Scenario">
+	<xsl:template match="Scenario" mode="ScenarioTable">
 		<tr>
 			<td width="6%" valign="top" style="width:6.04%;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt">
 				<p class="MsoNormal">
@@ -1361,158 +1366,165 @@
 		</tr>
 	</xsl:template>
 	
-	<xsl:template name="ScenarioStepTables">
+	<xsl:template match="Scenario" mode="ScenarioStepsTable">
+		<h2>
+			<span lang="EN-GB" xml:lang="EN-GB">
+				<p>
+					<!--LOOKUP: Scenario/technicalId-->
+					<xsl:attribute name="id">
+						<xsl:value-of select="technicalId"/>
+					</xsl:attribute>
+				
+					<!--LOOKUP: Scenario/name-->
+					<xsl:text>Steps - </xsl:text>
+					<xsl:value-of select="name"/>
+				</p>
+			</span>
+		</h2>
 		
+		<table id="4.1" class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse">
+			<tr>
+				<td width="100%" colspan="9" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+					<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">Scenario</span></p>
+				</td>
+			</tr>
+			<tr>
+				<td width="13%" colspan="2" valign="top" style="width:13.92%;border:solid windowtext 1.0pt; border-top:none;background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+					<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">Scenario Name :</span></p>
+				</td>
+				<td width="86%" colspan="7" valign="top" style="width:86.08%;border-top:none; border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt">
+					<p class="MsoNormal">
+						<!--LOOKUP: Scenario/name-->
+						<xsl:value-of select="name"/>
+					</p>
+				</td>
+			</tr>
+			<tr style="height:12.55pt">
+				<td width="6%" valign="top" style="width:6.48%;border-top:none;border-left: solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt;height:12.55pt">
+					<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">Step No.</span></p>
+				</td>
+				<td width="7%" valign="top" style="width:7.44%;border:none;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt;height:12.55pt">
+					<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">Event</span></p>
+				</td>
+				<td width="12%" valign="top" style="width:12.1%;border:none;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt;height:12.55pt">
+					<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">Name of Process/ Activity</span></p>
+				</td>
+				<td width="13%" valign="top" style="width:13.38%;border:none;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt;height:12.55pt">
+					<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">Description of Process/ Activity</span></p>
+				</td>
+				<td width="9%" valign="top" style="width:9.82%;border:none;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt;height:12.55pt">
+					<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">Service</span></p>
+					<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB"/></p>
+				</td>
+				<td width="12%" valign="top" style="width:12.32%;border:none;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt;height:12.55pt">
+					<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">Information Producer (Actor)</span></p>
+				</td>
+				<td width="12%" valign="top" style="width:12.66%;border:none;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt;height:12.55pt">
+					<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">Information Receiver (Actor)</span></p>
+				</td>
+				<td width="13%" valign="top" style="width:13.34%;border:none;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt;height:12.55pt">
+					<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">Information Exchanged</span></p>
+				</td>
+				<td width="12%" valign="top" style="width:12.5%;border:none;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt;height:12.55pt">
+					<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">Requirements , R-ID</span></p>
+				</td>
+			</tr>
+			
+			<xsl:apply-templates select="MacroActivity"/>
+			
+		</table>
 	</xsl:template>
 	
 	<!--Ouptut sub tables for a MacroActivity.-->
 	<xsl:template match="MacroActivity">
-		<xsl:param name="scenarioNumber"/>
-		
-		<div>
-			<xsl:attribute name="id">
-				<xsl:text>MacroActivity </xsl:text>
-				<xsl:value-of select="position()"/>
-			</xsl:attribute>
-			
-			<h2>
-				<span lang="EN-GB" xml:lang="EN-GB">
-					<p>
-						<!--LOOKUP: MacroActivity/technicalId-->
-						<xsl:attribute name="id">
-							<xsl:value-of select="technicalId"/>
-						</xsl:attribute>
-					
-						<!--LOOKUP: MacroActivity/name-->
-						<xsl:text>MacroActivity - </xsl:text>
-						<xsl:value-of select="name"/>
-					</p>
-				</span>
-				
-				<xsl:if test="Drawing">
-					<!--LOOKUP: MacroActivity/Step/Drawing-->
-					<xsl:apply-templates select="Drawing"/>
-				</xsl:if>
-			</h2>
-		
-			<xsl:apply-templates select="Step">
-				<xsl:with-param name="scenarioNumber" select="$scenarioNumber"/>
-			</xsl:apply-templates>
-			
-		</div>
-		
+		<xsl:apply-templates select="Step"/>
 	</xsl:template>
 	
 	<!--Output table for a Step-->
 	<xsl:template match="Step">
-		<xsl:param name="scenarioNumber"/>
-		
-		<div>
-			<xsl:attribute name="id">
-				<xsl:text>Step </xsl:text>
-				<xsl:value-of select="position()"/>
-			</xsl:attribute>
-			
-			<h2>
-				<span lang="EN-GB" xml:lang="EN-GB">
-					<p>
-						<xsl:text>Steps - </xsl:text>
+		<tr style="height:9.2pt">
+			<td width="6%" valign="top" style="width:6.48%;border:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt;height:9.2pt">
+				<p class="MsoNormal">
+					<xsl:attribute name="id">
+						<!--LOOKUP: Step/technicalId-->
+						<xsl:value-of select="technicalId"/>
+					</xsl:attribute>
+				
+					<!--LOOKUP: Step/identifier-->
+					<xsl:value-of select="identifier"/>
+				</p>
+			</td>
+			<td width="7%" valign="top" style="width:7.44%;border:solid windowtext 1.0pt; border-left:none;padding:0in 5.4pt 0in 5.4pt;height:9.2pt">
+				<p class="MsoNormal">
+					<!--LOOKUP: Step/event-->
+					<xsl:value-of select="event"/>
+				</p>
+			</td>
+			<td width="12%" valign="top" style="width:12.1%;border:solid windowtext 1.0pt; border-left:none;padding:0in 5.4pt 0in 5.4pt;height:9.2pt">
+				<p class="MsoNormal">
+					<!--LOOKUP: Step/name-->
+					<xsl:value-of select="name"/>
+				</p>
+			</td>
+			<td width="13%" valign="top" style="width:13.38%;border:solid windowtext 1.0pt; border-left:none;padding:0in 5.4pt 0in 5.4pt;height:9.2pt">
+				<p class="MsoNormal">
+					<!--LOOKUP: Step/description-->
+					<xsl:value-of select="description"/>
+				</p>
+			</td>
+			<td width="9%" valign="top" style="width:9.82%;border:solid windowtext 1.0pt; border-left:none;padding:0in 5.4pt 0in 5.4pt;height:9.2pt">
+				<p class="MsoNormal">
+					<!--LOOKUP: Step/service-->
+					<xsl:value-of select="service"/>
+				</p>
+			</td>
+			<td width="12%" valign="top" style="width:12.32%;border:solid windowtext 1.0pt; border-left:none;padding:0in 5.4pt 0in 5.4pt;height:9.2pt">
+				<xsl:for-each select="InformationProducer">
+					<p class="MsoNormal">
+						<!--LOOKUP: Step/InformationProducer/technicalId-->
+						<xsl:attribute name="id">
+							<xsl:value-of select="technicalId"/>
+						</xsl:attribute>
+						
+						<!--LOOKUP: Step/InformationProducer/name-->
 						<xsl:value-of select="name"/>
 					</p>
-				</span>
-			</h2>
-			<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse">
-				<!--If there are any drawing a new row is inserted to contain the drawings for this step-->
-				<xsl:if test="Drawing">
-					<tr>
-						<td width="6%" colspan="9" valign="top" style="width:6.04%;border:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt">
-							<!--LOOKUP: MacroActivity/Step/Drawing-->
-							<xsl:apply-templates select="Drawing"/>
-						</td>
-					</tr>
-				</xsl:if>
-				
-				<tr style="height:9.2pt">
-					<td width="6%" valign="top" style="width:6.48%;border:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt;height:9.2pt">
-						<p class="MsoNormal">
-							<!--LOOKUP: MacroActivity/Step/identifier-->
-							<xsl:value-of select="identifier"/>
-						</p>
-					</td>
-					<td width="7%" valign="top" style="width:7.44%;border:solid windowtext 1.0pt; border-left:none;padding:0in 5.4pt 0in 5.4pt;height:9.2pt">
-						<p class="MsoNormal">
-							<!--LOOKUP: MacroActivity/Step/event-->
-							<xsl:value-of select="event"/>
-						</p>
-					</td>
-					<td width="12%" valign="top" style="width:12.1%;border:solid windowtext 1.0pt; border-left:none;padding:0in 5.4pt 0in 5.4pt;height:9.2pt">
-						<p class="MsoNormal">
-							<!--LOOKUP: MacroActivity/Step/name-->
-							<xsl:value-of select="name"/>
-						</p>
-					</td>
-					<td width="13%" valign="top" style="width:13.38%;border:solid windowtext 1.0pt; border-left:none;padding:0in 5.4pt 0in 5.4pt;height:9.2pt">
-						<p class="MsoNormal">
-							<!--LOOKUP: MacroActivity/Step/description-->
-							<xsl:value-of select="description"/>
-						</p>
-					</td>
-					<td width="9%" valign="top" style="width:9.82%;border:solid windowtext 1.0pt; border-left:none;padding:0in 5.4pt 0in 5.4pt;height:9.2pt">
-						<p class="MsoNormal">
-							<!--LOOKUP: MacroActivity/Step/service-->
-							<xsl:value-of select="service"/>
-						</p>
-					</td>
-					<td width="12%" valign="top" style="width:12.32%;border:solid windowtext 1.0pt; border-left:none;padding:0in 5.4pt 0in 5.4pt;height:9.2pt">
-						<xsl:for-each select="InformationProducer">
-							<p class="MsoNormal">
-								<!--LOOKUP: MacroActivity/Step/InformationProducer/technicalId-->
-								<xsl:attribute name="id">
-									<xsl:value-of select="technicalId"/>
-								</xsl:attribute>
-												
-								<!--LOOKUP: MacroActivity/Step/InformationProducer/name-->
-								<xsl:value-of select="name"/>
-							</p>
-						</xsl:for-each>
-					</td>
-					<td width="12%" valign="top" style="width:12.66%;border:solid windowtext 1.0pt; border-left:none;padding:0in 5.4pt 0in 5.4pt;height:9.2pt">
-						<xsl:for-each select="InformationReceiver">
-							<p class="MsoNormal">
-								<!--LOOKUP: MacroActivity/Step/InformationReceiver/technicalId-->
-								<xsl:attribute name="id">
-									<xsl:value-of select="technicalId"/>
-								</xsl:attribute>
+				</xsl:for-each>
+			</td>
+			<td width="12%" valign="top" style="width:12.66%;border:solid windowtext 1.0pt; border-left:none;padding:0in 5.4pt 0in 5.4pt;height:9.2pt">
+				<xsl:for-each select="InformationReceiver">
+					<p class="MsoNormal">
+						<!--LOOKUP: Step/InformationReceiver/technicalId-->
+						<xsl:attribute name="id">
+							<xsl:value-of select="technicalId"/>
+						</xsl:attribute>
 						
-								<!--LOOKUP: MacroActivity/Step/InformatoinReceiver/name-->
-								<xsl:value-of select="name"/>
-							</p>
-						</xsl:for-each>
-					</td>
-					<td width="13%" valign="top" style="width:13.34%;border:solid windowtext 1.0pt; border-left:none;padding:0in 5.4pt 0in 5.4pt;height:9.2pt">
-						<xsl:for-each select="BusinessObject">
-							<p class="MsoNormal">
-								<!--LOOKUP: MacroActivity/Step/BusinessObject/technicalId-->
-								<xsl:attribute name="id">
-									<xsl:value-of select="technicalId"/>
-								</xsl:attribute>
+						<!--LOOKUP: Step/InformationReceiver/name-->
+						<xsl:value-of select="name"/>
+					</p>
+				</xsl:for-each>
+			</td>
+			<td width="13%" valign="top" style="width:13.34%;border:solid windowtext 1.0pt; border-left:none;padding:0in 5.4pt 0in 5.4pt;height:9.2pt">
+				<xsl:for-each select="BusinessObject">
+					<p class="MsoNormal">
+						<!--LOOKUP: Step/BusinessObject/technicalId-->
+						<xsl:attribute name="id">
+							<xsl:value-of select="technicalId"/>
+						</xsl:attribute>
 						
-								<!--LOOKUP: MacroActivity/Step/BusinessObject/name-->
-								<xsl:value-of select="name"/>
-							</p>
-						</xsl:for-each>
-					</td>
-					<td width="12%" valign="top" style="width:12.5%;border:solid windowtext 1.0pt; border-left:none;padding:0in 5.4pt 0in 5.4pt;height:9.2pt">
-						<xsl:for-each select="Requirement">
-							<p class="MsoNormal">	
-								<!--LOOKUP: MacroActivity/Step/Requirement/technicalId-->
-								<xsl:value-of select="technicalId"/>
-							</p>
-						</xsl:for-each>
-					</td>
-				</tr>
-			</table>
-		</div>
+						<!--LOOKUP: Step/BusinessObject/name-->
+						<xsl:value-of select="name"/>
+					</p>
+				</xsl:for-each>
+			</td>
+			<td width="12%" valign="top" style="width:12.5%;border:solid windowtext 1.0pt; border-left:none;padding:0in 5.4pt 0in 5.4pt;height:9.2pt">
+				<p class="MsoNormal">
+					<xsl:call-template name="GetAspectNumberFromLookup">
+						<xsl:with-param name="aspectNode" select="Aspects"/>
+					</xsl:call-template>
+				</p>
+			</td>
+		</tr>
 	</xsl:template>
 
 	<!--Output InformationModel information.-->
@@ -1722,26 +1734,24 @@
 	<!--Creates an intermediary xml document based on all the Asepcts in the source document
 		in order to generate the Requirements table and create links to the rest of thet document.-->
 	<xsl:template name="CreateAspectLookup">
-		<lookup:lookup>
-			<xsl:for-each select="//Aspects">
-				<lookup:entry>
-					<xsl:attribute name="id">
-						<xsl:value-of select="generate-id(.)"/>
-					</xsl:attribute>
-					<xsl:attribute name="number">
-						<xsl:value-of select="position()"/>
-					</xsl:attribute>
-					<xsl:copy-of select="."/>
-				</lookup:entry>
-			</xsl:for-each>
-		</lookup:lookup>
+		<xsl:for-each select="//Aspects">
+			<lookup:entry>
+				<xsl:attribute name="id">
+					<xsl:value-of select="generate-id(.)"/>
+				</xsl:attribute>
+				<xsl:attribute name="number">
+					<xsl:value-of select="position()"/>
+				</xsl:attribute>
+				<xsl:copy-of select="."/>
+			</lookup:entry>
+		</xsl:for-each>
 	</xsl:template>
 
 	<!--Outputs the number of the given Aspects element from the lookup table.-->
 	<xsl:template name="GetAspectNumberFromLookup">
 		<xsl:param name="aspectNode"/>
 		
-		<xsl:value-of select="$AspectLookupTable/lookup:lookup/lookup:entry[@id = generate-id($aspectNode)]/@number"/>
+		<xsl:value-of select="$AspectLookupTable/lookup:entry[@id = generate-id($aspectNode)]/@number"/>
 	</xsl:template>
 
 	<!--Joins the values in the given node set into one string with the given joinString in between.

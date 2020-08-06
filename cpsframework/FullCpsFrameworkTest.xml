@@ -474,6 +474,25 @@
 						<technicalId>Scenario 2 MacroActivity 1 Step 1 Requirement 2 techncialId</technicalId>
 					</Requirement>
 					<service>Scenario 2 MacroActivity 1 Step 1 service element</service>
+					<Aspects>
+						<functional>
+							<Manageability>
+								<Property>
+									<statement>Manageability statment</statement>
+								</Property>
+								<ComponentInventory>
+									<Property>
+										<statement>ComponentInventory statement</statement>
+									</Property>
+								</ComponentInventory>
+							</Manageability>
+						</functional>
+						<human>
+							<Property>
+								<statement>human property statement</statement>
+							</Property>
+						</human>
+					</Aspects>
 				</Step>
 				<Step>
 					<BusinessObject>
