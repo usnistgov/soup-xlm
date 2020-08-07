@@ -736,7 +736,7 @@
 				</h2>
 				<table id="6.2">
 					<tr>
-						<td width="100%" colspan="2" class="TableHeader">
+						<td width="100%" colspan="3" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Influences</span>
 							</p>
@@ -748,9 +748,14 @@
 								<span lang="EN-GB" xml:lang="EN-GB">Name</span>
 							</p>
 						</td>
-						<td width="80%" class="TableHeader">
+						<td width="70%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Description</span>
+							</p>
+						</td>
+						<td width="10%" class="TableHeader">
+							<p class="TableHeading">
+								<span lang="EN-GB" xml:lang="EN-GB">Requirement R-ID</span>
 							</p>
 						</td>
 					</tr>
@@ -1652,10 +1657,17 @@
 					<xsl:value-of select="name"/>
 				</p>
 			</td>
-			<td width="80%" class="TableCell">
+			<td width="70%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: influence/description-->
 					<xsl:value-of select="description"/>
+				</p>
+			</td>
+			<td width="10%" class="TableCell">
+				<p class="MsoNormal">
+					<xsl:call-template name="GetAspectNumberFromLookup">
+						<xsl:with-param name="aspectNode" select="Aspects"/>
+					</xsl:call-template>
 				</p>
 			</td>
 		</tr>
