@@ -153,6 +153,20 @@
 							margin:1.0in 1.0in 1.0in 1.0in;}
 					div.WordSection1
 							{page:WordSection1;}
+					td.TableHeader
+						{border:solid windowtext 1.0pt;
+						background:#CCCCCC;
+						padding:0in 5.4pt 0in 5.4pt;
+						height:10.75pt}
+					td.TableCell
+						{border:solid windowtext 1.0pt;
+						padding:0in 5.4pt 0in 5.4pt;
+						height:11.8pt;
+						vertical-align: text-top}
+					table
+						{width:100.0%;
+						border-collapse:collapse;
+						border:none}
 					-->
 					/*]]>*/
 				</style>
@@ -163,34 +177,34 @@
 				<h1>
 					<span lang="EN-GB" xml:lang="EN-GB">0       Description of the Business Case</span>
 				</h1>			
-				<table id="0" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">
+				<table id="0">
 					<tr style="height:10.75pt">
-						<td width="15%" valign="top" style="width:15%;border:solid windowtext 1.0pt;background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt;height:10.75pt">
+						<td width="15%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">ID</span>
 							</p>
 						</td>
-						<td width="15%" valign="top" style="width:15%;border:solid windowtext 1.0pt;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt;height:10.75pt">
+						<td width="15%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Name</span>
 							</p>
 						</td>
-						<td width="15%" valign="top" style="width:15%;border:solid windowtext 1.0pt;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt;height:10.75pt">
+						<td width="15%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Domain(s)</span>
 							</p>
 						</td>
-						<td width="30%" valign="top" style="width:30%;border:solid windowtext 1.0pt;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt;height:10.75pt">
+						<td width="30%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Description</span>
 							</p>
 						</td>
-						<td width="15%" valign="top" style="width:15%;border:solid windowtext 1.0pt;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt;height:10.75pt">
+						<td width="15%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Requirements R-ID</span>
 							</p>
 						</td>
-						<td width="15%" valign="top" style="width:15%;border:solid windowtext 1.0pt;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt;height:10.75pt">
+						<td width="15%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Type</span>
 							</p>
@@ -207,26 +221,26 @@
 				<h2>
 					<span lang="EN-GB" xml:lang="EN-GB">1.1    Name of Use Case</span>
 				</h2>
-				<table id="1.1" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">
+				<table id="1.1">
 					<tr style="height:10.75pt">
-						<td width="100%" colspan="3" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt;height:10.75pt">
+						<td width="100%" colspan="3" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Use Case Identification</span>
 							</p>
 						</td>
 					</tr>
 					<tr style="height:10.75pt">
-						<td width="7%" valign="top" style="width:7.58%;border:solid windowtext 1.0pt; border-top:none;background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt;height:10.75pt">
+						<td width="7%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">ID</span>
 							</p>
 						</td>
-						<td width="20%" valign="top" style="width:20.36%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt;height:10.75pt">
+						<td width="20%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Domain(s)</span>
 							</p>
 						</td>
-						<td width="72%" valign="top" style="width:72.06%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt;height:10.75pt">
+						<td width="72%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Name of Use Case</span>
 							</p>
@@ -240,31 +254,31 @@
 				<h2>
 					<span lang="EN-GB" xml:lang="EN-GB">1.2    Version Management</span>
 				</h2>
-				<table id="1.2" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">
+				<table id="1.2">
 					<tr style="height:1.0pt">
-						<td width="100%" colspan="7" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt;height:1.0pt">
+						<td width="100%" colspan="7" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Version Management</span>
 							</p>
 						</td>
 					</tr>
 					<tr>
-						<td width="10%" valign="top" style="width:10%;border:solid windowtext 1.0pt; border-top:none;background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="10%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Version Management Changes</span>
 							</p>
 						</td>
-						<td width="10%" valign="top" style="width:10%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="10%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Date</span>
 							</p>
 						</td>
-						<td width="10%" valign="top" style="width:10%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="10%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Name<br/>Author(s)  or Committee</span>
 							</p>
 						</td>
-						<td width="10%" valign="top" style="width:10%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="10%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Approval Status</span>
 							</p>
@@ -272,7 +286,7 @@
 								<span lang="EN-GB" xml:lang="EN-GB">draft, for comments, for voting, final</span>
 							</p>
 						</td>
-						<td width="10%" valign="top" style="width:10%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="10%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Version Number</span>
 							</p>
@@ -283,36 +297,36 @@
 					
 				</table>
 				
-				<table id="1.2.1" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none;margin-top:16px">
+				<table id="1.2.1" style="margin-top:16px">
 					<tr>
-						<td width="100%" colspan="5" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="100%" colspan="5" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Maturity</span>
 							</p>
 						</td>
 					</tr>
 					<tr>
-						<td  width="20%" valign="top" style="width:20%;border:solid windowtext 1.0pt; border-top:none;background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td  width="20%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Effective</span>
 							</p>						
 						</td>
-						<td width="20%" valign="top" style="width:20%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="20%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Maturity</span>
 							</p>	
 						</td>
-						<td width="20%" valign="top" style="width:20%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="20%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Responsible Party</span>
 							</p>	
 						</td>
-						<td width="20%" valign="top" style="width:20%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="20%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Revision</span>
 							</p>	
 						</td>
-						<td width="20%" valign="top" style="width:20%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="20%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Status</span>
 							</p>	
@@ -326,9 +340,9 @@
 				<h2>
 					<span lang="EN-GB" xml:lang="EN-GB">1.3    Scope and Objectives of Use Case</span>
 				</h2>
-				<table id="1.3" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">
+				<table id="1.3">
 					<tr style="height:17.2pt">
-						<td width="100%" colspan="2" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt;height:17.2pt">
+						<td width="100%" colspan="2" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Scope and Objectives of Use Case</span>
 							</p>
@@ -342,9 +356,9 @@
 				<h2>
 					<span lang="EN-GB" xml:lang="EN-GB">1.4    Narrative of Use Case</span>
 				</h2>
-				<table id="1.4" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">
+				<table id="1.4">
 					<tr style="height:1.0pt">
-						<td width="100%" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt;height:1.0pt">
+						<td width="100%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Narrative of Use Case</span>
 							</p>
@@ -358,9 +372,9 @@
 				<h2>
 					<span lang="EN-GB" xml:lang="EN-GB">1.5    General Remarks</span>
 				</h2>
-				<table id="1.5" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">
+				<table id="1.5">
 					<tr>
-						<td width="100%" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="100%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">General Remarks</span>
 							</p>
@@ -374,16 +388,16 @@
 				<h1>
 					<span lang="EN-GB" xml:lang="EN-GB">2       Diagrams of Use Case</span>
 				</h1>
-				<table id="2" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">
+				<table id="2">
 					<tr>
-						<td width="100%" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; background:#BFBFBF;padding:0in 5.4pt 0in 5.4pt">
+						<td width="100%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Diagram of Use Case</span>
 							</p>
 						</td>
 					</tr>
 					<tr>
-						<td width="100%" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt">
+						<td width="100%" class="TableCell">
 							<xsl:apply-templates select="/cps:CPSFramework/UseCase/Drawing"/>
 						</td>
 					</tr>
@@ -401,21 +415,21 @@
 				<h2>
 					<span lang="EN-GB" xml:lang="EN-GB">3.2    Preconditions, Assumptions, Post condition, Events</span>
 				</h2>
-				<table id="3.2" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">
+				<table id="3.2">
 					<tr>
-						<td width="100%" colspan="4" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="100%" colspan="4" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Use Case Conditions</span>
 							</p>
 						</td>
 					</tr>
 					<tr>
-						<td width="32%" valign="top" style="width:32.8%;border:solid windowtext 1.0pt; border-top:none;background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="32%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Assumption name</span>
 							</p>
 						</td>
-						<td width="33%" valign="top" style="width:33.46%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="33%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Assumption content</span>
 							</p>
@@ -426,14 +440,14 @@
 					
 				</table>
 					
-				<table id="3.3" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">
+				<table id="3.3">
 					<tr>
-						<td width="32%" valign="top" style="width:32.8%;border:solid windowtext 1.0pt; border-top:none;background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="32%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Prerequisite name</span>
 							</p>
 						</td>
-						<td width="33%" valign="top" style="width:33.46%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="33%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Prerequisite content</span>
 							</p>
@@ -447,51 +461,51 @@
 				<h2>
 					<span lang="EN-GB" xml:lang="EN-GB">3.3    References / Issues</span>
 				</h2>
-				<table id="3.4" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">
+				<table id="3.4">
 					<tr>
-						<td width="100%" colspan="8" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="100%" colspan="8" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">References</span>
 							</p>
 						</td>
 					</tr>
 					<tr>
-						<td width="5%" valign="top" style="width:5%;border:solid windowtext 1.0pt; border-top:none;background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="5%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">No.</span>
 							</p>
 						</td>
-						<td width="15%" valign="top" style="width:15%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="15%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">References Type</span>
 							</p>
 						</td>
-						<td width="15%" valign="top" style="width:15%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="15%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Reference</span>
 							</p>
 						</td>
-						<td width="10%" valign="top" style="width:10%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="10%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Description</span>
 							</p>
 						</td>
-						<td width="10%" valign="top" style="width:10%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="10%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Status</span>
 							</p>
 						</td>
-						<td width="15%" valign="top" style="width:15%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="15%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Impact on Use Case</span>
 							</p>
 						</td>
-						<td width="15%" valign="top" style="width:15%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="15%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Originator / Organisation</span>
 							</p>
 						</td>
-						<td width="15%" valign="top" style="width:15%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="15%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Link</span>
 							</p>
@@ -505,41 +519,41 @@
 				<h2>
 					<span lang="EN-GB" xml:lang="EN-GB">3.4    Further Information to the Use Case for Classification / Mapping</span>
 				</h2>				
-				<table id="3.5" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">				
+				<table id="3.5">				
 					<tr>
-						<td width="100%" colspan="6" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="100%" colspan="6" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Classification Information</span>
 							</p>
 						</td>
 					</tr>
 					<tr>
-						<td width="10%" valign="top" style="width:10%;border:solid windowtext 1.0pt; border-top:none;background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="10%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Relation to Other Use Cases</span>
 							</p>
 						</td>
-						<td width="10%" valign="top" style="width:10%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="10%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Level of Depth</span>
 							</p>
 						</td>
-						<td width="10%" valign="top" style="width:10%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="10%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Prioritisation</span>
 							</p>
 						</td>
-						<td width="10%" valign="top" style="width:10%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="10%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Generic, Regional or National Relation</span>
 							</p>
 						</td>
-						<td width="10%" valign="top" style="width:10%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="10%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">View</span>
 							</p>
 						</td>
-						<td width="10%" valign="top" style="width:10%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="10%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Further Keywords  for Classification</span>
 							</p>
@@ -553,32 +567,32 @@
 				<h1>
 					<span lang="EN-GB" xml:lang="EN-GB">4       Step by Step Analysis of Use Case</span>
 				</h1>
-				<table id="4" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">
+				<table id="4">
 					<tr style="height:14.35pt">
-						<td width="100%" colspan="7" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; background:#D9D9D9;padding:0in 5.4pt 0in 5.4pt;height:14.35pt">
+						<td width="100%" colspan="7" class="TableHeader">
 							<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">Scenario Conditions</span></p>
 						</td>
 					</tr>
 					<tr>
-						<td width="5%" valign="top" style="width:5%;border:solid windowtext 1.0pt; border-top:none;background:#D9D9D9;padding:0in 5.4pt 0in 5.4pt">
+						<td width="5%" class="TableHeader">
 							<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">No.</span></p>
 						</td>
-						<td width="18%" valign="top" style="width:18%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#D9D9D9;padding:0in 5.4pt 0in 5.4pt">
+						<td width="18%" class="TableHeader">
 							<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">Scenario Name</span></p>
 						</td>
-						<td width="18%" valign="top" style="width:18%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#D9D9D9;padding:0in 5.4pt 0in 5.4pt">
+						<td width="18%" class="TableHeader">
 							<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">Primary Actor</span></p>
 						</td>
-						<td width="18%" valign="top" style="width:18%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#D9D9D9;padding:0in 5.4pt 0in 5.4pt">
+						<td width="18%" class="TableHeader">
 							<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">Triggering Event</span></p>
 						</td>
-						<td width="18%" valign="top" style="width:18%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#D9D9D9;padding:0in 5.4pt 0in 5.4pt">
+						<td width="18%" class="TableHeader">
 							<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">Pre-Condition</span></p>
 						</td>
-						<td width="18%" valign="top" style="width:18%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#D9D9D9;padding:0in 5.4pt 0in 5.4pt">
+						<td width="18%" class="TableHeader">
 							<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">Post-Condition</span></p>
 						</td>
-						<td width="5%" valign="top" style="width:5%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#D9D9D9;padding:0in 5.4pt 0in 5.4pt">
+						<td width="5%" class="TableHeader">
 							<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">Requirements R-ID</span></p>
 						</td>
 					</tr>
@@ -592,36 +606,36 @@
 				<h1>
 					<span lang="EN-GB" xml:lang="EN-GB">5       Information Exchanged</span>
 				</h1>
-				<table id="5" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">
+				<table id="5">
 					<tr>
-						<td width="100%" colspan="5" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="100%" colspan="5" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Information Maturity</span>
 							</p>
 						</td>
 					</tr>
 					<tr>
-						<td  width="20%" valign="top" style="width:20%;border:solid windowtext 1.0pt; border-top:none;background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td  width="20%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Effective</span>
 							</p>						
 						</td>
-						<td width="20%" valign="top" style="width:20%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="20%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Maturity</span>
 							</p>	
 						</td>
-						<td width="20%" valign="top" style="width:20%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="20%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Responsible Party</span>
 							</p>	
 						</td>
-						<td width="20%" valign="top" style="width:20%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="20%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Revision</span>
 							</p>	
 						</td>
-						<td width="20%" valign="top" style="width:20%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="20%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Status</span>
 							</p>	
@@ -632,26 +646,26 @@
 					
 				</table>
 				
-				<table id="5.0.1" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none;margin-top:16px">
+				<table id="5.0.1" style="margin-top:16px">
 					<tr>
-						<td width="100%" colspan="4" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="100%" colspan="4" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Information Exchanged</span>
 							</p>
 						</td>
 					</tr>
 					<tr>
-						<td width="20%" valign="top" style="width:20%;border:solid windowtext 1.0pt; border-top:none;background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="20%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Name of Information Exchanged</span>
 							</p>
 						</td>
-						<td width="40%" valign="top" style="width:40%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="40%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Description of Information Exchanged</span>
 							</p>
 						</td>
-						<td width="30%" valign="top" style="width:40%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="30%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Requirements to information data</span>
 							</p>
@@ -659,7 +673,7 @@
 								<span lang="EN-GB" xml:lang="EN-GB">R-ID</span>
 							</p>
 						</td>
-						<td width="30%" valign="top" style="width:30%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="30%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Requirements R-ID</span>
 							</p>
@@ -677,36 +691,36 @@
 				<h2>
 					<span lang="EN-GB" xml:lang="EN-GB">6.1 Interaction Libary Maturity</span>
 				</h2>	
-				<table id="6.1" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">
+				<table id="6.1">
 					<tr>
-						<td width="100%" colspan="5" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="100%" colspan="5" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Interaction Maturity</span>
 							</p>
 						</td>
 					</tr>
 					<tr>
-						<td  width="20%" valign="top" style="width:20%;border:solid windowtext 1.0pt; border-top:none;background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td  width="20%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Effective</span>
 							</p>						
 						</td>
-						<td width="20%" valign="top" style="width:20%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="20%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Maturity</span>
 							</p>	
 						</td>
-						<td width="20%" valign="top" style="width:20%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="20%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Responsible Party</span>
 							</p>	
 						</td>
-						<td width="20%" valign="top" style="width:20%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="20%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Revision</span>
 							</p>	
 						</td>
-						<td width="20%" valign="top" style="width:20%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="20%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Status</span>
 							</p>	
@@ -720,21 +734,21 @@
 				<h2>
 					<span lang="EN-GB" xml:lang="EN-GB">6.2 Influences</span>
 				</h2>
-				<table id="6.2" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none;margin-top:16px">
+				<table id="6.2">
 					<tr>
-						<td width="100%" colspan="2" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="100%" colspan="2" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Influences</span>
 							</p>
 						</td>
 					</tr>
 					<tr>
-						<td width="20%" valign="top" style="width:20%;border:solid windowtext 1.0pt; border-top:none;background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="20%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Name</span>
 							</p>
 						</td>
-						<td width="80%" valign="top" style="width:80%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="80%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Description</span>
 							</p>
@@ -748,26 +762,26 @@
 				<h2>
 					<span lang="EN-GB" xml:lang="EN-GB">6.3 Messages</span>
 				</h2>
-				<table id="6.3" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none;margin-top:16px">
+				<table id="6.3">
 					<tr>
-						<td width="100%" colspan="3" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="100%" colspan="3" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Messages</span>
 							</p>
 						</td>
 					</tr>
 					<tr>
-						<td width="20%" valign="top" style="width:20%;border:solid windowtext 1.0pt; border-top:none;background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="20%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Name</span>
 							</p>
 						</td>
-						<td width="70%" valign="top" style="width:70%;border:solid windowtext 1.0pt; border-top:none;background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="70%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Description</span>
 							</p>
 						</td>
-						<td width="10%" valign="top" style="width:10%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+						<td width="10%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Requirement R-ID</span>
 							</p>
@@ -781,9 +795,9 @@
 				<h2>
 					<span lang="EN-GB" xml:lang="EN-GB">7 Requirements</span>
 				</h2>
-				<table id="7" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">
+				<table id="7">
 					<tr style="height:10.75pt">
-						<td width="100%" colspan="2" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt;height:10.75pt">
+						<td width="100%" colspan="2" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Requirements</span>
 							</p>
@@ -791,12 +805,12 @@
 					</tr>
 					
 					<tr style="height:10.75pt">
-						<td width="5%" valign="top" style="width:5%;border:solid windowtext 1.0pt; border-top:none;background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt;height:10.75pt">
+						<td width="5%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">R-ID</span>
 							</p>
 						</td>
-						<td width="95%" valign="top" style="width:95%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt;height:10.75pt">
+						<td width="95%" class="TableHeader">
 							<p class="TableHeading">
 								<span lang="EN-GB" xml:lang="EN-GB">Details</span>
 							</p>
@@ -815,7 +829,7 @@
 		This includes the technicalId, identifier, name, description, type, and Domains.-->
 	<xsl:template match="BusinessCase">
 		<tr style="height:11.8pt">
-			<td width="15%" valign="top" style="width:15%;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt;height:11.8pt">
+			<td width="15%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: BusinessCase/technicalId-->
 					<xsl:attribute name="id">
@@ -826,14 +840,14 @@
 					<xsl:value-of select="identifier"/>
 				</p>
 			</td>
-			<td width="15%" valign="top" style="width:15%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt;height:11.8pt">
+			<td width="15%" class="TableCell">
 				
 				<p class="MsoNormal">
 					<!--LOOKUP: BusinessCase/name-->
 					<xsl:value-of select="name"/>
 				</p>
 			</td>
-			<td width="15%" valign="top" style="width:15%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt;height:11.8pt">
+			<td width="15%" class="TableCell">
 				<xsl:for-each select="Domain">
 					<p class="MsoNormal">
 						<!--LOOKUP: BusinessCase/Domain/technicalId-->
@@ -846,13 +860,13 @@
 					</p>
 				</xsl:for-each>
 			</td>
-			<td width="30%" valign="top" style="width:30%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt;height:11.8pt">
+			<td width="30%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: BusinessCase/Domain/description-->
 					<xsl:value-of select="description"/>
 				</p>
 			</td>
-			<td width="15%" valign="top" style="width:15%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt;height:11.8pt">
+			<td width="15%" class="TableCell">
 				<p class="MsoNormal">
 					<!--Get requirement number from lookup table-->
 					<xsl:call-template name="GetAspectNumberFromLookup">
@@ -860,7 +874,7 @@
 					</xsl:call-template>
 				</p>
 			</td>
-			<td width="15%" valign="top" style="width:15%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt;height:11.8pt">
+			<td width="15%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: BusinessCase/Domain/type-->
 					<xsl:value-of select="type"/>
@@ -873,7 +887,7 @@
 		This includes the technicalId, identifier, and name.-->
 	<xsl:template match="UseCase">
 		<tr style="height:11.8pt">
-			<td width="7%" valign="top" style="width:7.58%;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt;height:11.8pt">
+			<td width="7%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: UseCase/technicalId-->
 					<xsl:attribute name="id">
@@ -884,7 +898,7 @@
 					<xsl:value-of select="identifier"/>
 				</p>
 			</td>
-			<td width="20%" valign="top" style="width:20.36%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt;height:11.8pt">
+			<td width="20%" class="TableCell">
 				<p class="MsoNormal">
 					<span lang="EN-GB" xml:lang="EN-GB">
 						<!-- FIXME:
@@ -896,7 +910,7 @@
 					</span>
 				</p>
 			</td>
-			<td width="72%" valign="top" style="width:72.06%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt;height:11.8pt">
+			<td width="72%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: UseCase/name-->
 					<xsl:value-of select="name"/>
@@ -910,12 +924,12 @@
 	<xsl:template name="ScopeAndObjectives">
 		<xsl:for-each select="cps:CPSFramework/UseCase">
 			<tr>
-				<td width="24%" valign="top" style="width:24.14%;border:solid windowtext 1.0pt; border-top:none;background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+				<td width="24%" class="TableHeader">
 					<p class="TableHeading">
 						<span lang="EN-GB" xml:lang="EN-GB">Related business case</span>
 					</p>
 				</td>
-				<td width="75%" valign="top" style="width:75.86%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt">
+				<td width="75%" class="TableCell">
 					<!--LOOKUP: UseCase/BusinessCase/technicalId-->
 					<xsl:for-each select="BusinessCase">
 						<p class="MsoNormal">
@@ -933,12 +947,12 @@
 				</td>
 			</tr>
 			<tr>
-				<td width="24%" valign="top" style="width:24.14%;border:solid windowtext 1.0pt; border-top:none;background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+				<td width="24%" class="TableHeader">
 					<p class="TableHeading">
 						<span lang="EN-GB" xml:lang="EN-GB">Scope</span>
 					</p>
 				</td>
-				<td width="75%" valign="top" style="width:75.86%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt">
+				<td width="75%" class="TableCell">
 					<p class="MsoNormal">
 						<!--LOOKUP: UseCase/Scope-->
 						<xsl:value-of select="scope"/>
@@ -946,12 +960,12 @@
 				</td>
 			</tr>
 			<tr>
-				<td width="24%" valign="top" style="width:24.14%;border:solid windowtext 1.0pt; border-top:none;background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+				<td width="24%" class="TableHeader">
 					<p class="TableHeading">
 						<span lang="EN-GB" xml:lang="EN-GB">Objective</span>
 					</p>
 				</td>
-				<td width="75%" valign="top" style="width:75.86%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt">
+				<td width="75%" class="TableCell">
 					<xsl:for-each select="RelatedObjective">
 						<p class="MsoNormal">
 							<xsl:attribute name="id">
@@ -968,7 +982,7 @@
 	<!--This template outputs Remarks with it's technicalId and content.-->
 	<xsl:template match="Remark">
 		<tr>
-			<td width="100%" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt">
+			<td width="100%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: UseCase/technicalId-->
 					<xsl:attribute name="id">
@@ -985,19 +999,19 @@
 	<!--This template outputs Version informatoin. Multiple authors are joined by ', '.-->
 	<xsl:template match="Version">
 		<tr>
-			<td width="10%" valign="top" style="width:10%;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt">
+			<td width="10%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: UseCase/Version/changes-->
 					<xsl:value-of select="changes"/>
 				</p>
 			</td>
-			<td width="10%" valign="top" style="width:10%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt">
+			<td width="10%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: UseCase/Version/date-->
 					<xsl:value-of select="date"/>
 				</p>
 			</td>
-			<td width="10%" valign="top" style="width:10%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt">
+			<td width="10%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: "UseCase/Version/Author/name"
 						multiple names are join with a ', '.-->
@@ -1007,13 +1021,13 @@
 					</xsl:call-template>
 				</p>
 			</td>
-			<td width="10%" valign="top" style="width:10%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt">
+			<td width="10%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: UseCase/Version/approvalStatus-->
 					<xsl:value-of select="approvalStatus"/>
 				</p>
 			</td>
-			<td width="10%" valign="top" style="width:10%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt">
+			<td width="10%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: UseCase/Version/versionNumber-->
 					<xsl:value-of select="versionNumber"/>
@@ -1025,14 +1039,14 @@
 	<!--This template adds a rows to the 1.4 table for any Narrative elements.-->
 	<xsl:template match="Narrative">
 		<tr style="height:1.0pt">
-			<td width="100%" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; border-top:none;background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt;height:1.0pt">
+			<td width="100%" class="TableHeader">
 				<p class="TableHeading">
 					<span lang="EN-GB" xml:lang="EN-GB">Short description - max 3 sentences</span>
 				</p>
 			</td>
 		</tr>
 		<tr style="height:1.0pt">
-			<td width="100%" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt;height:1.0pt">
+			<td width="100%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: UseCase/Narrative/shortDescription-->
 					<xsl:value-of select="shortDescription"/>
@@ -1040,14 +1054,14 @@
 			</td>
 		</tr>
 		<tr style="height:1.0pt">
-			<td width="100%" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; border-top:none;background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt;height:1.0pt">
+			<td width="100%" class="TableHeader">
 				<p class="TableHeading">
 					<span lang="EN-GB" xml:lang="EN-GB">Complete description</span>
 				</p>
 			</td>
 		</tr>				
 		<tr style="height:1.0pt">
-			<td width="100%" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt;height:1.0pt">
+			<td width="100%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: UseCase/Narrative/completeDescription-->
 					<xsl:value-of select="completeDescription"/>
@@ -1058,28 +1072,28 @@
 
 	<!--Create table for basic CPSGrouping and call template for any CPS elements.-->
 	<xsl:template match="CPSGrouping">
-		<table id="3.1" class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse;border:none">
+		<table id="3.1">
 			<tr>
-				<td width="100%" colspan="4" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+				<td width="100%" colspan="4" class="TableHeader">
 					<p class="TableHeading">
 						<span lang="EN-GB" xml:lang="EN-GB">Actors</span>
 					</p>
 				</td>
 			</tr>
 			<tr>
-				<td width="42%" colspan="2" valign="top" style="width:42.98%;border:solid windowtext 1.0pt; border-top:none;background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+				<td width="42%" colspan="2" class="TableHeader">
 					<p class="TableHeading">
 						<span lang="EN-GB" xml:lang="EN-GB">Grouping (Community)</span>
 					</p>
 				</td>
-				<td width="57%" colspan="2" valign="top" style="width:57.02%;border-top:none; border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+				<td width="57%" colspan="2" class="TableHeader">
 					<p class="TableHeading">
 						<span lang="EN-GB" xml:lang="EN-GB">Group Description</span>
 					</p>
 				</td>
 			</tr>
 			<tr>
-				<td width="42%" colspan="2" valign="top" style="width:42.98%;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt">
+				<td width="42%" colspan="2" class="TableCell">
 					<p class="MsoNormal">
 						<!--LOOKUP: UseCase/CPSGrouping/identifier-->
 						<xsl:attribute name="id">
@@ -1090,7 +1104,7 @@
 						<xsl:value-of select="name"/>
 					</p>
 				</td>
-				<td width="57%" colspan="2" valign="top" style="width:57.02%;border-top:none; border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt">
+				<td width="57%" colspan="2" class="TableCell">
 					<p class="MsoNormal">
 						<!--LOOKUP: UseCase/CPSGrouping/description-->
 						<xsl:value-of select="description"/>
@@ -1098,7 +1112,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td width="22%" valign="top" style="width:22.26%;border:solid windowtext 1.0pt; border-top:none;background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+				<td width="22%" class="TableHeader">
 					<p class="TableHeading">
 						<span lang="EN-GB" xml:lang="EN-GB">Actor Name</span>
 					</p>
@@ -1106,7 +1120,7 @@
 						<span lang="EN-GB" xml:lang="EN-GB">see Actor  List</span>
 					</p>
 				</td>
-				<td width="20%" valign="top" style="width:20.72%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+				<td width="20%" class="TableHeader">
 					<p class="TableHeading">
 						<span lang="EN-GB" xml:lang="EN-GB">Actor Type</span>
 					</p>
@@ -1114,7 +1128,7 @@
 						<span lang="EN-GB" xml:lang="EN-GB">see Actor  List</span>
 					</p>
 				</td>
-				<td width="56%" valign="top" style="width:56.7%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+				<td width="56%" class="TableHeader">
 					<p class="TableHeading">
 						<span lang="EN-GB" xml:lang="EN-GB">Further information specific to this Use Case</span>
 					</p>
@@ -1129,19 +1143,19 @@
 	<!--Output information for CPS element-->
 	<xsl:template match="CPS">
 		<tr>
-			<td width="22%" valign="top" style="width:22.26%;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt">
+			<td width="22%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: CPSGrouping/CPS/name-->
 					<xsl:value-of select="name"/>
 				</p>
 			</td>
-			<td width="20%" valign="top" style="width:20.72%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt">
+			<td width="20%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: CPSGrouping/CPS/technicalId-->
 					<xsl:value-of select="technicalId"/>
 				</p>
 			</td>
-			<td width="56%" valign="top" style="width:56.7%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt">
+			<td width="56%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: CPSGrouping/CPS/furtherInformation-->
 					<xsl:value-of select="furtherInformation"/>
@@ -1153,14 +1167,14 @@
 	<!--Output UseCase Precondition and Assumption elements.-->
 	<xsl:template match="Prerequisite">
 		<tr>
-			<td width="25%" style="width:25%;border:solid windowtext 1.0pt;border-top: none;padding:0in 5.4pt 0in 5.4pt">
+			<td width="25%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: Prerequisite/name-->
 					<xsl:value-of select="name"/>
 				</p>
 			</td>
 			
-			<td width="75%" style="width:75%;border:solid windowtext 1.0pt;border-top: none;padding:0in 5.4pt 0in 5.4pt">
+			<td width="75%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: Prerequisite/content-->
 					<xsl:value-of select="content"/>	
@@ -1171,14 +1185,14 @@
 	
 	<xsl:template match="Assumption">
 		<tr>
-			<td width="25%" style="width:25%;border:solid windowtext 1.0pt;border-top: none;padding:0in 5.4pt 0in 5.4pt">
+			<td width="25%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: Assumption/name-->
 					<xsl:value-of select="name"/>
 				</p>
 			</td>
 			
-			<td width="75%" style="width:75%;border:solid windowtext 1.0pt;border-top: none;padding:0in 5.4pt 0in 5.4pt">
+			<td width="75%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: Assumption/content-->
 					<xsl:value-of select="content"/>	
@@ -1190,7 +1204,7 @@
 	<!--Output UseCase Reference element.-->
 	<xsl:template match="Reference">
 		<tr>
-			<td width="5%" valign="top" style="width:5%;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt">
+			<td width="5%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: UseCase/technicalId-->
 					<xsl:attribute name="id">
@@ -1201,43 +1215,43 @@
 					<xsl:value-of select="identifier"/>
 				</p>
 			</td>
-			<td width="15%" valign="top" style="width:15%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt">
+			<td width="15%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: UseCase/Reference/type-->
 					<xsl:value-of select="type"/>
 				</p>
 			</td>
-			<td width="15%" valign="top" style="width:15%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt">
+			<td width="15%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: UseCase/Reference/name-->
 					<xsl:value-of select="name"/>
 				</p>
 			</td>
-			<td width="10%" valign="top" style="width:10%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt">
+			<td width="10%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: UseCase/Reference/description-->
 					<xsl:value-of select="description"/>
 				</p>
 			</td>
-			<td width="10%" valign="top" style="width:10%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt">
+			<td width="10%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: UseCase/Reference/status-->
 					<xsl:value-of select="status"/>
 				</p>
 			</td>
-			<td width="15%" valign="top" style="width:15%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt">
+			<td width="15%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: UseCase/Reference/impact-->
 					<xsl:value-of select="impact"/>
 				</p>
 			</td>
-			<td width="15%" valign="top" style="width:15%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt">
+			<td width="15%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: UseCase/Reference/orginiatorOrganisation-->
 					<xsl:value-of select="originatorOrganisation"/>
 				</p>
 			</td>
-			<td width="15%" valign="top" style="width:15%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt">
+			<td width="15%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: UseCase/Reference/link-->
 					<xsl:value-of select="link"/>
@@ -1250,7 +1264,7 @@
 	<xsl:template name="FurtherInformation">
 		<xsl:for-each select="cps:CPSFramework/UseCase">
 			<tr>
-				<td width="10%" valign="top" style="width:10%;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt">
+				<td width="10%" class="TableCell">
 					<!--LOOKUP: UseCase/technicalId-->
 					<xsl:attribute name="id">
 						<xsl:value-of select="technicalId"/>
@@ -1272,31 +1286,31 @@
 						</p>
 					</xsl:for-each>
 				</td>
-				<td width="10%" valign="top" style="width:10%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt">
+				<td width="10%" class="TableCell">
 					<p class="MsoNormal">
 						<!--LOOKUP: UseCase/levelOfDepth-->
 						<xsl:value-of select="levelOfDepth"/>
 					</p>
 				</td>
-				<td width="10%" valign="top" style="width:10%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt">
+				<td width="10%" class="TableCell">
 					<p class="MsoNormal">
 						<!--LOOKUP: UseCase/prioritisation-->
 						<xsl:value-of select="prioritisation"/>
 					</p>
 				</td>
-				<td width="10%" valign="top" style="width:10%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt">
+				<td width="10%" class="TableCell">
 					<p class="MsoNormal">
 						<!--LOOKUP: UseCase/classification-->
 						<xsl:value-of select="classification"/>
 					</p>
 				</td>
-				<td width="10%" valign="top" style="width:10%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt">
+				<td width="10%" class="TableCell">
 					<p class="MsoNormal">
 						<!--LOOKUP: UseCase/nature-->
 						<xsl:value-of select="nature"/>
 					</p>
 				</td>
-				<td width="10%" valign="top" style="width:10%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt">
+				<td width="10%" class="TableCell">
 					<p class="MsoNormal">
 						<!--LOOKUP: UseCase/keywords-->
 						<xsl:value-of select="keywords"/>
@@ -1310,7 +1324,7 @@
 		then creates sub tables for the MacroActivities and steps in this Scenario.-->
 	<xsl:template match="Scenario" mode="ScenarioTable">
 		<tr>
-			<td width="5%" valign="top" style="width:5%;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt">
+			<td width="5%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: UseCase/Scenario/technicalId-->
 					<xsl:attribute name="id">
@@ -1321,13 +1335,13 @@
 					<xsl:value-of select="identifier"/>
 				</p>
 			</td>
-			<td width="18%" valign="top" style="width:18%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt">
+			<td width="18%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: UseCase/Scenario/name-->
 					<xsl:value-of select="name"/>
 				</p>
 			</td>
-			<td width="18%" valign="top" style="width:18%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt">
+			<td width="18%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: UseCase/Scenario/PrimaryCPS-->
 					<xsl:for-each select="PrimaryCPS">
@@ -1343,7 +1357,7 @@
 					</xsl:for-each>
 				</p>
 			</td>
-			<td width="18%" valign="top" style="width:18%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt">
+			<td width="18%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: UseCase/Scenario/TriggeringEvent-->
 					<xsl:for-each select="TriggeringEvent">
@@ -1354,7 +1368,7 @@
 					</xsl:for-each>
 				</p>
 			</td>
-			<td width="18%" valign="top" style="width:18%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt">
+			<td width="18%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: UseCase/Scenario/Precondition-->
 					<xsl:for-each select="Precondition">
@@ -1365,7 +1379,7 @@
 					</xsl:for-each>
 				</p>
 			</td>
-			<td width="18%" valign="top" style="width:18%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt">
+			<td width="18%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: UseCase/Scenario/Postcondition-->
 					<xsl:for-each select="Postcondition">
@@ -1376,7 +1390,7 @@
 					</xsl:for-each>
 				</p>
 			</td>
-			<td width="5%" valign="top" style="width:5%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt">
+			<td width="5%" class="TableCell">
 				<p class="MsoNormal">
 					<xsl:call-template name="GetAspectNumberFromLookup">
 						<xsl:with-param name="aspectNode" select="Aspects"/>
@@ -1402,17 +1416,17 @@
 			</span>
 		</h2>
 		
-		<table id="4.1" class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;border-collapse:collapse">
+		<table id="4.1">
 			<tr>
-				<td width="100%" colspan="9" valign="top" style="width:100.0%;border:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+				<td width="100%" colspan="9" class="TableHeader">
 					<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">Scenario</span></p>
 				</td>
 			</tr>
 			<tr>
-				<td width="13%" colspan="2" valign="top" style="width:13.92%;border:solid windowtext 1.0pt; border-top:none;background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt">
+				<td width="13%" colspan="2" class="TableHeader">
 					<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">Scenario Name :</span></p>
 				</td>
-				<td width="86%" colspan="7" valign="top" style="width:86.08%;border-top:none; border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt">
+				<td width="86%" colspan="7" class="TableCell">
 					<p class="MsoNormal">
 						<!--LOOKUP: Scenario/name-->
 						<xsl:value-of select="name"/>
@@ -1420,32 +1434,32 @@
 				</td>
 			</tr>
 			<tr style="height:12.55pt">
-				<td width="6%" valign="top" style="width:6.48%;border-top:none;border-left: solid windowtext 1.0pt;border-bottom:none;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt;height:12.55pt">
+				<td width="6%" class="TableHeader">
 					<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">Step No.</span></p>
 				</td>
-				<td width="7%" valign="top" style="width:7.44%;border:none;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt;height:12.55pt">
+				<td width="7%" class="TableHeader">
 					<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">Event</span></p>
 				</td>
-				<td width="12%" valign="top" style="width:12.1%;border:none;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt;height:12.55pt">
+				<td width="12%" class="TableHeader">
 					<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">Name of Process/ Activity</span></p>
 				</td>
-				<td width="13%" valign="top" style="width:13.38%;border:none;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt;height:12.55pt">
+				<td width="13%" class="TableHeader">
 					<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">Description of Process/ Activity</span></p>
 				</td>
-				<td width="9%" valign="top" style="width:9.82%;border:none;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt;height:12.55pt">
+				<td width="9%" class="TableHeader">
 					<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">Service</span></p>
 					<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB"/></p>
 				</td>
-				<td width="12%" valign="top" style="width:12.32%;border:none;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt;height:12.55pt">
+				<td width="12%" class="TableHeader">
 					<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">Information Producer (Actor)</span></p>
 				</td>
-				<td width="12%" valign="top" style="width:12.66%;border:none;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt;height:12.55pt">
+				<td width="12%" class="TableHeader">
 					<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">Information Receiver (Actor)</span></p>
 				</td>
-				<td width="13%" valign="top" style="width:13.34%;border:none;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt;height:12.55pt">
+				<td width="13%" class="TableHeader">
 					<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">Information Exchanged</span></p>
 				</td>
-				<td width="12%" valign="top" style="width:12.5%;border:none;border-right:solid windowtext 1.0pt; background:#CCCCCC;padding:0in 5.4pt 0in 5.4pt;height:12.55pt">
+				<td width="12%" class="TableHeader">
 					<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">Requirements , R-ID</span></p>
 				</td>
 			</tr>
@@ -1463,7 +1477,7 @@
 	<!--Output table for a Step-->
 	<xsl:template match="Step">
 		<tr style="height:9.2pt">
-			<td width="6%" valign="top" style="width:6.48%;border:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt;height:9.2pt">
+			<td width="6%" class="TableCell">
 				<p class="MsoNormal">
 					<xsl:attribute name="id">
 						<!--LOOKUP: Step/technicalId-->
@@ -1474,31 +1488,31 @@
 					<xsl:value-of select="identifier"/>
 				</p>
 			</td>
-			<td width="7%" valign="top" style="width:7.44%;border:solid windowtext 1.0pt; border-left:none;padding:0in 5.4pt 0in 5.4pt;height:9.2pt">
+			<td width="7%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: Step/event-->
 					<xsl:value-of select="event"/>
 				</p>
 			</td>
-			<td width="12%" valign="top" style="width:12.1%;border:solid windowtext 1.0pt; border-left:none;padding:0in 5.4pt 0in 5.4pt;height:9.2pt">
+			<td width="12%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: Step/name-->
 					<xsl:value-of select="name"/>
 				</p>
 			</td>
-			<td width="13%" valign="top" style="width:13.38%;border:solid windowtext 1.0pt; border-left:none;padding:0in 5.4pt 0in 5.4pt;height:9.2pt">
+			<td width="13%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: Step/description-->
 					<xsl:value-of select="description"/>
 				</p>
 			</td>
-			<td width="9%" valign="top" style="width:9.82%;border:solid windowtext 1.0pt; border-left:none;padding:0in 5.4pt 0in 5.4pt;height:9.2pt">
+			<td width="9%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: Step/service-->
 					<xsl:value-of select="service"/>
 				</p>
 			</td>
-			<td width="12%" valign="top" style="width:12.32%;border:solid windowtext 1.0pt; border-left:none;padding:0in 5.4pt 0in 5.4pt;height:9.2pt">
+			<td width="12%" class="TableCell">
 				<xsl:for-each select="InformationProducer">
 					<p class="MsoNormal">
 						<!--LOOKUP: Step/InformationProducer/technicalId-->
@@ -1511,7 +1525,7 @@
 					</p>
 				</xsl:for-each>
 			</td>
-			<td width="12%" valign="top" style="width:12.66%;border:solid windowtext 1.0pt; border-left:none;padding:0in 5.4pt 0in 5.4pt;height:9.2pt">
+			<td width="12%" class="TableCell">
 				<xsl:for-each select="InformationReceiver">
 					<p class="MsoNormal">
 						<!--LOOKUP: Step/InformationReceiver/technicalId-->
@@ -1524,7 +1538,7 @@
 					</p>
 				</xsl:for-each>
 			</td>
-			<td width="13%" valign="top" style="width:13.34%;border:solid windowtext 1.0pt; border-left:none;padding:0in 5.4pt 0in 5.4pt;height:9.2pt">
+			<td width="13%" class="TableCell">
 				<xsl:for-each select="BusinessObject">
 					<p class="MsoNormal">
 						<!--LOOKUP: Step/BusinessObject/technicalId-->
@@ -1537,7 +1551,7 @@
 					</p>
 				</xsl:for-each>
 			</td>
-			<td width="12%" valign="top" style="width:12.5%;border:solid windowtext 1.0pt; border-left:none;padding:0in 5.4pt 0in 5.4pt;height:9.2pt">
+			<td width="12%" class="TableCell">
 				<p class="MsoNormal">
 					<xsl:call-template name="GetAspectNumberFromLookup">
 						<xsl:with-param name="aspectNode" select="Aspects"/>
@@ -1550,7 +1564,7 @@
 	<!--Output InformationModel information.-->
 	<xsl:template match="InformationModel">
 		<tr>
-			<td width="20%" valign="top" style="width:20%;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt">
+			<td width="20%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: InformationModel/technicalId-->
 					<xsl:attribute name="id">
@@ -1561,13 +1575,13 @@
 					<xsl:value-of select="name"/>
 				</p>
 			</td>
-			<td width="40%" valign="top" style="width:40border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt">
+			<td width="40%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: InformationModel/description-->
 					<xsl:value-of select="description"/>
 				</p>
 			</td>
-			<td width="30%" valign="top" style="width:40border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt">
+			<td width="30%" class="TableCell">
 				<xsl:for-each select="Requirement">
 					<p class="MsoNormal">
 						<!--LOOKUP: InformationModel/Requirement-->
@@ -1579,7 +1593,7 @@
 					</p>
 				</xsl:for-each>
 			</td>
-			<td width="10%" valign="top" style="width:10%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt">
+			<td width="10%" class="TableCell">
 				<p class="MsoNormal">
 					<xsl:call-template name="GetAspectNumberFromLookup">
 						<xsl:with-param name="aspectNode" select="Aspects"/>
@@ -1592,31 +1606,31 @@
 	<!--Creates a table for a Maturity element. This will output all the information in a table row.-->
 	<xsl:template match="Maturity">
 		<tr>
-			<td width="20%" valign="top" style="width:20%;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt">
+			<td width="20%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: Maturity/effective-->
 					<xsl:value-of select="effective"/>
 				</p>
 			</td>
-			<td width="20%" valign="top" style="width:20%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt">
+			<td width="20%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: Maturity/maurity-->
 					<xsl:value-of select="maturity"/>
 				</p>
 			</td>
-			<td width="20%" valign="top" style="width:20%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt">
+			<td width="20%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: Maturity/responsibleParty-->
 					<xsl:value-of select="responsibleParty"/>
 				</p>
 			</td>
-			<td width="20%" valign="top" style="width:20%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt">
+			<td width="20%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: Maturity/revision-->
 					<xsl:value-of select="revision"/>
 				</p>
 			</td>
-			<td width="20%" valign="top" style="width:20%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt">
+			<td width="20%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: Maturity/status-->
 					<xsl:value-of select="status"/>
@@ -1627,7 +1641,7 @@
 
 	<xsl:template match="influence">
 		<tr>
-			<td width="20%" valign="top" style="width:20%;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt">
+			<td width="20%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: influence/technicalId-->
 					<xsl:attribute name="id">
@@ -1638,7 +1652,7 @@
 					<xsl:value-of select="name"/>
 				</p>
 			</td>
-			<td width="80%" valign="top" style="width:80%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+			<td width="80%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: influence/description-->
 					<xsl:value-of select="description"/>
@@ -1649,7 +1663,7 @@
 	
 	<xsl:template match="message">
 		<tr>
-			<td width="20%" valign="top" style="width:20%;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt">
+			<td width="20%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: message/technicalId-->
 					<xsl:attribute name="id">
@@ -1660,13 +1674,13 @@
 					<xsl:value-of select="name"/>
 				</p>
 			</td>
-			<td width="70%" valign="top" style="width:70%;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt">
+			<td width="70%" class="TableCell">
 				<p class="MsoNormal">
 					<!--LOOKUP: message/description-->
 					<xsl:value-of select="description"/>
 				</p>
 			</td>
-			<td width="10%" valign="top" style="width:10%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+			<td width="10%" class="TableCell">
 				<p class="MsoNormal">
 					<xsl:call-template name="GetAspectNumberFromLookup">
 						<xsl:with-param name="aspectNode" select="Aspects"/>
@@ -1703,12 +1717,12 @@
 	<!--This template generates rows for the Requirements table based on the entries in the AspectLookupTable variable.-->
 	<xsl:template match="lookup:entry">
 		<tr>
-			<td width="5%" valign="top" style="width:5%;border:solid windowtext 1.0pt; border-top:none;padding:0in 5.4pt 0in 5.4pt">
+			<td width="5%" class="TableCell">
 				<p class="MsoNormal">
 					<xsl:value-of select="@number"/>
 				</p>
 			</td>
-			<td width="95%" valign="top" style="width:95%;border-top:none;border-left: none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+			<td width="95%" class="TableCell">
 				<p class="MsoNormal">
 					<xsl:apply-templates select="Aspects"/>
 				</p>
