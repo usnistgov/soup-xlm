@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--Created June, 2020-->
 <xsl:stylesheet version="1.0" 
-	exclude-result-prefixes="xsi x cps msxsl" 
+	exclude-result-prefixes="xsi x cps msxsl lookup" 
 	xmlns:cps="cpsframework"
 	xmlns:x="http://www.w3.org/1999/xhtml"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xmlns:msxsl="urn:schemas-microsoft-com:xslt"
-	xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:lookup="lookup">
 	
 	<xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 
@@ -200,7 +201,67 @@
 			<xsl:apply-templates select="x:table[@id='1.5']" mode="ExtractRemark"/>
 			
 			<xsl:apply-templates select="x:table[@id='4']/x:tr[position() > 2]" mode="ExtractScenario"/>
+			
+			<xsl:apply-templates select="x:table[@id='1.3']" mode="ExtractScope"/>
+			
+			<xsl:apply-templates select="x:table[@id='1.2']" mode="ExtractVersion"/>
 		</UseCase>
+	</xsl:template>
+
+	<xsl:template match="x:table" mode="ExtractVersion">
+		<Version>
+			<approvalStatus>
+				<xsl:value-of select="x:tr[3]/x:td[4]/x:p"/>
+			</approvalStatus>
+		</Version>
+		
+		<xsl:call-template name="GetAuthorRecursive">
+			<xsl:with-param name="string" select="x:tr[3]/x:td[3]/x:p"/>
+		</xsl:call-template>
+		
+		<changes>
+			<xsl:value-of select="x:tr[3]/x:td[1]/x:p"/>
+		</changes>
+		<date>
+			<xsl:value-of select="x:tr[3]/x:td[2]/x:p"/>
+		</date>
+		<versionNumber>
+			<xsl:value-of select="x:tr[3]/x:td[5]/x:p"/>
+		</versionNumber>
+	</xsl:template>
+	
+	<xsl:template name="GetAuthorRecursive">
+		<xsl:param name="string"/>
+		
+		<xsl:variable name="head">
+			<xsl:choose>
+				<xsl:when test="substring-before($string, ', ')">
+					<xsl:value-of select="substring-before($string, ', ')"/>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:value-of select="$string"/>
+				</xsl:otherwise>
+			</xsl:choose>
+		</xsl:variable>
+		<xsl:variable name="tail" select="substring-after($string, ', ')"/>		
+		
+		<Author>
+			<name>
+				<xsl:value-of select="$head"/>
+			</name>
+		</Author>
+		
+		<xsl:if test="$tail">
+			<xsl:call-template name="GetAuthorRecursive">
+				<xsl:with-param name="string" select="$tail"/>
+			</xsl:call-template>
+		</xsl:if>
+	</xsl:template>
+
+	<xsl:template match="x:table" mode="ExtractScope">
+		<scope>
+			<xsl:value-of select="x:tr[3]/x:td[2]/x:p"/>
+		</scope>
 	</xsl:template>
 
 	<xsl:template match="x:table" mode="ExtractAssumption">
@@ -417,10 +478,6 @@
 		</PrimaryCPS>
 	</xsl:template>
 	
-	<xsl:template match="x:table" mode="ExtractMacroActivity">
-		
-	</xsl:template>
-	
 	<xsl:template match="x:p" mode="ExtractContentAndNameFromString">
 		<xsl:param name="splitString" select="': '"/>
 
@@ -439,5 +496,17 @@
 		<technicalId>
 			<xsl:value-of select="@id"/>
 		</technicalId>
+	</xsl:template>
+	
+	<xsl:template match="x:table" mode="GenerateAspectsLookupTable">
+		<lookup:entry>
+			<Aspects>
+			
+			</Aspects>
+		</lookup:entry>
+	</xsl:template>
+	
+	<xsl:template match="x:p" mode="ExtractAspectBranchesFromString">
+	
 	</xsl:template>
 </xsl:stylesheet>
