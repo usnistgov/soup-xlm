@@ -11,7 +11,7 @@
 	xmlns:msxsl="urn:schemas-microsoft-com:xslt"
 	xmlns="http://www.w3.org/1999/xhtml" 
 	xmlns:err="http://www.w3.org/2005/xqt-errors" 
-	exclude-result-prefixes="array fn map math xs err msxsl" 
+	exclude-result-prefixes="array fn map math xs err msxsl lookup" 
 	version="1.0">
 	
 	<xsl:output method="xml" version="4.0" encoding="UTF-8" omit-xml-declaration="yes" indent="yes"/>
