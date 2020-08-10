@@ -1727,9 +1727,7 @@
 				</p>
 			</td>
 			<td width="95%" class="TableCell">
-				<p class="MsoNormal">
-					<xsl:apply-templates select="Aspects"/>
-				</p>
+				<xsl:apply-templates select="Aspects"/>
 			</td>
 		</tr>
 	</xsl:template>
