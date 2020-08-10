@@ -50,12 +50,7 @@
 	
 	<xsl:template match="x:p" mode="ExtractBusinessCaseDomains">
 		<Domain>
-			<name>
-				<xsl:value-of select="."/>
-			</name>
-			<technicalId>
-				<xsl:value-of select="@id"/>
-			</technicalId>
+			<xsl:apply-templates select="." mode="ExtractNameAndTechnicalIdFromP"/>
 		</Domain> 
 	</xsl:template>
 	
@@ -129,12 +124,8 @@
 					<description>
 						<xsl:value-of select="x:td[2]/x:p"/>
 					</description>
-					<name>
-						<xsl:value-of select="x:td[1]/x:p"/>
-					</name>
-					<technicalId>
-						<xsl:value-of select="x:td[1]/x:p/@id"/>
-					</technicalId>
+					
+					<xsl:apply-templates select="x:td[1]/x:p" mode="ExtractNameAndTechnicalIdFromP"/>
 				</influence>
 			</xsl:for-each>
 		</Influences>
@@ -147,12 +138,8 @@
 					<description>
 						<xsl:value-of select="x:td[2]/x:p"/>
 					</description>
-					<name>
-						<xsl:value-of select="x:td[1]/x:p"/>
-					</name>
-					<technicalId>
-						<xsl:value-of select="x:td[1]/x:p/@id"/>
-					</technicalId>
+
+					<xsl:apply-templates select="x:td[1]/x:p" mode="ExtractNameAndTechnicalIdFromP"/>
 				</message>
 			</xsl:for-each>
 		</Messages>
@@ -212,7 +199,7 @@
 			
 			<xsl:apply-templates select="x:table[@id='1.5']" mode="ExtractRemark"/>
 			
-			<!--TODO: Scenario-->
+			<xsl:apply-templates select="x:table[@id='4']/x:tr[position() > 2]" mode="ExtractScenario"/>
 		</UseCase>
 	</xsl:template>
 
@@ -380,5 +367,77 @@
 				</content>
 			</Remark>
 		</xsl:for-each>
+	</xsl:template>
+	
+	<xsl:template match="x:tr" mode="ExtractScenario">
+		<Scenario>
+			<identifier>
+				<xsl:value-of select="x:td[1]/x:p"/>
+			</identifier>
+			<name>
+				<xsl:value-of select="x:td[2]/x:p"/>
+			</name>
+			<technicalId>
+				<xsl:value-of select="x:td[1]/x:p/@id"/>
+			</technicalId>
+			
+			<!--TOOD MacroActivity-->
+			
+			<xsl:apply-templates select="x:td[6]/x:p" mode="ExtractPostcondition"/>
+			
+			<xsl:apply-templates select="x:td[5]/x:p" mode="ExtractPrecondition"/>
+			
+			<xsl:apply-templates select="x:td[3]/x:p" mode="ExtractPrimaryCPS"/>
+			
+			<xsl:apply-templates select="x:td[4]/x:p" mode="ExtractTriggeringEvent"/>
+		</Scenario>
+	</xsl:template>
+	
+	<xsl:template match="x:p" mode="ExtractPostcondition">
+		<Postcondition>
+			<xsl:apply-templates select="." mode="ExtractContentAndNameFromString"/>
+		</Postcondition>
+	</xsl:template>
+	
+	<xsl:template match="x:p" mode="ExtractPrecondition">
+		<Precondition>
+			<xsl:apply-templates select="." mode="ExtractContentAndNameFromString"/>
+		</Precondition>
+	</xsl:template>
+		
+	<xsl:template match="x:p" mode="ExtractTriggeringEvent">
+		<TriggeringEvent>
+			<xsl:apply-templates select="." mode="ExtractContentAndNameFromString"/>
+		</TriggeringEvent>
+	</xsl:template>
+	
+	<xsl:template match="x:p" mode="ExtractPrimaryCPS">
+		<PrimaryCPS>
+			<xsl:apply-templates select="." mode="ExtractNameAndTechnicalIdFromP"/>
+		</PrimaryCPS>
+	</xsl:template>
+	
+	<xsl:template match="x:table" mode="ExtractMacroActivity">
+		
+	</xsl:template>
+	
+	<xsl:template match="x:p" mode="ExtractContentAndNameFromString">
+		<xsl:param name="splitString" select="': '"/>
+
+		<content>
+			<xsl:value-of select="substring-after(., ': ')"/>
+		</content>
+		<name>
+			<xsl:value-of select="substring-before(., ': ')"/>
+		</name>
+	</xsl:template>
+	
+	<xsl:template match="x:p" mode="ExtractNameAndTechnicalIdFromP">
+		<name>
+			<xsl:value-of select="."/>
+		</name>
+		<technicalId>
+			<xsl:value-of select="@id"/>
+		</technicalId>
 	</xsl:template>
 </xsl:stylesheet>
