@@ -1347,53 +1347,45 @@
 				</p>
 			</td>
 			<td width="18%" class="TableCell">
-				<p class="MsoNormal">
-					<!--LOOKUP: UseCase/Scenario/PrimaryCPS-->
-					<xsl:for-each select="PrimaryCPS">
-						<p class="MsoNormal">
-							<!--LOOKUP: PrimaryCPS/technicalId-->
-							<xsl:attribute name="id">
-								<xsl:value-of select="technicalId"/>
-							</xsl:attribute>
-							
-							<!--LOOKUP: PrimaryCPS/name-->
-							<xsl:value-of select="name"/>
-						</p>
-					</xsl:for-each>
-				</p>
+				<!--LOOKUP: UseCase/Scenario/PrimaryCPS-->
+				<xsl:for-each select="PrimaryCPS">
+					<p class="MsoNormal">
+						<!--LOOKUP: PrimaryCPS/technicalId-->
+						<xsl:attribute name="id">
+							<xsl:value-of select="technicalId"/>
+						</xsl:attribute>
+						
+						<!--LOOKUP: PrimaryCPS/name-->
+						<xsl:value-of select="name"/>
+					</p>
+				</xsl:for-each>
 			</td>
 			<td width="18%" class="TableCell">
-				<p class="MsoNormal">
-					<!--LOOKUP: UseCase/Scenario/TriggeringEvent-->
-					<xsl:for-each select="TriggeringEvent">
-						<p class="MsoNormal">
-							<!--LOOKUP: TriggeringEvent/name & TriggeringEvent/content-->
-							<xsl:value-of select="concat(name, ': ', content)"/>
-						</p>
-					</xsl:for-each>
-				</p>
+				<!--LOOKUP: UseCase/Scenario/TriggeringEvent-->
+				<xsl:for-each select="TriggeringEvent">
+					<p class="MsoNormal">
+						<!--LOOKUP: TriggeringEvent/name & TriggeringEvent/content-->
+						<xsl:value-of select="concat(name, ': ', content)"/>
+					</p>
+				</xsl:for-each>
 			</td>
 			<td width="18%" class="TableCell">
-				<p class="MsoNormal">
-					<!--LOOKUP: UseCase/Scenario/Precondition-->
-					<xsl:for-each select="Precondition">
-						<p class="MsoNormal">
-							<!--LOOKUP: Precondition/name & Precondition/description-->
-							<xsl:value-of select="concat(name, ': ', content)"/>
-						</p>
-					</xsl:for-each>
-				</p>
+				<!--LOOKUP: UseCase/Scenario/Precondition-->
+				<xsl:for-each select="Precondition">
+					<p class="MsoNormal">
+						<!--LOOKUP: Precondition/name & Precondition/description-->
+						<xsl:value-of select="concat(name, ': ', content)"/>
+					</p>
+				</xsl:for-each>
 			</td>
 			<td width="18%" class="TableCell">
-				<p class="MsoNormal">
-					<!--LOOKUP: UseCase/Scenario/Postcondition-->
-					<xsl:for-each select="Postcondition">
-						<p class="MsoNormal">
-							<!--LOOKUP: Postcondition/name & Postcondition/description-->
-							<xsl:value-of select="concat(name, ': ', content)"/>
-						</p>
-					</xsl:for-each>
-				</p>
+				<!--LOOKUP: UseCase/Scenario/Postcondition-->
+				<xsl:for-each select="Postcondition">
+					<p class="MsoNormal">
+						<!--LOOKUP: Postcondition/name & Postcondition/description-->
+						<xsl:value-of select="concat(name, ': ', content)"/>
+					</p>
+				</xsl:for-each>
 			</td>
 			<td width="5%" class="TableCell">
 				<p class="MsoNormal">
