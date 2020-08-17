@@ -63,14 +63,14 @@
 			</Requirement>
 			<technicalId>InformationModel 2 technicalId</technicalId>
 			<Aspects>
-			<functional>
-				<TransportationInfrastructure>
-					<Property>
-						<statement> TBD </statement>
-					</Property>
-				</TransportationInfrastructure>
-			</functional>
-		</Aspects>
+				<functional>
+					<TransportationInfrastructure>
+						<Property>
+							<statement> TBD </statement>
+						</Property>
+					</TransportationInfrastructure>
+				</functional>
+			</Aspects>
 		</InformationModel>
 		<Maturity>
 			<effective>InformationModelLibrary Maturity effective</effective>
@@ -101,6 +101,13 @@
 				<description>Influence 4 description</description>
 				<name>Influence 4 name</name>
 				<technicalId>Influence 4 technicalId</technicalId>
+				<Aspects>
+					<business>
+						<Property>
+							<statement>Influences Statement</statement>
+						</Property>
+					</business>
+				</Aspects>
 			</influence>
 		</Influences>
 		<Maturity>
@@ -120,16 +127,37 @@
 				<description>Message 2 description</description>
 				<name>Message 2 name</name>
 				<technicalId>Message 2 technicalId</technicalId>
+				<Aspects>
+					<data>
+						<Property>
+							<statement>Messages statement 1</statement>
+						</Property>
+					</data>
+				</Aspects>
 			</message>
 			<message>
 				<description>Message 3 description</description>
 				<name>Message 3 name</name>
 				<technicalId>Message 3 technicalId</technicalId>
+				<Aspects>
+					<data>
+						<Property>
+							<statement>Messages statement 2</statement>
+						</Property>
+					</data>
+				</Aspects>
 			</message>
 			<message>
 				<description>Message 4 description</description>
 				<name>Message 4 name</name>
 				<technicalId>Message 4 technicalId</technicalId>
+				<Aspects>
+					<data>
+						<Property>
+							<statement>Messages statement 3</statement>
+						</Property>
+					</data>
+				</Aspects>
 			</message>
 		</Messages>
 	</InteractionLibrary>
@@ -261,6 +289,15 @@
 			<identifier>Scenario 1 identifier element</identifier>
 			<name>Scenario 1 name element</name>
 			<technicalId>Scenario 1 technicalId element</technicalId>
+			<Aspects>
+				<functional>
+					<Uncertainty>
+						<Property>
+							<statement>uncertainty statement</statement>
+						</Property>
+					</Uncertainty>
+				</functional>		
+			</Aspects>
 			<MacroActivity>
 				<Drawing>
 					<drawingType>other</drawingType>
@@ -304,6 +341,15 @@
 						<technicalId>Scenario 1 MacroActivity 1 Step 1 Requirement 2 techncialId</technicalId>
 					</Requirement>
 					<service>Scenario 1 MacroActivity 1 Step 1 service element</service>
+					<Aspects>
+						<functional>
+							<Uncertainty>
+								<Property>
+									<statement>uncertainty statement</statement>
+								</Property>
+							</Uncertainty>
+						</functional>
+					</Aspects>
 				</Step>
 				<Step>
 					<BusinessObject>
@@ -368,6 +414,15 @@
 						<technicalId>Scenario 1 MacroActivity 2 Step 1 Requirement 2 techncialId</technicalId>
 					</Requirement>
 					<service>Scenario 1 MacroActivity 2 Step 1 service element</service>
+					<Aspects>
+						<functional>
+							<Uncertainty>
+								<Property>
+									<statement>MacroActivity 2 statement</statement>
+								</Property>
+							</Uncertainty>
+						</functional>
+					</Aspects>
 				</Step>
 				<Step>
 					<BusinessObject>

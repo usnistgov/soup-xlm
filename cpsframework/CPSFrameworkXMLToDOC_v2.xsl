@@ -214,6 +214,12 @@
 					<xsl:apply-templates select="cps:CPSFramework/BusinessCase"/>
 					
 				</table>
+				
+				<xsl:call-template name="GenerateAspectsTable">
+					<xsl:with-param name="id" select="'0.1'"/>
+					<xsl:with-param name="parentName" select="'BusinessCase'"/>
+					<xsl:with-param name="grandparentId" select="generate-id(cps:CPSFramework)"/>
+				</xsl:call-template> 
 			
 				<h1>
 					<span lang="EN-GB" xml:lang="EN-GB">1       Description of the Use Case</span>
@@ -601,6 +607,12 @@
 					
 				</table>
 				
+				<xsl:call-template name="GenerateAspectsTable">
+					<xsl:with-param name="id" select="'4.0.1'"/>
+					<xsl:with-param name="parentName" select="'Scenario'"/>
+					<xsl:with-param name="grandparentId" select="generate-id(cps:CPSFramework)"/>
+				</xsl:call-template>
+				
 				<xsl:apply-templates select="cps:CPSFramework/UseCase/Scenario" mode="ScenarioStepsTable"/>
 				
 				<h1>
@@ -684,6 +696,12 @@
 					
 				</table>
 				
+				<xsl:call-template name="GenerateAspectsTable">
+					<xsl:with-param name="id" select="'5.0.2'"/>
+					<xsl:with-param name="parentName" select="'InformationModel'"/>
+					<xsl:with-param name="grandparentId" select="generate-id(cps:CPSFramework/InformationModelLibrary)"/>
+				</xsl:call-template>
+				
 				<h1>
 					<span lang="EN-GB" xml:lang="EN-GB">6       Interactions</span>
 				</h1>
@@ -764,6 +782,12 @@
 					
 				</table>
 				
+				<xsl:call-template name="GenerateAspectsTable">
+					<xsl:with-param name="id" select="'6.2.1'"/>
+					<xsl:with-param name="parentName" select="'influence'"/>
+					<xsl:with-param name="grandparentId" select="generate-id(cps:CPSFramework/InteractionLibrary/Influences)"/>
+				</xsl:call-template>
+				
 				<h2>
 					<span lang="EN-GB" xml:lang="EN-GB">6.3 Messages</span>
 				</h2>
@@ -797,35 +821,11 @@
 					
 				</table>
 				
-				<h2>
-					<span lang="EN-GB" xml:lang="EN-GB">7 Requirements</span>
-				</h2>
-				<table id="7">
-					<tr style="height:10.75pt">
-						<td width="100%" colspan="2" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Requirements</span>
-							</p>
-						</td>
-					</tr>
-					
-					<tr style="height:10.75pt">
-						<td width="5%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">R-ID</span>
-							</p>
-						</td>
-						<td width="95%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Details</span>
-							</p>
-						</td>
-					</tr>
-					
-					<xsl:apply-templates select="$AspectLookupTable/lookup:entry"/>
-					
-				</table>
-				
+				<xsl:call-template name="GenerateAspectsTable">
+					<xsl:with-param name="id" select="'6.3.1'"/>
+					<xsl:with-param name="parentName" select="'message'"/>
+					<xsl:with-param name="grandparentId" select="generate-id(cps:CPSFramework/InteractionLibrary/Messages)"/>
+				</xsl:call-template>
 			</body>
 		</html>
 	</xsl:template>
@@ -1462,8 +1462,14 @@
 			</tr>
 			
 			<xsl:apply-templates select="MacroActivity"/>
-			
+
 		</table>
+		
+		<xsl:call-template name="GenerateAspectsTableFromGreatGrandparentId">
+			<xsl:with-param name="id" select="'4.1.1'"/>
+			<xsl:with-param name="parentName" select="'Step'"/>
+			<xsl:with-param name="greatGrandparentId" select="generate-id(.)"/>
+		</xsl:call-template>
 	</xsl:template>
 	
 	<!--Ouptut sub tables for a MacroActivity.-->
@@ -1552,6 +1558,7 @@
 				<p class="MsoNormal">
 					<xsl:call-template name="GetAspectNumberFromLookup">
 						<xsl:with-param name="aspectNode" select="Aspects"/>
+						<xsl:with-param name="useGrandparentNumber" select="true()"/>
 					</xsl:call-template>
 				</p>
 			</td>
@@ -1718,6 +1725,76 @@
 		</p>
 	</xsl:template>
 
+	<xsl:template name="GenerateAspectsTable">
+		<xsl:param name="id"/>
+		<xsl:param name="parentName"/>
+		<xsl:param name="grandparentId"/>
+		
+		<h2>
+			<span lang="EN-GB" xml:lang="EN-GB">Requirements</span>
+		</h2>
+		<table id="{$id}">
+			<tr style="height:10.75pt">
+				<td width="100%" colspan="2" class="TableHeader">
+					<p class="TableHeading">
+						<span lang="EN-GB" xml:lang="EN-GB">Requirements</span>
+					</p>
+				</td>
+			</tr>
+			
+			<tr style="height:10.75pt">
+				<td width="5%" class="TableHeader">
+					<p class="TableHeading">
+						<span lang="EN-GB" xml:lang="EN-GB">R-ID</span>
+					</p>
+				</td>
+				<td width="95%" class="TableHeader">
+					<p class="TableHeading">
+						<span lang="EN-GB" xml:lang="EN-GB">Details</span>
+					</p>
+				</td>
+			</tr>
+			
+			<xsl:apply-templates select="$AspectLookupTable/lookup:entry[@parentName = $parentName and @grandparentId = $grandparentId]"/>
+			
+		</table>
+	</xsl:template>
+	
+	<xsl:template name="GenerateAspectsTableFromGreatGrandparentId">
+		<xsl:param name="id"/>
+		<xsl:param name="parentName"/>
+		<xsl:param name="greatGrandparentId"/>
+		
+		<h2>
+			<span lang="EN-GB" xml:lang="EN-GB">Requirements</span>
+		</h2>
+		<table id="{$id}">
+			<tr style="height:10.75pt">
+				<td width="100%" colspan="2" class="TableHeader">
+					<p class="TableHeading">
+						<span lang="EN-GB" xml:lang="EN-GB">Requirements</span>
+					</p>
+				</td>
+			</tr>
+			
+			<tr style="height:10.75pt">
+				<td width="5%" class="TableHeader">
+					<p class="TableHeading">
+						<span lang="EN-GB" xml:lang="EN-GB">R-ID</span>
+					</p>
+				</td>
+				<td width="95%" class="TableHeader">
+					<p class="TableHeading">
+						<span lang="EN-GB" xml:lang="EN-GB">Details</span>
+					</p>
+				</td>
+			</tr>
+			
+			<xsl:apply-templates select="$AspectLookupTable/lookup:entry[@parentName = $parentName and @greatGrandparentId = $greatGrandparentId]"/>
+			
+		</table>
+	</xsl:template>
+
 	<!--This template generates rows for the Requirements table based on the entries in the AspectLookupTable variable.-->
 	<xsl:template match="lookup:entry">
 		<tr>
@@ -1780,12 +1857,27 @@
 		in order to generate the Requirements table and create links to the rest of thet document.-->
 	<xsl:template name="CreateAspectLookup">
 		<xsl:for-each select="//Aspects">
+			<xsl:variable name="parentName" select="name(..)"/>
+			<xsl:variable name="grandparentName" select="name(../..)"/>
+		
 			<lookup:entry>
 				<xsl:attribute name="id">
 					<xsl:value-of select="generate-id(.)"/>
 				</xsl:attribute>
 				<xsl:attribute name="number">
-					<xsl:value-of select="position()"/>
+					<xsl:value-of select="count(../preceding-sibling::*[name() = $parentName and Aspects]) + 1"/>
+				</xsl:attribute>
+				<xsl:attribute name="grandparentNumber">
+					<xsl:value-of select="count(../../preceding-sibling::*/*[name() = $parentName and Aspects]) + 1"/>
+				</xsl:attribute>
+				<xsl:attribute name="parentName">
+					<xsl:value-of select="$parentName"/>
+				</xsl:attribute>
+				<xsl:attribute name="grandparentId">
+					<xsl:value-of select="generate-id(../..)"/>
+				</xsl:attribute>
+				<xsl:attribute name="greatGrandparentId">
+					<xsl:value-of select="generate-id(../../..)"/>
 				</xsl:attribute>
 				<xsl:copy-of select="."/>
 			</lookup:entry>
@@ -1795,8 +1887,16 @@
 	<!--Outputs the number of the given Aspects element from the lookup table.-->
 	<xsl:template name="GetAspectNumberFromLookup">
 		<xsl:param name="aspectNode"/>
+		<xsl:param name="useGrandparentNumber" select="false()"/>
 		
-		<xsl:value-of select="$AspectLookupTable/lookup:entry[@id = generate-id($aspectNode)]/@number"/>
+		<xsl:choose>
+			<xsl:when test="$useGrandparentNumber">
+				<xsl:value-of select="$AspectLookupTable/lookup:entry[@id = generate-id($aspectNode)]/@grandparentNumber"/>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:value-of select="$AspectLookupTable/lookup:entry[@id = generate-id($aspectNode)]/@number"/>
+			</xsl:otherwise>
+		</xsl:choose>
 	</xsl:template>
 
 	<!--Joins the values in the given node set into one string with the given joinString in between.
