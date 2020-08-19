@@ -1859,75 +1859,77 @@
 				</p>
 			</div>
 			<div style="display: inline-block; vertical-align: middle;margin: 4px">
-				<xsl:for-each select="$nodes">
-					<table style="margin: 8px;">
-						<tr>
-							<td width="5%" class="TableHeader">
-								<p class="TableHeading">
-									<span lang="EN-GB" xml:lang="EN-GB">Description</span>
-								</p>
-							</td>
-							<td width="95%" class="TableCell">
-								<p class="MsoNormal">
-									<xsl:value-of select="description"/>
-								</p>
-							</td>
-						</tr>
-						<tr>
-							<td width="5%" class="TableHeader">
-								<p class="TableHeading">
-									<span lang="EN-GB" xml:lang="EN-GB">Priority</span>
-								</p>
-							</td>
-							<td width="95%" class="TableCell">
-								<p class="MsoNormal">
-									<xsl:value-of select="priority"/>
-								</p>
-							</td>
-						</tr>
-						<tr>
-							<td width="5%" class="TableHeader">
-								<p class="TableHeading">
-									<span lang="EN-GB" xml:lang="EN-GB">References</span>
-								</p>
-							</td>
-							<td width="95%" class="TableCell">
-								<p class="MsoNormal">
-									<xsl:call-template name="StringJoin">
-										<xsl:with-param name="values" select="reference"/>
-										<xsl:with-param name="joinString" select="', '"/>
-									</xsl:call-template>
-								</p>
-							</td>
-						</tr>
-						<tr>
-							<td width="5%" class="TableHeader">
-								<p class="TableHeading">
-									<span lang="EN-GB" xml:lang="EN-GB">Statement</span>
-								</p>
-							</td>
-							<td width="95%" class="TableCell">
-								<p class="MsoNormal">
-									<xsl:value-of select="statement"/>
-								</p>
-							</td>
-						</tr>
-						<tr>
-							<td width="5%" class="TableHeader">
-								<p class="TableHeading">
-									<span lang="EN-GB" xml:lang="EN-GB">Trace</span>
-								</p>
-							</td>
-							<td width="95%" class="TableCell">
-								<p class="MsoNormal">
-									<xsl:value-of select="trace"/>
-								</p>
-							</td>
-						</tr>
-					</table>
-				</xsl:for-each>
+				<xsl:apply-templates select="$nodes"/>
 			</div>
 		</div>
+	</xsl:template>
+	
+	<xsl:template match="Property">
+		<table style="margin: 8px;">
+			<tr>
+				<td width="5%" class="TableHeader">
+					<p class="TableHeading">
+						<span lang="EN-GB" xml:lang="EN-GB">Description</span>
+					</p>
+				</td>
+				<td width="95%" class="TableCell">
+					<p class="MsoNormal">
+						<xsl:value-of select="description"/>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="5%" class="TableHeader">
+					<p class="TableHeading">
+						<span lang="EN-GB" xml:lang="EN-GB">Priority</span>
+					</p>
+				</td>
+				<td width="95%" class="TableCell">
+					<p class="MsoNormal">
+						<xsl:value-of select="priority"/>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="5%" class="TableHeader">
+					<p class="TableHeading">
+						<span lang="EN-GB" xml:lang="EN-GB">References</span>
+					</p>
+				</td>
+				<td width="95%" class="TableCell">
+					<p class="MsoNormal">
+						<xsl:call-template name="StringJoin">
+							<xsl:with-param name="values" select="reference"/>
+							<xsl:with-param name="joinString" select="', '"/>
+						</xsl:call-template>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="5%" class="TableHeader">
+					<p class="TableHeading">
+						<span lang="EN-GB" xml:lang="EN-GB">Statement</span>
+					</p>
+				</td>
+				<td width="95%" class="TableCell">
+					<p class="MsoNormal">
+						<xsl:value-of select="statement"/>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td width="5%" class="TableHeader">
+					<p class="TableHeading">
+						<span lang="EN-GB" xml:lang="EN-GB">Trace</span>
+					</p>
+				</td>
+				<td width="95%" class="TableCell">
+					<p class="MsoNormal">
+						<xsl:value-of select="trace"/>
+					</p>
+				</td>
+			</tr>
+		</table>
 	</xsl:template>
 
 	<!--Creates an intermediary xml document based on all the Asepcts in the source document
