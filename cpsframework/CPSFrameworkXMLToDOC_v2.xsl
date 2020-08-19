@@ -1790,17 +1790,27 @@
 				</td>
 			</tr>
 			
-			<xsl:apply-templates select="$AspectLookupTable/lookup:entry[@parentName = $parentName and @greatGrandparentId = $greatGrandparentId]"/>
+			<xsl:apply-templates select="$AspectLookupTable/lookup:entry[@parentName = $parentName and @greatGrandparentId = $greatGrandparentId]">
+				<xsl:with-param name="useGrandparentNumber" select="true()"/>
+			</xsl:apply-templates>
 			
 		</table>
 	</xsl:template>
 
 	<!--This template generates rows for the Requirements table based on the entries in the AspectLookupTable variable.-->
 	<xsl:template match="lookup:entry">
+		<xsl:param name="useGrandparentNumber" select="false()"/>
 		<tr>
-			<td width="5%" class="TableCell">
-				<p class="MsoNormal">
-					<xsl:value-of select="@number"/>
+			<td width="5%" class="TableCell" style="vertical-align: middle;">
+				<p class="MsoNormal" style="text-align: center;">
+					<xsl:choose>
+						<xsl:when test="$useGrandparentNumber">
+							<xsl:value-of select="@grandparentNumber"/>
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:value-of select="@number"/>
+						</xsl:otherwise>
+					</xsl:choose>
 				</p>
 			</td>
 			<td width="95%" class="TableCell">
