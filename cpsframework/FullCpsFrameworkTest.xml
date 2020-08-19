@@ -11,10 +11,47 @@
 			<functional>
 				<TransportationInfrastructure>
 					<Property>
-						<statement> TBD </statement>
+						<description>BusinessCase property 1 description</description>
+						<priority>1</priority>
+						<reference>BusinessCase property 1 reference 1</reference>
+						<reference>BusinessCase property 1 reference 2</reference>
+						<statement>BusinessCase Property 1 statement </statement>
+						<trace>BusinessCase property 1 trace</trace>
+					</Property>
+					<Property>
+						<description>BusinessCase property 2 description</description>
+						<priority>2</priority>
+						<reference>BusinessCase property 2 reference 1</reference>
+						<reference>BusinessCase property 2 reference 2</reference>
+						<statement>BusinessCase Property 2 statement </statement>
+						<trace>BusinessCase property 2 trace</trace>
 					</Property>
 				</TransportationInfrastructure>
 			</functional>
+			<communications>
+				<Connectivity>
+					<BasicConnectivity>
+						<OSIDataLink>
+							<Property>
+								<description>BusinessCase property 3 description</description>
+								<priority>3</priority>
+								<reference>BusinessCase property 3 reference 1</reference>
+								<reference>BusinessCase property 3 reference 2</reference>
+								<statement>BusinessCase Property 3 statement </statement>
+								<trace>BusinessCase property 3 trace</trace>
+							</Property>
+							<Property>
+								<description>BusinessCase property 4description</description>
+								<priority>4</priority>
+								<reference>BusinessCase property 4 reference 1</reference>
+								<reference>BusinessCase property 4 reference 2</reference>
+								<statement>BusinessCase Property 4 statement </statement>
+								<trace>BusinessCase property 4 trace</trace>
+							</Property>
+						</OSIDataLink>
+					</BasicConnectivity>
+				</Connectivity>
+			</communications>
 		</Aspects>
 		<Domain>
 			<name>BusinessCase 1 Domain 1 name</name>
