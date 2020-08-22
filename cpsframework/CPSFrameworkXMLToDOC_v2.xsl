@@ -1474,6 +1474,20 @@
 	
 	<!--Ouptut sub tables for a MacroActivity.-->
 	<xsl:template match="MacroActivity">
+		<tr id="MacroActivity">
+			<td colspan="9" class="TableHeader">
+				<p class="TableHeading">
+					<xsl:attribute name="id">
+						<!--LOOKUP: MacroActivity/technicald-->
+						<xsl:value-of select="technicalId"/>
+					</xsl:attribute>
+				
+					<!--LOOKUP: Macroactivity/name-->
+					<xsl:value-of select="name"/>
+				</p>
+			</td>
+		</tr>
+	
 		<xsl:apply-templates select="Step"/>
 	</xsl:template>
 	

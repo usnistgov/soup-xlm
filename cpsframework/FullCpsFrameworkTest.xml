@@ -347,6 +347,10 @@
 						<name>Scenario 1 MacroActivity 1 Step 1 BusinessObject 1 name</name>
 						<technicalId>Scenario 1 MacroActivity 1 Step 1 BusinessObject 1 technicalId</technicalId>
 					</BusinessObject>
+					<BusinessObject>
+						<name>Scenario 1 MacroActivity 1 Step 1 BusinessObject 2 name</name>
+						<technicalId>Scenario 1 MacroActivity 1 Step 1 BusinessObject 2 technicalId</technicalId>
+					</BusinessObject>
 					<description>Scenario 1 MacroActivity 1 Step 1 description element</description>
 					<Drawing>
 						<drawingType>other</drawingType>
