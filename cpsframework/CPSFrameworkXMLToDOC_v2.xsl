@@ -16,10 +16,13 @@
 	
 	<xsl:output method="xml" version="4.0" encoding="UTF-8" omit-xml-declaration="yes" indent="yes"/>
 	
+	<!--Create and store aspect lookup table. On msxml this will be stored as a string
+		and msxsl:node-set must be used to turn it back into xml nodes.-->
 	<xsl:variable name="AspectLookupTableString">
 		<xsl:call-template name="CreateAspectLookup"/>
 	</xsl:variable>
 	
+	<!--Turns the Aspect lookup table back into xml nodes.-->
 	<xsl:variable name="AspectLookupTable" select="msxsl:node-set($AspectLookupTableString)"/>
 	
 	<xsl:template match="/" name="initial-template">
@@ -942,11 +945,6 @@
 							<xsl:if test="position() &lt; last()">
 								<xsl:text>, </xsl:text>
 							</xsl:if>
-							
-							<!--<xsl:call-template name="StringJoin">
-								<xsl:with-param name="values" select="BusinessCase/technicalId"/>
-								<xsl:with-param name="joinString" select="', '"/>
-							</xsl:call-template>-->
 						</p>
 					</xsl:for-each>
 				</td>
@@ -1188,6 +1186,7 @@
 		</tr>
 	</xsl:template>
 	
+	<!--Outputs an assumption table row.-->
 	<xsl:template match="Assumption">
 		<tr>
 			<td width="25%" class="TableCell">
@@ -1397,6 +1396,7 @@
 		</tr>
 	</xsl:template>
 	
+	<!--Outputs a table for all the steps in a Scenario.-->
 	<xsl:template match="Scenario" mode="ScenarioStepsTable">
 		<h2>
 			<span lang="EN-GB" xml:lang="EN-GB">
@@ -1657,6 +1657,7 @@
 		</tr>
 	</xsl:template>
 
+	<!--Outputs influence table row.-->
 	<xsl:template match="influence">
 		<tr>
 			<td width="20%" class="TableCell">
@@ -1686,6 +1687,7 @@
 		</tr>
 	</xsl:template>
 	
+	<!--Outputs message table row.-->
 	<xsl:template match="message">
 		<tr>
 			<td width="20%" class="TableCell">
@@ -1739,6 +1741,7 @@
 		</p>
 	</xsl:template>
 
+	<!--Generates an aspect table with the Aspects that match the given id, parentName, and grandparentId.-->
 	<xsl:template name="GenerateAspectsTable">
 		<xsl:param name="id"/>
 		<xsl:param name="parentName"/>
@@ -1774,6 +1777,8 @@
 		</table>
 	</xsl:template>
 	
+	<!--Generates an aspect table with the Aspects that match the given id, parentName, and greatgrandparentId.
+		This is necessary for outputing aspect tables for steps in the right locations.-->
 	<xsl:template name="GenerateAspectsTableFromGreatGrandparentId">
 		<xsl:param name="id"/>
 		<xsl:param name="parentName"/>
@@ -1857,7 +1862,7 @@
 		
 		<!--If this node has at least one Property node after it, output an entry.-->
 		<xsl:if test="$node/Property">
-			<xsl:call-template name="OutputPropertys">
+			<xsl:call-template name="OutputProperties">
 				<xsl:with-param name="path" select="$newPath"/>
 				<xsl:with-param name="nodes" select="$node/Property"/>
 			</xsl:call-template>
@@ -1872,7 +1877,8 @@
 		</xsl:for-each>
 	</xsl:template>
 	
-	<xsl:template name="OutputPropertys">
+	<!--Creates a div grouping for a property name and its sub-table.-->
+	<xsl:template name="OutputProperties">
 		<xsl:param name="path"/>
 		<xsl:param name="nodes"/>
 		
@@ -1888,6 +1894,7 @@
 		</div>
 	</xsl:template>
 	
+	<!--Outputs a table for all of a property's elements.-->
 	<xsl:template match="Property">
 		<table style="margin: 8px;">
 			<tr>
