@@ -1460,10 +1460,9 @@
 					<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">Requirements , R-ID</span></p>
 				</td>
 			</tr>
+		</table>			
 			
-			<xsl:apply-templates select="MacroActivity"/>
-
-		</table>
+		<xsl:apply-templates select="MacroActivity"/>
 		
 		<xsl:call-template name="GenerateAspectsTableFromGreatGrandparentId">
 			<xsl:with-param name="id" select="'4.1.1'"/>
@@ -1474,21 +1473,23 @@
 	
 	<!--Ouptut sub tables for a MacroActivity.-->
 	<xsl:template match="MacroActivity">
-		<tr id="MacroActivity">
-			<td colspan="9" class="TableHeader">
-				<p class="TableHeading">
-					<xsl:attribute name="id">
-						<!--LOOKUP: MacroActivity/technicald-->
-						<xsl:value-of select="technicalId"/>
-					</xsl:attribute>
-				
-					<!--LOOKUP: Macroactivity/name-->
-					<xsl:value-of select="name"/>
-				</p>
-			</td>
-		</tr>
-	
-		<xsl:apply-templates select="Step"/>
+		<table id="4.1">
+			<tr id="MacroActivity">
+				<td colspan="9" class="TableHeader">
+					<p class="TableHeading">
+						<xsl:attribute name="id">
+							<!--LOOKUP: MacroActivity/technicald-->
+							<xsl:value-of select="technicalId"/>
+						</xsl:attribute>
+					
+						<!--LOOKUP: Macroactivity/name-->
+						<xsl:value-of select="name"/>
+					</p>
+				</td>
+			</tr>
+		
+			<xsl:apply-templates select="Step"/>
+		</table>
 	</xsl:template>
 	
 	<!--Output table for a Step-->
