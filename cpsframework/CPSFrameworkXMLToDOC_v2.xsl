@@ -45,7 +45,7 @@
 							{font-family:"Arial Narrow";
 							panose-1:2 11 6 6 2 2 2 3 2 4;}
 					 /* Style Definitions */
-					 p.MsoNormal, li.MsoNormal, div.MsoNormal
+					 p, li.MsoNormal, div.MsoNormal
 							{margin:0in;
 							margin-top:4px;
 							margin-bottom:4px;
@@ -156,12 +156,7 @@
 							margin:1.0in 1.0in 1.0in 1.0in;}
 					div.WordSection1
 							{page:WordSection1;}
-					td.TableHeader
-						{border:solid windowtext 1.0pt;
-						background:#CCCCCC;
-						padding:0in 5.4pt 0in 5.4pt;
-						height:10.75pt}
-					td.TableCell
+					td
 						{border:solid windowtext 1.0pt;
 						padding:0in 5.4pt 0in 5.4pt;
 						height:11.8pt;
@@ -170,6 +165,22 @@
 						{width:100.0%;
 						border-collapse:collapse;
 						border:none}
+					th
+						{border:solid windowtext 1.0pt;
+						background:#CCCCCC;
+						padding:0in 5.4pt 0in 5.4pt;
+						height:10.75pt;
+						text-align:left;
+						mso-style-name:TableHeading;
+						mso-style-link:"TableHeading Char";
+						margin:0in;
+						margin-bottom:.0001pt;
+						font-size:10.0pt;
+						font-family:"Arial","sans-serif";
+						color:#002060;
+						letter-spacing:.4pt;
+						font-weight:bold;
+						font-style:italic;}
 					-->
 					/*]]>*/
 				</style>
@@ -178,40 +189,16 @@
 			</head>
 			<body>
 				<h1>
-					<span lang="EN-GB" xml:lang="EN-GB">0       Description of the Business Case</span>
+					0       Description of the Business Case
 				</h1>			
 				<table id="0">
-					<tr style="height:10.75pt">
-						<td width="15%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">ID</span>
-							</p>
-						</td>
-						<td width="15%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Name</span>
-							</p>
-						</td>
-						<td width="15%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Domain(s)</span>
-							</p>
-						</td>
-						<td width="30%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Description</span>
-							</p>
-						</td>
-						<td width="15%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Requirements R-ID</span>
-							</p>
-						</td>
-						<td width="15%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Type</span>
-							</p>
-						</td>
+					<tr>
+						<th>ID</th>
+						<th>Name</th>
+						<th>Domain(s)</th>
+						<th>Description</th>
+						<th>Requirements R-ID</th>
+						<th>Type</th>
 					</tr>
 					
 					<xsl:apply-templates select="cps:CPSFramework/BusinessCase"/>
@@ -225,35 +212,19 @@
 				</xsl:call-template> 
 			
 				<h1>
-					<span lang="EN-GB" xml:lang="EN-GB">1       Description of the Use Case</span>
+					1       Description of the Use Case
 				</h1>
 				<h2>
-					<span lang="EN-GB" xml:lang="EN-GB">1.1    Name of Use Case</span>
+					1.1    Name of Use Case
 				</h2>
 				<table id="1.1">
-					<tr style="height:10.75pt">
-						<td width="100%" colspan="3" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Use Case Identification</span>
-							</p>
-						</td>
+					<tr>
+						<th colspan="3">Use Case Identification</th>
 					</tr>
-					<tr style="height:10.75pt">
-						<td width="7%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">ID</span>
-							</p>
-						</td>
-						<td width="20%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Domain(s)</span>
-							</p>
-						</td>
-						<td width="72%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Name of Use Case</span>
-							</p>
-						</td>
+					<tr>
+						<th>ID</th>
+						<th>Domain(s)</th>
+						<th>Name of Use Case</th>
 					</tr>
 					
 					<xsl:apply-templates select="cps:CPSFramework/UseCase"/>
@@ -261,45 +232,18 @@
 				</table>
 				
 				<h2>
-					<span lang="EN-GB" xml:lang="EN-GB">1.2    Version Management</span>
+					1.2    Version Management
 				</h2>
 				<table id="1.2">
-					<tr style="height:1.0pt">
-						<td width="100%" colspan="7" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Version Management</span>
-							</p>
-						</td>
+					<tr>
+						<th colspan="7">Version Management</th>
 					</tr>
 					<tr>
-						<td width="10%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Version Management Changes</span>
-							</p>
-						</td>
-						<td width="10%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Date</span>
-							</p>
-						</td>
-						<td width="10%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Name<br/>Author(s)  or Committee</span>
-							</p>
-						</td>
-						<td width="10%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Approval Status</span>
-							</p>
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">draft, for comments, for voting, final</span>
-							</p>
-						</td>
-						<td width="10%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Version Number</span>
-							</p>
-						</td>
+						<th>Version Management Changes</th>
+						<th>Date</th>
+						<th>Name, Author(s), or Committee</th>
+						<th>Approval Status, draft, for comments, for voting, final</th>
+						<th>Version Number</th>
 					</tr>
 					
 					<xsl:apply-templates select="cps:CPSFramework/UseCase/Version"/>
@@ -308,38 +252,14 @@
 				
 				<table id="1.2.1" style="margin-top:16px">
 					<tr>
-						<td width="100%" colspan="5" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Maturity</span>
-							</p>
-						</td>
+						<th colspan="5">Maturity</th>
 					</tr>
 					<tr>
-						<td  width="20%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Effective</span>
-							</p>						
-						</td>
-						<td width="20%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Maturity</span>
-							</p>	
-						</td>
-						<td width="20%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Responsible Party</span>
-							</p>	
-						</td>
-						<td width="20%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Revision</span>
-							</p>	
-						</td>
-						<td width="20%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Status</span>
-							</p>	
-						</td>
+						<th>Effective</th>
+						<th>Maturity</th>
+						<th>Responsible Party</th>
+						<th>Revision</th>
+						<th>Status</th>
 					</tr>
 					
 					<xsl:apply-templates select="cps:CPSFramework/Maturity"/>
@@ -347,15 +267,11 @@
 				</table>
 				
 				<h2>
-					<span lang="EN-GB" xml:lang="EN-GB">1.3    Scope and Objectives of Use Case</span>
+					1.3    Scope and Objectives of Use Case
 				</h2>
 				<table id="1.3">
-					<tr style="height:17.2pt">
-						<td width="100%" colspan="2" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Scope and Objectives of Use Case</span>
-							</p>
-						</td>
+					<tr>
+						<th colspan="2">Scope and Objectives of Use Case</th>
 					</tr>
 					
 					<xsl:call-template name="ScopeAndObjectives"/>
@@ -363,15 +279,11 @@
 				</table>
 				
 				<h2>
-					<span lang="EN-GB" xml:lang="EN-GB">1.4    Narrative of Use Case</span>
+					1.4    Narrative of Use Case
 				</h2>
 				<table id="1.4">
-					<tr style="height:1.0pt">
-						<td width="100%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Narrative of Use Case</span>
-							</p>
-						</td>
+					<tr>
+						<th>Narrative of Use Case</th>
 					</tr>
 
 					<xsl:apply-templates select="cps:CPSFramework/UseCase/Narrative"/>					
@@ -379,15 +291,11 @@
 				</table>
 				
 				<h2>
-					<span lang="EN-GB" xml:lang="EN-GB">1.5    General Remarks</span>
+					1.5    General Remarks
 				</h2>
 				<table id="1.5">
 					<tr>
-						<td width="100%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">General Remarks</span>
-							</p>
-						</td>
+						<th>General Remarks</th>
 					</tr>
 
 					<xsl:apply-templates select="cps:CPSFramework/UseCase/Remark"/>
@@ -395,54 +303,38 @@
 				</table>
 				
 				<h1>
-					<span lang="EN-GB" xml:lang="EN-GB">2       Diagrams of Use Case</span>
+					2       Diagrams of Use Case
 				</h1>
 				<table id="2">
 					<tr>
-						<td width="100%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Diagram of Use Case</span>
-							</p>
-						</td>
+						<th>Diagram of the Use Case</th>
 					</tr>
 					<tr>
-						<td width="100%" class="TableCell">
+						<td>
 							<xsl:apply-templates select="/cps:CPSFramework/UseCase/Drawing"/>
 						</td>
 					</tr>
 				</table>
 				
 				<h1>
-					<span lang="EN-GB" xml:lang="EN-GB">3       Technical Details</span>
+					3       Technical Details
 				</h1>
 				<h2>
-					<span lang="EN-GB" xml:lang="EN-GB">3.1    Actors: People, Systems, Applications, Databases, the Power System, and Other Stakeholders</span>
+					3.1    Actors: People, Systems, Applications, Databases, the Power System, and Other Stakeholders
 				</h2>
 				
 				<xsl:apply-templates select="cps:CPSFramework/UseCase/CPSGrouping"/>
 				
 				<h2>
-					<span lang="EN-GB" xml:lang="EN-GB">3.2    Preconditions, Assumptions, Post condition, Events</span>
+					3.2    Preconditions, Assumptions, Post condition, Events
 				</h2>
 				<table id="3.2">
 					<tr>
-						<td width="100%" colspan="4" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Use Case Conditions</span>
-							</p>
-						</td>
+						<th colspan="4">Use Case Conditions</th>
 					</tr>
 					<tr>
-						<td width="32%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Assumption name</span>
-							</p>
-						</td>
-						<td width="33%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Assumption content</span>
-							</p>
-						</td>
+						<th>Assumption name</th>
+						<th>Assumption content</th>
 					</tr>
 					
 					<xsl:apply-templates select="cps:CPSFramework/UseCase/Assumption"/>
@@ -451,16 +343,8 @@
 					
 				<table id="3.3">
 					<tr>
-						<td width="32%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Prerequisite name</span>
-							</p>
-						</td>
-						<td width="33%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Prerequisite content</span>
-							</p>
-						</td>
+						<th>Prerequisite name</th>
+						<th>Prerequisite content</th>
 					</tr>
 					
 					<xsl:apply-templates select="cps:CPSFramework/UseCase/Prerequisite"/>
@@ -468,57 +352,21 @@
 				</table>
 				
 				<h2>
-					<span lang="EN-GB" xml:lang="EN-GB">3.3    References / Issues</span>
+					3.3    References / Issues
 				</h2>
 				<table id="3.4">
 					<tr>
-						<td width="100%" colspan="8" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">References</span>
-							</p>
-						</td>
+						<th colspan="8">References</th>
 					</tr>
 					<tr>
-						<td width="5%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">No.</span>
-							</p>
-						</td>
-						<td width="15%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">References Type</span>
-							</p>
-						</td>
-						<td width="15%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Reference</span>
-							</p>
-						</td>
-						<td width="10%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Description</span>
-							</p>
-						</td>
-						<td width="10%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Status</span>
-							</p>
-						</td>
-						<td width="15%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Impact on Use Case</span>
-							</p>
-						</td>
-						<td width="15%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Originator / Organisation</span>
-							</p>
-						</td>
-						<td width="15%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Link</span>
-							</p>
-						</td>
+						<th>No.</th>
+						<th>References Type</th>
+						<th>Reference</th>
+						<th>Description</th>
+						<th>Status</th>
+						<th>Impact on Use Case</th>
+						<th>Originator / Organisation</th>
+						<th>Link</th>
 					</tr>
 						
 					<xsl:apply-templates select="cps:CPSFramework/UseCase/Reference"/>
@@ -526,84 +374,39 @@
 				</table>				
 				
 				<h2>
-					<span lang="EN-GB" xml:lang="EN-GB">3.4    Further Information to the Use Case for Classification / Mapping</span>
+					3.4    Further Information to the Use Case for Classification / Mapping
 				</h2>				
 				<table id="3.5">				
 					<tr>
-						<td width="100%" colspan="6" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Classification Information</span>
-							</p>
-						</td>
+						<th colspan="6">Classification Information</th>
 					</tr>
 					<tr>
-						<td width="10%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Relation to Other Use Cases</span>
-							</p>
-						</td>
-						<td width="10%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Level of Depth</span>
-							</p>
-						</td>
-						<td width="10%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Prioritisation</span>
-							</p>
-						</td>
-						<td width="10%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Generic, Regional or National Relation</span>
-							</p>
-						</td>
-						<td width="10%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">View</span>
-							</p>
-						</td>
-						<td width="10%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Further Keywords  for Classification</span>
-							</p>
-						</td>
+						<th>Relation to Other Use Cases</th>
+						<th>Level of Depth</th>
+						<th>Prioritisation</th>
+						<th>Generic, Regional or National Relation</th>
+						<th>View</th>
+						<th>Further Keywords for Classification</th>
 					</tr>
 					
 					<xsl:call-template name="FurtherInformation"/>
 					
 				</table>
 				
-				<h1>
-					<span lang="EN-GB" xml:lang="EN-GB">4       Step by Step Analysis of Use Case</span>
+				<h1>4       Step by Step Analysis of Use Case
 				</h1>
 				<table id="4">
-					<tr style="height:14.35pt">
-						<td width="100%" colspan="7" class="TableHeader">
-							<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">Scenario Conditions</span></p>
-						</td>
+					<tr>
+						<th colspan="7">Scenario Conditions</th>
 					</tr>
 					<tr>
-						<td width="5%" class="TableHeader">
-							<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">No.</span></p>
-						</td>
-						<td width="18%" class="TableHeader">
-							<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">Scenario Name</span></p>
-						</td>
-						<td width="18%" class="TableHeader">
-							<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">Primary Actor</span></p>
-						</td>
-						<td width="18%" class="TableHeader">
-							<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">Triggering Event</span></p>
-						</td>
-						<td width="18%" class="TableHeader">
-							<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">Pre-Condition</span></p>
-						</td>
-						<td width="18%" class="TableHeader">
-							<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">Post-Condition</span></p>
-						</td>
-						<td width="5%" class="TableHeader">
-							<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">Requirements R-ID</span></p>
-						</td>
+						<th>No.</th>
+						<th>Scenario Name</th>
+						<th>Primary Actor</th>
+						<th>Triggering Event</th>
+						<th>Pre-Condition</th>
+						<th>Post-Condition</th>
+						<th>Requirements R-ID</th>
 					</tr>
 					
 					<xsl:apply-templates select="cps:CPSFramework/UseCase/Scenario" mode="ScenarioTable"/>
@@ -619,42 +422,18 @@
 				<xsl:apply-templates select="cps:CPSFramework/UseCase/Scenario" mode="ScenarioStepsTable"/>
 				
 				<h1>
-					<span lang="EN-GB" xml:lang="EN-GB">5       Information Exchanged</span>
+					5       Information Exchanged
 				</h1>
 				<table id="5">
 					<tr>
-						<td width="100%" colspan="5" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Information Maturity</span>
-							</p>
-						</td>
+						<th colspan="5">Information Maturity</th>
 					</tr>
 					<tr>
-						<td  width="20%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Effective</span>
-							</p>						
-						</td>
-						<td width="20%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Maturity</span>
-							</p>	
-						</td>
-						<td width="20%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Responsible Party</span>
-							</p>	
-						</td>
-						<td width="20%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Revision</span>
-							</p>	
-						</td>
-						<td width="20%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Status</span>
-							</p>	
-						</td>
+						<th>Effective</th>
+						<th>Maturity</th>
+						<th>Responsible Party</th>
+						<th>Revision</th>
+						<th>Status</th>
 					</tr>
 					
 					<xsl:apply-templates select="cps:CPSFramework/InformationModelLibrary/Maturity"/>
@@ -663,36 +442,13 @@
 				
 				<table id="5.0.1" style="margin-top:16px">
 					<tr>
-						<td width="100%" colspan="4" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Information Exchanged</span>
-							</p>
-						</td>
+						<th colspan="4">Information Exchanged</th>
 					</tr>
 					<tr>
-						<td width="20%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Name of Information Exchanged</span>
-							</p>
-						</td>
-						<td width="40%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Description of Information Exchanged</span>
-							</p>
-						</td>
-						<td width="30%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Requirements to information data</span>
-							</p>
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">R-ID</span>
-							</p>
-						</td>
-						<td width="30%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Requirements R-ID</span>
-							</p>
-						</td>
+						<th>Name of Information Exchanged</th>
+						<th>Description of Information Exchanged</th>
+						<th>Requirements to information data R-ID</th>
+						<th>Requirements R-ID</th>
 					</tr>
 					
 					<xsl:apply-templates select="cps:CPSFramework/InformationModelLibrary/InformationModel"/>
@@ -706,46 +462,22 @@
 				</xsl:call-template>
 				
 				<h1>
-					<span lang="EN-GB" xml:lang="EN-GB">6       Interactions</span>
+					6       Interactions
 				</h1>
 				
 				<h2>
-					<span lang="EN-GB" xml:lang="EN-GB">6.1 Interaction Libary Maturity</span>
+					6.1 Interaction Libary Maturity
 				</h2>	
 				<table id="6.1">
 					<tr>
-						<td width="100%" colspan="5" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Interaction Maturity</span>
-							</p>
-						</td>
+						<th colspan="5">Interaction Maturity</th>
 					</tr>
 					<tr>
-						<td  width="20%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Effective</span>
-							</p>						
-						</td>
-						<td width="20%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Maturity</span>
-							</p>	
-						</td>
-						<td width="20%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Responsible Party</span>
-							</p>	
-						</td>
-						<td width="20%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Revision</span>
-							</p>	
-						</td>
-						<td width="20%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Status</span>
-							</p>	
-						</td>
+						<th>Effective</th>
+						<th>Maturity</th>
+						<th>Responsible Party</th>
+						<th>Revision</th>
+						<th>Status</th>
 					</tr>
 					
 					<xsl:apply-templates select="cps:CPSFramework/InteractionLibrary/Maturity"/>
@@ -753,32 +485,16 @@
 				</table>
 				
 				<h2>
-					<span lang="EN-GB" xml:lang="EN-GB">6.2 Influences</span>
+					6.2 Influences
 				</h2>
 				<table id="6.2">
 					<tr>
-						<td width="100%" colspan="3" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Influences</span>
-							</p>
-						</td>
+						<th colspan="3">Influences</th>
 					</tr>
 					<tr>
-						<td width="20%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Name</span>
-							</p>
-						</td>
-						<td width="70%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Description</span>
-							</p>
-						</td>
-						<td width="10%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Requirement R-ID</span>
-							</p>
-						</td>
+						<th>Name</th>
+						<th>Description</th>
+						<th>Requirement R-ID</th>
 					</tr>
 					
 					<xsl:apply-templates select="cps:CPSFramework/InteractionLibrary/Influences/influence"/>
@@ -792,32 +508,16 @@
 				</xsl:call-template>
 				
 				<h2>
-					<span lang="EN-GB" xml:lang="EN-GB">6.3 Messages</span>
+					6.3 Messages
 				</h2>
 				<table id="6.3">
 					<tr>
-						<td width="100%" colspan="3" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Messages</span>
-							</p>
-						</td>
+						<th colspan="3">Messages</th>
 					</tr>
 					<tr>
-						<td width="20%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Name</span>
-							</p>
-						</td>
-						<td width="70%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Description</span>
-							</p>
-						</td>
-						<td width="10%" class="TableHeader">
-							<p class="TableHeading">
-								<span lang="EN-GB" xml:lang="EN-GB">Requirement R-ID</span>
-							</p>
-						</td>
+						<th>Name</th>
+						<th>Description</th>
+						<th>Requirement R-ID</th>
 					</tr>
 					
 					<xsl:apply-templates select="cps:CPSFramework/InteractionLibrary/Messages/message"/>
@@ -829,16 +529,96 @@
 					<xsl:with-param name="parentName" select="'message'"/>
 					<xsl:with-param name="grandparentId" select="generate-id(cps:CPSFramework/InteractionLibrary/Messages)"/>
 				</xsl:call-template>
+				
+				<h1>
+					7 CPS Library
+				</h1>				
+				
+				<h2>
+					7.1 CPS List
+				</h2>
+				<table id="7.1">
+					<tr>
+						<th colspan="8">CPS List</th>
+					</tr>
+					<tr>
+						<th>Identifier</th>
+						<th>Name</th>
+						<th>Description</th>
+						<th>Type</th>
+						<th>Domains</th>
+						<th>Logical</th>
+						<th>Physical</th>
+						<th>Irreducible</th>
+					</tr>
+					
+					<xsl:apply-templates select="cps:CPSFramework/CPSLibrary/cps"/>
+					
+				</table>
 			</body>
 		</html>
+	</xsl:template>
+	
+	<xsl:template match="cps">
+		<tr>
+			<xsl:apply-templates select="identifier" mode="td">
+				<xsl:with-param name="id" select="technicalId"/>
+			</xsl:apply-templates>
+			
+			<xsl:apply-templates select="name" mode="td"/>
+			
+			<xsl:apply-templates select="description" mode="td"/>
+			
+			<xsl:apply-templates select="type" mode="td"/>
+			
+			<td>
+				<xsl:apply-templates select="Domain"/>
+			</td>
+			
+			<xsl:apply-templates select="name" mode="td"/>
+			
+			<xsl:apply-templates select="name" mode="td"/>
+			
+			<xsl:apply-templates select="name" mode="td"/>
+		</tr>
+	</xsl:template>
+	
+	<xsl:template match="Domain">
+		<p>
+			<xsl:attribute name="id">
+				<xsl:value-of select="technicalId"/>
+			</xsl:attribute>
+		
+			<xsl:value-of select="name"/>
+			<xsl:text>: </xsl:text>
+			<xsl:value-of select="description"/>
+		</p>
+	</xsl:template>
+	
+	<!--This template outputs a <td> element for any element 
+		with optional width and <p> id attributes.-->
+	<xsl:template match="*" mode="td">
+		<xsl:param name="id" select="''"/>
+		
+		<td>
+			<p>
+				<xsl:if test="$id != ''">
+					<xsl:attribute name="id">
+						<xsl:value-of select="$id"/>
+					</xsl:attribute>
+				</xsl:if>			
+			
+				<xsl:value-of select="."/>
+			</p>
+		</td>
 	</xsl:template>
 	
 	<!--This template outputs information related to a BusinessCases.
 		This includes the technicalId, identifier, name, description, type, and Domains.-->
 	<xsl:template match="BusinessCase">
 		<tr style="height:11.8pt">
-			<td width="15%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<!--LOOKUP: BusinessCase/technicalId-->
 					<xsl:attribute name="id">
 						<xsl:value-of select="technicalId"/>
@@ -848,16 +628,16 @@
 					<xsl:value-of select="identifier"/>
 				</p>
 			</td>
-			<td width="15%" class="TableCell">
+			<td>
 				
-				<p class="MsoNormal">
+				<p>
 					<!--LOOKUP: BusinessCase/name-->
 					<xsl:value-of select="name"/>
 				</p>
 			</td>
-			<td width="15%" class="TableCell">
+			<td>
 				<xsl:for-each select="Domain">
-					<p class="MsoNormal">
+					<p>
 						<!--LOOKUP: BusinessCase/Domain/technicalId-->
 						<xsl:attribute name="id">
 							<xsl:value-of select="technicalId"/>
@@ -868,22 +648,22 @@
 					</p>
 				</xsl:for-each>
 			</td>
-			<td width="30%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<!--LOOKUP: BusinessCase/Domain/description-->
 					<xsl:value-of select="description"/>
 				</p>
 			</td>
-			<td width="15%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<!--Get requirement number from lookup table-->
 					<xsl:call-template name="GetAspectNumberFromLookup">
 						<xsl:with-param name="aspectNode" select="Aspects"/>
 					</xsl:call-template>
 				</p>
 			</td>
-			<td width="15%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<!--LOOKUP: BusinessCase/Domain/type-->
 					<xsl:value-of select="type"/>
 				</p>
@@ -895,8 +675,8 @@
 		This includes the technicalId, identifier, and name.-->
 	<xsl:template match="UseCase">
 		<tr style="height:11.8pt">
-			<td width="7%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<!--LOOKUP: UseCase/technicalId-->
 					<xsl:attribute name="id">
 						<xsl:value-of select="technicalId"/>
@@ -906,8 +686,8 @@
 					<xsl:value-of select="identifier"/>
 				</p>
 			</td>
-			<td width="20%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<span lang="EN-GB" xml:lang="EN-GB">
 						<!-- FIXME:
 						<xsl:value-of select="/n1:CPSFramework/BusinessCase/Domain/name"/>
@@ -918,8 +698,8 @@
 					</span>
 				</p>
 			</td>
-			<td width="72%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<!--LOOKUP: UseCase/name-->
 					<xsl:value-of select="name"/>
 				</p>
@@ -932,15 +712,11 @@
 	<xsl:template name="ScopeAndObjectives">
 		<xsl:for-each select="cps:CPSFramework/UseCase">
 			<tr>
-				<td width="24%" class="TableHeader">
-					<p class="TableHeading">
-						<span lang="EN-GB" xml:lang="EN-GB">Related business case</span>
-					</p>
-				</td>
-				<td width="75%" class="TableCell">
+				<th>Related business case</th>
+				<td>
 					<!--LOOKUP: UseCase/BusinessCase/technicalId-->
 					<xsl:for-each select="BusinessCase">
-						<p class="MsoNormal">
+						<p>
 							<xsl:value-of select="technicalId"/>
 							<xsl:if test="position() &lt; last()">
 								<xsl:text>, </xsl:text>
@@ -950,27 +726,19 @@
 				</td>
 			</tr>
 			<tr>
-				<td width="24%" class="TableHeader">
-					<p class="TableHeading">
-						<span lang="EN-GB" xml:lang="EN-GB">Scope</span>
-					</p>
-				</td>
-				<td width="75%" class="TableCell">
-					<p class="MsoNormal">
+				<th>Scope</th>
+				<td>
+					<p>
 						<!--LOOKUP: UseCase/Scope-->
 						<xsl:value-of select="scope"/>
 					</p>
 				</td>
 			</tr>
 			<tr>
-				<td width="24%" class="TableHeader">
-					<p class="TableHeading">
-						<span lang="EN-GB" xml:lang="EN-GB">Objective</span>
-					</p>
-				</td>
-				<td width="75%" class="TableCell">
+				<th>Objective</th>
+				<td>
 					<xsl:for-each select="RelatedObjective">
-						<p class="MsoNormal">
+						<p>
 							<xsl:attribute name="id">
 								<xsl:value-of select="technicalId"/>
 							</xsl:attribute>
@@ -985,8 +753,8 @@
 	<!--This template outputs Remarks with it's technicalId and content.-->
 	<xsl:template match="Remark">
 		<tr>
-			<td width="100%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<!--LOOKUP: UseCase/technicalId-->
 					<xsl:attribute name="id">
 						<xsl:value-of select="technicalId"/>
@@ -1002,20 +770,20 @@
 	<!--This template outputs Version informatoin. Multiple authors are joined by ', '.-->
 	<xsl:template match="Version">
 		<tr>
-			<td width="10%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<!--LOOKUP: UseCase/Version/changes-->
 					<xsl:value-of select="changes"/>
 				</p>
 			</td>
-			<td width="10%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<!--LOOKUP: UseCase/Version/date-->
 					<xsl:value-of select="date"/>
 				</p>
 			</td>
-			<td width="10%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<!--LOOKUP: "UseCase/Version/Author/name"
 						multiple names are join with a ', '.-->
 					<xsl:call-template name="StringJoin">
@@ -1024,14 +792,14 @@
 					</xsl:call-template>
 				</p>
 			</td>
-			<td width="10%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<!--LOOKUP: UseCase/Version/approvalStatus-->
 					<xsl:value-of select="approvalStatus"/>
 				</p>
 			</td>
-			<td width="10%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<!--LOOKUP: UseCase/Version/versionNumber-->
 					<xsl:value-of select="versionNumber"/>
 				</p>
@@ -1042,30 +810,22 @@
 	<!--This template adds a rows to the 1.4 table for any Narrative elements.-->
 	<xsl:template match="Narrative">
 		<tr style="height:1.0pt">
-			<td width="100%" class="TableHeader">
-				<p class="TableHeading">
-					<span lang="EN-GB" xml:lang="EN-GB">Short description - max 3 sentences</span>
-				</p>
-			</td>
+			<th>Short description - max 3 sentences</th>
 		</tr>
 		<tr style="height:1.0pt">
-			<td width="100%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<!--LOOKUP: UseCase/Narrative/shortDescription-->
 					<xsl:value-of select="shortDescription"/>
 				</p>
 			</td>
 		</tr>
 		<tr style="height:1.0pt">
-			<td width="100%" class="TableHeader">
-				<p class="TableHeading">
-					<span lang="EN-GB" xml:lang="EN-GB">Complete description</span>
-				</p>
-			</td>
+			<th>Complete description</th>
 		</tr>				
 		<tr style="height:1.0pt">
-			<td width="100%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<!--LOOKUP: UseCase/Narrative/completeDescription-->
 					<xsl:value-of select="completeDescription"/>
 				</p>
@@ -1077,27 +837,15 @@
 	<xsl:template match="CPSGrouping">
 		<table id="3.1">
 			<tr>
-				<td width="100%" colspan="4" class="TableHeader">
-					<p class="TableHeading">
-						<span lang="EN-GB" xml:lang="EN-GB">Actors</span>
-					</p>
-				</td>
+				<th colspan="4">Actors</th>
 			</tr>
 			<tr>
-				<td width="42%" colspan="2" class="TableHeader">
-					<p class="TableHeading">
-						<span lang="EN-GB" xml:lang="EN-GB">Grouping (Community)</span>
-					</p>
-				</td>
-				<td width="57%" colspan="2" class="TableHeader">
-					<p class="TableHeading">
-						<span lang="EN-GB" xml:lang="EN-GB">Group Description</span>
-					</p>
-				</td>
+				<th colspan="2">Grouping (Community)</th>
+				<th colspan="2">Group Description</th>
 			</tr>
 			<tr>
-				<td width="42%" colspan="2" class="TableCell">
-					<p class="MsoNormal">
+				<td colspan="2">
+					<p>
 						<!--LOOKUP: UseCase/CPSGrouping/identifier-->
 						<xsl:attribute name="id">
 							<xsl:value-of select="identifier"/>
@@ -1107,35 +855,17 @@
 						<xsl:value-of select="name"/>
 					</p>
 				</td>
-				<td width="57%" colspan="2" class="TableCell">
-					<p class="MsoNormal">
+				<td colspan="2">
+					<p>
 						<!--LOOKUP: UseCase/CPSGrouping/description-->
 						<xsl:value-of select="description"/>
 					</p>
 				</td>
 			</tr>
 			<tr>
-				<td width="22%" class="TableHeader">
-					<p class="TableHeading">
-						<span lang="EN-GB" xml:lang="EN-GB">Actor Name</span>
-					</p>
-					<p class="TableHeading">
-						<span lang="EN-GB" xml:lang="EN-GB">see Actor  List</span>
-					</p>
-				</td>
-				<td width="20%" class="TableHeader">
-					<p class="TableHeading">
-						<span lang="EN-GB" xml:lang="EN-GB">Actor Type</span>
-					</p>
-					<p class="TableHeading">
-						<span lang="EN-GB" xml:lang="EN-GB">see Actor  List</span>
-					</p>
-				</td>
-				<td width="56%" class="TableHeader">
-					<p class="TableHeading">
-						<span lang="EN-GB" xml:lang="EN-GB">Further information specific to this Use Case</span>
-					</p>
-				</td>
+				<th>Actor Name see Actor  List</th>
+				<th>Actor Type see Actor  List</th>
+				<th>Further information specific to this Use Case</th>
 			</tr>
 			
 			<xsl:apply-templates select="CPS"/>
@@ -1146,20 +876,20 @@
 	<!--Output information for CPS element-->
 	<xsl:template match="CPS">
 		<tr>
-			<td width="22%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<!--LOOKUP: CPSGrouping/CPS/name-->
 					<xsl:value-of select="name"/>
 				</p>
 			</td>
-			<td width="20%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<!--LOOKUP: CPSGrouping/CPS/technicalId-->
 					<xsl:value-of select="technicalId"/>
 				</p>
 			</td>
-			<td width="56%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<!--LOOKUP: CPSGrouping/CPS/furtherInformation-->
 					<xsl:value-of select="furtherInformation"/>
 				</p>
@@ -1170,15 +900,15 @@
 	<!--Output UseCase Precondition and Assumption elements.-->
 	<xsl:template match="Prerequisite">
 		<tr>
-			<td width="25%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<!--LOOKUP: Prerequisite/name-->
 					<xsl:value-of select="name"/>
 				</p>
 			</td>
 			
-			<td width="75%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<!--LOOKUP: Prerequisite/content-->
 					<xsl:value-of select="content"/>	
 				</p>
@@ -1189,15 +919,15 @@
 	<!--Outputs an assumption table row.-->
 	<xsl:template match="Assumption">
 		<tr>
-			<td width="25%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<!--LOOKUP: Assumption/name-->
 					<xsl:value-of select="name"/>
 				</p>
 			</td>
 			
-			<td width="75%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<!--LOOKUP: Assumption/content-->
 					<xsl:value-of select="content"/>	
 				</p>
@@ -1208,8 +938,8 @@
 	<!--Output UseCase Reference element.-->
 	<xsl:template match="Reference">
 		<tr>
-			<td width="5%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<!--LOOKUP: UseCase/technicalId-->
 					<xsl:attribute name="id">
 						<xsl:value-of select="technicalId"/>
@@ -1219,44 +949,44 @@
 					<xsl:value-of select="identifier"/>
 				</p>
 			</td>
-			<td width="15%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<!--LOOKUP: UseCase/Reference/type-->
 					<xsl:value-of select="type"/>
 				</p>
 			</td>
-			<td width="15%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<!--LOOKUP: UseCase/Reference/name-->
 					<xsl:value-of select="name"/>
 				</p>
 			</td>
-			<td width="10%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<!--LOOKUP: UseCase/Reference/description-->
 					<xsl:value-of select="description"/>
 				</p>
 			</td>
-			<td width="10%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<!--LOOKUP: UseCase/Reference/status-->
 					<xsl:value-of select="status"/>
 				</p>
 			</td>
-			<td width="15%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<!--LOOKUP: UseCase/Reference/impact-->
 					<xsl:value-of select="impact"/>
 				</p>
 			</td>
-			<td width="15%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<!--LOOKUP: UseCase/Reference/orginiatorOrganisation-->
 					<xsl:value-of select="originatorOrganisation"/>
 				</p>
 			</td>
-			<td width="15%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<!--LOOKUP: UseCase/Reference/link-->
 					<xsl:value-of select="link"/>
 				</p>
@@ -1268,14 +998,14 @@
 	<xsl:template name="FurtherInformation">
 		<xsl:for-each select="cps:CPSFramework/UseCase">
 			<tr>
-				<td width="10%" class="TableCell">
+				<td>
 					<!--LOOKUP: UseCase/technicalId-->
 					<xsl:attribute name="id">
 						<xsl:value-of select="technicalId"/>
 					</xsl:attribute>
 					
 					<xsl:for-each select="RelatedUseCase">
-						<p class="MsoNormal">
+						<p>
 							<!--LOOKUP: UseCase/RelatedUseCase/technicalId-->
 							<xsl:attribute name="id">
 								<xsl:value-of select="technicalId"/>
@@ -1290,32 +1020,32 @@
 						</p>
 					</xsl:for-each>
 				</td>
-				<td width="10%" class="TableCell">
-					<p class="MsoNormal">
+				<td>
+					<p>
 						<!--LOOKUP: UseCase/levelOfDepth-->
 						<xsl:value-of select="levelOfDepth"/>
 					</p>
 				</td>
-				<td width="10%" class="TableCell">
-					<p class="MsoNormal">
+				<td>
+					<p>
 						<!--LOOKUP: UseCase/prioritisation-->
 						<xsl:value-of select="prioritisation"/>
 					</p>
 				</td>
-				<td width="10%" class="TableCell">
-					<p class="MsoNormal">
+				<td>
+					<p>
 						<!--LOOKUP: UseCase/classification-->
 						<xsl:value-of select="classification"/>
 					</p>
 				</td>
-				<td width="10%" class="TableCell">
-					<p class="MsoNormal">
+				<td>
+					<p>
 						<!--LOOKUP: UseCase/nature-->
 						<xsl:value-of select="nature"/>
 					</p>
 				</td>
-				<td width="10%" class="TableCell">
-					<p class="MsoNormal">
+				<td>
+					<p>
 						<!--LOOKUP: UseCase/keywords-->
 						<xsl:value-of select="keywords"/>
 					</p>
@@ -1328,8 +1058,8 @@
 		then creates sub tables for the MacroActivities and steps in this Scenario.-->
 	<xsl:template match="Scenario" mode="ScenarioTable">
 		<tr>
-			<td width="5%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<!--LOOKUP: UseCase/Scenario/technicalId-->
 					<xsl:attribute name="id">
 						<xsl:value-of select="technicalId"/>
@@ -1339,16 +1069,16 @@
 					<xsl:value-of select="identifier"/>
 				</p>
 			</td>
-			<td width="18%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<!--LOOKUP: UseCase/Scenario/name-->
 					<xsl:value-of select="name"/>
 				</p>
 			</td>
-			<td width="18%" class="TableCell">
+			<td>
 				<!--LOOKUP: UseCase/Scenario/PrimaryCPS-->
 				<xsl:for-each select="PrimaryCPS">
-					<p class="MsoNormal">
+					<p>
 						<!--LOOKUP: PrimaryCPS/technicalId-->
 						<xsl:attribute name="id">
 							<xsl:value-of select="technicalId"/>
@@ -1359,35 +1089,35 @@
 					</p>
 				</xsl:for-each>
 			</td>
-			<td width="18%" class="TableCell">
+			<td>
 				<!--LOOKUP: UseCase/Scenario/TriggeringEvent-->
 				<xsl:for-each select="TriggeringEvent">
-					<p class="MsoNormal">
+					<p>
 						<!--LOOKUP: TriggeringEvent/name & TriggeringEvent/content-->
 						<xsl:value-of select="concat(name, ': ', content)"/>
 					</p>
 				</xsl:for-each>
 			</td>
-			<td width="18%" class="TableCell">
+			<td>
 				<!--LOOKUP: UseCase/Scenario/Precondition-->
 				<xsl:for-each select="Precondition">
-					<p class="MsoNormal">
+					<p>
 						<!--LOOKUP: Precondition/name & Precondition/description-->
 						<xsl:value-of select="concat(name, ': ', content)"/>
 					</p>
 				</xsl:for-each>
 			</td>
-			<td width="18%" class="TableCell">
+			<td>
 				<!--LOOKUP: UseCase/Scenario/Postcondition-->
 				<xsl:for-each select="Postcondition">
-					<p class="MsoNormal">
+					<p>
 						<!--LOOKUP: Postcondition/name & Postcondition/description-->
 						<xsl:value-of select="concat(name, ': ', content)"/>
 					</p>
 				</xsl:for-each>
 			</td>
-			<td width="5%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<xsl:call-template name="GetAspectNumberFromLookup">
 						<xsl:with-param name="aspectNode" select="Aspects"/>
 					</xsl:call-template>
@@ -1413,56 +1143,35 @@
 			</span>
 		</h2>
 		
-		<table id="4.1">
-			<tr>
-				<td width="100%" colspan="9" class="TableHeader">
-					<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">Scenario</span></p>
-				</td>
-			</tr>
-			<tr>
-				<td width="13%" colspan="2" class="TableHeader">
-					<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">Scenario Name :</span></p>
-				</td>
-				<td width="86%" colspan="7" class="TableCell">
-					<p class="MsoNormal">
-						<!--LOOKUP: Scenario/name-->
-						<xsl:value-of select="name"/>
-					</p>
-				</td>
-			</tr>
-			<tr style="height:12.55pt">
-				<td width="6%" class="TableHeader">
-					<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">Step No.</span></p>
-				</td>
-				<td width="7%" class="TableHeader">
-					<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">Event</span></p>
-				</td>
-				<td width="12%" class="TableHeader">
-					<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">Name of Process/ Activity</span></p>
-				</td>
-				<td width="13%" class="TableHeader">
-					<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">Description of Process/ Activity</span></p>
-				</td>
-				<td width="9%" class="TableHeader">
-					<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">Service</span></p>
-					<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB"/></p>
-				</td>
-				<td width="12%" class="TableHeader">
-					<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">Information Producer (Actor)</span></p>
-				</td>
-				<td width="12%" class="TableHeader">
-					<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">Information Receiver (Actor)</span></p>
-				</td>
-				<td width="13%" class="TableHeader">
-					<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">Information Exchanged</span></p>
-				</td>
-				<td width="12%" class="TableHeader">
-					<p class="TableHeading"><span lang="EN-GB" xml:lang="EN-GB">Requirements , R-ID</span></p>
-				</td>
-			</tr>
-		</table>			
-			
-		<xsl:apply-templates select="MacroActivity"/>
+		<div id="ScenarioTables">
+			<table id="4.1.1">
+				<tr>
+					<th colspan="9">Scenario</th>
+				</tr>
+				<tr>
+					<th colspan="2">Scenario Name :</th>
+					<td colspan="7">
+						<p>
+							<!--LOOKUP: Scenario/name-->
+							<xsl:value-of select="name"/>
+						</p>
+					</td>
+				</tr>
+				<tr style="height:12.55pt">
+					<th>Step No.</th>
+					<th>Event</th>
+					<th>Name of Process/ Activity</th>
+					<th>Description of Process/ Activity</th>
+					<th>Service</th>
+					<th>Information Producer (Actor)</th>
+					<th>Information Receiver (Actor)</th>
+					<th>Information Exchanged</th>
+					<th>Requirements , R-ID</th>
+				</tr>
+			</table>			
+				
+			<xsl:apply-templates select="MacroActivity"/>
+		</div>
 		
 		<xsl:call-template name="GenerateAspectsTableFromGreatGrandparentId">
 			<xsl:with-param name="id" select="'4.1.1'"/>
@@ -1473,9 +1182,9 @@
 	
 	<!--Ouptut sub tables for a MacroActivity.-->
 	<xsl:template match="MacroActivity">
-		<table id="4.1">
+		<table id="4.1.2">
 			<tr id="MacroActivity">
-				<td colspan="9" class="TableHeader">
+				<th colspan="9">
 					<p class="TableHeading">
 						<xsl:attribute name="id">
 							<!--LOOKUP: MacroActivity/technicald-->
@@ -1485,7 +1194,7 @@
 						<!--LOOKUP: Macroactivity/name-->
 						<xsl:value-of select="name"/>
 					</p>
-				</td>
+				</th>
 			</tr>
 		
 			<xsl:apply-templates select="Step"/>
@@ -1495,8 +1204,8 @@
 	<!--Output table for a Step-->
 	<xsl:template match="Step">
 		<tr style="height:9.2pt">
-			<td width="6%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<xsl:attribute name="id">
 						<!--LOOKUP: Step/technicalId-->
 						<xsl:value-of select="technicalId"/>
@@ -1506,33 +1215,33 @@
 					<xsl:value-of select="identifier"/>
 				</p>
 			</td>
-			<td width="7%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<!--LOOKUP: Step/event-->
 					<xsl:value-of select="event"/>
 				</p>
 			</td>
-			<td width="12%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<!--LOOKUP: Step/name-->
 					<xsl:value-of select="name"/>
 				</p>
 			</td>
-			<td width="13%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<!--LOOKUP: Step/description-->
 					<xsl:value-of select="description"/>
 				</p>
 			</td>
-			<td width="9%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<!--LOOKUP: Step/service-->
 					<xsl:value-of select="service"/>
 				</p>
 			</td>
-			<td width="12%" class="TableCell">
+			<td>
 				<xsl:for-each select="InformationProducer">
-					<p class="MsoNormal">
+					<p>
 						<!--LOOKUP: Step/InformationProducer/technicalId-->
 						<xsl:attribute name="id">
 							<xsl:value-of select="technicalId"/>
@@ -1543,9 +1252,9 @@
 					</p>
 				</xsl:for-each>
 			</td>
-			<td width="12%" class="TableCell">
+			<td>
 				<xsl:for-each select="InformationReceiver">
-					<p class="MsoNormal">
+					<p>
 						<!--LOOKUP: Step/InformationReceiver/technicalId-->
 						<xsl:attribute name="id">
 							<xsl:value-of select="technicalId"/>
@@ -1556,9 +1265,9 @@
 					</p>
 				</xsl:for-each>
 			</td>
-			<td width="13%" class="TableCell">
+			<td>
 				<xsl:for-each select="BusinessObject">
-					<p class="MsoNormal">
+					<p>
 						<!--LOOKUP: Step/BusinessObject/technicalId-->
 						<xsl:attribute name="id">
 							<xsl:value-of select="technicalId"/>
@@ -1569,8 +1278,8 @@
 					</p>
 				</xsl:for-each>
 			</td>
-			<td width="12%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<xsl:call-template name="GetAspectNumberFromLookup">
 						<xsl:with-param name="aspectNode" select="Aspects"/>
 						<xsl:with-param name="useGrandparentNumber" select="true()"/>
@@ -1583,8 +1292,8 @@
 	<!--Output InformationModel information.-->
 	<xsl:template match="InformationModel">
 		<tr>
-			<td width="20%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<!--LOOKUP: InformationModel/technicalId-->
 					<xsl:attribute name="id">
 						<xsl:value-of select="technicalId"/>
@@ -1594,15 +1303,15 @@
 					<xsl:value-of select="name"/>
 				</p>
 			</td>
-			<td width="40%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<!--LOOKUP: InformationModel/description-->
 					<xsl:value-of select="description"/>
 				</p>
 			</td>
-			<td width="30%" class="TableCell">
+			<td>
 				<xsl:for-each select="Requirement">
-					<p class="MsoNormal">
+					<p>
 						<!--LOOKUP: InformationModel/Requirement-->
 						<xsl:value-of select="technicalId"/>
 						
@@ -1612,8 +1321,8 @@
 					</p>
 				</xsl:for-each>
 			</td>
-			<td width="10%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<xsl:call-template name="GetAspectNumberFromLookup">
 						<xsl:with-param name="aspectNode" select="Aspects"/>
 					</xsl:call-template>
@@ -1625,32 +1334,32 @@
 	<!--Creates a table for a Maturity element. This will output all the information in a table row.-->
 	<xsl:template match="Maturity">
 		<tr>
-			<td width="20%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<!--LOOKUP: Maturity/effective-->
 					<xsl:value-of select="effective"/>
 				</p>
 			</td>
-			<td width="20%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<!--LOOKUP: Maturity/maurity-->
 					<xsl:value-of select="maturity"/>
 				</p>
 			</td>
-			<td width="20%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<!--LOOKUP: Maturity/responsibleParty-->
 					<xsl:value-of select="responsibleParty"/>
 				</p>
 			</td>
-			<td width="20%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<!--LOOKUP: Maturity/revision-->
 					<xsl:value-of select="revision"/>
 				</p>
 			</td>
-			<td width="20%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<!--LOOKUP: Maturity/status-->
 					<xsl:value-of select="status"/>
 				</p>
@@ -1661,8 +1370,8 @@
 	<!--Outputs influence table row.-->
 	<xsl:template match="influence">
 		<tr>
-			<td width="20%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<!--LOOKUP: influence/technicalId-->
 					<xsl:attribute name="id">
 						<xsl:value-of select="technicalId"/>
@@ -1672,14 +1381,14 @@
 					<xsl:value-of select="name"/>
 				</p>
 			</td>
-			<td width="70%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<!--LOOKUP: influence/description-->
 					<xsl:value-of select="description"/>
 				</p>
 			</td>
-			<td width="10%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<xsl:call-template name="GetAspectNumberFromLookup">
 						<xsl:with-param name="aspectNode" select="Aspects"/>
 					</xsl:call-template>
@@ -1691,8 +1400,8 @@
 	<!--Outputs message table row.-->
 	<xsl:template match="message">
 		<tr>
-			<td width="20%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<!--LOOKUP: message/technicalId-->
 					<xsl:attribute name="id">
 						<xsl:value-of select="technicalId"/>
@@ -1702,14 +1411,14 @@
 					<xsl:value-of select="name"/>
 				</p>
 			</td>
-			<td width="70%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<!--LOOKUP: message/description-->
 					<xsl:value-of select="description"/>
 				</p>
 			</td>
-			<td width="10%" class="TableCell">
-				<p class="MsoNormal">
+			<td>
+				<p>
 					<xsl:call-template name="GetAspectNumberFromLookup">
 						<xsl:with-param name="aspectNode" select="Aspects"/>
 					</xsl:call-template>
@@ -1753,24 +1462,12 @@
 		</h2>
 		<table id="{$id}">
 			<tr style="height:10.75pt">
-				<td width="100%" colspan="2" class="TableHeader">
-					<p class="TableHeading">
-						<span lang="EN-GB" xml:lang="EN-GB">Requirements</span>
-					</p>
-				</td>
+				<th colspan="2">Requirements</th>
 			</tr>
 			
 			<tr style="height:10.75pt">
-				<td width="5%" class="TableHeader">
-					<p class="TableHeading">
-						<span lang="EN-GB" xml:lang="EN-GB">R-ID</span>
-					</p>
-				</td>
-				<td width="95%" class="TableHeader">
-					<p class="TableHeading">
-						<span lang="EN-GB" xml:lang="EN-GB">Details</span>
-					</p>
-				</td>
+				<th>R-ID</th>
+				<th>Details</th>
 			</tr>
 			
 			<xsl:apply-templates select="$AspectLookupTable/lookup:entry[@parentName = $parentName and @grandparentId = $grandparentId]"/>
@@ -1790,24 +1487,12 @@
 		</h2>
 		<table id="{$id}">
 			<tr style="height:10.75pt">
-				<td width="100%" colspan="2" class="TableHeader">
-					<p class="TableHeading">
-						<span lang="EN-GB" xml:lang="EN-GB">Requirements</span>
-					</p>
-				</td>
+				<th colspan="2">Requirements</th>
 			</tr>
 			
 			<tr style="height:10.75pt">
-				<td width="5%" class="TableHeader">
-					<p class="TableHeading">
-						<span lang="EN-GB" xml:lang="EN-GB">R-ID</span>
-					</p>
-				</td>
-				<td width="95%" class="TableHeader">
-					<p class="TableHeading">
-						<span lang="EN-GB" xml:lang="EN-GB">Details</span>
-					</p>
-				</td>
+				<th>R-ID</th>
+				<th>Details</th>
 			</tr>
 			
 			<xsl:apply-templates select="$AspectLookupTable/lookup:entry[@parentName = $parentName and @greatGrandparentId = $greatGrandparentId]">
@@ -1821,7 +1506,7 @@
 	<xsl:template match="lookup:entry">
 		<xsl:param name="useGrandparentNumber" select="false()"/>
 		<tr>
-			<td width="5%" class="TableCell" style="vertical-align: middle;">
+			<td style="vertical-align: middle;">
 				<p class="MsoNormal" style="text-align: center;">
 					<xsl:choose>
 						<xsl:when test="$useGrandparentNumber">
@@ -1833,7 +1518,7 @@
 					</xsl:choose>
 				</p>
 			</td>
-			<td width="95%" class="TableCell">
+			<td>
 				<xsl:apply-templates select="Aspects"/>
 			</td>
 		</tr>
@@ -1900,13 +1585,9 @@
 		<table style="margin: 8px;">
 			<xsl:if test="description">
 				<tr>
-					<td width="5%" class="TableHeader">
-						<p class="TableHeading">
-							<span lang="EN-GB" xml:lang="EN-GB">Description</span>
-						</p>
-					</td>
-					<td width="95%" class="TableCell">
-						<p class="MsoNormal">
+					<th>Description</th>
+					<td>
+						<p>
 							<xsl:value-of select="description"/>
 						</p>
 					</td>
@@ -1914,13 +1595,9 @@
 			</xsl:if>
 			<xsl:if test="priority">
 				<tr>
-					<td width="5%" class="TableHeader">
-						<p class="TableHeading">
-							<span lang="EN-GB" xml:lang="EN-GB">Priority</span>
-						</p>
-					</td>
-					<td width="95%" class="TableCell">
-						<p class="MsoNormal">
+					<th>Priority</th>
+					<td>
+						<p>
 							<xsl:value-of select="priority"/>
 						</p>
 					</td>
@@ -1928,13 +1605,9 @@
 			</xsl:if>
 			<xsl:if test="reference">
 				<tr>
-					<td width="5%" class="TableHeader">
-						<p class="TableHeading">
-							<span lang="EN-GB" xml:lang="EN-GB">References</span>
-						</p>
-					</td>
-					<td width="95%" class="TableCell">
-						<p class="MsoNormal">
+					<th>References</th>
+					<td>
+						<p>
 							<xsl:call-template name="StringJoin">
 								<xsl:with-param name="values" select="reference"/>
 								<xsl:with-param name="joinString" select="', '"/>
@@ -1945,13 +1618,9 @@
 			</xsl:if>
 			<xsl:if test="statement">
 				<tr>
-					<td width="5%" class="TableHeader">
-						<p class="TableHeading">
-							<span lang="EN-GB" xml:lang="EN-GB">Statement</span>
-						</p>
-					</td>
-					<td width="95%" class="TableCell">
-						<p class="MsoNormal">
+					<th>Statement</th>
+					<td>
+						<p>
 							<xsl:value-of select="statement"/>
 						</p>
 					</td>
@@ -1959,13 +1628,9 @@
 			</xsl:if>
 			<xsl:if test="trace">
 				<tr>
-					<td width="5%" class="TableHeader">
-						<p class="TableHeading">
-							<span lang="EN-GB" xml:lang="EN-GB">Trace</span>
-						</p>
-					</td>
-					<td width="95%" class="TableCell">
-						<p class="MsoNormal">
+					<th>Trace</th>
+					<td>
+						<p>
 							<xsl:value-of select="trace"/>
 						</p>
 					</td>
