@@ -254,13 +254,6 @@
 					<tr>
 						<th colspan="5">Maturity</th>
 					</tr>
-					<tr>
-						<th>Effective</th>
-						<th>Maturity</th>
-						<th>Responsible Party</th>
-						<th>Revision</th>
-						<th>Status</th>
-					</tr>
 					
 					<xsl:apply-templates select="cps:CPSFramework/Maturity"/>
 					
@@ -428,13 +421,6 @@
 					<tr>
 						<th colspan="5">Information Maturity</th>
 					</tr>
-					<tr>
-						<th>Effective</th>
-						<th>Maturity</th>
-						<th>Responsible Party</th>
-						<th>Revision</th>
-						<th>Status</th>
-					</tr>
 					
 					<xsl:apply-templates select="cps:CPSFramework/InformationModelLibrary/Maturity"/>
 					
@@ -471,13 +457,6 @@
 				<table id="6.1">
 					<tr>
 						<th colspan="5">Interaction Maturity</th>
-					</tr>
-					<tr>
-						<th>Effective</th>
-						<th>Maturity</th>
-						<th>Responsible Party</th>
-						<th>Revision</th>
-						<th>Status</th>
 					</tr>
 					
 					<xsl:apply-templates select="cps:CPSFramework/InteractionLibrary/Maturity"/>
@@ -549,12 +528,30 @@
 						<th>Domains</th>
 						<th>Logical</th>
 						<th>Physical</th>
-						<th>Irreducible</th>
 					</tr>
 					
 					<xsl:apply-templates select="cps:CPSFramework/CPSLibrary/cps"/>
 					
 				</table>
+				
+				<h2>7.2 Systems</h2>
+				<table id="7.2">
+					<tr>
+						<th>Identifier</th>
+						<th>Name</th>
+						<th>Description</th>
+						<th>Type</th>
+						<th>Domains</th>
+						<th>Human</th>
+					</tr>
+				</table>
+				
+				<h2>Maturity</h2>
+				
+				<table>
+					<xsl:apply-templates select="cps:CPSFramework/CPSLibrary/Maturity"/>
+				</table>
+				
 			</body>
 		</html>
 	</xsl:template>
@@ -616,7 +613,7 @@
 	<!--This template outputs information related to a BusinessCases.
 		This includes the technicalId, identifier, name, description, type, and Domains.-->
 	<xsl:template match="BusinessCase">
-		<tr style="height:11.8pt">
+		<tr>
 			<td>
 				<p>
 					<!--LOOKUP: BusinessCase/technicalId-->
@@ -674,7 +671,7 @@
 	<!--This template outputs basic information related to the UseCase. 
 		This includes the technicalId, identifier, and name.-->
 	<xsl:template match="UseCase">
-		<tr style="height:11.8pt">
+		<tr>
 			<td>
 				<p>
 					<!--LOOKUP: UseCase/technicalId-->
@@ -809,10 +806,10 @@
 	
 	<!--This template adds a rows to the 1.4 table for any Narrative elements.-->
 	<xsl:template match="Narrative">
-		<tr style="height:1.0pt">
+		<tr>
 			<th>Short description - max 3 sentences</th>
 		</tr>
-		<tr style="height:1.0pt">
+		<tr>
 			<td>
 				<p>
 					<!--LOOKUP: UseCase/Narrative/shortDescription-->
@@ -820,10 +817,10 @@
 				</p>
 			</td>
 		</tr>
-		<tr style="height:1.0pt">
+		<tr>
 			<th>Complete description</th>
 		</tr>				
-		<tr style="height:1.0pt">
+		<tr>
 			<td>
 				<p>
 					<!--LOOKUP: UseCase/Narrative/completeDescription-->
@@ -1157,7 +1154,7 @@
 						</p>
 					</td>
 				</tr>
-				<tr style="height:12.55pt">
+				<tr>
 					<th>Step No.</th>
 					<th>Event</th>
 					<th>Name of Process/ Activity</th>
@@ -1203,7 +1200,7 @@
 	
 	<!--Output table for a Step-->
 	<xsl:template match="Step">
-		<tr style="height:9.2pt">
+		<tr>
 			<td>
 				<p>
 					<xsl:attribute name="id">
@@ -1334,6 +1331,13 @@
 	<!--Creates a table for a Maturity element. This will output all the information in a table row.-->
 	<xsl:template match="Maturity">
 		<tr>
+			<th>Effective</th>
+			<th>Maturity</th>
+			<th>Responsible Party</th>
+			<th>Revision</th>
+			<th>Status</th>
+		</tr>
+		<tr>
 			<td>
 				<p>
 					<!--LOOKUP: Maturity/effective-->
@@ -1461,11 +1465,11 @@
 			<span lang="EN-GB" xml:lang="EN-GB">Requirements</span>
 		</h2>
 		<table id="{$id}">
-			<tr style="height:10.75pt">
+			<tr>
 				<th colspan="2">Requirements</th>
 			</tr>
 			
-			<tr style="height:10.75pt">
+			<tr>
 				<th>R-ID</th>
 				<th>Details</th>
 			</tr>
@@ -1486,11 +1490,11 @@
 			<span lang="EN-GB" xml:lang="EN-GB">Requirements</span>
 		</h2>
 		<table id="{$id}">
-			<tr style="height:10.75pt">
+			<tr>
 				<th colspan="2">Requirements</th>
 			</tr>
 			
-			<tr style="height:10.75pt">
+			<tr>
 				<th>R-ID</th>
 				<th>Details</th>
 			</tr>
