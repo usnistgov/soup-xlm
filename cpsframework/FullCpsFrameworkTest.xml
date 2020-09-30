@@ -65,49 +65,17 @@
 	<!-- CPSLibrary - This repository contains all of these actors or 'subsystems' of the CPS, that may interact logically, physically or cyber-physically.-->
 	<CPSLibrary>
 		<cps>
-			<description>TripManager is responsible for creating strategic route between starting location and destination location. </description>
-			<identifier>ADSTAT_01</identifier>
-			<name>TripManager</name>
-			<technicalId>1234554321</technicalId>
+			<description>cps 1 description</description>
+			<identifier>cps 1 identifier</identifier>
+			<name>cps 1 name</name>
+			<technicalId>cps 1 technicalId</technicalId>
+			<type>cps 1 type</type>
 			<Aspects/>
-			<Logical>
-				<identifier/>
-				<name/>
-				<technicalId/>
-				<state/>
-			</Logical>
-			<Physical>
-				<identifier/>
-				<name/>
-				<technicalId/>
-				<state/>
-			</Physical>
-		</cps>
-		<cps>
-			<description>TripPlanner recieves the initial data, and based on previous experience (transportation model) generate the TripPlan. </description>
-			<identifier>ADSTAT_02</identifier>
-			<name>TripPlanner</name>
-			<technicalId>1234554322</technicalId>
-			<Aspects/>
-			<Logical>
-				<identifier/>
-				<name/>
-				<technicalId/>
-				<state/>
-			</Logical>
-			<Physical>
-				<identifier/>
-				<name/>
-				<technicalId/>
-				<state/>
-			</Physical>
-		</cps>
-		<cps>
-			<description>OEDRC is responsible for oject and event detection and recognition/classfication. </description>
-			<identifier>ADSTAT_03</identifier>
-			<name>OEDRC</name>
-			<technicalId>1234554323</technicalId>
-			<Aspects/>
+			<Domain>
+				<description>cps 1 Domain 1 description</description>
+				<name>cps 1 Domain 1 name</name>
+				<technicalId>cps 1 Domain 1 technicalId</technicalId>
+			</Domain>
 			<Logical>
 				<identifier/>
 				<name/>
