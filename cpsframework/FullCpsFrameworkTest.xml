@@ -76,6 +76,11 @@
 				<name>cps 1 Domain 1 name</name>
 				<technicalId>cps 1 Domain 1 technicalId</technicalId>
 			</Domain>
+			<Domain>
+				<description>cps 1 Domain 2 description</description>
+				<name>cps 1 Domain 2 name</name>
+				<technicalId>cps 1 Domain 2 technicalId</technicalId>
+			</Domain>
 			<Logical>
 				<identifier/>
 				<name/>
@@ -89,6 +94,38 @@
 				<state/>
 			</Physical>
 		</cps>
+		<cps>
+			<description>cps 2 description</description>
+			<identifier>cps 2 identifier</identifier>
+			<name>cps 2 name</name>
+			<technicalId>cps 2 technicalId</technicalId>
+			<type>cps 2 type</type>
+			<Aspects/>
+			<Domain>
+				<description>cps 2 Domain 1 description</description>
+				<name>cps 2 Domain 1 name</name>
+				<technicalId>cps 2 Domain 1 technicalId</technicalId>
+			</Domain>
+			<Logical>
+				<identifier/>
+				<name/>
+				<technicalId/>
+				<state/>
+			</Logical>
+			<Physical>
+				<identifier/>
+				<name/>
+				<technicalId/>
+				<state/>
+			</Physical>
+		</cps>
+		<Maturity>
+			<effective>CPSLibrary Maturity effective</effective>
+			<maturity>submitted</maturity>
+			<responsibleParty>CPSLibrary Maturity responsibleParty</responsibleParty>
+			<revision>CPSLibrary Maturity revision</revision>
+			<status>asDesigned</status>
+		</Maturity>
 	</CPSLibrary>
 	<InformationModelLibrary>
 		<InformationModel>

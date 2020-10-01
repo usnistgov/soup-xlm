@@ -685,14 +685,12 @@
 			</td>
 			<td>
 				<p>
-					<span lang="EN-GB" xml:lang="EN-GB">
-						<!-- FIXME:
-						<xsl:value-of select="/n1:CPSFramework/BusinessCase/Domain/name"/>
-						<xsl:for-each select="/n1:CPSFramework/UseCase/AdditionalDomain">
-							<xsl:text>, </xsl:text>
-							<xsl:value-of select="name"/>
-						</xsl:for-each>-->
-					</span>
+					<!-- FIXME:
+					<xsl:value-of select="/n1:CPSFramework/BusinessCase/Domain/name"/>
+					<xsl:for-each select="/n1:CPSFramework/UseCase/AdditionalDomain">
+						<xsl:text>, </xsl:text>
+						<xsl:value-of select="name"/>
+					</xsl:for-each>-->
 				</p>
 			</td>
 			<td>
@@ -1126,18 +1124,16 @@
 	<!--Outputs a table for all the steps in a Scenario.-->
 	<xsl:template match="Scenario" mode="ScenarioStepsTable">
 		<h2>
-			<span lang="EN-GB" xml:lang="EN-GB">
-				<p>
-					<!--LOOKUP: Scenario/technicalId-->
-					<xsl:attribute name="id">
-						<xsl:value-of select="technicalId"/>
-					</xsl:attribute>
-				
-					<!--LOOKUP: Scenario/name-->
-					<xsl:text>Steps - </xsl:text>
-					<xsl:value-of select="name"/>
-				</p>
-			</span>
+			<p>
+				<!--LOOKUP: Scenario/technicalId-->
+				<xsl:attribute name="id">
+					<xsl:value-of select="technicalId"/>
+				</xsl:attribute>
+			
+				<!--LOOKUP: Scenario/name-->
+				<xsl:text>Steps - </xsl:text>
+				<xsl:value-of select="name"/>
+			</p>
 		</h2>
 		
 		<div id="ScenarioTables">
@@ -1462,7 +1458,7 @@
 		<xsl:param name="grandparentId"/>
 		
 		<h2>
-			<span lang="EN-GB" xml:lang="EN-GB">Requirements</span>
+			Requirements
 		</h2>
 		<table id="{$id}">
 			<tr>
@@ -1487,7 +1483,7 @@
 		<xsl:param name="greatGrandparentId"/>
 		
 		<h2>
-			<span lang="EN-GB" xml:lang="EN-GB">Requirements</span>
+			Requirements
 		</h2>
 		<table id="{$id}">
 			<tr>
