@@ -571,12 +571,91 @@
 				<xsl:apply-templates select="Domain"/>
 			</td>
 			
-			<xsl:apply-templates select="name" mode="td"/>
-			
-			<xsl:apply-templates select="name" mode="td"/>
+			<xsl:apply-templates select="Logical"/>
 			
 			<xsl:apply-templates select="name" mode="td"/>
 		</tr>
+	</xsl:template>
+	
+	<xsl:template match="Logical">
+		<table>
+			<xsl:if test="name">
+				<tr>
+					<th>Name</th>
+					<td>
+						<p>
+							<xsl:attribute name="id">
+								<xsl:value-of select="technicalId"/>
+							</xsl:attribute>
+						
+							<xsl:value-of select="name"/>
+						</p>
+					</td>
+				</tr>
+			</xsl:if>
+			<xsl:if test="identifier">
+				<tr>
+					<th>Identifier</th>
+					<td>
+						<p>
+							<xsl:value-of select="identifier"/>
+						</p>
+					</td>
+				</tr>
+			</xsl:if>
+			<xsl:if test="description">
+				<tr>
+					<th>Description</th>
+					<td>
+						<p>
+							<xsl:value-of select="description"/>
+						</p>
+					</td>
+				</tr>
+			</xsl:if>
+			<xsl:if test="state">
+				<tr>
+					<th>State</th>
+					<td>
+						<p>
+							<xsl:value-of select="state"/>
+						</p>
+					</td>
+				</tr>
+			</xsl:if>
+			<xsl:if test="type">
+				<tr>
+					<th>Type</th>
+					<td>
+						<p>
+							<xsl:value-of select="type"/>
+						</p>
+					</td>
+				</tr>
+			</xsl:if>
+			<xsl:if test="Ref_msgs">
+				<tr>
+					<th>Ref Msg</th>
+					<td>
+						<xsl:for-each select="Ref_msgs">
+							<p>
+								<xsl:value-of select="refMessage"/>
+							</p>
+						</xsl:for-each>
+					</td>
+				</tr>
+			</xsl:if>
+			<xsl:if test="Aspects">
+				<tr>
+					<th>Requirements R-ID</th>
+					<td>
+						<p>
+							<!--TODO-->
+						</p>
+					</td>
+				</tr>
+			</xsl:if>
+		</table>
 	</xsl:template>
 	
 	<xsl:template match="Domain">
