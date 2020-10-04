@@ -223,7 +223,6 @@
 					</tr>
 					<tr>
 						<th>ID</th>
-						<th>Domain(s)</th>
 						<th>Name of Use Case</th>
 					</tr>
 					
@@ -681,16 +680,6 @@
 					
 					<!--LOOKUP: UseCase/Identifier-->
 					<xsl:value-of select="identifier"/>
-				</p>
-			</td>
-			<td>
-				<p>
-					<!-- FIXME:
-					<xsl:value-of select="/n1:CPSFramework/BusinessCase/Domain/name"/>
-					<xsl:for-each select="/n1:CPSFramework/UseCase/AdditionalDomain">
-						<xsl:text>, </xsl:text>
-						<xsl:value-of select="name"/>
-					</xsl:for-each>-->
 				</p>
 			</td>
 			<td>
