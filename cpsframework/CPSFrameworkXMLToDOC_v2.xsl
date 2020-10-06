@@ -533,6 +533,15 @@
 					
 				</table>
 				
+				<xsl:call-template name="GenerateAspectsTableFromGreatGrandparentId">
+					<xsl:with-param name="id" select="'7.1.1'"/>
+					<xsl:with-param name="parentName">
+						<string>Logical</string>
+						<string>Physical</string>
+					</xsl:with-param>
+					<xsl:with-param name="greatGrandparentId" select="generate-id(cps:CPSFramework/CPSLibrary)"/>
+				</xsl:call-template>
+				
 				<h2>7.2 Systems</h2>
 				<table id="7.2">
 					<tr>
@@ -571,9 +580,13 @@
 				<xsl:apply-templates select="Domain"/>
 			</td>
 			
-			<xsl:apply-templates select="Logical"/>
+			<td>
+				<xsl:apply-templates select="Logical"/>
+			</td>
 			
-			<xsl:apply-templates select="name" mode="td"/>
+			<td>
+				<xsl:apply-templates select="Physical"/>
+			</td>
 		</tr>
 	</xsl:template>
 	
@@ -582,7 +595,7 @@
 			<xsl:if test="name">
 				<tr>
 					<th>Name</th>
-					<td>
+					<th>
 						<p>
 							<xsl:attribute name="id">
 								<xsl:value-of select="technicalId"/>
@@ -590,7 +603,7 @@
 						
 							<xsl:value-of select="name"/>
 						</p>
-					</td>
+					</th>
 				</tr>
 			</xsl:if>
 			<xsl:if test="identifier">
@@ -640,6 +653,87 @@
 						<xsl:for-each select="Ref_msgs">
 							<p>
 								<xsl:value-of select="refMessage"/>
+							</p>
+						</xsl:for-each>
+					</td>
+				</tr>
+			</xsl:if>
+			<xsl:if test="Aspects">
+				<tr>
+					<th>Requirements R-ID</th>
+					<td>
+						<p>
+							<!--TODO-->
+						</p>
+					</td>
+				</tr>
+			</xsl:if>
+		</table>
+	</xsl:template>
+	
+	<xsl:template match="Physical">
+		<table>
+			<xsl:if test="name">
+				<tr>
+					<th>Name</th>
+					<th>
+						<p>
+							<xsl:attribute name="id">
+								<xsl:value-of select="technicalId"/>
+							</xsl:attribute>
+						
+							<xsl:value-of select="name"/>
+						</p>
+					</th>
+				</tr>
+			</xsl:if>
+			<xsl:if test="identifier">
+				<tr>
+					<th>Identifier</th>
+					<td>
+						<p>
+							<xsl:value-of select="identifier"/>
+						</p>
+					</td>
+				</tr>
+			</xsl:if>
+			<xsl:if test="description">
+				<tr>
+					<th>Description</th>
+					<td>
+						<p>
+							<xsl:value-of select="description"/>
+						</p>
+					</td>
+				</tr>
+			</xsl:if>
+			<xsl:if test="state">
+				<tr>
+					<th>State</th>
+					<td>
+						<p>
+							<xsl:value-of select="state"/>
+						</p>
+					</td>
+				</tr>
+			</xsl:if>
+			<xsl:if test="type">
+				<tr>
+					<th>Type</th>
+					<td>
+						<p>
+							<xsl:value-of select="type"/>
+						</p>
+					</td>
+				</tr>
+			</xsl:if>
+			<xsl:if test="Ref_Influences">
+				<tr>
+					<th>Ref Influence</th>
+					<td>
+						<xsl:for-each select="Ref_Influences">
+							<p>
+								<xsl:value-of select="refInfluence"/>
 							</p>
 						</xsl:for-each>
 					</td>
@@ -1525,30 +1619,7 @@
 		<xsl:param name="parentName"/>
 		<xsl:param name="grandparentId"/>
 		
-		<h2>
-			Requirements
-		</h2>
-		<table id="{$id}">
-			<tr>
-				<th colspan="2">Requirements</th>
-			</tr>
-			
-			<tr>
-				<th>R-ID</th>
-				<th>Details</th>
-			</tr>
-			
-			<xsl:apply-templates select="$AspectLookupTable/lookup:entry[@parentName = $parentName and @grandparentId = $grandparentId]"/>
-			
-		</table>
-	</xsl:template>
-	
-	<!--Generates an aspect table with the Aspects that match the given id, parentName, and greatgrandparentId.
-		This is necessary for outputing aspect tables for steps in the right locations.-->
-	<xsl:template name="GenerateAspectsTableFromGreatGrandparentId">
-		<xsl:param name="id"/>
-		<xsl:param name="parentName"/>
-		<xsl:param name="greatGrandparentId"/>
+		<xsl:variable name="parentNameNodeset" select="msxsl:node-set($parentName)"/>
 		
 		<h2>
 			Requirements
@@ -1563,9 +1634,42 @@
 				<th>Details</th>
 			</tr>
 			
-			<xsl:apply-templates select="$AspectLookupTable/lookup:entry[@parentName = $parentName and @greatGrandparentId = $greatGrandparentId]">
-				<xsl:with-param name="useGrandparentNumber" select="true()"/>
-			</xsl:apply-templates>
+			<xsl:for-each select="$parentNameNodeset">
+				<xsl:variable name="parent" select="."/>
+				<xsl:apply-templates select="$AspectLookupTable/lookup:entry[@parentName = $parent and @grandparentId = $grandparentId]"/>
+			</xsl:for-each>
+			
+		</table>
+	</xsl:template>
+	
+	<!--Generates an aspect table with the Aspects that match the given id, parentName, and greatgrandparentId.
+		This is necessary for outputing aspect tables for steps in the right locations.-->
+	<xsl:template name="GenerateAspectsTableFromGreatGrandparentId">
+		<xsl:param name="id"/>
+		<xsl:param name="parentName"/>
+		<xsl:param name="greatGrandparentId"/>
+		
+		<xsl:variable name="parentNameNodeset" select="msxsl:node-set($parentName)"/>		
+		
+		<h2>
+			Requirements
+		</h2>
+		<table id="{$id}">
+			<tr>
+				<th colspan="2">Requirements</th>
+			</tr>
+			
+			<tr>
+				<th>R-ID</th>
+				<th>Details</th>
+			</tr>
+				
+			<xsl:for-each select="$parentNameNodeset">
+				<xsl:variable name="parent" select="."/>
+				<xsl:apply-templates select="$AspectLookupTable/lookup:entry[@parentName = $parent and @greatGrandparentId = $greatGrandparentId]">
+					<xsl:with-param name="useGrandparentNumber" select="true()"/>
+				</xsl:apply-templates>
+			</xsl:for-each>
 			
 		</table>
 	</xsl:template>
@@ -1574,8 +1678,8 @@
 	<xsl:template match="lookup:entry">
 		<xsl:param name="useGrandparentNumber" select="false()"/>
 		<tr>
-			<td style="vertical-align: middle;">
-				<p class="MsoNormal" style="text-align: center;">
+			<td>
+				<p>
 					<xsl:choose>
 						<xsl:when test="$useGrandparentNumber">
 							<xsl:value-of select="@grandparentNumber"/>

@@ -87,6 +87,18 @@
 				<name>cps 1 logical 1 name</name>
 				<technicalId>cps 1 logical 1 techncialId</technicalId>
 				<type>cps 1 logical 1 type</type>
+				<Aspects>
+					<boundaries>
+						<Property>
+							<statement>cps 1 logical 1 aspects</statement>
+						</Property>
+					</boundaries>
+					<trustworthiness>
+						<Property>
+							<statement>cps 1 logical 1 aspects</statement>
+						</Property>
+					</trustworthiness>
+				</Aspects>
 				<Ref_msgs>
 					<refMessage>ref_msgs 1</refMessage>
 				</Ref_msgs>
@@ -98,11 +110,30 @@
 				</Ref_msgs>
 				<state>cps 1 logical 1 state</state>
 			</Logical>
+			<Logical>
+				<description>cps 1 logcial 2 description</description>
+				<identifier>cps 1 logical 2 identifier</identifier>
+				<name>cps 1 logical 2 name</name>
+				<technicalId>cps 1 logical 2 techncialId</technicalId>
+				<type>cps 1 logical 2 type</type>
+				<state>cps 1 logical 2 state</state>
+			</Logical>
 			<Physical>
-				<identifier/>
-				<name/>
-				<technicalId/>
-				<state/>
+				<description>cps 1 physcial 1 description</description>
+				<identifier>cps 1 physical 1 identifier</identifier>
+				<name>cps 1 physical 1 name</name>
+				<technicalId>cps 1 physical 1 technicalId</technicalId>
+				<type>cps 1 physical 1 type</type>
+				<Ref_Influences>
+					<refInfluence>ref influence 1</refInfluence>
+				</Ref_Influences>
+				<Ref_Influences>
+					<refInfluence>ref influence 2</refInfluence>
+				</Ref_Influences>
+				<Ref_Influences>
+					<refInfluence>ref influence 3</refInfluence>
+				</Ref_Influences>
+				<state>cps 1 physical 1 state</state>
 			</Physical>
 		</cps>
 		<cps>
@@ -111,7 +142,6 @@
 			<name>cps 2 name</name>
 			<technicalId>cps 2 technicalId</technicalId>
 			<type>cps 2 type</type>
-			<Aspects/>
 			<Domain>
 				<description>cps 2 Domain 1 description</description>
 				<name>cps 2 Domain 1 name</name>
