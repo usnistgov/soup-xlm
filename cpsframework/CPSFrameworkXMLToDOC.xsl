@@ -2,11 +2,9 @@
 <xsl:stylesheet 
 	xmlns:cps="cpsframework"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
-	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
-	xmlns:fn="http://www.w3.org/2005/xpath-functions" 
 	xmlns:msxsl="urn:schemas-microsoft-com:xslt"
 	xmlns="http://www.w3.org/1999/xhtml" 
-	exclude-result-prefixes="fn xs msxsl" 
+	exclude-result-prefixes="msxsl" 
 	version="1.0">
 	
 	<xsl:import href="Utils.xsl"/>
@@ -1347,17 +1345,6 @@
 						</p>
 					</td>
 				</tr>
-				<tr>
-					<th>Step No.</th>
-					<th>Event</th>
-					<th>Name of Process/ Activity</th>
-					<th>Description of Process/ Activity</th>
-					<th>Service</th>
-					<th>Information Producer (Actor)</th>
-					<th>Information Receiver (Actor)</th>
-					<th>Information Exchanged</th>
-					<th>Requirements , R-ID</th>
-				</tr>
 			</table>			
 				
 			<xsl:apply-templates select="MacroActivity"/>
@@ -1386,7 +1373,19 @@
 					</p>
 				</th>
 			</tr>
-		
+			
+			<tr>
+				<th>Step No.</th>
+				<th>Event</th>
+				<th>Name of Process/ Activity</th>
+				<th>Description of Process/ Activity</th>
+				<th>Service</th>
+				<th>Information Producer (Actor)</th>
+				<th>Information Receiver (Actor)</th>
+				<th>Information Exchanged</th>
+				<th>Requirements , R-ID</th>
+			</tr>
+			
 			<xsl:apply-templates select="Step"/>
 		</table>
 	</xsl:template>

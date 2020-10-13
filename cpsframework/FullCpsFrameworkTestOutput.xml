@@ -1,0 +1,2399 @@
+<html xmlns:cps="cpsframework" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="generator" content="HTML Tidy for Windows (vers 14 October 2008), see www.w3.org" />
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta name="Generator" content="Microsoft Word 14 (filtered)" />
+<style type="text/css">
+					/**/
+					&lt;!--
+					 /* Font Definitions */
+					 @font-face
+							{font-family:Cambria;
+							panose-1:2 4 5 3 5 4 6 3 2 4;}
+					@font-face
+							{font-family:Tahoma;
+							panose-1:2 11 6 4 3 5 4 4 2 4;}
+					@font-face
+							{font-family:"Arial Narrow";
+							panose-1:2 11 6 6 2 2 2 3 2 4;}
+					 /* Style Definitions */
+					 p
+							{margin:0in;
+							margin-top:4px;
+							margin-bottom:4px;
+							text-align:justify;
+							font-size:10.0pt;
+							font-family:"Arial","sans-serif";
+							letter-spacing:.4pt;}
+					h1
+							{mso-style-link:"Heading 1 Char";
+							margin-top:24.0pt;
+							margin-right:0in;
+							margin-bottom:0in;
+							margin-left:0in;
+							margin-bottom:.0001pt;
+							text-align:justify;
+							page-break-after:avoid;
+							font-size:14.0pt;
+							font-family:"Cambria","serif";
+							color:#365F91;
+							letter-spacing:.4pt;}
+					h2
+							{mso-style-link:"Heading 2 Char";
+							margin-top:10.0pt;
+							margin-right:0in;
+							margin-bottom:0in;
+							margin-left:0in;
+							margin-bottom:.0001pt;
+							text-align:justify;
+							page-break-after:avoid;
+							font-size:13.0pt;
+							font-family:"Cambria","serif";
+							color:#4F81BD;
+							letter-spacing:.4pt;}
+					@page WordSection1
+							{size:11.0in 8.5in;
+							margin:1.0in 1.0in 1.0in 1.0in;}
+					div.WordSection1
+							{page:WordSection1;}
+					td
+						{border:solid windowtext 1.0pt;
+						padding:0in 5.4pt 0in 5.4pt;
+						height:11.8pt;
+						vertical-align: text-top}
+					table
+						{width:100.0%;
+						border-collapse:collapse;
+						border:none}
+					th
+						{border:solid windowtext 1.0pt;
+						background:#CCCCCC;
+						padding:0in 5.4pt 0in 5.4pt;
+						height:10.75pt;
+						text-align:left;
+						mso-style-name:TableHeading;
+						mso-style-link:"TableHeading Char";
+						margin:0in;
+						margin-bottom:.0001pt;
+						font-size:10.0pt;
+						font-family:"Arial","sans-serif";
+						color:#002060;
+						letter-spacing:.4pt;
+						font-weight:bold;
+						font-style:italic;}
+					--&gt;
+					/**/
+				</style><title></title></head>
+<body>
+<h1>
+					0       Description of the Business Case
+				</h1>
+<table id="0">
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Domain(s)</th>
+<th>Description</th>
+<th>Requirements R-ID</th>
+<th>Type</th>
+</tr>
+<tr>
+<td>
+<p id="BusinessCase 1 technicalId">BusinessCase 1 identifier</p>
+</td>
+<td>
+<p>BusinessCase 1 name</p>
+</td>
+<td>
+<p id="BusinessCase 1 Domain 1 technicalId">BusinessCase 1 Domain 1 name</p>
+<p id="BusinessCase Domain 2 technicalId">BusinessCase 1 Domain 2 name</p>
+</td>
+<td>
+<p>BusinessCase 1 description</p>
+</td>
+<td>
+<p>1</p>
+</td>
+<td>
+<p>BusinessCase 1 type</p>
+</td>
+</tr>
+</table>
+<h2>
+			Requirements
+		</h2>
+<table id="0.1">
+<tr>
+<th colspan="2">Requirements</th>
+</tr>
+<tr>
+<th>R-ID</th>
+<th>Details</th>
+</tr>
+<tr>
+<td>
+<p>1</p>
+</td>
+<td>
+<div>
+<div style="display: inline-block; vertical-align: middle;">
+<p>functional/TransportationInfrastructure:</p>
+</div>
+<div style="display: inline-block; vertical-align: middle;margin: 4px">
+<table style="margin: 8px;">
+<tr>
+<th>Description</th>
+<td>
+<p>BusinessCase property 1 description</p>
+</td>
+</tr>
+<tr>
+<th>Priority</th>
+<td>
+<p>1</p>
+</td>
+</tr>
+<tr>
+<th>References</th>
+<td>
+<p>BusinessCase property 1 reference 1, BusinessCase property 1 reference 2</p>
+</td>
+</tr>
+<tr>
+<th>Statement</th>
+<td>
+<p>BusinessCase Property 1 statement </p>
+</td>
+</tr>
+<tr>
+<th>Trace</th>
+<td>
+<p>BusinessCase property 1 trace</p>
+</td>
+</tr>
+</table>
+<table style="margin: 8px;">
+<tr>
+<th>Description</th>
+<td>
+<p>BusinessCase property 2 description</p>
+</td>
+</tr>
+<tr>
+<th>Priority</th>
+<td>
+<p>2</p>
+</td>
+</tr>
+<tr>
+<th>References</th>
+<td>
+<p>BusinessCase property 2 reference 1, BusinessCase property 2 reference 2</p>
+</td>
+</tr>
+<tr>
+<th>Statement</th>
+<td>
+<p>BusinessCase Property 2 statement </p>
+</td>
+</tr>
+<tr>
+<th>Trace</th>
+<td>
+<p>BusinessCase property 2 trace</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div>
+<div style="display: inline-block; vertical-align: middle;">
+<p>communications/Connectivity/BasicConnectivity/OSIDataLink:</p>
+</div>
+<div style="display: inline-block; vertical-align: middle;margin: 4px">
+<table style="margin: 8px;">
+<tr>
+<th>Description</th>
+<td>
+<p>BusinessCase property 3 description</p>
+</td>
+</tr>
+<tr>
+<th>Priority</th>
+<td>
+<p>3</p>
+</td>
+</tr>
+<tr>
+<th>References</th>
+<td>
+<p>BusinessCase property 3 reference 1, BusinessCase property 3 reference 2</p>
+</td>
+</tr>
+<tr>
+<th>Statement</th>
+<td>
+<p>BusinessCase Property 3 statement </p>
+</td>
+</tr>
+<tr>
+<th>Trace</th>
+<td>
+<p>BusinessCase property 3 trace</p>
+</td>
+</tr>
+</table>
+<table style="margin: 8px;">
+<tr>
+<th>Description</th>
+<td>
+<p>BusinessCase property 4description</p>
+</td>
+</tr>
+<tr>
+<th>Priority</th>
+<td>
+<p>4</p>
+</td>
+</tr>
+<tr>
+<th>References</th>
+<td>
+<p>BusinessCase property 4 reference 1, BusinessCase property 4 reference 2</p>
+</td>
+</tr>
+<tr>
+<th>Statement</th>
+<td>
+<p>BusinessCase Property 4 statement </p>
+</td>
+</tr>
+<tr>
+<th>Trace</th>
+<td>
+<p>BusinessCase property 4 trace</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</td>
+</tr>
+</table>
+<h1>
+					1       Description of the Use Case
+				</h1>
+<h2>
+					1.1    Name of Use Case
+				</h2>
+<table id="1.1">
+<tr>
+<th colspan="3">Use Case Identification</th>
+</tr>
+<tr>
+<th>ID</th>
+<th>Name of Use Case</th>
+</tr>
+<tr>
+<td>
+<p id="UseCase 1 TechnicalId Element">UseCase 1 Identifier Element</p>
+</td>
+<td>
+<p>UseCase 1 Name Element</p>
+</td>
+</tr>
+</table>
+<h2>
+					1.2    Version Management
+				</h2>
+<table id="1.2">
+<tr>
+<th colspan="7">Version Management</th>
+</tr>
+<tr>
+<th>Version Management Changes</th>
+<th>Date</th>
+<th>Name, Author(s), or Committee</th>
+<th>Approval Status, draft, for comments, for voting, final</th>
+<th>Version Number</th>
+</tr>
+<tr>
+<td>
+<p>UseCase 1 Version changes</p>
+</td>
+<td>
+<p> 2020-05-31T00:00:00Z </p>
+</td>
+<td>
+<p>UseCase 1 Version Author 1 name, UseCase 1 Version Author 2 name</p>
+</td>
+<td>
+<p>UseCase 1 approvalStatus</p>
+</td>
+<td>
+<p>0.0.1</p>
+</td>
+</tr>
+</table>
+<table id="1.2.1" style="margin-top:16px">
+<tr>
+<th colspan="5">Maturity</th>
+</tr>
+<tr>
+<th>Effective</th>
+<th>Maturity</th>
+<th>Responsible Party</th>
+<th>Revision</th>
+<th>Status</th>
+</tr>
+<tr>
+<td>
+<p>Maturity Effective Element</p>
+</td>
+<td>
+<p>submitted</p>
+</td>
+<td>
+<p>Maturity ResponsibleParty Element</p>
+</td>
+<td>
+<p>Maturity Revision Element</p>
+</td>
+<td>
+<p>asDeveloped</p>
+</td>
+</tr>
+</table>
+<h2>
+					1.3    Scope and Objectives of Use Case
+				</h2>
+<table id="1.3">
+<tr>
+<th colspan="2">Scope and Objectives of Use Case</th>
+</tr>
+<tr>
+<th>Related business case</th>
+<td>
+<p>UseCase 1 BusinessCase 1 technicalId, </p>
+<p>UseCase 1 BusinessCase 2 technicalId</p>
+</td>
+</tr>
+<tr>
+<th>Scope</th>
+<td>
+<p>UseCase Scope Element</p>
+</td>
+</tr>
+<tr>
+<th>Objective</th>
+<td>
+<p id="UseCase 1 RelatedObjetcive 1 techncialId">UseCase 1 RelatedObjective 1 name: UseCase 1 RelatedObjective 1 description</p>
+<p id="Usecase 1 RelatedObject 2 technicalId">UseCaes 1 RelatedObjectve 2 name: UseCase 1 RelatedObject 2 description</p>
+</td>
+</tr>
+</table>
+<h2>
+					1.4    Narrative of Use Case
+				</h2>
+<table id="1.4">
+<tr>
+<th>Narrative of Use Case</th>
+</tr>
+<tr>
+<th>Short description - max 3 sentences</th>
+</tr>
+<tr>
+<td>
+<p>Narrative ShortDescription Element</p>
+</td>
+</tr>
+<tr>
+<th>Complete description</th>
+</tr>
+<tr>
+<td>
+<p>Narrative CompleteDescription Element</p>
+</td>
+</tr>
+</table>
+<h2>
+					1.5    General Remarks
+				</h2>
+<table id="1.5">
+<tr>
+<th>General Remarks</th>
+</tr>
+<tr>
+<td>
+<p id="">UseCase 1 Remark 1</p>
+</td>
+</tr>
+<tr>
+<td>
+<p id="">UseCase 1 Remark 2</p>
+</td>
+</tr>
+</table>
+<h1>
+					2       Diagrams of Use Case
+				</h1>
+<table id="2">
+<tr>
+<th>Diagram of the Use Case</th>
+</tr>
+<tr>
+<td>
+<p>
+<img id="other" width="" height="" src="https://upload.wikimedia.org/wikipedia/commons/8/85/Logo-Test.png" alt="UseCase 1 Drawing 1" />
+</p>
+<p>
+<img id="other" width="" height="" src="https://upload.wikimedia.org/wikipedia/commons/8/85/Logo-Test.png" alt="UseCase 1 Drawing 2" />
+</p>
+</td>
+</tr>
+</table>
+<h1>
+					3       Technical Details
+				</h1>
+<h2>
+					3.1    Actors: People, Systems, Applications, Databases, the Power System, and Other Stakeholders
+				</h2>
+<table id="3.1">
+<tr>
+<th colspan="4">Actors</th>
+</tr>
+<tr>
+<th colspan="2">Grouping (Community)</th>
+<th colspan="2">Group Description</th>
+</tr>
+<tr>
+<td colspan="2">
+<p id="UseCase 1 CPSGrouping identifier">UseCase 1 CPSGrouping name</p>
+</td>
+<td colspan="2">
+<p>UseCase 1 CPSGrouping description</p>
+</td>
+</tr>
+<tr>
+<th>Actor Name see Actor  List</th>
+<th>Actor Type see Actor  List</th>
+<th>Further information specific to this Use Case</th>
+</tr>
+<tr>
+<td>
+<p>UseCase 1 CPSGrouping 1 CPS 1 name</p>
+</td>
+<td>
+<p>UseCase 1 CPSGrouping 1 CPS 1 technicalId</p>
+</td>
+<td>
+<p>UseCase 1 CPSGrouping 1 CPS 1 furtherInformation</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>UseCase 1 CPSGrouping 1 CPS 2 name</p>
+</td>
+<td>
+<p>UseCase 1 CPSGrouping 1 CPS 2 technicalId</p>
+</td>
+<td>
+<p>UseCase 1 CPSGrouping 1 CPS 2 furtherInformation</p>
+</td>
+</tr>
+</table>
+<h2>
+					3.2    Preconditions, Assumptions, Post condition, Events
+				</h2>
+<table id="3.2">
+<tr>
+<th colspan="4">Use Case Conditions</th>
+</tr>
+<tr>
+<th>Assumption name</th>
+<th>Assumption content</th>
+</tr>
+<tr>
+<td>
+<p>UseCase 1 Assumption 1 name</p>
+</td>
+<td>
+<p>UseCase 1 Assumption 1 content</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>UseCase 1 Assumption 2 name</p>
+</td>
+<td>
+<p>UseCase 1 Assumption 2 content</p>
+</td>
+</tr>
+</table>
+<table id="3.3">
+<tr>
+<th>Prerequisite name</th>
+<th>Prerequisite content</th>
+</tr>
+<tr>
+<td>
+<p>UseCase 1 Prerequisite 1 name</p>
+</td>
+<td>
+<p>UseCase 1 Prerequisite 1 content</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>UseCase 1 Prerequisite 2 name</p>
+</td>
+<td>
+<p>UseCase 1 Prerequisite 2 content</p>
+</td>
+</tr>
+</table>
+<h2>
+					3.3    References / Issues
+				</h2>
+<table id="3.4">
+<tr>
+<th colspan="8">References</th>
+</tr>
+<tr>
+<th>No.</th>
+<th>References Type</th>
+<th>Reference</th>
+<th>Description</th>
+<th>Status</th>
+<th>Impact on Use Case</th>
+<th>Originator / Organisation</th>
+<th>Link</th>
+</tr>
+<tr>
+<td>
+<p id="">UseCase 1 Reference 1 identifier</p>
+</td>
+<td>
+<p>UseCaes 1 Reference 1 type</p>
+</td>
+<td>
+<p>UseCaes 1 Reference 1 name</p>
+</td>
+<td>
+<p>UseCase 1 Reference 1 description</p>
+</td>
+<td>
+<p>UseCase 1 Reference 1 status</p>
+</td>
+<td>
+<p>UseCase 1 Reference 1 impact</p>
+</td>
+<td>
+<p>UseCaes 1 Reference 1 originatorOrganisation</p>
+</td>
+<td>
+<p>UseCase 1 Reference 1 link</p>
+</td>
+</tr>
+<tr>
+<td>
+<p id="">UseCase 1 Reference 2 identifier</p>
+</td>
+<td>
+<p>UseCase 1 Reference 2 type</p>
+</td>
+<td>
+<p>UseCaes 1 Reference 2 name</p>
+</td>
+<td>
+<p>UseCase 1 Reference 2 description</p>
+</td>
+<td>
+<p>UseCase 1 Reference 2 status</p>
+</td>
+<td>
+<p>UseCase 1 Reference 2 impact</p>
+</td>
+<td>
+<p>UseCaes 1 Reference 2 originatorOrganisation</p>
+</td>
+<td>
+<p>UseCase 1 Reference 2 link</p>
+</td>
+</tr>
+</table>
+<h2>
+					3.4    Further Information to the Use Case for Classification / Mapping
+				</h2>
+<table id="3.5">
+<tr>
+<th colspan="6">Classification Information</th>
+</tr>
+<tr>
+<th>Relation to Other Use Cases</th>
+<th>Level of Depth</th>
+<th>Prioritisation</th>
+<th>Generic, Regional or National Relation</th>
+<th>View</th>
+<th>Further Keywords for Classification</th>
+</tr>
+<tr>
+<td id="UseCase 1 TechnicalId Element">
+<p id="UseCAse 1 RelatedUseCase 1 TechnicalId">UseCase 1 RelatedUseCase 1 Name,</p>
+<p id="UseCase 1 RelatedUseCase 2 technicalId">UseCase 1 RelatedUseCase 2 Name</p>
+</td>
+<td>
+<p>LevelOfDepth Element</p>
+</td>
+<td>
+<p>Prioritisation Element</p>
+</td>
+<td>
+<p>UseCase Classification Element</p>
+</td>
+<td>
+<p>Nature Element</p>
+</td>
+<td>
+<p>Keywork1, Keyword2, Keywork3, Keyword with space, Keywork 5</p>
+</td>
+</tr>
+</table>
+<h1>4       Step by Step Analysis of Use Case
+				</h1>
+<table id="4">
+<tr>
+<th colspan="7">Scenario Conditions</th>
+</tr>
+<tr>
+<th>No.</th>
+<th>Scenario Name</th>
+<th>Primary Actor</th>
+<th>Triggering Event</th>
+<th>Pre-Condition</th>
+<th>Post-Condition</th>
+<th>Requirements R-ID</th>
+</tr>
+<tr>
+<td>
+<p id="Scenario 1 technicalId element">Scenario 1 identifier element</p>
+</td>
+<td>
+<p>Scenario 1 name element</p>
+</td>
+<td>
+<p id="Scenario 1 PrimaryCPS 1 technicalId element">Scenario 1 PrimaryCPS 1 name element</p>
+<p id="Scenario 1 PrimaryCPS 2 technicalId element">Scenario 1 PrimaryCPS 2 name element</p>
+</td>
+<td>
+<p>Scenario 1 TriggeringEvent 1 name element: Scenario 1 TriggeringEvent 1 content element</p>
+<p>Scenario 1 TriggeringEvent 2 name element: Scenario 1 TriggeringEvent 2 content element</p>
+</td>
+<td>
+<p>Scenario 1 Precondition 1 name element: Scneario 1 Precondition 1 content element</p>
+<p>Scenario 1 Preconditino 2 name element: Scenario 1 Precondition 2 content element</p>
+</td>
+<td>
+<p>Scenario 1 Postcondition 1 name element: Scenario 1 Postcondition 1 content element</p>
+<p>Scenario 1 Postcondition 2 name element: Scenario 1 Postcondition 2 content element</p>
+</td>
+<td>
+<p>10</p>
+</td>
+</tr>
+<tr>
+<td>
+<p id="Scenario 2 technicalId element">Scenario 2 identifier element</p>
+</td>
+<td>
+<p>Scenario 2 name element</p>
+</td>
+<td>
+<p id="Scenario 2 PrimaryCPS 1 technicalId element">Scenario 2 PrimaryCPS 1 name element</p>
+<p id="Scenario 2 PrimaryCPS 2 technicalId element">Scenario 2 PrimaryCPS 2 name element</p>
+</td>
+<td>
+<p>Scenario 2 TriggeringEvent 1 name element: Scenario 2 TriggeringEvent 1 content element</p>
+<p>Scenario 2 TriggeringEvent 2 name element: Scenario 2 TriggeringEvent 2 content element</p>
+</td>
+<td>
+<p>Scenario 2 Precondition 1 name element: Scneario 2 Precondition 1 content element</p>
+<p>Scenario 2 Preconditino 2 name element: Scenario 2 Precondition 2 content element</p>
+</td>
+<td>
+<p>Scenario 2 Postcondition 1 name element: Scenario 2 Postcondition 1 content element</p>
+<p>Scenario 2 Postcondition 2 name element: Scenario 2 Postcondition 2 content element</p>
+</td>
+<td>
+<p></p>
+</td>
+</tr>
+</table>
+<h2>
+<p id="Scenario 1 technicalId element">Steps - Scenario 1 name element</p>
+</h2>
+<div id="ScenarioTables">
+<table id="4.1.1">
+<tr>
+<th colspan="9">Scenario</th>
+</tr>
+<tr>
+<th colspan="2">Scenario Name :</th>
+<td colspan="7">
+<p>Scenario 1 name element</p>
+</td>
+</tr>
+</table>
+<table id="4.1.2">
+<tr id="MacroActivity">
+<th colspan="9">
+<p id="Scenario 1 MacroActivity 1 tehcnicalId element">Scenario 1 MacroActivity 1 name element</p>
+</th>
+</tr>
+<tr>
+<th>Step No.</th>
+<th>Event</th>
+<th>Name of Process/ Activity</th>
+<th>Description of Process/ Activity</th>
+<th>Service</th>
+<th>Information Producer (Actor)</th>
+<th>Information Receiver (Actor)</th>
+<th>Information Exchanged</th>
+<th>Requirements , R-ID</th>
+</tr>
+<tr>
+<td>
+<p id="">Scenario 1 MacroActivity 1 Step 1 identifier element</p>
+</td>
+<td>
+<p>Scenario 1 MacroActivity 1 Step 1 event element</p>
+</td>
+<td>
+<p>Scenario 1 MacroActivity 1 Step 1 name element</p>
+</td>
+<td>
+<p>Scenario 1 MacroActivity 1 Step 1 description element</p>
+</td>
+<td>
+<p>Scenario 1 MacroActivity 1 Step 1 service element</p>
+</td>
+<td>
+<p id="Scenario 1 MacroActivity 1 Step 1 InformationProducer 1 technicalId">Scenario 1 MacroActivity 1 Step 1 InformationProducer 1 name</p>
+<p id="Scenario 1 MacroActivity 1 Step 1 InformationProducer 2 technicalId">Scenario 1 MacroActivity 1 Step 1 InformationProducer 2 name</p>
+</td>
+<td>
+<p id="Scenario 1 MacroActivity 1 Step 1 InformationReceiver 1 technicalId">Scenario 1 MacroActivity 1 Step 1 InformationReceiver 1 name</p>
+</td>
+<td>
+<p id="Scenario 1 MacroActivity 1 Step 1 BusinessObject 1 technicalId">Scenario 1 MacroActivity 1 Step 1 BusinessObject 1 name</p>
+<p id="Scenario 1 MacroActivity 1 Step 1 BusinessObject 2 technicalId">Scenario 1 MacroActivity 1 Step 1 BusinessObject 2 name</p>
+</td>
+<td>
+<p>11</p>
+</td>
+</tr>
+<tr>
+<td>
+<p id="">Scenario 1 MacroActivity 1 Step 2 identifier element</p>
+</td>
+<td>
+<p>Scenario 1 MacroActivity 1 Step 2 event element</p>
+</td>
+<td>
+<p>Scenario 1 MacroActivity 1 Step 2 name element</p>
+</td>
+<td>
+<p>Scenario 1 MacroActivity 1 Step 2 description element</p>
+</td>
+<td>
+<p>Scenario 1 MacroActivity 1 Step 2 service element</p>
+</td>
+<td>
+<p id="Scenario 1 MacroActivity 1 Step 2 InformationProducer 1 technicalId">Scenario 1 MacroActivity 1 Step 2 InformationProducer 1 name</p>
+</td>
+<td>
+<p id="Scenario 1 MacroActivity 1 Step 2 InformationReceiver 1 technicalId">Scenario 1 MacroActivity 1 Step 2 InformationReceiver 1 name</p>
+</td>
+<td>
+<p id="Scenario 1 MacroActivity 1 Step 2 BusinessObject 1 technicalId">Scenario 1 MacroActivity 1 Step 2 BusinessObjecvt 1 name</p>
+</td>
+<td>
+<p></p>
+</td>
+</tr>
+</table>
+<table id="4.1.2">
+<tr id="MacroActivity">
+<th colspan="9">
+<p id="Scenario 1 MacroActivity 2 tehcnicalId">Scenario 1 MacroActivity 2 name</p>
+</th>
+</tr>
+<tr>
+<th>Step No.</th>
+<th>Event</th>
+<th>Name of Process/ Activity</th>
+<th>Description of Process/ Activity</th>
+<th>Service</th>
+<th>Information Producer (Actor)</th>
+<th>Information Receiver (Actor)</th>
+<th>Information Exchanged</th>
+<th>Requirements , R-ID</th>
+</tr>
+<tr>
+<td>
+<p id="">Scenario 1 MacroActivity 2 Step 1 identifier element</p>
+</td>
+<td>
+<p>Scenario 1 MacroActivity 2 Step 1 event element</p>
+</td>
+<td>
+<p>Scenario 1 MacroActivity 2 Step 1 name element</p>
+</td>
+<td>
+<p>Scenario 1 MacroActivity 2 Step 1 description element</p>
+</td>
+<td>
+<p>Scenario 1 MacroActivity 2 Step 1 service element</p>
+</td>
+<td>
+<p id="Scenario 1 MacroActivity 2 Step 1 InformationProducer 1 technicalId">Scenario 1 MacroActivity 2 Step 1 InformationProducer 1 name</p>
+<p id="Scenario 1 MacroActivity 2 Step 1 InformationProducer 2 technicalId">Scenario 1 MacroActivity 2 Step 1 InformationProducer 2 name</p>
+</td>
+<td>
+<p id="Scenario 1 MacroActivity 2 Step 1 InformationReceiver 1 technicalId">Scenario 1 MacroActivity 2 Step 1 InformationReceiver 1 name</p>
+</td>
+<td>
+<p id="Scenario 1 MacroActivity 2 Step 1 BusinessObject 1 technicalId">Scenario 1 MacroActivity 2 Step 1 BusinessObject 1 name</p>
+</td>
+<td>
+<p>12</p>
+</td>
+</tr>
+<tr>
+<td>
+<p id="">Scenario 1 MacroActivity 2 Step 2 identifier element</p>
+</td>
+<td>
+<p>Scenario 1 MacroActivity 2 Step 2 event element</p>
+</td>
+<td>
+<p>Scenario 1 MacroActivity 2 Step 2 name element</p>
+</td>
+<td>
+<p>Scenario 1 MacroActivity 2 Step 2 description element</p>
+</td>
+<td>
+<p>Scenario 1 MacroActivity 2 Step 2 service element</p>
+</td>
+<td>
+<p id="Scenario 1 MacroActivity 2 Step 1 InformationProducer 1 technicalId">Scenario 1 MacroActivity 2 Step 2 InformationProducer 1 name</p>
+</td>
+<td>
+<p id="Scenario 1 MacroActivity 2 Step 1 InformationReceiver 1 technicalId">Scenario 1 MacroActivity 2 Step 1 InformationReceiver 1 name</p>
+</td>
+<td>
+<p id="Scenario 1 MacroActivity 2 Step 2 BusinessObject 1 technicalId">Scenario 1 MacroActivity 2 Step 2 BusinessObject 1 name</p>
+</td>
+<td>
+<p></p>
+</td>
+</tr>
+</table>
+</div>
+<h2>
+			Requirements
+		</h2>
+<table id="4.1.1">
+<tr>
+<th colspan="2">Requirements</th>
+</tr>
+<tr>
+<th>R-ID</th>
+<th>Details</th>
+</tr>
+<tr>
+<td>
+<p>10</p>
+</td>
+<td>
+<div>
+<div style="display: inline-block; vertical-align: middle;">
+<p>functional/Uncertainty:</p>
+</div>
+<div style="display: inline-block; vertical-align: middle;margin: 4px">
+<table style="margin: 8px;">
+<tr>
+<th>Statement</th>
+<td>
+<p>uncertainty statement</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<p>11</p>
+</td>
+<td>
+<div>
+<div style="display: inline-block; vertical-align: middle;">
+<p>functional/Uncertainty:</p>
+</div>
+<div style="display: inline-block; vertical-align: middle;margin: 4px">
+<table style="margin: 8px;">
+<tr>
+<th>Statement</th>
+<td>
+<p>uncertainty statement</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<p>12</p>
+</td>
+<td>
+<div>
+<div style="display: inline-block; vertical-align: middle;">
+<p>functional/Uncertainty:</p>
+</div>
+<div style="display: inline-block; vertical-align: middle;margin: 4px">
+<table style="margin: 8px;">
+<tr>
+<th>Statement</th>
+<td>
+<p>MacroActivity 2 statement</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</td>
+</tr>
+</table>
+<h2>
+<p id="Scenario 2 technicalId element">Steps - Scenario 2 name element</p>
+</h2>
+<div id="ScenarioTables">
+<table id="4.1.1">
+<tr>
+<th colspan="9">Scenario</th>
+</tr>
+<tr>
+<th colspan="2">Scenario Name :</th>
+<td colspan="7">
+<p>Scenario 2 name element</p>
+</td>
+</tr>
+</table>
+<table id="4.1.2">
+<tr id="MacroActivity">
+<th colspan="9">
+<p id="Scenario 2 MacroActivity 1 tehcnicalId element">Scenario 2 MacroActivity 1 name element</p>
+</th>
+</tr>
+<tr>
+<th>Step No.</th>
+<th>Event</th>
+<th>Name of Process/ Activity</th>
+<th>Description of Process/ Activity</th>
+<th>Service</th>
+<th>Information Producer (Actor)</th>
+<th>Information Receiver (Actor)</th>
+<th>Information Exchanged</th>
+<th>Requirements , R-ID</th>
+</tr>
+<tr>
+<td>
+<p id="">Scenario 2 MacroActivity 1 Step 1 identifier element</p>
+</td>
+<td>
+<p>Scenario 2 MacroActivity 1 Step 1 event element</p>
+</td>
+<td>
+<p>Scenario 2 MacroActivity 1 Step 1 name element</p>
+</td>
+<td>
+<p>Scenario 2 MacroActivity 1 Step 1 description element</p>
+</td>
+<td>
+<p>Scenario 2 MacroActivity 1 Step 1 service element</p>
+</td>
+<td>
+<p id="Scenario 2 MacroActivity 1 Step 1 InformationProducer 1 technicalId">Scenario 2 MacroActivity 1 Step 1 InformationProducer 1 name</p>
+<p id="Scenario 2 MacroActivity 1 Step 1 InformationProducer 2 technicalId">Scenario 2 MacroActivity 1 Step 1 InformationProducer 2 name</p>
+</td>
+<td>
+<p id="Scenario 2 MacroActivity 1 Step 1 InformationReceiver 1 technicalId">Scenario 2 MacroActivity 1 Step 1 InformationReceiver 1 name</p>
+</td>
+<td>
+<p id="Scenario 2 MacroActivity 1 Step 1 BusinessObject 1 technicalId">Scenario 2 MacroActivity 1 Step 1 BusinessObject 1 name</p>
+</td>
+<td>
+<p>13</p>
+</td>
+</tr>
+<tr>
+<td>
+<p id="">Scenario 2 MacroActivity 1 Step 2 identifier element</p>
+</td>
+<td>
+<p>Scenario 2 MacroActivity 1 Step 2 event element</p>
+</td>
+<td>
+<p>Scenario 2 MacroActivity 1 Step 2 name element</p>
+</td>
+<td>
+<p>Scenario 2 MacroActivity 1 Step 2 description element</p>
+</td>
+<td>
+<p>Scenario 2 MacroActivity 1 Step 2 service element</p>
+</td>
+<td>
+<p id="Scenario 2 MacroActivity 1 Step 2 InformationProducer 1 technicalId">Scenario 2 MacroActivity 1 Step 2 InformationProducer 1 name</p>
+</td>
+<td>
+<p id="Scenario 2 MacroActivity 1 Step 2 InformationReceiver 1 technicalId">Scenario 2 MacroActivity 1 Step 2 InformationReceiver 1 name</p>
+</td>
+<td>
+<p id="Scenario 2 MacroActivity 1 Step 2 BusinessObject 1 technicalId">Scenario 2 MacroActivity 2 Step 2 BusinessObject 1 name</p>
+</td>
+<td>
+<p></p>
+</td>
+</tr>
+</table>
+<table id="4.1.2">
+<tr id="MacroActivity">
+<th colspan="9">
+<p id="Scenario 2 MacroActivity 2 tehcnicalId">Scenario 2 MacroActivity 2 name</p>
+</th>
+</tr>
+<tr>
+<th>Step No.</th>
+<th>Event</th>
+<th>Name of Process/ Activity</th>
+<th>Description of Process/ Activity</th>
+<th>Service</th>
+<th>Information Producer (Actor)</th>
+<th>Information Receiver (Actor)</th>
+<th>Information Exchanged</th>
+<th>Requirements , R-ID</th>
+</tr>
+<tr>
+<td>
+<p id="">Scenario 2 MacroActivity 2 Step 1 identifier element</p>
+</td>
+<td>
+<p>Scenario 2 MacroActivity 2 Step 1 event element</p>
+</td>
+<td>
+<p>Scenario 2 MacroActivity 2 Step 1 name element</p>
+</td>
+<td>
+<p>Scenario 2 MacroActivity 2 Step 1 description element</p>
+</td>
+<td>
+<p>Scenario 2 MacroActivity 2 Step 1 service element</p>
+</td>
+<td>
+<p id="Scenario 2 MacroActivity 2 Step 1 InformationProducer 1 technicalId">Scenario 2 MacroActivity 2 Step 1 InformationProducer 1 name</p>
+<p id="Scenario 2 MacroActivity 2 Step 1 InformationProducer 2 technicalId">Scenario 2 MacroActivity 2 Step 1 InformationProducer 2 name</p>
+</td>
+<td>
+<p id="Scenario 2 MacroActivity 2 Step 1 InformationReceiver 1 technicalId">Scenario 2 MacroActivity 2 Step 1 InformationReceiver 1 name</p>
+</td>
+<td>
+<p id="Scenario 2 MacroActivity 2 Step 1 BusinessObject 1 technicalId">Scenario 2 MacroActivity 2 Step 1 BusinessObject 1 name</p>
+</td>
+<td>
+<p></p>
+</td>
+</tr>
+<tr>
+<td>
+<p id="">Scenario 2 MacroActivity 2 Step 2 identifier element</p>
+</td>
+<td>
+<p>Scenario 2 MacroActivity 2 Step 2 event element</p>
+</td>
+<td>
+<p>Scenario 2 MacroActivity 2 Step 2 name element</p>
+</td>
+<td>
+<p>Scenario 2 MacroActivity 2 Step 2 description element</p>
+</td>
+<td>
+<p>Scenario 2 MacroActivity 2 Step 2 service element</p>
+</td>
+<td>
+<p id="Scenario 2 MacroActivity 2 Step 1 InformationProducer 1 technicalId">Scenario 2 MacroActivity 2 Step 2 InformationProducer 1 name</p>
+</td>
+<td>
+<p id="Scenario 2 MacroActivity 2 Step 1 InformationReceiver 1 technicalId">Scenario 2 MacroActivity 2 Step 1 InformationReceiver 1 name</p>
+</td>
+<td>
+<p id="Scenario 2 MacroActivity 2 Step 2 BusinessObject 1 technicalId">Scenario 2 MacroActivity 2 Step 2 BusinessObject 1 name</p>
+</td>
+<td>
+<p></p>
+</td>
+</tr>
+</table>
+</div>
+<h2>
+			Requirements
+		</h2>
+<table id="4.1.1">
+<tr>
+<th colspan="2">Requirements</th>
+</tr>
+<tr>
+<th>R-ID</th>
+<th>Details</th>
+</tr>
+<tr>
+<td>
+<p>13</p>
+</td>
+<td>
+<div>
+<div style="display: inline-block; vertical-align: middle;">
+<p>functional/Manageability:</p>
+</div>
+<div style="display: inline-block; vertical-align: middle;margin: 4px">
+<table style="margin: 8px;">
+<tr>
+<th>Statement</th>
+<td>
+<p>Manageability statment</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div>
+<div style="display: inline-block; vertical-align: middle;">
+<p>functional/Manageability/ComponentInventory:</p>
+</div>
+<div style="display: inline-block; vertical-align: middle;margin: 4px">
+<table style="margin: 8px;">
+<tr>
+<th>Statement</th>
+<td>
+<p>ComponentInventory statement</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div>
+<div style="display: inline-block; vertical-align: middle;">
+<p>human:</p>
+</div>
+<div style="display: inline-block; vertical-align: middle;margin: 4px">
+<table style="margin: 8px;">
+<tr>
+<th>Statement</th>
+<td>
+<p>human property statement</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</td>
+</tr>
+</table>
+<h1>
+					5       Information Exchanged
+				</h1>
+<table id="5">
+<tr>
+<th colspan="5">Information Maturity</th>
+</tr>
+<tr>
+<th>Effective</th>
+<th>Maturity</th>
+<th>Responsible Party</th>
+<th>Revision</th>
+<th>Status</th>
+</tr>
+<tr>
+<td>
+<p>InformationModelLibrary Maturity effective</p>
+</td>
+<td>
+<p>submitted</p>
+</td>
+<td>
+<p>InformationModelLibrary Maturity responsibleParty</p>
+</td>
+<td>
+<p>InformationModelLibrary Maturity revision</p>
+</td>
+<td>
+<p>asDesigned</p>
+</td>
+</tr>
+</table>
+<table id="5.0.1" style="margin-top:16px">
+<tr>
+<th colspan="4">Information Exchanged</th>
+</tr>
+<tr>
+<th>Name of Information Exchanged</th>
+<th>Description of Information Exchanged</th>
+<th>Requirements to information data R-ID</th>
+<th>Requirements R-ID</th>
+</tr>
+<tr>
+<td>
+<p id="InformationModel 1 technicalId">InformationModel 1 name</p>
+</td>
+<td>
+<p>InformationModel 1 description</p>
+</td>
+<td>
+<p>InformationModel 1 Requirement 1 technicalId,</p>
+<p>InformationModel 1 Requirment 2 technicalId,</p>
+<p>InformationModel 1 Requirement 3 technicalId</p>
+</td>
+<td>
+<p>4</p>
+</td>
+</tr>
+<tr>
+<td>
+<p id="InformationModel 2 technicalId">InformationModel 2 name</p>
+</td>
+<td>
+<p>InformationModel 2 description</p>
+</td>
+<td>
+<p>InformationModel 2 Requirement 1 technicalId,</p>
+<p>InformationModel 2 Requirment 2 technicalId,</p>
+<p>InformationModel 2 Requirement 3 technicalId</p>
+</td>
+<td>
+<p>5</p>
+</td>
+</tr>
+</table>
+<h2>
+			Requirements
+		</h2>
+<table id="5.0.2">
+<tr>
+<th colspan="2">Requirements</th>
+</tr>
+<tr>
+<th>R-ID</th>
+<th>Details</th>
+</tr>
+<tr>
+<td>
+<p>4</p>
+</td>
+<td>
+<div>
+<div style="display: inline-block; vertical-align: middle;">
+<p>functional/TransportationInfrastructure:</p>
+</div>
+<div style="display: inline-block; vertical-align: middle;margin: 4px">
+<table style="margin: 8px;">
+<tr>
+<th>Statement</th>
+<td>
+<p> TBD </p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<p>5</p>
+</td>
+<td>
+<div>
+<div style="display: inline-block; vertical-align: middle;">
+<p>functional/TransportationInfrastructure:</p>
+</div>
+<div style="display: inline-block; vertical-align: middle;margin: 4px">
+<table style="margin: 8px;">
+<tr>
+<th>Statement</th>
+<td>
+<p> TBD </p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</td>
+</tr>
+</table>
+<h1>
+					6       Interactions
+				</h1>
+<h2>
+					6.1 Interaction Libary Maturity
+				</h2>
+<table id="6.1">
+<tr>
+<th colspan="5">Interaction Maturity</th>
+</tr>
+<tr>
+<th>Effective</th>
+<th>Maturity</th>
+<th>Responsible Party</th>
+<th>Revision</th>
+<th>Status</th>
+</tr>
+<tr>
+<td>
+<p>Maturity Effective Element</p>
+</td>
+<td>
+<p>submitted</p>
+</td>
+<td>
+<p>Maturity ResponsibleParty Element</p>
+</td>
+<td>
+<p>Maturity Revision Element</p>
+</td>
+<td>
+<p>asDeveloped</p>
+</td>
+</tr>
+</table>
+<h2>
+					6.2 Influences
+				</h2>
+<table id="6.2">
+<tr>
+<th colspan="3">Influences</th>
+</tr>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Requirement R-ID</th>
+</tr>
+<tr>
+<td>
+<p id="Influence 1 technicalId">Influence 1 name</p>
+</td>
+<td>
+<p>Influence 1 description</p>
+</td>
+<td>
+<p></p>
+</td>
+</tr>
+<tr>
+<td>
+<p id="Influence 2 technicalId">Influence 2 name</p>
+</td>
+<td>
+<p>Influence 2 description</p>
+</td>
+<td>
+<p></p>
+</td>
+</tr>
+<tr>
+<td>
+<p id="Influence 3 technicalId">Influence 3 name</p>
+</td>
+<td>
+<p>Influence 3 description</p>
+</td>
+<td>
+<p></p>
+</td>
+</tr>
+<tr>
+<td>
+<p id="Influence 4 technicalId">Influence 4 name</p>
+</td>
+<td>
+<p>Influence 4 description</p>
+</td>
+<td>
+<p>6</p>
+</td>
+</tr>
+</table>
+<h2>
+			Requirements
+		</h2>
+<table id="6.2.1">
+<tr>
+<th colspan="2">Requirements</th>
+</tr>
+<tr>
+<th>R-ID</th>
+<th>Details</th>
+</tr>
+<tr>
+<td>
+<p>6</p>
+</td>
+<td>
+<div>
+<div style="display: inline-block; vertical-align: middle;">
+<p>business:</p>
+</div>
+<div style="display: inline-block; vertical-align: middle;margin: 4px">
+<table style="margin: 8px;">
+<tr>
+<th>Statement</th>
+<td>
+<p>Influences Statement</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</td>
+</tr>
+</table>
+<h2>
+					6.3 Messages
+				</h2>
+<table id="6.3">
+<tr>
+<th colspan="3">Messages</th>
+</tr>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Requirement R-ID</th>
+</tr>
+<tr>
+<td>
+<p id="Message 1 technicalId">Message 1 name</p>
+</td>
+<td>
+<p>Message 1 description</p>
+</td>
+<td>
+<p></p>
+</td>
+</tr>
+<tr>
+<td>
+<p id="Message 2 technicalId">Message 2 name</p>
+</td>
+<td>
+<p>Message 2 description</p>
+</td>
+<td>
+<p>7</p>
+</td>
+</tr>
+<tr>
+<td>
+<p id="Message 3 technicalId">Message 3 name</p>
+</td>
+<td>
+<p>Message 3 description</p>
+</td>
+<td>
+<p>8</p>
+</td>
+</tr>
+<tr>
+<td>
+<p id="Message 4 technicalId">Message 4 name</p>
+</td>
+<td>
+<p>Message 4 description</p>
+</td>
+<td>
+<p>9</p>
+</td>
+</tr>
+</table>
+<h2>
+			Requirements
+		</h2>
+<table id="6.3.1">
+<tr>
+<th colspan="2">Requirements</th>
+</tr>
+<tr>
+<th>R-ID</th>
+<th>Details</th>
+</tr>
+<tr>
+<td>
+<p>7</p>
+</td>
+<td>
+<div>
+<div style="display: inline-block; vertical-align: middle;">
+<p>data:</p>
+</div>
+<div style="display: inline-block; vertical-align: middle;margin: 4px">
+<table style="margin: 8px;">
+<tr>
+<th>Statement</th>
+<td>
+<p>Messages statement 1</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<p>8</p>
+</td>
+<td>
+<div>
+<div style="display: inline-block; vertical-align: middle;">
+<p>data:</p>
+</div>
+<div style="display: inline-block; vertical-align: middle;margin: 4px">
+<table style="margin: 8px;">
+<tr>
+<th>Statement</th>
+<td>
+<p>Messages statement 2</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<p>9</p>
+</td>
+<td>
+<div>
+<div style="display: inline-block; vertical-align: middle;">
+<p>data:</p>
+</div>
+<div style="display: inline-block; vertical-align: middle;margin: 4px">
+<table style="margin: 8px;">
+<tr>
+<th>Statement</th>
+<td>
+<p>Messages statement 3</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</td>
+</tr>
+</table>
+<h1>
+					7 CPS Library
+				</h1>
+<h2>
+					7.1 CPS List
+				</h2>
+<table id="7.1">
+<tr>
+<th colspan="8">CPS List</th>
+</tr>
+<tr>
+<th>Identifier</th>
+<th>Name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Domains</th>
+<th>Requirements R-ID</th>
+<th>Logical</th>
+<th>Physical</th>
+</tr>
+<tr>
+<td>
+<p id="cps 1 technicalId">cps 1 identifier</p>
+</td>
+<td>
+<p>cps 1 name</p>
+</td>
+<td>
+<p>cps 1 description</p>
+</td>
+<td>
+<p>cps 1 type</p>
+</td>
+<td>
+<p id="cps 1 Domain 1 technicalId">cps 1 Domain 1 name: cps 1 Domain 1 description</p>
+<p id="cps 1 Domain 2 technicalId">cps 1 Domain 2 name: cps 1 Domain 2 description</p>
+</td>
+<td>2</td>
+<td>
+<table>
+<tr>
+<th>Name</th>
+<th>
+<p id="cps 1 logical 1 techncialId">cps 1 logical 1 name</p>
+</th>
+</tr>
+<tr>
+<th>Identifier</th>
+<td>
+<p>cps 1 logical 1 identifier</p>
+</td>
+</tr>
+<tr>
+<th>Description</th>
+<td>
+<p>cps 1 logcial 1 description</p>
+</td>
+</tr>
+<tr>
+<th>State</th>
+<td>
+<p>cps 1 logical 1 state</p>
+</td>
+</tr>
+<tr>
+<th>Type</th>
+<td>
+<p>cps 1 logical 1 type</p>
+</td>
+</tr>
+<tr>
+<th>Ref Msg</th>
+<td>
+<p>ref_msgs 1</p>
+<p>ref_msgs 2</p>
+<p>ref_msgs 3</p>
+</td>
+</tr>
+<tr>
+<th>Requirements R-ID</th>
+<td>
+<p>3</p>
+</td>
+</tr>
+</table>
+<table>
+<tr>
+<th>Name</th>
+<th>
+<p id="cps 1 logical 2 techncialId">cps 1 logical 2 name</p>
+</th>
+</tr>
+<tr>
+<th>Identifier</th>
+<td>
+<p>cps 1 logical 2 identifier</p>
+</td>
+</tr>
+<tr>
+<th>Description</th>
+<td>
+<p>cps 1 logcial 2 description</p>
+</td>
+</tr>
+<tr>
+<th>State</th>
+<td>
+<p>cps 1 logical 2 state</p>
+</td>
+</tr>
+<tr>
+<th>Type</th>
+<td>
+<p>cps 1 logical 2 type</p>
+</td>
+</tr>
+</table>
+</td>
+<td>
+<table>
+<tr>
+<th>Name</th>
+<th>
+<p id="cps 1 physical 1 technicalId">cps 1 physical 1 name</p>
+</th>
+</tr>
+<tr>
+<th>Identifier</th>
+<td>
+<p>cps 1 physical 1 identifier</p>
+</td>
+</tr>
+<tr>
+<th>Description</th>
+<td>
+<p>cps 1 physcial 1 description</p>
+</td>
+</tr>
+<tr>
+<th>State</th>
+<td>
+<p>cps 1 physical 1 state</p>
+</td>
+</tr>
+<tr>
+<th>Type</th>
+<td>
+<p>cps 1 physical 1 type</p>
+</td>
+</tr>
+<tr>
+<th>Ref Influence</th>
+<td>
+<p>ref influence 1</p>
+<p>ref influence 2</p>
+<p>ref influence 3</p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<p id="cps 2 technicalId">cps 2 identifier</p>
+</td>
+<td>
+<p>cps 2 name</p>
+</td>
+<td>
+<p>cps 2 description</p>
+</td>
+<td>
+<p>cps 2 type</p>
+</td>
+<td>
+<p id="cps 2 Domain 1 technicalId">cps 2 Domain 1 name: cps 2 Domain 1 description</p>
+</td>
+<td></td>
+<td>
+<table>
+<tr>
+<th>Name</th>
+<th>
+<p id=""></p>
+</th>
+</tr>
+<tr>
+<th>Identifier</th>
+<td>
+<p></p>
+</td>
+</tr>
+<tr>
+<th>State</th>
+<td>
+<p></p>
+</td>
+</tr>
+</table>
+</td>
+<td>
+<table>
+<tr>
+<th>Name</th>
+<th>
+<p id=""></p>
+</th>
+</tr>
+<tr>
+<th>Identifier</th>
+<td>
+<p></p>
+</td>
+</tr>
+<tr>
+<th>State</th>
+<td>
+<p></p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<p id="irreducible cps 1 techncialId">irreducible cps 1 identifier</p>
+</td>
+<td>
+<p>irreducible cps 1 name</p>
+</td>
+<td>
+<p></p>
+</td>
+<td>
+<p></p>
+</td>
+<td></td>
+<td></td>
+<td>
+<table>
+<tr>
+<th>Name</th>
+<th>
+<p id="irreducible cps 1 logical technicalId">irreducible cps 1 logical name</p>
+</th>
+</tr>
+<tr>
+<th>Identifier</th>
+<td>
+<p>irreducible cps 1 logical identifier</p>
+</td>
+</tr>
+<tr>
+<th>State</th>
+<td>
+<p>irreducible cps 1 logical state</p>
+</td>
+</tr>
+</table>
+</td>
+<td>
+<table>
+<tr>
+<th>Name</th>
+<th>
+<p id="irreducible cps 1 physical technicalId">irreducible cps 1 physical name</p>
+</th>
+</tr>
+<tr>
+<th>Identifier</th>
+<td>
+<p>irreducible cps 1 physical identifier</p>
+</td>
+</tr>
+<tr>
+<th>State</th>
+<td>
+<p>irreducible cps 1 physical state</p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<p id="irreducible cps 2 techncialId">irreducible cps 2 identifier</p>
+</td>
+<td>
+<p>irreducible cps 2 name</p>
+</td>
+<td>
+<p></p>
+</td>
+<td>
+<p></p>
+</td>
+<td></td>
+<td></td>
+<td>
+<table>
+<tr>
+<th>Name</th>
+<th>
+<p id="irreducible cps 2 logical technicalId">irreducible cps 2 logical name</p>
+</th>
+</tr>
+<tr>
+<th>Identifier</th>
+<td>
+<p>irreducible cps 2 logical identifier</p>
+</td>
+</tr>
+<tr>
+<th>State</th>
+<td>
+<p>irreducible cps 2 logical state</p>
+</td>
+</tr>
+</table>
+</td>
+<td>
+<table>
+<tr>
+<th>Name</th>
+<th>
+<p id="irreducible cps 2 physical technicalId">irreducible cps 2 physical name</p>
+</th>
+</tr>
+<tr>
+<th>Identifier</th>
+<td>
+<p>irreducible cps 2 physical identifier</p>
+</td>
+</tr>
+<tr>
+<th>State</th>
+<td>
+<p>irreducible cps 2 physical state</p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<p id="systemofsystems system 1 irreducible cps 1 technicalId">systemofsystems system 1 irreducible cps 1 identifier</p>
+</td>
+<td>
+<p>systemofsystems system 1 irreducible cps 1 name</p>
+</td>
+<td>
+<p></p>
+</td>
+<td>
+<p></p>
+</td>
+<td></td>
+<td></td>
+<td>
+<table>
+<tr>
+<th>Name</th>
+<th>
+<p id=""></p>
+</th>
+</tr>
+<tr>
+<th>Identifier</th>
+<td>
+<p></p>
+</td>
+</tr>
+<tr>
+<th>State</th>
+<td>
+<p></p>
+</td>
+</tr>
+</table>
+</td>
+<td>
+<table>
+<tr>
+<th>Name</th>
+<th>
+<p id=""></p>
+</th>
+</tr>
+<tr>
+<th>Identifier</th>
+<td>
+<p></p>
+</td>
+</tr>
+<tr>
+<th>State</th>
+<td>
+<p></p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<p id="systemofsystems system 1 irreducible cps 2 techncialId">systemofsystems system 1 irreducible cps 2 identifier</p>
+</td>
+<td>
+<p>systemofsystems system 1 irreducible cps 2 name</p>
+</td>
+<td>
+<p></p>
+</td>
+<td>
+<p></p>
+</td>
+<td></td>
+<td></td>
+<td>
+<table>
+<tr>
+<th>Name</th>
+<th>
+<p id=""></p>
+</th>
+</tr>
+<tr>
+<th>Identifier</th>
+<td>
+<p></p>
+</td>
+</tr>
+<tr>
+<th>State</th>
+<td>
+<p></p>
+</td>
+</tr>
+</table>
+</td>
+<td>
+<table>
+<tr>
+<th>Name</th>
+<th>
+<p id=""></p>
+</th>
+</tr>
+<tr>
+<th>Identifier</th>
+<td>
+<p></p>
+</td>
+</tr>
+<tr>
+<th>State</th>
+<td>
+<p></p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<p id="systemofsystems system 2 irreduciblecps 1 technicalId">systemofsystems system 2 irreduciblecps 1 identifier</p>
+</td>
+<td>
+<p>systemofsystems system 2 irreduciblecps 1 name</p>
+</td>
+<td>
+<p></p>
+</td>
+<td>
+<p></p>
+</td>
+<td></td>
+<td></td>
+<td>
+<table>
+<tr>
+<th>Name</th>
+<th>
+<p id=""></p>
+</th>
+</tr>
+<tr>
+<th>Identifier</th>
+<td>
+<p></p>
+</td>
+</tr>
+<tr>
+<th>State</th>
+<td>
+<p></p>
+</td>
+</tr>
+</table>
+</td>
+<td>
+<table>
+<tr>
+<th>Name</th>
+<th>
+<p id=""></p>
+</th>
+</tr>
+<tr>
+<th>Identifier</th>
+<td>
+<p></p>
+</td>
+</tr>
+<tr>
+<th>State</th>
+<td>
+<p></p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<p id="systemofsystems system 2 irreduciblecps 2 techncialId">systemofsystems system 2 irreduciblecps 2 identifier</p>
+</td>
+<td>
+<p>systemofsystems system 2 irreduciblecps 2 name</p>
+</td>
+<td>
+<p></p>
+</td>
+<td>
+<p></p>
+</td>
+<td></td>
+<td></td>
+<td>
+<table>
+<tr>
+<th>Name</th>
+<th>
+<p id=""></p>
+</th>
+</tr>
+<tr>
+<th>Identifier</th>
+<td>
+<p></p>
+</td>
+</tr>
+<tr>
+<th>State</th>
+<td>
+<p></p>
+</td>
+</tr>
+</table>
+</td>
+<td>
+<table>
+<tr>
+<th>Name</th>
+<th>
+<p id=""></p>
+</th>
+</tr>
+<tr>
+<th>Identifier</th>
+<td>
+<p></p>
+</td>
+</tr>
+<tr>
+<th>State</th>
+<td>
+<p></p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h2>7.2 Systems</h2>
+<table id="7.2">
+<tr>
+<th>Identifier</th>
+<th>Name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Requirements R-ID</th>
+<th>Domains</th>
+<th>Human</th>
+<th>Irreducible CPS</th>
+</tr>
+<tr>
+<td>
+<p id="system technicalId">system identifier</p>
+</td>
+<td>
+<p>system name</p>
+</td>
+<td>
+<p>system description</p>
+</td>
+<td>
+<p>system type</p>
+</td>
+<td>
+<p></p>
+</td>
+<td>
+<p></p>
+</td>
+<td>
+<p />
+</td>
+<td>
+<p>irreducible cps 1 identifier</p>
+<p>irreducible cps 2 identifier</p>
+</td>
+</tr>
+<tr>
+<td>
+<p id="systemofsystems system 1 techncialId">systemofsystems system 1 identifier</p>
+</td>
+<td>
+<p>systemofsystems system 1 name</p>
+</td>
+<td>
+<p></p>
+</td>
+<td>
+<p></p>
+</td>
+<td>
+<p></p>
+</td>
+<td>
+<p></p>
+</td>
+<td>
+<p />
+</td>
+<td>
+<p>systemofsystems system 1 irreducible cps 1 identifier</p>
+<p>systemofsystems system 1 irreducible cps 2 identifier</p>
+</td>
+</tr>
+<tr>
+<td>
+<p id="systemofsystems system 2 technicalId">systemofsystems system 2 identifier</p>
+</td>
+<td>
+<p>systemofsystems system 2 name</p>
+</td>
+<td>
+<p></p>
+</td>
+<td>
+<p></p>
+</td>
+<td>
+<p></p>
+</td>
+<td>
+<p></p>
+</td>
+<td>
+<p />
+</td>
+<td>
+<p>systemofsystems system 2 irreduciblecps 1 identifier</p>
+<p>systemofsystems system 2 irreduciblecps 2 identifier</p>
+</td>
+</tr>
+</table>
+<h2>7.3 System of Systems</h2>
+<table id="7.3">
+<tr>
+<th>Identifier</th>
+<th>Name</th>
+<th>Description</th>
+<th>Type</th>
+<th>Domains</th>
+<th>Requirements R-ID</th>
+</tr>
+<tr>
+<td>
+<p id="systemofsystems technicalId">systemofsystems identifier</p>
+</td>
+<td>
+<p>systemofsystems name</p>
+</td>
+<td>
+<p></p>
+</td>
+<td>
+<p></p>
+</td>
+<td>
+<p></p>
+</td>
+<td>
+<p></p>
+</td>
+</tr>
+</table>
+<h2>
+			Requirements
+		</h2>
+<table id="7.9">
+<tr>
+<th colspan="2">Requirements</th>
+</tr>
+<tr>
+<th>R-ID</th>
+<th>Details</th>
+</tr>
+<tr>
+<td>
+<p>2</p>
+</td>
+<td></td>
+</tr>
+<tr>
+<td>
+<p>3</p>
+</td>
+<td>
+<div>
+<div style="display: inline-block; vertical-align: middle;">
+<p>boundaries:</p>
+</div>
+<div style="display: inline-block; vertical-align: middle;margin: 4px">
+<table style="margin: 8px;">
+<tr>
+<th>Statement</th>
+<td>
+<p>cps 1 logical 1 aspects</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div>
+<div style="display: inline-block; vertical-align: middle;">
+<p>trustworthiness:</p>
+</div>
+<div style="display: inline-block; vertical-align: middle;margin: 4px">
+<table style="margin: 8px;">
+<tr>
+<th>Statement</th>
+<td>
+<p>cps 1 logical 1 aspects</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</td>
+</tr>
+</table>
+<h2>Maturity</h2>
+<table>
+<tr>
+<th>Effective</th>
+<th>Maturity</th>
+<th>Responsible Party</th>
+<th>Revision</th>
+<th>Status</th>
+</tr>
+<tr>
+<td>
+<p>CPSLibrary Maturity effective</p>
+</td>
+<td>
+<p>submitted</p>
+</td>
+<td>
+<p>CPSLibrary Maturity responsibleParty</p>
+</td>
+<td>
+<p>CPSLibrary Maturity revision</p>
+</td>
+<td>
+<p>asDesigned</p>
+</td>
+</tr>
+</table>
+</body>
+</html>

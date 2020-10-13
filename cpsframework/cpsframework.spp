@@ -2,6 +2,7 @@
 <Project>
 	<Folder FolderName="XML Files" ExtStr="xml;cml;math;rdf;smil;svg;wml">
 		<File FilePath="FullCpsFrameworkTest.xml" HomeFolder="Yes"/>
+		<File FilePath="FullCpsFrameworkTestOutput.xml" HomeFolder="Yes"/>
 		<File FilePath="ODDAspects.xml" HomeFolder="Yes"/>
 	</Folder>
 	<Folder FolderName="XSL Files" ExtStr="xsl;xslt">
