@@ -34,7 +34,7 @@
 							{font-family:"Arial Narrow";
 							panose-1:2 11 6 6 2 2 2 3 2 4;}
 					 /* Style Definitions */
-					 p, li.MsoNormal, div.MsoNormal
+					 p
 							{margin:0in;
 							margin-top:4px;
 							margin-bottom:4px;
@@ -68,78 +68,6 @@
 							font-family:"Cambria","serif";
 							color:#4F81BD;
 							letter-spacing:.4pt;}
-					p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
-							{mso-style-link:"Body Text Char";
-							margin-top:0in;
-							margin-right:0in;
-							margin-bottom:6.0pt;
-							margin-left:0in;
-							text-align:justify;
-							font-size:10.0pt;
-							font-family:"Arial","sans-serif";
-							letter-spacing:.4pt;}
-					p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
-							{mso-style-link:"Document Map Char";
-							margin:0in;
-							margin-bottom:.0001pt;
-							text-align:justify;
-							font-size:8.0pt;
-							font-family:"Tahoma","sans-serif";
-							letter-spacing:.4pt;}
-					p.TableHeading, li.TableHeading, div.TableHeading
-							{mso-style-name:TableHeading;
-							mso-style-link:"TableHeading Char";
-							margin:0in;
-							margin-bottom:.0001pt;
-							font-size:10.0pt;
-							font-family:"Arial","sans-serif";
-							color:#002060;
-							letter-spacing:.4pt;
-							font-weight:bold;
-							font-style:italic;}
-					span.TableHeadingDetail
-							{mso-style-name:TableHeadingDetail;
-							font-family:"Arial Narrow","sans-serif";
-							color:navy;
-							font-weight:normal;
-							font-style:italic;}
-					span.DocumentMapChar
-							{mso-style-name:"Document Map Char";
-							mso-style-link:"Document Map";
-							font-family:"Tahoma","sans-serif";
-							letter-spacing:.4pt;}
-					span.Heading2Char
-							{mso-style-name:"Heading 2 Char";
-							mso-style-link:"Heading 2";
-							font-family:"Cambria","serif";
-							color:#4F81BD;
-							letter-spacing:.4pt;
-							font-weight:bold;}
-					span.Heading1Char
-							{mso-style-name:"Heading 1 Char";
-							mso-style-link:"Heading 1";
-							font-family:"Cambria","serif";
-							color:#365F91;
-							letter-spacing:.4pt;
-							font-weight:bold;}
-					span.BodyTextChar
-							{mso-style-name:"Body Text Char";
-							mso-style-link:"Body Text";
-							font-family:"Arial","sans-serif";
-							letter-spacing:.4pt;}
-					span.TableHeadingChar
-							{mso-style-name:"TableHeading Char";
-							mso-style-link:TableHeading;
-							font-family:"Arial","sans-serif";
-							color:#002060;
-							letter-spacing:.4pt;
-							font-weight:bold;
-							font-style:italic;}
-					.MsoChpDefault
-							{font-family:"Calibri","sans-serif";}
-					.MsoPapDefault
-							{margin-bottom:10.0pt;
-							line-height:115%;}
 					@page WordSection1
 							{size:11.0in 8.5in;
 							margin:1.0in 1.0in 1.0in 1.0in;}
@@ -1319,7 +1247,7 @@
 		<table id="4.1.2">
 			<tr id="MacroActivity">
 				<th colspan="9">
-					<p class="TableHeading">
+					<p>
 						<xsl:attribute name="id">
 							<!--LOOKUP: MacroActivity/technicald-->
 							<xsl:value-of select="technicalId"/>
