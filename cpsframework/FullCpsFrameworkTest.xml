@@ -160,6 +160,130 @@
 				<state/>
 			</Physical>
 		</cps>
+		<system>
+			<description>system description</description>
+			<identifier>system identifier</identifier>
+			<name>system name</name>
+			<technicalId>system technicalId</technicalId>
+			<type>system type</type>
+			<IrreducibleCPS>
+				<identifier>irreducible cps 1 identifier</identifier>
+				<name>irreducible cps 1 name</name>
+				<technicalId>irreducible cps 1 techncialId</technicalId>
+				<Logical>
+					<identifier>irreducible cps 1 logical identifier</identifier>
+					<name>irreducible cps 1 logical name</name>
+					<technicalId>irreducible cps 1 logical technicalId</technicalId>
+					<state>irreducible cps 1 logical state</state>
+				</Logical>
+				<Physical>
+					<identifier>irreducible cps 1 physical identifier</identifier>
+					<name>irreducible cps 1 physical name</name>
+					<technicalId>irreducible cps 1 physical technicalId</technicalId>
+					<state>irreducible cps 1 physical state</state>
+				</Physical>
+			</IrreducibleCPS>
+			<IrreducibleCPS>
+				<identifier>irreducible cps 2 identifier</identifier>
+				<name>irreducible cps 2 name</name>
+				<technicalId>irreducible cps 2 techncialId</technicalId>
+				<Logical>
+					<identifier>irreducible cps 2 logical identifier</identifier>
+					<name>irreducible cps 2 logical name</name>
+					<technicalId>irreducible cps 2 logical technicalId</technicalId>
+					<state>irreducible cps 2 logical state</state>
+				</Logical>
+				<Physical>
+					<identifier>irreducible cps 2 physical identifier</identifier>
+					<name>irreducible cps 2 physical name</name>
+					<technicalId>irreducible cps 2 physical technicalId</technicalId>
+					<state>irreducible cps 2 physical state</state>
+				</Physical>
+			</IrreducibleCPS>
+		</system>
+		<systemofsystems>
+			<identifier>systemofsystems identifier</identifier>
+			<name>systemofsystems name</name>
+			<technicalId>systemofsystems technicalId</technicalId>
+			<System>
+				<identifier>systemofsystems system 1 identifier</identifier>
+				<name>systemofsystems system 1 name</name>
+				<technicalId>systemofsystems system 1 techncialId</technicalId>
+				<IrreducibleCPS>
+					<identifier>systemofsystems system 1 irreducible cps 1 identifier</identifier>
+					<name>systemofsystems system 1 irreducible cps 1 name</name>
+					<technicalId>systemofsystems system 1 irreducible cps 1 technicalId</technicalId>
+					<Logical>
+						<identifier/>
+						<name/>
+						<technicalId/>
+						<state/>
+					</Logical>
+					<Physical>
+						<identifier/>
+						<name/>
+						<technicalId/>
+						<state/>
+					</Physical>
+				</IrreducibleCPS>
+				<IrreducibleCPS>
+					<identifier>systemofsystems system 1 irreducible cps 2 identifier</identifier>
+					<name>systemofsystems system 1 irreducible cps 2 name</name>
+					<technicalId>systemofsystems system 1 irreducible cps 2 techncialId</technicalId>
+					<Logical>
+						<identifier/>
+						<name/>
+						<technicalId/>
+						<state/>
+					</Logical>
+					<Physical>
+						<identifier/>
+						<name/>
+						<technicalId/>
+						<state/>
+					</Physical>
+				</IrreducibleCPS>
+			</System>
+			<System>
+				<identifier>systemofsystems system 2 identifier</identifier>
+				<name>systemofsystems system 2 name</name>
+				<technicalId>systemofsystems system 2 technicalId</technicalId>
+				<IrreducibleCPS>
+					<identifier>systemofsystems system 2 irreduciblecps 1 identifier</identifier>
+					<name>systemofsystems system 2 irreduciblecps 1 name</name>
+					<technicalId>systemofsystems system 2 irreduciblecps 1 technicalId</technicalId>
+					<Logical>
+						<identifier/>
+						<name/>
+						<technicalId/>
+						<state/>
+					</Logical>
+					<Physical>
+						<identifier/>
+						<name/>
+						<technicalId/>
+						<state/>
+					</Physical>
+				</IrreducibleCPS>
+				<IrreducibleCPS>
+					<identifier>systemofsystems system 2 irreduciblecps 2 identifier</identifier>
+					<name>systemofsystems system 2 irreduciblecps 2 name</name>
+					<technicalId>systemofsystems system 2 irreduciblecps 2 techncialId</technicalId>
+					<Logical>
+						<identifier/>
+						<name/>
+						<technicalId/>
+						<state/>
+					</Logical>
+					<Physical>
+						<identifier/>
+						<name/>
+						<technicalId/>
+						<state/>
+					</Physical>
+				</IrreducibleCPS>
+			</System>
+		</systemofsystems>
 		<Maturity>
 			<effective>CPSLibrary Maturity effective</effective>
 			<maturity>submitted</maturity>
