@@ -319,13 +319,10 @@
 					
 				</table>
 				
-<!--
 				<xsl:call-template name="GenerateAspectsTable">
 					<xsl:with-param name="id" select="'4.0.1'"/>
-					<xsl:with-param name="parentName" select="'Scenario'"/>
-					<xsl:with-param name="grandparentId" select="generate-id(cps:CPSFramework/UseCase)"/>
-				</xsl:call-template>
--->				
+					<xsl:with-param name="aspectNodes" select="cps:CPSFramework/UseCase//Aspects"/>
+				</xsl:call-template> 
 
 				<xsl:apply-templates select="cps:CPSFramework/UseCase/Scenario" mode="ScenarioStepsTable"/>
 				

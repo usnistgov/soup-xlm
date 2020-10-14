@@ -62,7 +62,6 @@
 			<technicalId>BusinessCase Domain 2 technicalId</technicalId>
 		</Domain>
 	</BusinessCase>
-	<!-- CPSLibrary - This repository contains all of these actors or 'subsystems' of the CPS, that may interact logically, physically or cyber-physically.-->
 	<CPSLibrary>
 		<cps>
 			<description>cps 1 description</description>
