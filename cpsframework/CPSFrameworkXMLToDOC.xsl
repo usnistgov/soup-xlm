@@ -478,7 +478,7 @@
 				</table>
 				
 				<xsl:call-template name="GenerateAspectsTable">
-					<xsl:with-param name="id" select="'7.9'"/>
+					<xsl:with-param name="id" select="'7.0.1'"/>
 					<xsl:with-param name="aspectNodes" select="cps:CPSFramework/CPSLibrary//Aspects"/>
 				</xsl:call-template>		
 				
@@ -536,110 +536,144 @@
 		</tr>
 	</xsl:template>
 	
-	<xsl:template match="system|System">
+	<xsl:template match="system">
 		<tr>
-			<td>
-				<p>
-					<xsl:attribute name="id">
-						<xsl:value-of select="technicalId"/>
-					</xsl:attribute>
-					
-					<xsl:value-of select="identifier"/>
-				</p>
-			</td>
+			<xsl:attribute name="id">
+				<xsl:text>system</xsl:text>
+			</xsl:attribute>
 			
-			<td>
-				<p>
-					<xsl:value-of select="name"/>
-				</p>
-			</td>
-			
-			<td>
-				<p>
-					<xsl:value-of select="description"/>
-				</p>
-			</td>
-			
-			<td>
-				<p>
-					<xsl:value-of select="type"/>
-				</p>
-			</td>
-			
-			<td>
-				<p>
-					<xsl:apply-templates select="Aspects" mode="GetAspectNumber"/>
-				</p>
-			</td>
-			
-			<td>
-				<p>
-					<xsl:apply-templates select="Domain"/>
-				</p>
-			</td>
-			
-			<td>
-				<p>
-					<!--TODO Human-->
-				</p>
-			</td>
-			
-			<td>
-				<xsl:for-each select="IrreducibleCPS">
-					<p>
-						<xsl:value-of select="identifier"/>
-					</p>
-				</xsl:for-each>
-			</td>
+			<xsl:call-template name="GenerateSystemContent"/>
 		</tr>
 	</xsl:template>
 	
-	<xsl:template match="cps|IrreducibleCPS">
+	<xsl:template match="System">
 		<tr>
-			<td>
+			<xsl:attribute name="id">
+				<xsl:text>system-of-systems</xsl:text>
+			</xsl:attribute>
+			
+			<xsl:call-template name="GenerateSystemContent"/>
+		</tr>
+	</xsl:template>	
+	
+	<xsl:template name="GenerateSystemContent">
+		<td>
+			<p>
+				<xsl:attribute name="id">
+					<xsl:value-of select="technicalId"/>
+				</xsl:attribute>
+				
+				<xsl:value-of select="identifier"/>
+			</p>
+		</td>
+		
+		<td>
+			<p>
+				<xsl:value-of select="name"/>
+			</p>
+		</td>
+		
+		<td>
+			<p>
+				<xsl:value-of select="description"/>
+			</p>
+		</td>
+		
+		<td>
+			<p>
+				<xsl:value-of select="type"/>
+			</p>
+		</td>
+		
+		<td>
+			<p>
+				<xsl:apply-templates select="Aspects" mode="GetAspectNumber"/>
+			</p>
+		</td>
+		
+		<td>
+			<xsl:apply-templates select="Domain"/>
+		</td>
+		
+		<td>
+			<p>
+				<!--TODO Human-->
+			</p>
+		</td>
+		
+		<td>
+			<xsl:for-each select="IrreducibleCPS">
 				<p>
-					<xsl:attribute name="id">
-						<xsl:value-of select="technicalId"/>
-					</xsl:attribute>
-					
 					<xsl:value-of select="identifier"/>
 				</p>
-			</td>
+			</xsl:for-each>
+		</td>
+	</xsl:template>
+	
+	<xsl:template match="IrreducibleCPS">
+		<tr>
+			<xsl:attribute name="id">
+				<xsl:text>irreducible-cps</xsl:text>
+			</xsl:attribute>
 			
-			<td>
-				<p>
-					<xsl:value-of select="name"/>
-				</p>
-			</td>
-			
-			<td>
-				<p>
-					<xsl:value-of select="description"/>
-				</p>
-			</td>
-			
-			<td>
-				<p>
-					<xsl:value-of select="type"/>
-				</p>
-			</td>
-			
-			<td>
-				<xsl:apply-templates select="Domain"/>
-			</td>
-			
-			<td>
-				<xsl:apply-templates select="Aspects" mode="GetAspectNumber"/>
-			</td>
-			
-			<td>
-				<xsl:apply-templates select="Logical"/>
-			</td>
-			
-			<td>
-				<xsl:apply-templates select="Physical"/>
-			</td>
+			<xsl:call-template name="CreateCpsContent"/>
 		</tr>
+	</xsl:template>
+	
+	<xsl:template match="cps">
+		<tr>
+			<xsl:attribute name="id">
+				<xsl:text>cps</xsl:text>
+			</xsl:attribute>
+			
+			<xsl:call-template name="CreateCpsContent"/>
+		</tr>
+	</xsl:template>
+	
+	<xsl:template name="CreateCpsContent">
+		<td>
+			<p>
+				<xsl:attribute name="id">
+					<xsl:value-of select="technicalId"/>
+				</xsl:attribute>
+				
+				<xsl:value-of select="identifier"/>
+			</p>
+		</td>
+		
+		<td>
+			<p>
+				<xsl:value-of select="name"/>
+			</p>
+		</td>
+		
+		<td>
+			<p>
+				<xsl:value-of select="description"/>
+			</p>
+		</td>
+		
+		<td>
+			<p>
+				<xsl:value-of select="type"/>
+			</p>
+		</td>
+		
+		<td>
+			<xsl:apply-templates select="Domain"/>
+		</td>
+		
+		<td>
+			<xsl:apply-templates select="Aspects" mode="GetAspectNumber"/>
+		</td>
+		
+		<td>
+			<xsl:apply-templates select="Logical"/>
+		</td>
+		
+		<td>
+			<xsl:apply-templates select="Physical"/>
+		</td>	
 	</xsl:template>
 	
 	<xsl:template match="Logical">
