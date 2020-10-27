@@ -463,6 +463,22 @@
 					
 				</table>
 				
+				<h2>System Human Elements</h2>
+				<table id="7.2.1">
+					<tr>
+						<th>Identifier</th>
+						<th>Name</th>
+						<th>Description</th>
+						<th>Type</th>
+						<th>Domains</th>
+						<th>Physical</th>
+						<th>Requirements R-ID</th>
+					</tr>
+					
+					<xsl:apply-templates select="cps:CPSFramework/CPSLibrary/system/Human"/>
+					<xsl:apply-templates select="cps:CPSFramework/CPSLibrary//System/Human"/>
+				</table>
+				
 				<h2>7.3 System of Systems</h2>
 				<table id="7.3">
 					<tr>
@@ -471,6 +487,7 @@
 						<th>Description</th>
 						<th>Type</th>
 						<th>Domains</th>
+						<th>System List</th>
 						<th>Requirements R-ID</th>
 					</tr>
 					
@@ -527,7 +544,15 @@
 					<xsl:apply-templates select="Aspects" mode="GetAspectNumber"/>
 				</p>
 			</td>
-			
+
+			<td>
+				<xsl:for-each select="System">
+					<p>
+						<xsl:value-of select="identifier"/>
+					</p>
+				</xsl:for-each>
+			</td>
+
 			<td>
 				<p>
 					<xsl:apply-templates select="Domain"/>
@@ -596,9 +621,7 @@
 		</td>
 		
 		<td>
-			<p>
-				<!--TODO Human-->
-			</p>
+			<xsl:value-of select="Human/identifier"/>
 		</td>
 		
 		<td>
@@ -608,6 +631,46 @@
 				</p>
 			</xsl:for-each>
 		</td>
+	</xsl:template>
+	
+	<xsl:template match="Human">
+		<tr>
+			<td>
+				<p>
+					<xsl:value-of select="identifier"/>
+				</p>
+			</td>
+			<td>
+				<p>
+					<xsl:attribute name="id">
+						<xsl:value-of select="technicalId"/>
+					</xsl:attribute>
+				
+					<xsl:value-of select="name"/>
+				</p>
+			</td>
+			<td>
+				<p>
+					<xsl:value-of select="description"/>
+				</p>
+			</td>
+			<td>
+				<p>
+					<xsl:value-of select="type"/>
+				</p>
+			</td>
+			<td>
+				<xsl:apply-templates select="Domain"/>
+			</td>
+			<td>
+				<xsl:apply-templates select="Physical"/>
+			</td>
+			<td>
+				<p>
+					<xsl:apply-templates select="Aspects" mode="GetAspectNumber"/>
+				</p>
+			</td>
+		</tr>
 	</xsl:template>
 	
 	<xsl:template match="IrreducibleCPS">

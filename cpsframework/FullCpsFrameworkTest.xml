@@ -208,6 +208,17 @@
 				<identifier>systemofsystems system 1 identifier</identifier>
 				<name>systemofsystems system 1 name</name>
 				<technicalId>systemofsystems system 1 techncialId</technicalId>
+				<Human>
+					<identifier>human 1 identifier</identifier>
+					<name>human 1 name</name>
+					<technicalId>human 1 technicalId</technicalId>
+					<Physical>
+						<identifier>human 1 physical identifier</identifier>
+						<name>human 1 physical name</name>
+						<technicalId>human 1 physical technicalId</technicalId>
+						<state>human 1 physical state</state>
+					</Physical>
+				</Human>
 				<IrreducibleCPS>
 					<identifier>systemofsystems system 1 irreducible cps 1 identifier</identifier>
 					<name>systemofsystems system 1 irreducible cps 1 name</name>
