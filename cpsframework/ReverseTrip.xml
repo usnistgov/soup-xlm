@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="CPSFrameworkXMLToDOC.xsl"?>
-<cps:CPSFramework xmlns:cps="cpsframework" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="cpsframework ODDAspects.xsd">
+<cps:CPSFramework xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:cps="cpsframework">
 	<BusinessCase>
 		<description>BusinessCase 1 description</description>
 		<identifier>BusinessCase 1 identifier</identifier>
@@ -69,7 +69,7 @@
 			<name>cps 1 name</name>
 			<technicalId>cps 1 technicalId</technicalId>
 			<type>cps 1 type</type>
-			<Aspects/>
+			<Aspects>/</Aspects>
 			<Domain>
 				<description>cps 1 Domain 1 description</description>
 				<name>cps 1 Domain 1 name</name>

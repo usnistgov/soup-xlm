@@ -299,6 +299,32 @@
 					
 				</table>
 				
+				<h2>
+					3.5 Custom Information
+				</h2>
+				<table id="3.6">
+					<tr>
+						<th>Key</th>
+						<th>Reference</th>
+						<th>Value</th>
+					</tr>
+					
+					<xsl:apply-templates select="cps:CPSFramework/UseCase/CustomInformation"/>
+				</table>
+				
+				<h2>
+					3.6 Performance Indicators
+				</h2>
+				<table id="3.7">
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+						<th>Objective</th>
+					</tr>
+					
+					<xsl:apply-templates select="cps:CPSFramework/UseCase/KeyPerformanceIndicator"/>
+				</table>
+				
 				<h1>4       Step by Step Analysis of Use Case
 				</h1>
 				<table id="4">
@@ -499,14 +525,52 @@
 					<xsl:with-param name="aspectNodes" select="cps:CPSFramework/CPSLibrary//Aspects"/>
 				</xsl:call-template>		
 				
-				<h2>Maturity</h2>
-				
-				<table>
+				<table id="7.4">
+					<tr>
+						<th colspan="5">Maturity</th>
+					</tr>
+					
 					<xsl:apply-templates select="cps:CPSFramework/CPSLibrary/Maturity"/>
 				</table>
 				
 			</body>
 		</html>
+	</xsl:template>
+	
+	<xsl:template match="KeyPerformanceIndicator">
+		<tr>
+			<td>
+				<xsl:attribute name="id">
+					<xsl:value-of select="technicalId"/>
+				</xsl:attribute>
+			
+				<xsl:value-of select="name"/>
+			</td>
+			<td>
+				<xsl:value-of select="description"/>
+			</td>
+			<td>
+				<xsl:for-each select="Objective">
+					<p>
+						<xsl:value-of select="technicalId"/>
+					</p>
+				</xsl:for-each>
+			</td>
+		</tr>
+	</xsl:template>
+	
+	<xsl:template match="CustomInformation">
+		<tr>
+			<td>
+				<xsl:value-of select="key"/>
+			</td>
+			<td>
+				<xsl:value-of select="reference"/>
+			</td>
+			<td>
+				<xsl:value-of select="value"/>
+			</td>
+		</tr>
 	</xsl:template>
 	
 	<xsl:template match="systemofsystems">
@@ -540,9 +604,7 @@
 			</td>
 			
 			<td>
-				<p>
-					<xsl:apply-templates select="Aspects" mode="GetAspectNumber"/>
-				</p>
+				<xsl:apply-templates select="Domain"/>
 			</td>
 
 			<td>
@@ -555,7 +617,7 @@
 
 			<td>
 				<p>
-					<xsl:apply-templates select="Domain"/>
+					<xsl:apply-templates select="Aspects" mode="GetAspectNumber"/>
 				</p>
 			</td>
 		</tr>
@@ -621,7 +683,11 @@
 		</td>
 		
 		<td>
-			<xsl:value-of select="Human/identifier"/>
+			<xsl:for-each select="Human/identifier">
+				<p>
+					<xsl:value-of select="."/>
+				</p>
+			</xsl:for-each>
 		</td>
 		
 		<td>
@@ -1455,7 +1521,7 @@
 	<xsl:template match="MacroActivity">
 		<table id="4.1.2">
 			<tr id="MacroActivity">
-				<th colspan="9">
+				<th colspan="12">
 					<p>
 						<xsl:attribute name="id">
 							<!--LOOKUP: MacroActivity/technicald-->
@@ -1469,6 +1535,16 @@
 			</tr>
 			
 			<tr>
+				<th  colspan="12">Drawings</th>
+			</tr>
+			
+			<tr>
+				<td colspan="12">
+					<xsl:apply-templates select="Drawing"/>
+				</td>
+			</tr>
+			
+			<tr>
 				<th>Step No.</th>
 				<th>Event</th>
 				<th>Name of Process/ Activity</th>
@@ -1477,7 +1553,10 @@
 				<th>Information Producer (Actor)</th>
 				<th>Information Receiver (Actor)</th>
 				<th>Information Exchanged</th>
+				<th>Interaction</th>
+				<th>Ref Requirements</th>
 				<th>Requirements , R-ID</th>
+				<th>Drawing</th>
 			</tr>
 			
 			<xsl:apply-templates select="Step"/>
@@ -1563,8 +1642,24 @@
 			</td>
 			<td>
 				<p>
+					<!--LOOKUP: Step/interaction/refMessage-->
+					<xsl:value-of select="interaction/refMessage"/>
+				</p>
+			</td>
+			<td>
+				<xsl:for-each select="Requirement/technicalId">
+					<p>
+						<xsl:value-of select="."/>
+					</p>
+				</xsl:for-each>
+			</td>
+			<td>
+				<p>
 					<xsl:apply-templates mode="GetAspectNumber" select="Aspects"/>
 				</p>
+			</td>
+			<td>
+				<xsl:apply-templates select="Drawing"/>
 			</td>
 		</tr>
 	</xsl:template>

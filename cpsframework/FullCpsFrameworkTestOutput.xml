@@ -661,6 +661,38 @@
 				</td>
 			</tr>
 		</table>
+		<h2>
+					3.5 Custom Information
+				</h2>
+		<table id="3.6">
+			<tr>
+				<th>Key</th>
+				<th>Reference</th>
+				<th>Value</th>
+			</tr>
+			<tr>
+				<td>CustomInformation Key Element</td>
+				<td>CustonInformation Reference Element</td>
+				<td>CustomInformation Value Element</td>
+			</tr>
+		</table>
+		<h2>
+					3.6 Performance Indicators
+				</h2>
+		<table id="3.7">
+			<tr>
+				<th>Name</th>
+				<th>Description</th>
+				<th>Objective</th>
+			</tr>
+			<tr>
+				<td id="KeyPerformanceIndicator TechnicalId Element">KeyPerformanceIndicator Name Element</td>
+				<td>KeyPerformanceIndicator Description Element</td>
+				<td>
+					<p>KeyPerformanceIndicator Objective TechnicalId Element</p>
+				</td>
+			</tr>
+		</table>
 		<h1>4       Step by Step Analysis of Use Case
 				</h1>
 		<table id="4">
@@ -878,9 +910,19 @@
 			</table>
 			<table id="4.1.2">
 				<tr id="MacroActivity">
-					<th colspan="9">
+					<th colspan="12">
 						<p id="Scenario 1 MacroActivity 1 tehcnicalId element">Scenario 1 MacroActivity 1 name element</p>
 					</th>
+				</tr>
+				<tr>
+					<th colspan="12">Drawings</th>
+				</tr>
+				<tr>
+					<td colspan="12">
+						<p>
+							<img id="other" width="" height="" src="https://upload.wikimedia.org/wikipedia/commons/8/85/Logo-Test.png" alt="Scenario 1 Drawing"/>
+						</p>
+					</td>
 				</tr>
 				<tr>
 					<th>Step No.</th>
@@ -891,7 +933,10 @@
 					<th>Information Producer (Actor)</th>
 					<th>Information Receiver (Actor)</th>
 					<th>Information Exchanged</th>
+					<th>Interaction</th>
+					<th>Ref Requirements</th>
 					<th>Requirements , R-ID</th>
+					<th>Drawing</th>
 				</tr>
 				<tr>
 					<td>
@@ -921,7 +966,19 @@
 						<p id="Scenario 1 MacroActivity 1 Step 1 BusinessObject 2 technicalId">Scenario 1 MacroActivity 1 Step 1 BusinessObject 2 name</p>
 					</td>
 					<td>
+						<p>Scenario 1 MacroActivity 1 Step 1 refMessage element</p>
+					</td>
+					<td>
+						<p>Scenario 1 MacroActivity 1 Step 1 Requirement 1 techncialId</p>
+						<p>Scenario 1 MacroActivity 1 Step 1 Requirement 2 techncialId</p>
+					</td>
+					<td>
 						<p>11</p>
+					</td>
+					<td>
+						<p>
+							<img id="other" width="" height="" src="https://upload.wikimedia.org/wikipedia/commons/8/85/Logo-Test.png" alt="Scenario 1 MacroActivity 1 Step 1 Drawing"/>
+						</p>
 					</td>
 				</tr>
 				<tr>
@@ -950,15 +1007,29 @@
 						<p id="Scenario 1 MacroActivity 1 Step 2 BusinessObject 1 technicalId">Scenario 1 MacroActivity 1 Step 2 BusinessObjecvt 1 name</p>
 					</td>
 					<td>
+						<p>Scenario 1 MacroActivity 1 Step 2 refMessage element</p>
+					</td>
+					<td>
+						<p>Scenario 1 MacroActivity 1 Step 2 Requirement 1 techncialId</p>
+						<p>Scenario 1 MacroActivity 1 Step 2 Requirement 2 techncialId</p>
+					</td>
+					<td>
 						<p/>
 					</td>
+					<td/>
 				</tr>
 			</table>
 			<table id="4.1.2">
 				<tr id="MacroActivity">
-					<th colspan="9">
+					<th colspan="12">
 						<p id="Scenario 1 MacroActivity 2 tehcnicalId">Scenario 1 MacroActivity 2 name</p>
 					</th>
+				</tr>
+				<tr>
+					<th colspan="12">Drawings</th>
+				</tr>
+				<tr>
+					<td colspan="12"/>
 				</tr>
 				<tr>
 					<th>Step No.</th>
@@ -969,7 +1040,10 @@
 					<th>Information Producer (Actor)</th>
 					<th>Information Receiver (Actor)</th>
 					<th>Information Exchanged</th>
+					<th>Interaction</th>
+					<th>Ref Requirements</th>
 					<th>Requirements , R-ID</th>
+					<th>Drawing</th>
 				</tr>
 				<tr>
 					<td>
@@ -998,8 +1072,16 @@
 						<p id="Scenario 1 MacroActivity 2 Step 1 BusinessObject 1 technicalId">Scenario 1 MacroActivity 2 Step 1 BusinessObject 1 name</p>
 					</td>
 					<td>
+						<p>Scenario 1 MacroActivity 2 Step 1 refMessage element</p>
+					</td>
+					<td>
+						<p>Scenario 1 MacroActivity 2 Step 1 Requirement 1 techncialId</p>
+						<p>Scenario 1 MacroActivity 2 Step 1 Requirement 2 techncialId</p>
+					</td>
+					<td>
 						<p>12</p>
 					</td>
+					<td/>
 				</tr>
 				<tr>
 					<td>
@@ -1027,8 +1109,16 @@
 						<p id="Scenario 1 MacroActivity 2 Step 2 BusinessObject 1 technicalId">Scenario 1 MacroActivity 2 Step 2 BusinessObject 1 name</p>
 					</td>
 					<td>
+						<p>Scenario 1 MacroActivity 2 Step 2 refMessage element</p>
+					</td>
+					<td>
+						<p>Scenario 1 MacroActivity 2 Step 2 Requirement 1 techncialId</p>
+						<p>Scenario 1 MacroActivity 2 Step 2 Requirement 2 techncialId</p>
+					</td>
+					<td>
 						<p/>
 					</td>
+					<td/>
 				</tr>
 			</table>
 		</div>
@@ -1127,9 +1217,19 @@
 			</table>
 			<table id="4.1.2">
 				<tr id="MacroActivity">
-					<th colspan="9">
+					<th colspan="12">
 						<p id="Scenario 2 MacroActivity 1 tehcnicalId element">Scenario 2 MacroActivity 1 name element</p>
 					</th>
+				</tr>
+				<tr>
+					<th colspan="12">Drawings</th>
+				</tr>
+				<tr>
+					<td colspan="12">
+						<p>
+							<img id="other" width="" height="" src="https://upload.wikimedia.org/wikipedia/commons/8/85/Logo-Test.png" alt="Scenario 2 Drawing"/>
+						</p>
+					</td>
 				</tr>
 				<tr>
 					<th>Step No.</th>
@@ -1140,7 +1240,10 @@
 					<th>Information Producer (Actor)</th>
 					<th>Information Receiver (Actor)</th>
 					<th>Information Exchanged</th>
+					<th>Interaction</th>
+					<th>Ref Requirements</th>
 					<th>Requirements , R-ID</th>
+					<th>Drawing</th>
 				</tr>
 				<tr>
 					<td>
@@ -1169,8 +1272,16 @@
 						<p id="Scenario 2 MacroActivity 1 Step 1 BusinessObject 1 technicalId">Scenario 2 MacroActivity 1 Step 1 BusinessObject 1 name</p>
 					</td>
 					<td>
+						<p>Scenario 2 MacroActivity 1 Step 1 refMessage element</p>
+					</td>
+					<td>
+						<p>Scenario 2 MacroActivity 1 Step 1 Requirement 1 techncialId</p>
+						<p>Scenario 2 MacroActivity 1 Step 1 Requirement 2 techncialId</p>
+					</td>
+					<td>
 						<p>13</p>
 					</td>
+					<td/>
 				</tr>
 				<tr>
 					<td>
@@ -1198,15 +1309,29 @@
 						<p id="Scenario 2 MacroActivity 1 Step 2 BusinessObject 1 technicalId">Scenario 2 MacroActivity 2 Step 2 BusinessObject 1 name</p>
 					</td>
 					<td>
+						<p>Scenario 2 MacroActivity 1 Step 2 refMessage element</p>
+					</td>
+					<td>
+						<p>Scenario 2 MacroActivity 1 Step 2 Requirement 1 techncialId</p>
+						<p>Scenario 2 MacroActivity 1 Step 2 Requirement 2 techncialId</p>
+					</td>
+					<td>
 						<p/>
 					</td>
+					<td/>
 				</tr>
 			</table>
 			<table id="4.1.2">
 				<tr id="MacroActivity">
-					<th colspan="9">
+					<th colspan="12">
 						<p id="Scenario 2 MacroActivity 2 tehcnicalId">Scenario 2 MacroActivity 2 name</p>
 					</th>
+				</tr>
+				<tr>
+					<th colspan="12">Drawings</th>
+				</tr>
+				<tr>
+					<td colspan="12"/>
 				</tr>
 				<tr>
 					<th>Step No.</th>
@@ -1217,7 +1342,10 @@
 					<th>Information Producer (Actor)</th>
 					<th>Information Receiver (Actor)</th>
 					<th>Information Exchanged</th>
+					<th>Interaction</th>
+					<th>Ref Requirements</th>
 					<th>Requirements , R-ID</th>
+					<th>Drawing</th>
 				</tr>
 				<tr>
 					<td>
@@ -1246,8 +1374,16 @@
 						<p id="Scenario 2 MacroActivity 2 Step 1 BusinessObject 1 technicalId">Scenario 2 MacroActivity 2 Step 1 BusinessObject 1 name</p>
 					</td>
 					<td>
+						<p>Scenario 2 MacroActivity 2 Step 1 refMessage element</p>
+					</td>
+					<td>
+						<p>Scenario 2 MacroActivity 2 Step 1 Requirement 1 techncialId</p>
+						<p>Scenario 2 MacroActivity 2 Step 1 Requirement 2 techncialId</p>
+					</td>
+					<td>
 						<p/>
 					</td>
+					<td/>
 				</tr>
 				<tr>
 					<td>
@@ -1275,8 +1411,16 @@
 						<p id="Scenario 2 MacroActivity 2 Step 2 BusinessObject 1 technicalId">Scenario 2 MacroActivity 2 Step 2 BusinessObject 1 name</p>
 					</td>
 					<td>
+						<p>Scenario 2 MacroActivity 2 Step 2 refMessage element</p>
+					</td>
+					<td>
+						<p>Scenario 2 MacroActivity 2 Step 2 Requirement 1 techncialId</p>
+						<p>Scenario 2 MacroActivity 2 Step 2 Requirement 2 techncialId</p>
+					</td>
+					<td>
 						<p/>
 					</td>
+					<td/>
 				</tr>
 			</table>
 		</div>
@@ -2349,9 +2493,7 @@
 					<p/>
 				</td>
 				<td/>
-				<td>
-					<p/>
-				</td>
+				<td/>
 				<td>
 					<p>irreducible cps 1 identifier</p>
 					<p>irreducible cps 2 identifier</p>
@@ -2375,7 +2517,8 @@
 				</td>
 				<td/>
 				<td>
-					<p/>
+					<p>human 1 identifier</p>
+					<p>human 2 identifier</p>
 				</td>
 				<td>
 					<p>systemofsystems system 1 irreducible cps 1 identifier</p>
@@ -2399,12 +2542,102 @@
 					<p/>
 				</td>
 				<td/>
+				<td/>
+				<td>
+					<p>systemofsystems system 2 irreduciblecps 1 identifier</p>
+					<p>systemofsystems system 2 irreduciblecps 2 identifier</p>
+				</td>
+			</tr>
+		</table>
+		<h2>System Human Elements</h2>
+		<table id="7.2.1">
+			<tr>
+				<th>Identifier</th>
+				<th>Name</th>
+				<th>Description</th>
+				<th>Type</th>
+				<th>Domains</th>
+				<th>Physical</th>
+				<th>Requirements R-ID</th>
+			</tr>
+			<tr>
+				<td>
+					<p>human 1 identifier</p>
+				</td>
+				<td>
+					<p id="human 1 technicalId">human 1 name</p>
+				</td>
 				<td>
 					<p/>
 				</td>
 				<td>
-					<p>systemofsystems system 2 irreduciblecps 1 identifier</p>
-					<p>systemofsystems system 2 irreduciblecps 2 identifier</p>
+					<p/>
+				</td>
+				<td/>
+				<td>
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>
+								<p id="human 1 physical technicalId">human 1 physical name</p>
+							</th>
+						</tr>
+						<tr>
+							<th>Identifier</th>
+							<td>
+								<p>human 1 physical identifier</p>
+							</td>
+						</tr>
+						<tr>
+							<th>State</th>
+							<td>
+								<p>human 1 physical state</p>
+							</td>
+						</tr>
+					</table>
+				</td>
+				<td>
+					<p/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>human 2 identifier</p>
+				</td>
+				<td>
+					<p id="human 2 technicalId">human 2 name</p>
+				</td>
+				<td>
+					<p/>
+				</td>
+				<td>
+					<p/>
+				</td>
+				<td/>
+				<td>
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>
+								<p id="human 2 physical technicalId">human 2 physical name</p>
+							</th>
+						</tr>
+						<tr>
+							<th>Identifier</th>
+							<td>
+								<p>human 2 physical identifier</p>
+							</td>
+						</tr>
+						<tr>
+							<th>State</th>
+							<td>
+								<p>human 2 physical state</p>
+							</td>
+						</tr>
+					</table>
+				</td>
+				<td>
+					<p/>
 				</td>
 			</tr>
 		</table>
@@ -2416,6 +2649,7 @@
 				<th>Description</th>
 				<th>Type</th>
 				<th>Domains</th>
+				<th>System List</th>
 				<th>Requirements R-ID</th>
 			</tr>
 			<tr>
@@ -2431,8 +2665,10 @@
 				<td>
 					<p/>
 				</td>
+				<td/>
 				<td>
-					<p/>
+					<p>systemofsystems system 1 identifier</p>
+					<p>systemofsystems system 2 identifier</p>
 				</td>
 				<td>
 					<p/>
@@ -2494,8 +2730,10 @@
 				</td>
 			</tr>
 		</table>
-		<h2>Maturity</h2>
-		<table>
+		<table id="7.4">
+			<tr>
+				<th colspan="5">Maturity</th>
+			</tr>
 			<tr>
 				<th>Effective</th>
 				<th>Maturity</th>
