@@ -7,7 +7,6 @@
 	exclude-result-prefixes="msxsl" 
 	version="1.0">
 	
-	<xsl:import href="Utils.xsl"/>
 	<xsl:import href="AspectsUtils.xsl"/>
 	
 	<xsl:output method="xml" version="4.0" encoding="UTF-8" omit-xml-declaration="yes" indent="yes"/>
@@ -335,6 +334,7 @@
 					<tr>
 						<th>No.</th>
 						<th>Scenario Name</th>
+						<th>Description</th>
 						<th>Primary Actor</th>
 						<th>Triggering Event</th>
 						<th>Pre-Condition</th>
@@ -1130,10 +1130,12 @@
 	<xsl:template match="Version">
 		<tr>
 			<td>
-				<p>
-					<!--LOOKUP: UseCase/Version/changes-->
-					<xsl:value-of select="changes"/>
-				</p>
+				<xsl:if test="changes">
+								<p>
+						<!--LOOKUP: UseCase/Version/changes-->
+						<xsl:value-of select="changes"/>
+					</p>
+				</xsl:if>
 			</td>
 			<td>
 				<p>
@@ -1142,26 +1144,29 @@
 				</p>
 			</td>
 			<td>
-				<p>
-					<!--LOOKUP: "UseCase/Version/Author/name"
-						multiple names are join with a ', '.-->
-					<xsl:call-template name="StringJoin">
-						<xsl:with-param name="values" select="Author/name"/>
-						<xsl:with-param name="joinString" select="', '"/>
-					</xsl:call-template>
-				</p>
+				<xsl:if test="Author">
+					<xsl:for-each select="Author">
+						<p>
+							<xsl:value-of select="name"/>
+						</p>
+					</xsl:for-each>
+				</xsl:if>
 			</td>
 			<td>
-				<p>
-					<!--LOOKUP: UseCase/Version/approvalStatus-->
-					<xsl:value-of select="approvalStatus"/>
-				</p>
+				<xsl:if test="approvalStatus">
+					<p>
+						<!--LOOKUP: UseCase/Version/approvalStatus-->
+						<xsl:value-of select="approvalStatus"/>
+					</p>
+				</xsl:if>
 			</td>
 			<td>
-				<p>
-					<!--LOOKUP: UseCase/Version/versionNumber-->
-					<xsl:value-of select="versionNumber"/>
-				</p>
+				<xsl:if test="versionNumber">
+					<p>
+						<!--LOOKUP: UseCase/Version/versionNumber-->
+						<xsl:value-of select="versionNumber"/>
+					</p>
+				</xsl:if>
 			</td>
 		</tr>
 	</xsl:template>
@@ -1435,6 +1440,12 @@
 				</p>
 			</td>
 			<td>
+				<p>
+					<!--LOOKUP: UseCase/Scenario/description-->
+					<xsl:value-of select="description"/>
+				</p>
+			</td>
+			<td>
 				<!--LOOKUP: UseCase/Scenario/PrimaryCPS-->
 				<xsl:for-each select="PrimaryCPS">
 					<p>
@@ -1501,11 +1512,11 @@
 		<div id="ScenarioTables">
 			<table id="4.1.1">
 				<tr>
-					<th colspan="9">Scenario</th>
+					<th scope="col" colspan="2">Scenario</th>
 				</tr>
 				<tr>
-					<th colspan="2">Scenario Name :</th>
-					<td colspan="7">
+					<th scope="row">Scenario Name:</th>
+					<td>
 						<p>
 							<!--LOOKUP: Scenario/name-->
 							<xsl:value-of select="name"/>
@@ -1528,7 +1539,7 @@
 	<xsl:template match="MacroActivity">
 		<table id="4.1.2">
 			<tr id="MacroActivity">
-				<th colspan="12">
+				<th scope="row" colspan="2">
 					<p>
 						<xsl:attribute name="id">
 							<!--LOOKUP: MacroActivity/technicald-->
@@ -1539,6 +1550,12 @@
 						<xsl:value-of select="name"/>
 					</p>
 				</th>
+				<td colspan="10">
+					<p>
+						<!--LOOKUP: Macroactivity/description-->
+						<xsl:value-of select="description"/>
+					</p>
+				</td>
 			</tr>
 			
 			<tr>
@@ -1548,6 +1565,38 @@
 			<tr>
 				<td colspan="12">
 					<xsl:apply-templates select="Drawing"/>
+				</td>
+			</tr>
+			
+			<tr>
+				<th colspan="12">PrimaryCPS</th>
+			</tr>
+			
+			<tr>
+				<td colspan="12">
+					<xsl:for-each select="PrimaryCPS">
+						<p>
+							<xsl:attribute name="id">
+								<xsl:value-of select="technicalId"/>
+							</xsl:attribute>
+							
+							<xsl:value-of select="name"/>
+						</p>
+					</xsl:for-each>
+				</td>
+			</tr>
+			
+			<tr>
+				<th colspan="12">Requirement</th>
+			</tr>
+			
+			<tr>
+				<td colspan="12">
+					<xsl:for-each select="Requirement">
+						<p>
+							<xsl:value-of select="technicalId"/>
+						</p>
+					</xsl:for-each>
 				</td>
 			</tr>
 			
