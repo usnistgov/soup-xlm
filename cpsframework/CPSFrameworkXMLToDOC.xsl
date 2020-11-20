@@ -138,6 +138,7 @@
 					<tr>
 						<th>ID</th>
 						<th>Name of Use Case</th>
+						<th>Description</th>
 					</tr>
 					
 					<xsl:apply-templates select="cps:CPSFramework/UseCase"/>
@@ -1056,6 +1057,12 @@
 					<xsl:value-of select="name"/>
 				</p>
 			</td>
+			<td>
+				<p>
+					<!--LOOKUP: UseCase/description-->
+					<xsl:value-of select="description"/>
+				</p>
+			</td>
 		</tr>
 	</xsl:template>
 	
@@ -1807,9 +1814,12 @@
 		use a p element.-->
 	<xsl:template match="Drawing">
 		<p>
+			<xsl:attribute name="id">
+				<xsl:value-of select="drawingType"/>
+			</xsl:attribute>
 			<xsl:element name="img">
 				<xsl:attribute name="id">
-					<xsl:value-of select="drawingType"/>
+					<xsl:value-of select="URI/@type"/>
 				</xsl:attribute>
 				<xsl:attribute name="width">
 					<xsl:value-of select="substring-before(substring-after(URI,'W'),'_')"/>
