@@ -1028,10 +1028,12 @@
 				</p>
 			</td>
 			<td>
-				<p>
-					<!--LOOKUP: BusinessCase/Domain/type-->
-					<xsl:value-of select="type"/>
-				</p>
+				<xsl:if test="type">
+					<p>
+						<!--LOOKUP: BusinessCase/Domain/type-->
+						<xsl:value-of select="type"/>
+					</p>
+				</xsl:if>
 			</td>
 		</tr>
 	</xsl:template>
