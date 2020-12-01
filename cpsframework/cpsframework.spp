@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Project>
+<Project ScriptFile="macros.asprj" ScriptsActive="Yes">
 	<Folder FolderName="XML Files" ExtStr="xml;cml;math;rdf;smil;svg;wml">
 		<File FilePath="FullCpsFrameworkTest.xml" HomeFolder="Yes"/>
 		<File FilePath="FullCpsFrameworkTestOutput.xml" HomeFolder="Yes"/>
 		<File FilePath="ODDAspects.xml" HomeFolder="Yes"/>
+		<File FilePath="C:\Users\Luke\Downloads\cpsframework-master\xml\ODDTest.xml" HomeFolder="Yes"/>
 	</Folder>
 	<Folder FolderName="XSL Files" ExtStr="xsl;xslt">
 		<File FilePath="AspectsUtils.xsl" HomeFolder="Yes"/>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project version="4" app="XMLSpy TypeLib" UseHigherDotNetFramework="1">
+	<GlobalDeclarations>
+		<Source>function GetAllPathsFromProject()
+{
+	var	astrPaths = new Array();
+	
+	if(Application.CurrentProject)
+	{
+		RecurseProjectFolder(Application.CurrentProject.RootItems, astrPaths);
+	}
+	
+	return astrPaths;
+}
+
+
+function RecurseProjectFolder(ipProjectItems, astrPaths)
+{
+	if(ipProjectItems)
+	{
+		for(var iter = new Enumerator(ipProjectItems); !iter.atEnd(); iter.moveNext())
+		{
+			var	ipItem = iter.item();
+
+			if(ipItem)
+			{
+				var		strName = ipItem.Name;
+				var		eItemType = ipItem.ItemType;
+
+				if(eItemType == 2 /*spyFolderItem*/)
+				{
+					RecurseProjectFolder(ipItem.ChildItems, astrPaths);
+				}
+				else if(eItemType == 0 /*spyUnknownItem*/)
+				{
+				}
+				else if(eItemType == 1 /*spyFileItem*/)
+				{
+					InsertStringInArrayUnique(astrPaths, ipItem.Path, false);
+				}
+			}
+		}
+	}
+}
+
+
+function InsertStringInArrayUnique(astrStrings, strNew, bCaseSensitive)
+{
+	var bInsert = true;
+	var strToCompare = strNew;
+	
+	if(!bCaseSensitive)
+		strToCompare = strToCompare.toLowerCase();
+		
+	for(var nIdx = 0; nIdx &lt; astrStrings.length; nIdx++)
+	{
+		var	str2ndToCompare = astrStrings[nIdx];
+		
+		if(!bCaseSensitive)
+			str2ndToCompare = str2ndToCompare.toLowerCase();
+	
+		if(strToCompare == str2ndToCompare)
+		{
+			bInsert = false;
+			break;
+		}
+	}
+	
+	if(bInsert)
+		astrStrings.push(strNew);	
+}
+</Source>
+	</GlobalDeclarations>
+	<Forms>
+		<Form name="ForwardReverseDialog">
+			<Source>var filePaths;
+
+function OnLoad(){
+	filePaths = GetAllPathsFromProject();	
+	
+	var array = CLR.Create(&quot;System.Collections.ArrayList&quot;);
+	var array2 = CLR.Create(&quot;System.Collections.ArrayList&quot;);
+	var array3 = CLR.Create(&quot;System.Collections.ArrayList&quot;);
+	
+	for(var nIdx = 0; nIdx &lt; filePaths.length; nIdx++)
+		array.Add(filePaths[nIdx]);
+	for(var nIdx = 0; nIdx &lt; filePaths.length; nIdx++)
+		array2.Add(filePaths[nIdx]);
+	for(var nIdx = 0; nIdx &lt; filePaths.length; nIdx++)
+		array3.Add(filePaths[nIdx]);
+	
+	form.ComboBox1.Items.AddRange(array.ToArray());	
+	form.ComboBox2.Items.AddRange(array2.ToArray());	
+	form.ComboBox3.Items.AddRange(array3.ToArray());	
+}
+
+function Run(){
+	CLR.Import( &quot;System.IO&quot;);	
+	var Path = CLR.Static(&quot;Path&quot;);
+	
+	var document = Application.Documents.OpenFile( lastform.ComboBox1.SelectedItem, false);
+	document.AssignXSL(lastform.ComboBox2.SelectedItem, false);
+	document.TransformXSL();
+	
+	var middleDocument = Application.ActiveDocument;
+	middleDocument.FullName = Path.Combine(Path.GetDirectoryName(middleDocument.FullName), &quot;middle_document.xml&quot;);
+	middleDocument.Save();
+	middleDocument.AssignXSL(lastform.ComboBox3.SelectedItem, false);
+	middleDocument.TransformXSL();
+	
+	var reverseDocument = Application.ActiveDocument;
+	reverseDocument.FullName = Path.Combine(Path.GetDirectoryName(reverseDocument.FullName), &quot;reverse_document.xml&quot;);
+	reverseDocument.Save();
+}</Source>
+			<FormData>&lt;Object type=&quot;System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot; name=&quot;ForwardReverseDialog&quot; children=&quot;Controls&quot;&gt;&lt;Object type=&quot;System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot; name=&quot;Button2&quot; children=&quot;Controls&quot;&gt;&lt;Property name=&quot;DialogResult&quot;&gt;OK&lt;/Property&gt;&lt;Property name=&quot;Text&quot;&gt;Run&lt;/Property&gt;&lt;Property name=&quot;UseCompatibleTextRendering&quot;&gt;True&lt;/Property&gt;&lt;Property name=&quot;UseVisualStyleBackColor&quot;&gt;True&lt;/Property&gt;&lt;Property name=&quot;DataBindings&quot;&gt;&lt;Property name=&quot;DefaultDataSourceUpdateMode&quot;&gt;OnValidation&lt;/Property&gt;&lt;/Property&gt;&lt;Property name=&quot;Location&quot;&gt;457, 215&lt;/Property&gt;&lt;Property name=&quot;Name&quot;&gt;Button2&lt;/Property&gt;&lt;Property name=&quot;Size&quot;&gt;75, 23&lt;/Property&gt;&lt;Property name=&quot;TabIndex&quot;&gt;10&lt;/Property&gt;&lt;Event name=&quot;Click&quot;&gt;Run&lt;/Event&gt;&lt;/Object&gt;&lt;Object type=&quot;System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot; name=&quot;Button1&quot; children=&quot;Controls&quot;&gt;&lt;Property name=&quot;DialogResult&quot;&gt;Cancel&lt;/Property&gt;&lt;Property name=&quot;Text&quot;&gt;Cancel&lt;/Property&gt;&lt;Property name=&quot;UseCompatibleTextRendering&quot;&gt;True&lt;/Property&gt;&lt;Property name=&quot;UseVisualStyleBackColor&quot;&gt;True&lt;/Property&gt;&lt;Property name=&quot;DataBindings&quot;&gt;&lt;Property name=&quot;DefaultDataSourceUpdateMode&quot;&gt;OnValidation&lt;/Property&gt;&lt;/Property&gt;&lt;Property name=&quot;Location&quot;&gt;538, 215&lt;/Property&gt;&lt;Property name=&quot;Name&quot;&gt;Button1&lt;/Property&gt;&lt;Property name=&quot;Size&quot;&gt;75, 23&lt;/Property&gt;&lt;Property name=&quot;TabIndex&quot;&gt;9&lt;/Property&gt;&lt;/Object&gt;&lt;Object type=&quot;System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot; name=&quot;ComboBox3&quot; children=&quot;Controls&quot;&gt;&lt;Property name=&quot;FormattingEnabled&quot;&gt;True&lt;/Property&gt;&lt;Property name=&quot;DataBindings&quot;&gt;&lt;Property name=&quot;DefaultDataSourceUpdateMode&quot;&gt;OnValidation&lt;/Property&gt;&lt;/Property&gt;&lt;Property name=&quot;Location&quot;&gt;155, 111&lt;/Property&gt;&lt;Property name=&quot;Name&quot;&gt;ComboBox3&lt;/Property&gt;&lt;Property name=&quot;Size&quot;&gt;425, 21&lt;/Property&gt;&lt;Property name=&quot;TabIndex&quot;&gt;8&lt;/Property&gt;&lt;/Object&gt;&lt;Object type=&quot;System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot; name=&quot;ComboBox2&quot; children=&quot;Controls&quot;&gt;&lt;Property name=&quot;FormattingEnabled&quot;&gt;True&lt;/Property&gt;&lt;Property name=&quot;DataBindings&quot;&gt;&lt;Property name=&quot;DefaultDataSourceUpdateMode&quot;&gt;OnValidation&lt;/Property&gt;&lt;/Property&gt;&lt;Property name=&quot;Location&quot;&gt;155, 84&lt;/Property&gt;&lt;Property name=&quot;Name&quot;&gt;ComboBox2&lt;/Property&gt;&lt;Property name=&quot;Size&quot;&gt;425, 21&lt;/Property&gt;&lt;Property name=&quot;TabIndex&quot;&gt;7&lt;/Property&gt;&lt;/Object&gt;&lt;Object type=&quot;System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot; name=&quot;ComboBox1&quot; children=&quot;Controls&quot;&gt;&lt;Property name=&quot;FormattingEnabled&quot;&gt;True&lt;/Property&gt;&lt;Property name=&quot;DataBindings&quot;&gt;&lt;Property name=&quot;DefaultDataSourceUpdateMode&quot;&gt;OnValidation&lt;/Property&gt;&lt;/Property&gt;&lt;Property name=&quot;Location&quot;&gt;155, 57&lt;/Property&gt;&lt;Property name=&quot;Name&quot;&gt;ComboBox1&lt;/Property&gt;&lt;Property name=&quot;Size&quot;&gt;425, 21&lt;/Property&gt;&lt;Property name=&quot;TabIndex&quot;&gt;6&lt;/Property&gt;&lt;/Object&gt;&lt;Object type=&quot;System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot; name=&quot;Label3&quot; children=&quot;Controls&quot;&gt;&lt;Property name=&quot;Text&quot;&gt;Reverse XSLT File&lt;/Property&gt;&lt;Property name=&quot;UseCompatibleTextRendering&quot;&gt;True&lt;/Property&gt;&lt;Property name=&quot;DataBindings&quot;&gt;&lt;Property name=&quot;DefaultDataSourceUpdateMode&quot;&gt;OnValidation&lt;/Property&gt;&lt;/Property&gt;&lt;Property name=&quot;Location&quot;&gt;35, 113&lt;/Property&gt;&lt;Property name=&quot;Name&quot;&gt;Label3&lt;/Property&gt;&lt;Property name=&quot;Size&quot;&gt;100, 23&lt;/Property&gt;&lt;Property name=&quot;TabIndex&quot;&gt;5&lt;/Property&gt;&lt;/Object&gt;&lt;Object type=&quot;System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot; name=&quot;Label2&quot; children=&quot;Controls&quot;&gt;&lt;Property name=&quot;Text&quot;&gt;Forward XSLT File&lt;/Property&gt;&lt;Property name=&quot;UseCompatibleTextRendering&quot;&gt;True&lt;/Property&gt;&lt;Property name=&quot;DataBindings&quot;&gt;&lt;Property name=&quot;DefaultDataSourceUpdateMode&quot;&gt;OnValidation&lt;/Property&gt;&lt;/Property&gt;&lt;Property name=&quot;Location&quot;&gt;35, 87&lt;/Property&gt;&lt;Property name=&quot;Name&quot;&gt;Label2&lt;/Property&gt;&lt;Property name=&quot;Size&quot;&gt;100, 23&lt;/Property&gt;&lt;Property name=&quot;TabIndex&quot;&gt;4&lt;/Property&gt;&lt;/Object&gt;&lt;Object type=&quot;System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot; name=&quot;Label1&quot; children=&quot;Controls&quot;&gt;&lt;Property name=&quot;Text&quot;&gt;XML Source&lt;/Property&gt;&lt;Property name=&quot;UseCompatibleTextRendering&quot;&gt;True&lt;/Property&gt;&lt;Property name=&quot;DataBindings&quot;&gt;&lt;Property name=&quot;DefaultDataSourceUpdateMode&quot;&gt;OnValidation&lt;/Property&gt;&lt;/Property&gt;&lt;Property name=&quot;Location&quot;&gt;35, 61&lt;/Property&gt;&lt;Property name=&quot;Name&quot;&gt;Label1&lt;/Property&gt;&lt;Property name=&quot;Size&quot;&gt;100, 23&lt;/Property&gt;&lt;Property name=&quot;TabIndex&quot;&gt;1&lt;/Property&gt;&lt;Event name=&quot;Click&quot;&gt;ForwardReverseDialog_Label1_Click&lt;/Event&gt;&lt;/Object&gt;&lt;Property name=&quot;ClientSize&quot;&gt;625, 250&lt;/Property&gt;&lt;Property name=&quot;DataBindings&quot;&gt;&lt;Property name=&quot;DefaultDataSourceUpdateMode&quot;&gt;OnValidation&lt;/Property&gt;&lt;/Property&gt;&lt;Property name=&quot;Name&quot;&gt;ForwardReverseDialog&lt;/Property&gt;&lt;Event name=&quot;Load&quot;&gt;OnLoad&lt;/Event&gt;&lt;/Object&gt;</FormData>
+		</Form>
+	</Forms>
+	<Macros>
+		<Macro name="Forward and Reverse">
+			<Source>var activeDoc = Application.ActiveDocument;
+
+var form = CreateForm(&quot;ForwardReverseDialog&quot;);
+if (form != null) {
+	var result = form.ShowDialog()
+}</Source>
+		</Macro>
+	</Macros>
+</Project>
