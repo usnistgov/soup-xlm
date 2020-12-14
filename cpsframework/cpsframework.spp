@@ -4,7 +4,7 @@
 		<File FilePath="FullCpsFrameworkTest.xml" HomeFolder="Yes"/>
 		<File FilePath="FullCpsFrameworkTestOutput.xml" HomeFolder="Yes"/>
 		<File FilePath="ODDAspects.xml" HomeFolder="Yes"/>
-		<File FilePath="C:\Users\Luke\Downloads\cpsframework-master\xml\ODDTest.xml" HomeFolder="Yes"/>
+		<File FilePath="ODDTest.xml" HomeFolder="Yes"/>
 	</Folder>
 	<Folder FolderName="XSL Files" ExtStr="xsl;xslt">
 		<File FilePath="AspectsUtils.xsl" HomeFolder="Yes"/>
