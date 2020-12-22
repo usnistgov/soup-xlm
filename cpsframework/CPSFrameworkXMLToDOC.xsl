@@ -1211,21 +1211,25 @@
 			</tr>
 			<tr>
 				<td colspan="2">
-					<p>
-						<!--LOOKUP: UseCase/CPSGrouping/identifier-->
-						<xsl:attribute name="id">
-							<xsl:value-of select="identifier"/>
-						</xsl:attribute>
-					
-						<!--LOOKUP: UseCase/CPSGrouping/name-->
-						<xsl:value-of select="name"/>
-					</p>
+					<xsl:if test="identifier">
+						<p>
+							<!--LOOKUP: UseCase/CPSGrouping/identifier-->
+							<xsl:attribute name="id">
+								<xsl:value-of select="identifier"/>
+							</xsl:attribute>
+						
+							<!--LOOKUP: UseCase/CPSGrouping/name-->
+							<xsl:value-of select="name"/>
+						</p>
+					</xsl:if>
 				</td>
 				<td colspan="2">
-					<p>
-						<!--LOOKUP: UseCase/CPSGrouping/description-->
-						<xsl:value-of select="description"/>
-					</p>
+					<xsl:if test="description">
+						<p>
+							<!--LOOKUP: UseCase/CPSGrouping/description-->
+							<xsl:value-of select="description"/>
+						</p>
+					</xsl:if>
 				</td>
 			</tr>
 			<tr>
