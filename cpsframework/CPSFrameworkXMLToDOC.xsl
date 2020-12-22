@@ -1553,10 +1553,12 @@
 					</p>
 				</th>
 				<td colspan="10">
-					<p>
-						<!--LOOKUP: Macroactivity/description-->
-						<xsl:value-of select="description"/>
-					</p>
+					<xsl:if test="description">
+						<p>
+							<!--LOOKUP: Macroactivity/description-->
+							<xsl:value-of select="description"/>
+						</p>
+					</xsl:if>
 				</td>
 			</tr>
 			
