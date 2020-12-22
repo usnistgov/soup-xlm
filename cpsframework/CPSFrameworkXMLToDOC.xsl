@@ -1060,10 +1060,12 @@
 				</p>
 			</td>
 			<td>
-				<p>
-					<!--LOOKUP: UseCase/description-->
-					<xsl:value-of select="description"/>
-				</p>
+				<xsl:if test="description">
+					<p>
+						<!--LOOKUP: UseCase/description-->
+						<xsl:value-of select="description"/>
+					</p>
+				</xsl:if>
 			</td>
 		</tr>
 	</xsl:template>
@@ -1446,10 +1448,12 @@
 				</p>
 			</td>
 			<td>
-				<p>
-					<!--LOOKUP: UseCase/Scenario/description-->
-					<xsl:value-of select="description"/>
-				</p>
+				<xsl:if test="description">
+					<p>
+						<!--LOOKUP: UseCase/Scenario/description-->
+						<xsl:value-of select="description"/>
+					</p>
+				</xsl:if>
 			</td>
 			<td>
 				<!--LOOKUP: UseCase/Scenario/PrimaryCPS-->
